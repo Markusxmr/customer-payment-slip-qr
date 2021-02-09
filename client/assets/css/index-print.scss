@@ -1,0 +1,86 @@
+$top1: 32px !important;
+$top2: 57px !important;
+$top3: 88px !important;
+$top4: 118px !important;
+$top5: 150px !important;
+$top6: 185px !important;
+$opis-placanja-top: 172px !important;
+$datum_izvrsenja-top: 222px !important;
+$uplatnica__barcode-top: 246px !important;
+
+@media print {
+    .fieldset-platitelj {
+        top: 42px !important;
+    }
+
+    .fieldset-primatelj {
+        top: 152px !important;
+    }
+
+    .form-field--hitno,
+    .form-field--valuta_placanja,
+    .form-field--iznos {
+        top: $top1;
+    }
+
+    .potvrda-field--iznos {
+        top: $top1 + 5;
+    }
+
+    .form-field--iban-platitelja {
+        top: $top2;
+    }
+
+    .potvrda-field--iban-platitelja {
+        top: $top2 + 5;
+    }
+
+    .form-field--model-platitelja,
+    .form-field--poziv-na-platitelja {
+        top: $top3;
+    }
+
+    .potvrda-field--model-i-poziv-na-broj-platitelja {
+        top: $top3 + 5;
+    }
+
+    .form-field--iban-primatelja {
+        top: $top4;
+    }
+
+    .potvrda-field--iban-primatelja {
+        top: $top4 + 5;
+    }
+
+    .form-field--model,
+    .form-field--poziv-na-broj-primatelja {
+        top: $top5;
+    }
+
+    .potvrda-field--model-i-poziv-na-broj-primatelja {
+        top: $top5 + 5;
+    }
+
+    .form-field--sifra-namjene {
+        top: $top6;
+    }
+
+    .form-field--opis {
+        top: $opis-placanja-top;
+    }
+
+    .potvrda-field--opis-placanja {
+        top: $opis-placanja-top + 8;
+    }
+
+    .form-field--datum_izvrsenja {
+        top: $datum_izvrsenja-top;
+    }
+
+    .uplatnica__barcode {
+        top: $uplatnica__barcode-top;
+        left: 14px !important;
+        width: 244px !important;
+    }
+}
+
