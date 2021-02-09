@@ -1,14 +1,14 @@
 import { Module } from '@nestjs/common';
 import { PaymentSlipResolver } from './resolvers/payment-slip.resolver';
-import { UserResolver } from './resolvers/user.resolver';
+import { CustomerResolver } from './resolvers/customer.resolver';
 import { PaymentSlipController } from './controllers/payment-slip.controller';
-import { UserController } from './controllers/user.controller';
+import { CustomerController } from './controllers/customer.controller';
 import { ServiceModule } from '../service/service.module';
 
 @Module({
   imports: [ServiceModule],
-  controllers: [PaymentSlipController, UserController],
-  providers: [ServiceModule, PaymentSlipResolver, UserResolver],
-  exports: [PaymentSlipResolver, UserResolver],
+  controllers: [PaymentSlipController, CustomerController],
+  providers: [ServiceModule, PaymentSlipResolver, CustomerResolver],
+  exports: [PaymentSlipResolver, CustomerResolver],
 })
 export class ApiModule {}

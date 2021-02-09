@@ -1,5 +1,5 @@
 import { Connection, Repository } from 'typeorm';
-import { User } from '../entities/user.entity';
+import { Customer } from '../entities/customer.entity';
 import { PaymentSlip } from '../entities/payment-slip.entity';
 
 export const serviceProviders = [
@@ -10,8 +10,8 @@ export const serviceProviders = [
     inject: ['DATABASE_CONNECTION'],
   },
   {
-    provide: 'USER_REPOSITORY',
-    useFactory: (connection: Connection) => connection.getRepository(User),
+    provide: 'CUSTOMER_REPOSITORY',
+    useFactory: (connection: Connection) => connection.getRepository(Customer),
     inject: ['DATABASE_CONNECTION'],
   },
 ];

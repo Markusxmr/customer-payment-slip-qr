@@ -9,7 +9,7 @@
   function upload() {
     const formData = new FormData();
     formData.append("file", files[0]);
-    const upload = fetch(`${config.url}/user/xls`, {
+    const upload = fetch(`${config.url}/customer/xls`, {
       method: "POST",
       body: formData,
     })

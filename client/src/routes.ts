@@ -1,7 +1,7 @@
 import Home from "./routes/Home.svelte";
 import Korisnik from "./routes/Korisnik.svelte";
-import UpdateKorisnik from "./components/User/Edit.svelte";
-import NoviKorisnik from "./components/User/New.svelte";
+import UpdateKorisnik from "./components/Customer/Edit.svelte";
+import NoviKorisnik from "./components/Customer/New.svelte";
 import Korisnici from "./routes/Korisnici.svelte";
 import NotFound from "./routes/NotFound.svelte";
 

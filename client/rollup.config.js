@@ -10,7 +10,7 @@ import livereload from "rollup-plugin-livereload";
 import sveltePreprocessor from "svelte-preprocess";
 
 const isDevelopment = process.env.NODE_ENV === "development";
-const base = "../server/public";
+const base = "server/public";
 
 const plugins = [
   svelte({

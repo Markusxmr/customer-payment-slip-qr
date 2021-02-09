@@ -37,14 +37,14 @@
 
     methods: {
       handleInput: debounce(async function (event) {
-        getUsers();
+        getCustomers();
       }, 300),
     },
   };
-  function getUsers() {
+  function getCustomers() {
     loading = true;
     fetch(
-      `${config.url}/user?naziv=${search}&adresa=${search}&mjesta=${search}`,
+      `${config.url}/customer?naziv=${search}&adresa=${search}&mjesta=${search}`,
       {
         headers: {
           accept: "application/json",
@@ -61,7 +61,7 @@
       });
   }
 
-  function deleteUsers() {
+  function deleteCustomers() {
     const promptVal = confirm("Izbrisati sve?");
 
     if (!promptVal) return;
@@ -73,13 +73,13 @@
         "Content-Type": "application/json",
       },
     }).then(async (res) => {
-      getUsers();
+      getCustomers();
     });
   }
 
-  getUsers();
+  getCustomers();
 
-  function deleteUser(id) {
+  function deleteCustomer(id) {
     const promptVal = confirm("Izbrisati?");
 
     if (!promptVal) return;
@@ -91,7 +91,7 @@
         "Content-Type": "application/json",
       },
     }).then(async (res) => {
-      getUsers();
+      getCustomers();
     });
   }
 </script>
@@ -99,16 +99,16 @@
 <h3>Korisnici</h3>
 
 <div>
-  <XlsUpload callback={getUsers} />
+  <XlsUpload callback={getCustomers} />
   <br /><br />
   <a class="btn btn-secondary" href="/#/korisnik/new">Novi korisnik</a>
-  <button class="btn btn-secondary" on:click={deleteUsers}>Izbriši sve</button>
+  <button class="btn btn-secondary" on:click={deleteCustomers}>Izbriši sve</button>
 </div>
 
 <form
   class="d-flex"
   style="margin-top: 21px"
-  on:submit|preventDefault={getUsers}
+  on:submit|preventDefault={getCustomers}
 >
   <input
     class="form-control me-2"
@@ -150,7 +150,7 @@
             >
             <button
               class="btn btn-danger btn-sm"
-              on:click={() => deleteUser(item.id)}>Izbriši</button
+              on:click={() => deleteCustomer(item.id)}>Izbriši</button
             >
           </td>
         </tr>

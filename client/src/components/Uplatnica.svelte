@@ -9,7 +9,7 @@
   export let key = Math.random();
   export let model;
   export let printing = false;
-  export let getUser;
+  export let getCustomer;
   let genexUrl = "http://188.34.178.129";
   let loaded = false;
   let loadstart = "Učitavanje...";
@@ -50,7 +50,7 @@
       body: JSON.stringify(model),
     });
 
-    await getUser();
+    await getCustomer();
   }
 
   async function deletePaymentSlip(id) {
@@ -60,7 +60,7 @@
       method: "DELETE",
     });
 
-    await getUser();
+    await getCustomer();
   }
 </script>
 

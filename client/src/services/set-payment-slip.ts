@@ -1,6 +1,6 @@
 import { primatelj } from "../model";
 
-export function setPaymentSlip(user) {
+export function setPaymentSlip(customer) {
   return {
     id: null,
     poziv_na_broj_platitelja: "",
@@ -15,14 +15,14 @@ export function setPaymentSlip(user) {
     valuta_placanja: "HRK",
     // Samo vrijednost X ili ništa
     hitno: "X",
-    ime_i_prezime_platitelja: user?.naziv,
-    ulica_i_broj_platitelja: user?.adresa,
+    ime_i_prezime_platitelja: customer?.naziv,
+    ulica_i_broj_platitelja: customer?.adresa,
     ulica_i_broj_primatelja: primatelj.ulica_i_broj_primatelja,
-    postanski_i_grad_platitelja: `${user?.pošta} ${user?.adresa}`,
+    postanski_i_grad_platitelja: `${customer?.pošta} ${customer?.adresa}`,
     postanski_i_grad_primatelja: primatelj.postanski_i_grad_primatelja,
     naziv_primatelja: primatelj.naziv_primatelja,
     opis_placanja: "Opis uplate",
     nalog: "-",
-    user_id: Number(user.id),
+    customer_id: Number(customer.id),
   };
 }

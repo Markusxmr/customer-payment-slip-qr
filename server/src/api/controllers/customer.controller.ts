@@ -14,53 +14,56 @@ import {
 import * as fs from 'fs';
 import { join } from 'path';
 import * as xls_json from 'xls-to-json';
-import { UserService } from '../../service/services/user.service';
-import { CreateUserDto } from '../dto/user/create-user.dto';
-import { UpdateUserDto } from '../dto/user/update-user.dto';
+import { CustomerService } from '../../service/services/customer.service';
+import { CreateCustomerDto } from '../dto/customer/create-customer.dto';
+import { UpdateCustomerDto } from '../dto/customer/update-customer.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { PaymentSlipService } from '../../service/services/payment-slip.service';
 import { setPaymentSlip } from 'src/common/set-payment-slip';
 
-@Controller('user')
-export class UserController {
+@Controller('customer')
+export class CustomerController {
   constructor(
-    private readonly userService: UserService,
+    private readonly customerService: CustomerService,
     private readonly paymentSlipService: PaymentSlipService,
   ) {}
 
   @Post()
-  async create(@Body() createUserDto: CreateUserDto) {
-    const user = await this.userService.create(createUserDto);
+  async create(@Body() createCustomerDto: CreateCustomerDto) {
+    const customer = await this.customerService.create(createCustomerDto);
 
     const items = new Array(12);
     for (const item of items) {
-      await this.paymentSlipService.create(setPaymentSlip(user));
+      await this.paymentSlipService.create(setPaymentSlip(customer));
     }
   }
 
   @Get()
   findAll(@Query() options: Record<string, unknown>) {
-    return this.userService.findAll(options);
+    return this.customerService.findAll(options);
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.userService.findOne(+id);
+    return this.customerService.findOne(+id);
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.userService.update(+id, updateUserDto);
+  update(
+    @Param('id') id: string,
+    @Body() updateCustomerDto: UpdateCustomerDto,
+  ) {
+    return this.customerService.update(+id, updateCustomerDto);
   }
 
   @Delete()
   removeAll() {
-    return this.userService.removeAll();
+    return this.customerService.removeAll();
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.userService.remove(+id);
+    return this.customerService.remove(+id);
   }
 
   @Post('xls')
@@ -93,10 +96,10 @@ export class UserController {
     );
 
     let source: any = fs.readFileSync(jsonPath);
-    let users = JSON.parse(source);
+    let customers = JSON.parse(source);
 
-    if (Array.isArray(users)) {
-      users = users.map((item) => {
+    if (Array.isArray(customers)) {
+      customers = customers.map((item) => {
         return Object.keys(item).reduce((acc, key) => {
           return item[key]
             ? {
@@ -108,9 +111,11 @@ export class UserController {
       });
 
       try {
-        const userInstances = await this.userService.createMany(users);
-        for (const userInstance of userInstances) {
-          const items = new Array(12).fill(setPaymentSlip(userInstance));
+        const customerInstances = await this.customerService.createMany(
+          customers,
+        );
+        for (const customerInstance of customerInstances) {
+          const items = new Array(12).fill(setPaymentSlip(customerInstance));
           await this.paymentSlipService.createMany(items);
         }
       } catch (error) {

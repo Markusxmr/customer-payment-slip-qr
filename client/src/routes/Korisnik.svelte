@@ -5,7 +5,7 @@
   import config from "../config";
 
   export let params = {};
-  let user;
+  let customer;
   let model;
   let paymentSlips = [];
 
@@ -21,19 +21,19 @@
     setTimeout(() => window.print(), 1000);
   }
 
-  async function getUser() {
-    fetch(`${config.url}/user/${params.id}`, {
+  async function getCustomer() {
+    fetch(`${config.url}/customer/${params.id}`, {
       headers: {
         accept: "application/json",
         "Content-Type": "application/json",
       },
     }).then(async (res) => {
-      user = await res.json();
-      paymentSlips = user?.paymentSlips;
+      customer = await res.json();
+      paymentSlips = customer?.paymentSlips;
     });
   }
 
-  getUser();
+  getCustomer();
 
   function newPaymentSlip() {
     fetch(`${config.url}/payment-slip`, {
@@ -42,10 +42,10 @@
         "Content-Type": "application/json",
       },
       method: "POST",
-      body: JSON.stringify(setPaymentSlip(user)),
+      body: JSON.stringify(setPaymentSlip(customer)),
     }).then(async (res) => {
       let data = await res.json();
-      getUser();
+      getCustomer();
       setTimeout(() => {
         window.scrollTo(0, document.body.scrollHeight);
       }, 1000);
@@ -53,7 +53,7 @@
   }
 </script>
 
-<h3 class="noprint" style="text-align: center">{user?.naziv ?? "..."}</h3>
+<h3 class="noprint" style="text-align: center">{customer?.naziv ?? "..."}</h3>
 
 {#each paymentSlips as model, i}
   <div class="print">
@@ -99,7 +99,7 @@
         data-bs-parent="#accordionExample"
       >
         <div class="accordion-body">
-          <Uplatnica bind:model={item} {getUser} {textOnlyPrint} />
+          <Uplatnica bind:model={item} {getCustomer} {textOnlyPrint} />
         </div>
       </div>
     </div>

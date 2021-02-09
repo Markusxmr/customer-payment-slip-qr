@@ -7,11 +7,11 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { ObjectType, Field, Int } from '@nestjs/graphql';
-import { PaymentSlip } from 'src/entities/payment-slip.entity';
+import { PaymentSlip } from './payment-slip.entity';
 
 @ObjectType()
-@Entity('users')
-export class User {
+@Entity('customers')
+export class Customer {
   @Field(() => Int)
   @PrimaryGeneratedColumn({ type: 'bigint' })
   id: number;
@@ -132,7 +132,7 @@ export class User {
   mjesto_primatelja: string;
 
   @Field(() => [PaymentSlip])
-  @OneToMany(() => PaymentSlip, (entity) => entity.user, {
+  @OneToMany(() => PaymentSlip, (entity) => entity.customer, {
     eager: true,
   })
   paymentSlips: PaymentSlip[];

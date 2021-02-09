@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
-import { UserService } from './services/user.service';
+import { CustomerService } from './services/customer.service';
 import { PaymentSlipService } from './services/payment-slip.service';
 import { serviceProviders } from './service.providers';
 import { DatabaseModule } from '../database/database.module';
 
 @Module({
   imports: [DatabaseModule],
-  providers: [PaymentSlipService, UserService, ...serviceProviders],
-  exports: [PaymentSlipService, UserService, ...serviceProviders],
+  providers: [PaymentSlipService, CustomerService, ...serviceProviders],
+  exports: [PaymentSlipService, CustomerService, ...serviceProviders],
 })
 export class ServiceCoreModule {}
 
