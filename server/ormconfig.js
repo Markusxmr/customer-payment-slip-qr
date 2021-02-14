@@ -18,7 +18,7 @@ const shared = {
 const dev = {
   host: DB_HOST,
   username: 'postgres',
-  password: 'postgres',
+  password: process.env.DB_PASSWORD ?? 'postgres',
   database: 'transactor_dev',
   ...shared,
 };
