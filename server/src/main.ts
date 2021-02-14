@@ -16,7 +16,7 @@ async function bootstrap() {
     origin: ['http://localhost:10001'],
   });
   // @ts-ignore
-  app.useStaticAssets(join(__dirname, '..', 'public'));
+  app.useStaticAssets(join(__dirname, '../..', 'public'));
   await app.listen(PORT);
   console.log(`Server is running on port: ${PORT || 3000}`);
 }

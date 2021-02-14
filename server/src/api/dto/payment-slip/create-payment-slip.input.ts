@@ -2,6 +2,6 @@ import { InputType, Int, Field } from '@nestjs/graphql';
 
 @InputType()
 export class CreatePaymentSlipInput {
-  @Field(() => Int, { description: 'Example field (placeholder)' })
-  exampleField: number;
+  @Field(() => Int, { description: 'ISP ID' })
+  isp_id: number;
 }

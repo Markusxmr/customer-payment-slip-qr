@@ -5,7 +5,7 @@ export let primatelj = {
   iban_primatelja: 'HR1723600001101234565',
 };
 
-export function setPaymentSlip(customer) {
+export function setPaymentSlip({ isp, customer }) {
   return {
     // poziv_na_broj_platitelja: '',
     // poziv_na_broj_primatelja: '',
@@ -28,5 +28,6 @@ export function setPaymentSlip(customer) {
     // opis_placanja: '',
     // nalog: '-',
     customer_id: Number(customer.id),
+    isp_id: isp?.id ?? 1,
   };
 }

@@ -6,6 +6,8 @@ import { Customer } from '../../entities/customer.entity';
 
 @Injectable()
 export class CustomerService {
+  private relations = ['paymentSlips'];
+
   constructor(
     @Inject('CUSTOMER_REPOSITORY')
     private customerRepository: Repository<Customer>,

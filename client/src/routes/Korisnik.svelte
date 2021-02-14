@@ -1,11 +1,12 @@
 <script lang="ts">
-  import printJS from "print-js";
   import { setPaymentSlip } from "../services/set-payment-slip";
   import Uplatnica from "../components/Uplatnica.svelte";
   import config from "../config";
 
   export let params = {};
   let customer;
+  let isps = [];
+  let isp_id;
   let model;
   let paymentSlips = [];
 
@@ -21,6 +22,23 @@
     setTimeout(() => window.print(), 1000);
   }
 
+  function getIsps() {
+    fetch(`${config.url}/isp`, {
+      headers: {
+        accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then(async (res) => {
+        isps = await res.json();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  getIsps();
+
   async function getCustomer() {
     fetch(`${config.url}/customer/${params.id}`, {
       headers: {
@@ -35,14 +53,14 @@
 
   getCustomer();
 
-  function newPaymentSlip() {
+  function newPaymentSlip(isp) {
     fetch(`${config.url}/payment-slip`, {
       headers: {
         accept: "application/json",
         "Content-Type": "application/json",
       },
       method: "POST",
-      body: JSON.stringify(setPaymentSlip(customer)),
+      body: JSON.stringify(setPaymentSlip({ isp, customer })),
     }).then(async (res) => {
       let data = await res.json();
       getCustomer();
@@ -62,11 +80,27 @@
 {/each}
 
 <fieldset class="noprint" style="text-align: center">
-  <button
-    class="btn btn-primary btn-sm"
-    name="novi-nalog"
-    on:click={newPaymentSlip}>Novi nalog</button
-  >
+  <div class="dropdown" style="display: inline-block">
+    <button
+      class="btn btn-primary btn-sm dropdown-toggle"
+      type="button"
+      name="novi-nalog"
+      id="dropdownMenuButton1"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Novi nalog
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      {#each isps as isp}
+        <li>
+          <button class="dropdown-item" on:click={() => newPaymentSlip(isp)}
+            >{isp.name}</button
+          >
+        </li>
+      {/each}
+    </ul>
+  </div>
 
   <button class="btn btn-warning btn-sm" on:click={printWithBackground}
     >Print</button

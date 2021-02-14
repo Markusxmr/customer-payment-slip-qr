@@ -30,11 +30,12 @@ export class CustomerController {
 
   @Post()
   async create(@Body() createCustomerDto: CreateCustomerDto) {
+    const isp = { isp_id: 1 };
     const customer = await this.customerService.create(createCustomerDto);
 
     const items = new Array(12);
     for (const item of items) {
-      await this.paymentSlipService.create(setPaymentSlip(customer));
+      await this.paymentSlipService.create(setPaymentSlip({ isp, customer }));
     }
   }
 
@@ -69,6 +70,7 @@ export class CustomerController {
   @Post('xls')
   @UseInterceptors(FileInterceptor('file'))
   async uploadFile(@Response() res, @UploadedFile() file) {
+    const isp = { isp_id: 1 };
     const filePath = join(process.cwd(), 'files', file.originalname);
     const jsonPath = filePath.replace('xlsx', 'json').replace('xls', 'json');
     fs.writeFileSync(filePath, file.buffer, {});
@@ -114,8 +116,8 @@ export class CustomerController {
         const customerInstances = await this.customerService.createMany(
           customers,
         );
-        for (const customerInstance of customerInstances) {
-          const items = new Array(12).fill(setPaymentSlip(customerInstance));
+        for (const customer of customerInstances) {
+          const items = new Array(12).fill(setPaymentSlip({ isp, customer }));
           await this.paymentSlipService.createMany(items);
         }
       } catch (error) {

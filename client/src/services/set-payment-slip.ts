@@ -1,6 +1,6 @@
 import { primatelj } from "../model";
 
-export function setPaymentSlip(customer) {
+export function setPaymentSlip({ isp, customer }) {
   return {
     id: null,
     poziv_na_broj_platitelja: "",
@@ -24,5 +24,6 @@ export function setPaymentSlip(customer) {
     opis_placanja: "Opis uplate",
     nalog: "-",
     customer_id: Number(customer.id),
+    isp_id: isp?.id,
   };
 }

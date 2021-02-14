@@ -1,1 +1,3 @@
-export class CreatePaymentSlipDto {}
+export class CreatePaymentSlipDto {
+  isp_id: number;
+}

@@ -1,27 +1,41 @@
 import Home from "./routes/Home.svelte";
-import Korisnik from "./routes/Korisnik.svelte";
-import UpdateKorisnik from "./components/Customer/Edit.svelte";
-import NoviKorisnik from "./components/Customer/New.svelte";
-import Korisnici from "./routes/Korisnici.svelte";
+import Isps from "./routes/Isps.svelte";
+import Isp from "./routes/Isp.svelte";
+import Customer from "./routes/Korisnik.svelte";
+import EditISP from "./components/ISP/Edit.svelte";
+import NewISP from "./components/ISP/New.svelte";
+import EditCustomer from "./components/Customer/Edit.svelte";
+import NewCustomer from "./components/Customer/New.svelte";
+import Customers from "./routes/Korisnici.svelte";
 import NotFound from "./routes/NotFound.svelte";
 
 let routes;
 const urlParams = new URLSearchParams(window.location.search);
 if (!urlParams.has("routemap")) {
   routes = {
-    "/": Korisnici,
-    "/korisnik/new": NoviKorisnik,
-    "/korisnik/:id/edit": UpdateKorisnik,
-    "/korisnik/:id": Korisnik,
+    "/": Customers,
+    "/korisnik": Customers,
+    "/korisnik/new": NewCustomer,
+    "/korisnik/:id/edit": EditCustomer,
+    "/korisnik/:id": Customer,
+    "/isp": Isps,
+    "/isp/new": NewISP,
+    "/isp/:id/edit": EditISP,
+    "/isp/:id": Isp,
     "/logout": Home,
     "*": NotFound,
   };
 } else {
   routes = new Map();
-  routes.set("/", Korisnici);
-  routes.set("/korisnik/new", NoviKorisnik);
-  routes.set("/korisnik/:id/edit", UpdateKorisnik);
-  routes.set("/korisnik/:id", Korisnik);
+  routes.set("/", Customers);
+  routes.set("/korisnik", Customers);
+  routes.set("/korisnik/new", NewCustomer);
+  routes.set("/korisnik/:id/edit", EditCustomer);
+  routes.set("/korisnik/:id", Customer);
+  routes.set("/isp", Isps);
+  routes.set("/isp/new", NewISP);
+  routes.set("/isp/:id/edit", EditISP);
+  routes.set("/isp/:id", Isp);
   routes.set("*", NotFound);
 }
 

@@ -62,3 +62,16 @@ export let primatelj = {
   postanski_i_grad_primatelja: `47300 Ogulin`,
   iban_primatelja: "HR1723600001101234565",
 };
+
+export let isp = {
+  id: "",
+  name: "",
+  street: "",
+  postalCode: "",
+  city: "",
+  oib: "",
+  iban: "",
+  inserted_at: "",
+  updated_at: "",
+  paymentSlips: [],
+};
