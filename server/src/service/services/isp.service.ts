@@ -1,7 +1,7 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateIspDto } from '../../api/dto/isp/create-isp.dto';
 import { UpdateIspDto } from '../../api/dto/isp/update-isp.dto';
-import { Repository } from 'typeorm';
+import { getManager, Repository } from 'typeorm';
 import { Isp } from '../../entities/isp.entity';
 
 @Injectable()
@@ -26,7 +26,7 @@ export class IspService {
   }
 
   findAll() {
-    return this.ispRepository.find();
+    return getManager().query(`select * from isps`);
   }
 
   findOne(id: number) {

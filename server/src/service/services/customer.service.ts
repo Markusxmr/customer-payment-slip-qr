@@ -1,7 +1,7 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateCustomerDto } from '../../api/dto/customer/create-customer.dto';
 import { UpdateCustomerDto } from '../../api/dto/customer/update-customer.dto';
-import { DeleteResult, Repository } from 'typeorm';
+import { DeleteResult, getManager, Repository } from 'typeorm';
 import { Customer } from '../../entities/customer.entity';
 
 @Injectable()
@@ -27,6 +27,7 @@ export class CustomerService {
   }
 
   findAll(options?: Record<string, unknown>) {
+    return getManager().query(`select * from customers`);
     return this.customerRepository
       .createQueryBuilder('customers')
       .leftJoinAndSelect('customers.paymentSlips', 'paymentSlips')
@@ -38,7 +39,23 @@ export class CustomerService {
       .getMany();
   }
 
-  findOne(id: number) {
+  async findOne(id: number) {
+    const customer = await getManager().query(
+      `select * from customers where id = $1`,
+      [id],
+    );
+
+    const paymentSlips = await getManager().query(
+      `select * from payment_slips where customer_id = $1`,
+      [id],
+    );
+
+    if (customer.length === 0) {
+      throw new NotFoundException();
+    }
+
+    return { ...customer[0], paymentSlips };
+
     return this.customerRepository
       .createQueryBuilder('customers')
       .leftJoinAndSelect('customers.paymentSlips', 'paymentSlips')

@@ -1,7 +1,7 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { CreatePaymentSlipDto } from '../../api/dto/payment-slip/create-payment-slip.dto';
 import { UpdatePaymentSlipDto } from '../../api/dto/payment-slip/update-payment-slip.dto';
-import { Repository } from 'typeorm';
+import { Repository, getManager } from 'typeorm';
 import { PaymentSlip } from '../../entities/payment-slip.entity';
 
 @Injectable()
@@ -26,7 +26,7 @@ export class PaymentSlipService {
   }
 
   findAll() {
-    return this.paymentSlipRepository.find();
+    return getManager().query(`select * from payment_slips`);
   }
 
   findOne(id: number) {

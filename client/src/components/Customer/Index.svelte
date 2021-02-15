@@ -161,46 +161,6 @@
 
 <div id="customers" />
 
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Naziv</th>
-        <th scope="col">Adresa</th>
-        <th scope="col">Mjesto</th>
-        <th class="text-center" scope="col">Akcije</th>
-      </tr>
-    </thead>
-    <tbody>
-      {#if loading}
-        <br />
-        <h4>Učitavanje...</h4>
-      {/if}
-      {#each models as item, i}
-        <tr>
-          <th scope="row">{item?.id}</th>
-          <td style="width: 250px">{item?.naziv}</td>
-          <td>{item?.adresa}</td>
-          <td>{item?.mjesto}</td>
-          <td class="text-center actions">
-            <a href="/#/korisnik/{item.id}" class="btn btn-success btn-sm"
-              >Pregled</a
-            >
-            <a href="/#/korisnik/{item.id}/edit" class="btn btn-primary btn-sm"
-              >Uredi</a
-            >
-            <button
-              class="btn btn-danger btn-sm"
-              on:click={() => deleteCustomer(item.id)}>Izbriši</button
-            >
-          </td>
-        </tr>
-      {/each}
-    </tbody>
-  </table>
-</div>
-
 <style>
   .actions {
     display: grid;
