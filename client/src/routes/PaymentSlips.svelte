@@ -1,28 +1,17 @@
 <script lang="ts">
-  import config from "src/config";
+  import config from "../config";
+  import { store } from "../store";
 
   import PaymentSlip from "../components/PaymentSlip/Index.svelte";
+  import { getPaymentSlips } from "../services/http";
 
   let paymentSlips: any[] = [];
   let data = [];
   let loading = false;
 
-  async function getPaymentSlips() {
-    loading = true;
-    fetch(`${config.url}/payment-slip`, {
-      headers: {
-        accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
-      .then(async (res) => {
-        paymentSlips = await res.json();
-        loading = false;
-      })
-      .catch((err) => {
-        loading = false;
-      });
-  }
+  store.subscribe((state) => {
+    paymentSlips = state?.paymentSlips;
+  });
 
   getPaymentSlips();
 </script>

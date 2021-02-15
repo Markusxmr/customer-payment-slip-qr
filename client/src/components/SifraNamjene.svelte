@@ -1,12 +1,13 @@
 <script lang="ts">
   export let sifra_namjene;
+  let key = Math.random();
 </script>
 
 <select
   bind:value={sifra_namjene}
   class="form-field form-field--sifra-namjene"
   maxlength="4"
-  id="sifra_namjene"
+  id="{key}-sifra_namjene"
   ><option value="" /><option value="ADMG">ADMG - Administracija</option><option
     value="GVEA">GVEA - Austrijski državni zaposlenici, Kategorija A</option
   ><option value="GVEB"

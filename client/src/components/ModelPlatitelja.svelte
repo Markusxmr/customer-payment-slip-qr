@@ -1,12 +1,13 @@
 <script lang="ts">
   export let model_platitelja;
+  let key = Math.random();
 </script>
 
 <select
   bind:value={model_platitelja}
   class="form-field form-field--model-platitelja"
   maxlength="4"
-  id="model_platitelja"
+  id="{key}-model_platitelja"
   ><option value="" />
   <option value="HR00">HR00</option><option value="HR01">HR01</option><option
     value="HR02">HR02</option

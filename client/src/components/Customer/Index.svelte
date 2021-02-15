@@ -5,6 +5,7 @@
 
   import XlsUpload from "../XlsUpload.svelte";
   import { model } from "src/model";
+  import { onMount } from "svelte";
 
   let search = "";
   let loading = false;
@@ -12,6 +13,17 @@
   let hot: Handsontable;
   let colHeaders: string[] = [];
   let data = [];
+  let container;
+  let tableMounted = false;
+
+  onMount(() => {
+    container = document.getElementById("customers");
+  });
+
+  $: if (container && models.length > 0 && tableMounted === false) {
+    createTable();
+    tableMounted = true;
+  }
 
   const _debounce = {
     data() {
@@ -30,15 +42,14 @@
     let viewBtn = document.createElement("a");
     let deleteBtn = document.createElement("a");
     viewBtn.href = `/#/korisnik/${stringifiedValue}`;
-    deleteBtn.href = `/#/korisnik/${stringifiedValue}`;
     viewBtn.className = "btn btn-success btn-sm";
     deleteBtn.className = "btn btn-danger btn-sm";
     viewBtn.textContent = "Pregled";
     deleteBtn.textContent = "Izbriši";
-    let buttons = `
-  <a href="/#/korisnik/{item.id}" class="btn btn-success btn-sm">Pregled</a>
-  <button class="btn btn-danger btn-sm" on:click={() => deleteCustomer(item.id)}>Izbriši</button>
-  `;
+    deleteBtn.addEventListener("click", (event) => {
+      deleteCustomer(stringifiedValue);
+    });
+
     let container = document.createElement("div");
     container.appendChild(viewBtn);
     container.appendChild(deleteBtn);
@@ -51,7 +62,6 @@
   }
 
   function createTable() {
-    let container = document.getElementById("customers");
     hot = new Handsontable(container, {
       data: data,
       rowHeaders: true,
@@ -60,6 +70,16 @@
       dropdownMenu: true,
       manualColumnResize: true,
       manualRowResize: true,
+      afterChange: function (change, source) {
+        if (change) {
+          let [index, column, prevVal, newVal] = change[0] ?? [];
+          if (source === "loadData") {
+            return; //don't save this change
+          }
+          let user = { ...data[index], [column]: newVal };
+          updateCustomer(user);
+        }
+      },
       columns: [
         ...Object.keys(data[0]).map((key) => {
           if (key === "Akcije")
@@ -90,8 +110,8 @@
         }));
         colHeaders = Object.keys(models[0] ?? []);
         data = models;
+
         loading = false;
-        createTable();
       })
       .catch((err) => {
         loading = false;
@@ -121,12 +141,25 @@
 
     if (!promptVal) return;
 
-    fetch(`${config.url}/user/${id}`, {
+    fetch(`${config.url}/customer/${id}`, {
       method: "DELETE",
       headers: {
         accept: "application/json",
         "Content-Type": "application/json",
       },
+    }).then(async (res) => {
+      getCustomers();
+    });
+  }
+
+  function updateCustomer(user) {
+    fetch(`${config.url}/customer/${user.id}`, {
+      method: "PUT",
+      headers: {
+        accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
     }).then(async (res) => {
       getCustomers();
     });

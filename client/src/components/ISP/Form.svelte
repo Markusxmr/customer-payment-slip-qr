@@ -3,18 +3,20 @@
   export let submit;
 </script>
 
-<form action="/users" on:submit|preventDefault={submit}>
+<form action="/users" on:submit|preventDefault={() => submit(isp)}>
   <div class="row">
-    <div class="mb-2 col-md-4 col-sm-12">
-      <label for="user_id">ID</label>
-      <input
-        class="form-control"
-        id="isp_id"
-        name="isp[id]"
-        type="number"
-        bind:value={isp["id"]}
-      />
-    </div>
+    {#if isp["id"] === null}
+      <div class="mb-2 col-md-4 col-sm-12">
+        <label for="user_id">ID</label>
+        <input
+          class="form-control"
+          id="isp_id"
+          name="isp[id]"
+          type="number"
+          bind:value={isp["id"]}
+        />
+      </div>
+    {/if}
 
     <div class="mb-2 col-md-4 col-sm-12">
       <label for="isp_name">Naziv</label>
@@ -67,6 +69,8 @@
         id="isp_oib"
         name="isp[oib]"
         type="number"
+        minlength="11"
+        maxlength="11"
         bind:value={isp["oib"]}
       />
     </div>
@@ -78,6 +82,8 @@
         id="isp_iban"
         name="isp[iban]"
         type="text"
+        minlength="21"
+        maxlength="21"
         bind:value={isp["iban"]}
       />
     </div>

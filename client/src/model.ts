@@ -64,14 +64,11 @@ export let primatelj = {
 };
 
 export let isp = {
-  id: "",
-  name: "",
-  street: "",
-  postalCode: "",
-  city: "",
-  oib: "",
-  iban: "",
-  inserted_at: "",
-  updated_at: "",
-  paymentSlips: [],
+  id: undefined,
+  name: null,
+  street: null,
+  postalCode: null,
+  city: null,
+  oib: null,
+  iban: null,
 };

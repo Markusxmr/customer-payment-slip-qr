@@ -1,6 +1,8 @@
 <script lang="ts">
   import Handsontable from "handsontable";
+  import { getCustomer, updatePaymentSlip } from "../../services/http";
   import { onMount } from "svelte";
+  import { store } from "../../store";
 
   export let paymentSlips: any[] = [];
   let key = Math.random();
@@ -10,9 +12,15 @@
   let data = [];
   let loading = false;
   let container;
-  let mounted = false;
-  if (paymentSlips) {
-    prevSlips = paymentSlips;
+  let tableMounted = false;
+
+  store.subscribe((state) => {
+    paymentSlips = state?.paymentSlips;
+
+    setTableData();
+  });
+
+  function setTableData() {
     colHeaders = Object.keys(paymentSlips[0]);
     data = paymentSlips.map((model, i) => {
       return {
@@ -20,11 +28,19 @@
         renderer: "html",
       };
     });
+    if (hot) {
+      hot.loadData(data);
+    }
   }
 
-  $: if (container && mounted === false) {
+  if (paymentSlips.length > 0) {
+    prevSlips = paymentSlips;
+    setTableData();
+  }
+
+  $: if (container && paymentSlips.length > 0 && tableMounted === false) {
     createTable();
-    mounted = true;
+    tableMounted = true;
   }
 
   function createTable() {
@@ -38,10 +54,18 @@
       manualRowResize: true,
       afterChange: function (change, source) {
         if (change) {
-          let [index, column, _, cellData] = change[0] ?? [];
+          let [index, column, prevVal, newVal] = change[0] ?? [];
           if (source === "loadData") {
             return; //don't save this change
           }
+          let item = {
+            ...(data[index]?.data ?? data[index]),
+            [column]: newVal,
+          };
+
+          updatePaymentSlip(item).then(() => {
+            getCustomer({ id: item?.customer_id });
+          });
         }
       },
       licenseKey: "non-commercial-and-evaluation",

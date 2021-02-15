@@ -82,7 +82,7 @@
         <fieldset class="fieldset-platitelj">
           <div>
             <input
-              id="ime_i_prezime_platitelja"
+              id="{key}-ime_i_prezime_platitelja"
               class="form-field"
               class:form-field-invalid={!model.ime_i_prezime_platitelja}
               type="text"
@@ -92,7 +92,7 @@
           </div>
           <div>
             <input
-              id="ulica_i_broj_platitelja"
+              id="{key}-ulica_i_broj_platitelja"
               class="form-field"
               class:form-field-invalid={!model.ulica_i_broj_platitelja}
               type="text"
@@ -102,7 +102,7 @@
           </div>
           <div>
             <input
-              id="postanski_i_grad_platitelja"
+              id="{key}-postanski_i_grad_platitelja"
               class="form-field"
               class:form-field-invalid={!model.postanski_i_grad_platitelja}
               type="text"
@@ -114,7 +114,7 @@
         <fieldset class="fieldset-primatelj">
           <div>
             <input
-              id="ime_i_prezime_primatelja"
+              id="{key}-ime_i_prezime_primatelja"
               class="form-field"
               class:form-field-invalid={!model.naziv_primatelja}
               type="text"
@@ -124,7 +124,7 @@
           </div>
           <div>
             <input
-              id="ulica_i_broj_primatelja"
+              id="{key}-ulica_i_broj_primatelja"
               class="form-field"
               class:form-field-invalid={!model.ulica_i_broj_primatelja}
               type="text"
@@ -134,7 +134,7 @@
           </div>
           <div>
             <input
-              id="postanski_i_grad_primatelja"
+              id="{key}-postanski_i_grad_primatelja"
               class="form-field"
               class:form-field-invalid={!model.postanski_i_grad_primatelja}
               type="text"
@@ -148,7 +148,7 @@
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
           <div>
             <input
-              id="hitno"
+              id="{key}-hitno"
               class="form-field form-field--hitno"
               type="text"
               placeholder="hitno"
@@ -158,7 +158,7 @@
           </div>
           <div>
             <input
-              id="valuta_placanja"
+              id="{key}-valuta_placanja"
               class="form-field form-field--valuta_placanja"
               type="text"
               maxlength="3"
@@ -168,7 +168,7 @@
           </div>
           <div>
             <input
-              id="iznos"
+              id="{key}-iznos"
               class="form-field form-field--iznos "
               class:form-field-invalid={!model.iznos}
               type="text"
@@ -180,7 +180,7 @@
         <br />
         <div>
           <input
-            id="iban_platitelja"
+            id="{key}-iban_platitelja"
             class="form-field form-field--iban-platitelja"
             type="text"
             placeholder="IBAN platitelja"
@@ -195,7 +195,7 @@
           </div>
           <div>
             <input
-              id="poziv_na_broj_platitelja"
+              id="{key}-poziv_na_broj_platitelja"
               class="form-field form-field--poziv-na-platitelja"
               type="text"
               placeholder="Poziv na br platitelja"
@@ -207,7 +207,7 @@
         <br />
         <div>
           <input
-            id="iban_primatelja"
+            id="{key}-iban_primatelja"
             class="form-field form-field--iban-primatelja"
             class:form-field-invalid={!model.iban_primatelja}
             type="text"
@@ -223,7 +223,7 @@
           </div>
           <div>
             <input
-              id="poziv_na_broj_primatelja"
+              id="{key}-poziv_na_broj_primatelja"
               class="form-field form-field--poziv-na-broj-primatelja"
               placeholder="Poziv na br primatelja"
               maxlength="22"
@@ -239,7 +239,7 @@
           </div>
           <div>
             <input
-              id="datum_izvrsenja"
+              id="{key}-datum_izvrsenja"
               class="form-field form-field--datum_izvrsenja"
               placeholder="Datum izvrsenja"
               maxlength="8"
@@ -251,7 +251,7 @@
             class="form-field form-field--opis {!model.opis_placanja
               ? 'form-field-invalid'
               : ''}"
-            id="opis_placanja"
+            id="{key}-opis_placanja"
             cols="33"
             rows="4"
             placeholder="opis plaćanja"

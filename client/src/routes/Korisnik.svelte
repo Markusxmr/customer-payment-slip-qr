@@ -2,7 +2,8 @@
   import PaymentSlip from "../components/PaymentSlip/Index.svelte";
   import { setPaymentSlip } from "../services/set-payment-slip";
   import Uplatnica from "../components/Uplatnica.svelte";
-  import config from "../config";
+  import { getCustomer, getIsps, newPaymentSlip } from "src/services/http";
+  import { store } from "src/store";
 
   export let params = {};
   let customer;
@@ -10,8 +11,12 @@
   let isp_id;
   let model;
   let paymentSlips = [];
-
   let textOnlyPrint = false;
+
+  store.subscribe((state) => {
+    customer = state?.customer;
+    paymentSlips = customer?.paymentSlips ?? [];
+  });
 
   function printWithBackground() {
     textOnlyPrint = false;
@@ -23,48 +28,19 @@
     setTimeout(() => window.print(), 1000);
   }
 
-  function getIsps() {
-    fetch(`${config.url}/isp`, {
-      headers: {
-        accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
-      .then(async (res) => {
-        isps = await res.json();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  getIsps().then(async (data) => {
+    isps = data;
+  });
+
+  function fetchCustomer(params) {
+    getCustomer(params);
   }
 
-  getIsps();
+  fetchCustomer(params);
 
-  async function getCustomer() {
-    fetch(`${config.url}/customer/${params.id}`, {
-      headers: {
-        accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    }).then(async (res) => {
-      customer = await res.json();
-      paymentSlips = customer?.paymentSlips;
-    });
-  }
-
-  getCustomer();
-
-  function newPaymentSlip(isp) {
-    fetch(`${config.url}/payment-slip`, {
-      headers: {
-        accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-      body: JSON.stringify(setPaymentSlip({ isp, customer })),
-    }).then(async (res) => {
-      let data = await res.json();
-      getCustomer();
+  function addPaymentSlip(isp) {
+    newPaymentSlip(setPaymentSlip({ isp, customer })).then(async (data) => {
+      fetchCustomer(params);
       setTimeout(() => {
         window.scrollTo(0, document.body.scrollHeight);
       }, 1000);
@@ -102,7 +78,7 @@
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
       {#each isps as isp}
         <li>
-          <button class="dropdown-item" on:click={() => newPaymentSlip(isp)}
+          <button class="dropdown-item" on:click={() => addPaymentSlip(isp)}
             >{isp.name}</button
           >
         </li>
