@@ -52,20 +52,19 @@
       dropdownMenu: true,
       manualColumnResize: true,
       manualRowResize: true,
-      afterChange: function (change, source) {
-        if (change) {
-          let [index, column, prevVal, newVal] = change[0] ?? [];
-          if (source === "loadData") {
-            return; //don't save this change
-          }
-          let item = {
-            ...(data[index]?.data ?? data[index]),
-            [column]: newVal,
-          };
+      afterChange: function (changes, source) {
+        if (changes) {
+          for (const change of changes) {
+            let [index, column, prevVal, newVal] = change ?? [];
+            if (source === "loadData") {
+              return; //don't save this change
+            }
+            let item = { ...data[index], [column]: newVal };
 
-          updatePaymentSlip(item).then(() => {
-            getCustomer({ id: item?.customer_id });
-          });
+            updatePaymentSlip(item).then(() => {
+              getCustomer({ id: item?.customer_id });
+            });
+          }
         }
       },
       licenseKey: "non-commercial-and-evaluation",

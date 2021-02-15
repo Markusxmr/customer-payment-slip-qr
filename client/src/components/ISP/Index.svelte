@@ -96,16 +96,19 @@
       dropdownMenu: true,
       manualColumnResize: true,
       manualRowResize: true,
-      afterChange: function (change, source) {
-        if (change) {
-          let [index, column, prevVal, newVal] = change[0] ?? [];
-          if (source === "loadData") {
-            return; //don't save this change
+      afterChange: function (changes, source) {
+        if (changes) {
+          for (const change of changes) {
+            let [index, column, prevVal, newVal] = change ?? [];
+            if (source === "loadData") {
+              return; //don't save this change
+            }
+            let item = { ...data[index], [column]: newVal };
+            updateIsp(item).then(() => listIsp());
           }
-          let user = { ...data[index], [column]: newVal };
-          updateIsp(user).then(() => listIsp());
         }
       },
+
       columns: [
         ...Object.keys(data[0]).map((key) => {
           if (key === "Akcije")

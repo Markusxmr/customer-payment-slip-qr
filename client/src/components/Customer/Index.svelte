@@ -70,14 +70,16 @@
       dropdownMenu: true,
       manualColumnResize: true,
       manualRowResize: true,
-      afterChange: function (change, source) {
-        if (change) {
-          let [index, column, prevVal, newVal] = change[0] ?? [];
-          if (source === "loadData") {
-            return; //don't save this change
+      afterChange: function (changes, source) {
+        if (changes) {
+          for (const change of changes) {
+            let [index, column, prevVal, newVal] = change ?? [];
+            if (source === "loadData") {
+              return; //don't save this change
+            }
+            let user = { ...data[index], [column]: newVal };
+            updateCustomer(user);
           }
-          let user = { ...data[index], [column]: newVal };
-          updateCustomer(user);
         }
       },
       columns: [
