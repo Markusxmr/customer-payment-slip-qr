@@ -1,6 +1,5 @@
 <script lang="ts">
   import Router, { replace } from "svelte-spa-router";
-  import { get } from "svelte/store";
   import Navbar from "./components/Navbar.svelte";
   import routes from "./routes";
 
@@ -24,7 +23,7 @@
 <div class="noprint" style="margin-bottom: 89px">
   <Navbar />
 </div>
-<div class="container">
+<div>
   <Router
     {routes}
     on:conditionsFailed={conditionsFailed}

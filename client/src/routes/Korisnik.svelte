@@ -1,4 +1,5 @@
 <script lang="ts">
+  import PaymentSlip from "../components/PaymentSlip/Index.svelte";
   import { setPaymentSlip } from "../services/set-payment-slip";
   import Uplatnica from "../components/Uplatnica.svelte";
   import config from "../config";
@@ -78,6 +79,13 @@
     <Uplatnica bind:model printing={true} {textOnlyPrint} />
   </div>
 {/each}
+
+{#if paymentSlips.length > 0}
+  <div class="noprint">
+    <PaymentSlip {paymentSlips} />
+  </div>
+  <br />
+{/if}
 
 <fieldset class="noprint" style="text-align: center">
   <div class="dropdown" style="display: inline-block">

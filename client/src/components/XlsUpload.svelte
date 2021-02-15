@@ -36,7 +36,9 @@
 {/if}
 
 {#if files}
-  <button class="btn btn-secondary" on:click={upload}>Submit</button>
+  <button class="btn btn-secondary btn-sm" on:click={upload}>Submit</button>
 {:else}
-  <button class="btn btn-secondary" on:click={upload} disabled>Submit</button>
+  <button class="btn btn-secondary btn-sm" on:click={upload} disabled
+    >Submit</button
+  >
 {/if}

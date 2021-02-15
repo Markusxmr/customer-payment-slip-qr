@@ -1,34 +1,17 @@
 <script lang="ts">
   import { debounce } from "lodash";
+  import Handsontable from "handsontable";
   import config from "../../config";
 
   import XlsUpload from "../XlsUpload.svelte";
+  import { model } from "src/model";
 
   let search = "";
   let loading = false;
-  let model = {
-    poziv_na_broj_platitelja: "",
-    poziv_na_broj_primatelja: "",
-    iznos: "",
-    iban_primatelja: "",
-    iban_platitelja: "",
-    model_primatelja: "",
-    model_platitelja: "",
-    sifra_namjene: "",
-    datum_izvrsenja: "",
-    valuta_placanja: "HRK",
-    // Samo vrijednost X ili ništa
-    hitno: "X",
-    ime_i_prezime_platitelja: "Ime platitelja",
-    ulica_i_broj_platitelja: "",
-    ulica_i_broj_primatelja: "",
-    postanski_i_grad_platitelja: "",
-    postanski_i_grad_primatelja: "",
-    naziv_primatelja: "",
-    opis_placanja: "",
-    nalog: "-",
-  };
   let models = [];
+  let hot: Handsontable;
+  let colHeaders: string[] = [];
+  let data = [];
 
   const _debounce = {
     data() {
@@ -41,9 +24,56 @@
       }, 300),
     },
   };
-  function getCustomers() {
+
+  function actionRenderer(instance, td, row, col, prop, value, cellProperties) {
+    var stringifiedValue = Handsontable.helper.stringify(value);
+    let viewBtn = document.createElement("a");
+    let deleteBtn = document.createElement("a");
+    viewBtn.href = `/#/korisnik/${stringifiedValue}`;
+    deleteBtn.href = `/#/korisnik/${stringifiedValue}`;
+    viewBtn.className = "btn btn-success btn-sm";
+    deleteBtn.className = "btn btn-danger btn-sm";
+    viewBtn.textContent = "Pregled";
+    deleteBtn.textContent = "Izbriši";
+    let buttons = `
+  <a href="/#/korisnik/{item.id}" class="btn btn-success btn-sm">Pregled</a>
+  <button class="btn btn-danger btn-sm" on:click={() => deleteCustomer(item.id)}>Izbriši</button>
+  `;
+    let container = document.createElement("div");
+    container.appendChild(viewBtn);
+    container.appendChild(deleteBtn);
+    Handsontable.dom.addEvent(container, "mousedown", function (e) {
+      e.preventDefault(); // prevent selection quirk
+    });
+
+    Handsontable.dom.empty(td);
+    td.appendChild(container);
+  }
+
+  function createTable() {
+    let container = document.getElementById("customers");
+    hot = new Handsontable(container, {
+      data: data,
+      rowHeaders: true,
+      colHeaders,
+      filters: true,
+      dropdownMenu: true,
+      manualColumnResize: true,
+      manualRowResize: true,
+      columns: [
+        ...Object.keys(data[0]).map((key) => {
+          if (key === "Akcije")
+            return { data: "Akcije", renderer: actionRenderer };
+          return { data: key, renderer: "html" };
+        }),
+      ],
+      licenseKey: "non-commercial-and-evaluation",
+    });
+  }
+
+  async function getCustomers() {
     loading = true;
-    fetch(
+    await fetch(
       `${config.url}/customer?naziv=${search}&adresa=${search}&mjesta=${search}`,
       {
         headers: {
@@ -54,7 +84,14 @@
     )
       .then(async (res) => {
         models = await res.json();
+        models = models.map((model) => ({
+          Akcije: model?.id,
+          ...model,
+        }));
+        colHeaders = Object.keys(models[0] ?? []);
+        data = models;
         loading = false;
+        createTable();
       })
       .catch((err) => {
         loading = false;
@@ -101,8 +138,8 @@
 <div>
   <XlsUpload callback={getCustomers} />
   <br /><br />
-  <a class="btn btn-secondary" href="/#/korisnik/new">Novi korisnik</a>
-  <button class="btn btn-secondary" on:click={deleteCustomers}
+  <a class="btn btn-secondary btn-sm" href="/#/korisnik/new">Novi korisnik</a>
+  <button class="btn btn-secondary btn-sm" on:click={deleteCustomers}
     >Izbriši sve</button
   >
 </div>
@@ -121,6 +158,9 @@
     bind:value={search}
   />
 </form>
+
+<div id="customers" />
+
 <div class="table-responsive">
   <table class="table">
     <thead>

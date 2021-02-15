@@ -4,6 +4,7 @@ import "../assets/css/index.scss";
 // import "bootstrap/js/dist/dropdown";
 // import "bootstrap/js/dist/button";
 import "bootstrap/scss/bootstrap.scss";
+import "handsontable/dist/handsontable.full.css";
 
 new App({
   target: document.body,

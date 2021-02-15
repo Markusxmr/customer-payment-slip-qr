@@ -1,3 +1,7 @@
+<script lang="ts">
+  import active from "svelte-spa-router/active";
+</script>
+
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <button
@@ -15,11 +19,39 @@
       <a class="navbar-brand" href="#">App</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/#/isp">ISP</a>
+          <a
+            class="nav-link"
+            use:active={{
+              path: "/#/isp/*",
+              className: "active",
+              inactiveClassName: "inactive",
+            }}
+            aria-current="page"
+            href="/#/isp">ISP</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/#/korisnik"
-            >Korisnici</a
+          <a
+            class="nav-link"
+            use:active={{
+              path: "/#/korisnik/*",
+              className: "active",
+              inactiveClassName: "inactive",
+            }}
+            aria-current="page"
+            href="/#/korisnik">Korisnici</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            use:active={{
+              path: "/#/uplatnica/*",
+              className: "active",
+              inactiveClassName: "inactive",
+            }}
+            aria-current="page"
+            href="/#/uplatnica">Uplatnice</a
           >
         </li>
       </ul>
