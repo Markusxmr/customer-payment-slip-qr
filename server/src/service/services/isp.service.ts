@@ -29,8 +29,16 @@ export class IspService {
     return getManager().query(`select * from isps`);
   }
 
-  findOne(id: number) {
-    return this.ispRepository.findOne(id);
+  async findOne(id: number) {
+    const isps = await getManager().query(`select * from isps where id = $1`, [
+      id,
+    ]);
+
+    if (isps.length === 0) {
+      throw new NotFoundException();
+    }
+
+    return isps[0];
   }
 
   async update(id: number, updateIspDto: UpdateIspDto) {

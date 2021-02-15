@@ -31,11 +31,11 @@ export class PaymentSlip {
   isp_id: number;
 
   @Field(() => Int)
-  @Column({ type: 'int2', nullable: true })
+  @Column({ type: 'int2', nullable: true, default: 1 })
   month: number;
 
   @Field(() => Int)
-  @Column({ type: 'int4', nullable: true })
+  @Column({ type: 'int4', nullable: true, default: new Date().getFullYear() })
   year: number;
 
   @Field(() => String)
@@ -52,7 +52,7 @@ export class PaymentSlip {
 
   @Field(() => String)
   @Column({ type: 'text', nullable: true })
-  descriptiom: string;
+  description: string;
 
   @Field(() => Customer)
   @ManyToOne(() => Customer, (entity) => entity.paymentSlips, {
