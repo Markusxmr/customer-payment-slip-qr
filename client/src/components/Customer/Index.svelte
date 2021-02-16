@@ -6,7 +6,7 @@
   import XlsUpload from "../XlsUpload.svelte";
   import { model } from "../../model";
   import { onMount } from "svelte";
-  import { createCustomer } from "../../services/http";
+  import { createCustomer, getCustomer } from "../../services/http";
 
   let search = "";
   let loading = false;
@@ -99,7 +99,7 @@
           };
 
           if (item?.id) updateCustomer(item);
-          if (!item?.id) createCustomer(item);
+          if (!item?.id) createCustomer(item).then(() => getCustomers());
         }
       },
       columns: [
