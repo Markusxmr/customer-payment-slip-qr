@@ -5516,8 +5516,8 @@
         "affectsGlobalScope": false
       },
       "../src/service/services/customer.service.ts": {
-        "version": "9fc4b7e5fb38d0580a086e2a50c406df05d700971d89301cde5c83ee08c228e7",
-        "signature": "9e0de08c980a2be02c1006b49595b94a9186cee10ddcf5cfaae2593f631e4ee5",
+        "version": "5a296e85571fc901ea62512b0e45827bff3d7bba9614d0dac00a4a90641610d3",
+        "signature": "a9b112354b8c1530013777ad003856f1744d11a6f9ee51e82392e4a79efc762e",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts": {
@@ -5607,7 +5607,7 @@
       },
       "../src/api/controllers/customer.controller.ts": {
         "version": "47838bbeac0041be2a63b615aaf2b046fa161de4d01b90a163d00d03406778c0",
-        "signature": "578884346f96986434c5b10ccb4723ba5e4f5614c67d921b490c40daf1c87367",
+        "signature": "5d00b59a95de2a984427f3d38fcf7de960f1d39296ce75cc3381cade90bf9d84",
         "affectsGlobalScope": false
       },
       "../src/api/dto/customer/create-customer.input.ts": {
@@ -5622,7 +5622,7 @@
       },
       "../src/api/resolvers/customer.resolver.ts": {
         "version": "cc20f0da0a9febfe96610d95fff5b0b788aec3142ce3569313917caea9acc19d",
-        "signature": "21e1e9109dadcb701b8c07d511fb3a052bd77891ff2e7bafee24ec5f78282768",
+        "signature": "27f6407ffc30c36808e9c367cbe8a76a360a6d273793a709f695f080be614c41",
         "affectsGlobalScope": false
       },
       "../src/api/dto/payment-slip/create-payment-slip.input.ts": {
@@ -15417,7 +15417,6 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/api/dto/customer/create-customer.dto.ts",
         "../src/api/dto/customer/update-customer.dto.ts",
-        "../src/entities/customer.entity.ts",
         "../src/service/services/customer.service.ts",
         "../src/service/services/payment-slip.service.ts"
       ],

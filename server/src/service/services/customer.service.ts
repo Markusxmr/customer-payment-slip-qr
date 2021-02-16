@@ -82,7 +82,7 @@ export class CustomerService {
   }
 
   async remove(id: number) {
-    let item = await this.findOne(id);
+    let item = await this.customerRepository.findOne(id);
     if (!item) throw new NotFoundException();
     return this.customerRepository.delete(item.id);
   }

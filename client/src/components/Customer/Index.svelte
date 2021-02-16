@@ -86,9 +86,6 @@
       contextMenu: true,
       columnSorting: true,
       afterChange: function (changes, source) {
-        console.log(changes);
-        console.log(source);
-
         if (!changes) return;
 
         for (const change of changes) {

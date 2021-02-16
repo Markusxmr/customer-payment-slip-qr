@@ -43,7 +43,7 @@ export declare class CustomerService {
         updated_at: Date;
     } & Customer>;
     createMany(createCustomerDtos: CreateCustomerDto[]): Promise<any[]>;
-    findAll(options?: Record<string, unknown>): Promise<Customer[]>;
+    findAll(options?: Record<string, unknown>): Promise<any[]>;
     findOne(id: number): Promise<any>;
     update(id: number, updateCustomerDto: UpdateCustomerDto): Promise<any>;
     removeAll(): Promise<DeleteResult>;

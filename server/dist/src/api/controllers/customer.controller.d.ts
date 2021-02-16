@@ -7,7 +7,7 @@ export declare class CustomerController {
     private readonly paymentSlipService;
     constructor(customerService: CustomerService, paymentSlipService: PaymentSlipService);
     create(createCustomerDto: CreateCustomerDto): Promise<any>;
-    findAll(options: Record<string, unknown>): Promise<import("../../entities/customer.entity").Customer[]>;
+    findAll(options: Record<string, unknown>): Promise<any[]>;
     findOne(id: string): Promise<any>;
     update(id: string, updateCustomerDto: UpdateCustomerDto): Promise<any>;
     removeAll(): Promise<import("typeorm").DeleteResult>;

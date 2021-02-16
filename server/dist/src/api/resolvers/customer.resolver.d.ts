@@ -40,7 +40,7 @@ export declare class CustomerResolver {
         inserted_at: Date;
         updated_at: Date;
     } & Customer>;
-    findAll(): Promise<Customer[]>;
+    findAll(): Promise<any[]>;
     findOne(id: number): Promise<any>;
     updateCustomer(updateCustomerInput: UpdateCustomerInput): Promise<any>;
     removeCustomer(id: number): Promise<import("typeorm").DeleteResult>;

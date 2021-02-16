@@ -35,13 +35,14 @@ let CustomerService = class CustomerService {
         return this.customerRepository.save(items);
     }
     async findAll(options) {
-        return this.customerRepository
+        const items = await this.customerRepository
             .createQueryBuilder('customers')
             .where('naziv ilike :naziv', { naziv: `%${options === null || options === void 0 ? void 0 : options.naziv}%` })
             .orWhere('adresa ilike :adresa', { adresa: `%${options === null || options === void 0 ? void 0 : options.adresa}%` })
             .orWhere('mjesto ilike :mjesto', { mjesto: `%${options === null || options === void 0 ? void 0 : options.mjesto}%` })
             .orderBy('customers.id', 'DESC')
             .getMany();
+        return dto_1.dto(items, this.excludes);
     }
     async findOne(id) {
         const customer = await typeorm_1.getManager().query(`select * from customers where id = $1`, [id]);
@@ -73,7 +74,7 @@ let CustomerService = class CustomerService {
         return new typeorm_1.DeleteResult();
     }
     async remove(id) {
-        let item = await this.findOne(id);
+        let item = await this.customerRepository.findOne(id);
         if (!item)
             throw new common_1.NotFoundException();
         return this.customerRepository.delete(item.id);
