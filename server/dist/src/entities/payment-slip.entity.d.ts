@@ -1,0 +1,37 @@
+import { Customer } from './customer.entity';
+import { Isp } from './isp.entity';
+export declare class PaymentSlip {
+    id: number;
+    customer_id: number;
+    isp_id: number;
+    month: number;
+    year: number;
+    model: string;
+    pnb: string;
+    amount: number;
+    description: string;
+    customer: Customer;
+    isp: Isp;
+    inserted_at: Date;
+    updated_at: Date;
+    deleted: Date;
+    poziv_na_broj_platitelja: string;
+    poziv_na_broj_primatelja: string;
+    iznos: string;
+    iban_primatelja: string;
+    iban_platitelja: string;
+    model_primatelja: string;
+    model_platitelja: string;
+    sifra_namjene: string;
+    datum_izvrsenja: string;
+    valuta_placanja: string;
+    hitno: string;
+    ime_i_prezime_platitelja: string;
+    ulica_i_broj_platitelja: string;
+    ulica_i_broj_primatelja: string;
+    postanski_i_grad_platitelja: string;
+    postanski_i_grad_primatelja: string;
+    naziv_primatelja: string;
+    opis_placanja: string;
+    nalog: string;
+}

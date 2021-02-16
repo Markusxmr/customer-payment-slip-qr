@@ -1,0 +1,47 @@
+import { PaymentSlipService } from '../../service/services/payment-slip.service';
+import { PaymentSlip } from '../../entities/payment-slip.entity';
+import { CreatePaymentSlipInput } from '../dto/payment-slip/create-payment-slip.input';
+import { UpdatePaymentSlipInput } from '../dto/payment-slip/update-payment-slip.input';
+export declare class PaymentSlipResolver {
+    private readonly paymentSlipService;
+    constructor(paymentSlipService: PaymentSlipService);
+    createPaymentSlip(createPaymentSlipInput: CreatePaymentSlipInput): Promise<PaymentSlip>;
+    findAll(): Promise<any[]>;
+    findOne(id: number): Promise<PaymentSlip>;
+    updatePaymentSlip(updatePaymentSlipInput: UpdatePaymentSlipInput): Promise<{
+        isp_id: number;
+        id: number;
+        customer_id: number;
+        month: number;
+        year: number;
+        model: string;
+        pnb: string;
+        amount: number;
+        description: string;
+        customer: import("../../entities/customer.entity").Customer;
+        isp: import("../../entities/isp.entity").Isp;
+        inserted_at: Date;
+        updated_at: Date;
+        deleted: Date;
+        poziv_na_broj_platitelja: string;
+        poziv_na_broj_primatelja: string;
+        iznos: string;
+        iban_primatelja: string;
+        iban_platitelja: string;
+        model_primatelja: string;
+        model_platitelja: string;
+        sifra_namjene: string;
+        datum_izvrsenja: string;
+        valuta_placanja: string;
+        hitno: string;
+        ime_i_prezime_platitelja: string;
+        ulica_i_broj_platitelja: string;
+        ulica_i_broj_primatelja: string;
+        postanski_i_grad_platitelja: string;
+        postanski_i_grad_primatelja: string;
+        naziv_primatelja: string;
+        opis_placanja: string;
+        nalog: string;
+    } & PaymentSlip>;
+    removePaymentSlip(id: number): Promise<import("typeorm").DeleteResult>;
+}
