@@ -29,13 +29,15 @@ export class CustomerService {
   }
 
   async findAll(options?: Record<string, unknown>) {
-    return this.customerRepository
+    const items = await this.customerRepository
       .createQueryBuilder('customers')
       .where('naziv ilike :naziv', { naziv: `%${options?.naziv}%` })
       .orWhere('adresa ilike :adresa', { adresa: `%${options?.adresa}%` })
       .orWhere('mjesto ilike :mjesto', { mjesto: `%${options?.mjesto}%` })
       .orderBy('customers.id', 'DESC')
       .getMany();
+
+    return dto(items, this.excludes);
   }
 
   async findOne(id: number) {
