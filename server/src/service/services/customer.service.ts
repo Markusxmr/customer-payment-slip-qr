@@ -29,18 +29,12 @@ export class CustomerService {
   }
 
   async findAll(options?: Record<string, unknown>) {
-    const items = await getManager().query(
-      `select * from customers order by inserted_at desc`,
-    );
-    return dto(items, this.excludes);
     return this.customerRepository
       .createQueryBuilder('customers')
-      .leftJoinAndSelect('customers.paymentSlips', 'paymentSlips')
       .where('naziv ilike :naziv', { naziv: `%${options?.naziv}%` })
       .orWhere('adresa ilike :adresa', { adresa: `%${options?.adresa}%` })
       .orWhere('mjesto ilike :mjesto', { mjesto: `%${options?.mjesto}%` })
-      .orderBy('customers.inserted_at', 'DESC')
-      .addOrderBy('paymentSlips.id', 'DESC')
+      .orderBy('customers.id', 'DESC')
       .getMany();
   }
 
