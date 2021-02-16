@@ -82,6 +82,7 @@ export class CustomerService {
   }
 
   async remove(id: number) {
+    if (!id) throw new NotFoundException('Id not provided');
     let item = await this.customerRepository.findOne(id);
     if (!item) throw new NotFoundException();
     return this.customerRepository.delete(item.id);

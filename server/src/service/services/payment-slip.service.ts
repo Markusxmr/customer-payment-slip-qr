@@ -47,6 +47,7 @@ export class PaymentSlipService {
   }
 
   async remove(id: number) {
+    if (!id) throw new NotFoundException('Id not provided');
     let item = await this.findOne(id);
     if (!item) throw new NotFoundException();
     return this.paymentSlipRepository.delete(item.id);

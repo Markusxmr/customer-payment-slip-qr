@@ -55,6 +55,7 @@ export class IspService {
   }
 
   async remove(id: number) {
+    if (!id) throw new NotFoundException('Id not provided');
     let item = await this.findOne(id);
     if (!item) throw new NotFoundException();
     return this.ispRepository.delete(item.id);

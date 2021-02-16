@@ -53,6 +53,8 @@ let IspService = class IspService {
         return this.ispRepository.save(Object.assign(Object.assign({}, item), updateIspDto));
     }
     async remove(id) {
+        if (!id)
+            throw new common_1.NotFoundException('Id not provided');
         let item = await this.findOne(id);
         if (!item)
             throw new common_1.NotFoundException();

@@ -74,6 +74,8 @@ let CustomerService = class CustomerService {
         return new typeorm_1.DeleteResult();
     }
     async remove(id) {
+        if (!id)
+            throw new common_1.NotFoundException('Id not provided');
         let item = await this.customerRepository.findOne(id);
         if (!item)
             throw new common_1.NotFoundException();

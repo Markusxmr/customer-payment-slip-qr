@@ -47,6 +47,8 @@ let PaymentSlipService = class PaymentSlipService {
         return this.paymentSlipRepository.save(Object.assign(Object.assign({}, item), updatePaymentSlipDto));
     }
     async remove(id) {
+        if (!id)
+            throw new common_1.NotFoundException('Id not provided');
         let item = await this.findOne(id);
         if (!item)
             throw new common_1.NotFoundException();
