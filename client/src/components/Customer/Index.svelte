@@ -84,6 +84,7 @@
       manualColumnResize: true,
       manualRowResize: true,
       contextMenu: true,
+      columnSorting: true,
       afterChange: function (changes, source) {
         console.log(changes);
         console.log(source);
@@ -128,7 +129,7 @@
     )
       .then(async (res) => {
         models = await res.json();
-        setTableData()
+        setTableData();
         loading = false;
       })
       .catch((err) => {

@@ -53,6 +53,7 @@
       manualColumnResize: true,
       manualRowResize: true,
       contextMenu: true,
+      columnSorting: true,
       afterChange: function (changes, source) {
         if (!changes) return;
 
