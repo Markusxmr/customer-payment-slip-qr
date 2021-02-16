@@ -21,23 +21,23 @@ export class Isp {
   name: string;
 
   @Field(() => Int)
-  @Column({ type: 'varchar' })
+  @Column({ type: 'varchar', nullable: true })
   street: string;
 
   @Field(() => Int)
-  @Column({ type: 'integer' })
+  @Column({ type: 'integer', nullable: true })
   postalCode: number;
 
   @Field(() => Int)
-  @Column({ type: 'varchar' })
+  @Column({ type: 'varchar', nullable: true })
   city: string;
 
   @Field(() => Int)
-  @Column({ type: 'bigint' })
+  @Column({ type: 'bigint', nullable: true })
   oib: number;
 
   @Field(() => Int)
-  @Column({ type: 'varchar', length: 21 })
+  @Column({ type: 'varchar', length: 21, nullable: true })
   iban: string;
 
   @Field(() => [PaymentSlip])

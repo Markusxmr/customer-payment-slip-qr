@@ -4,8 +4,9 @@
   import config from "../../config";
 
   import XlsUpload from "../XlsUpload.svelte";
-  import { model } from "src/model";
+  import { model } from "../../model";
   import { onMount } from "svelte";
+  import { createCustomer } from "../../services/http";
 
   let search = "";
   let loading = false;
@@ -15,6 +16,18 @@
   let data = [];
   let container;
   let tableMounted = false;
+
+  async function setTableData() {
+    models = models.map((model) => ({
+      Akcije: model?.id,
+      ...model,
+    }));
+    colHeaders = Object.keys(models[0] ?? []);
+    data = models;
+    if (hot) {
+      hot.loadData(data);
+    }
+  }
 
   onMount(() => {
     container = document.getElementById("customers");
@@ -70,16 +83,25 @@
       dropdownMenu: true,
       manualColumnResize: true,
       manualRowResize: true,
+      contextMenu: true,
       afterChange: function (changes, source) {
-        if (changes) {
-          for (const change of changes) {
-            let [index, column, prevVal, newVal] = change ?? [];
-            if (source === "loadData") {
-              return; //don't save this change
-            }
-            let user = { ...data[index], [column]: newVal };
-            updateCustomer(user);
+        console.log(changes);
+        console.log(source);
+
+        if (!changes) return;
+
+        for (const change of changes) {
+          let [index, column, prevVal, newVal] = change ?? [];
+          if (source === "loadData") {
+            return; //don't save this change
           }
+          let item = {
+            ...(data[index]?.data ?? data[index]),
+            [column]: newVal,
+          };
+
+          if (item?.id) updateCustomer(item);
+          if (!item?.id) createCustomer(item);
         }
       },
       columns: [
@@ -106,13 +128,7 @@
     )
       .then(async (res) => {
         models = await res.json();
-        models = models.map((model) => ({
-          Akcije: model?.id,
-          ...model,
-        }));
-        colHeaders = Object.keys(models[0] ?? []);
-        data = models;
-
+        setTableData()
         loading = false;
       })
       .catch((err) => {

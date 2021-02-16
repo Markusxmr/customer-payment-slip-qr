@@ -37,6 +37,8 @@ export class CustomerController {
     for (const item of items) {
       await this.paymentSlipService.create(setPaymentSlip({ isp, customer }));
     }
+
+    return this.customerService.findOne(customer?.id);
   }
 
   @Get()

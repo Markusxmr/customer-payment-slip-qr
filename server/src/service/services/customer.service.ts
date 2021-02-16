@@ -3,10 +3,12 @@ import { CreateCustomerDto } from '../../api/dto/customer/create-customer.dto';
 import { UpdateCustomerDto } from '../../api/dto/customer/update-customer.dto';
 import { DeleteResult, getManager, Repository } from 'typeorm';
 import { Customer } from '../../entities/customer.entity';
+import { dto } from '../helpers/dto';
 
 @Injectable()
 export class CustomerService {
   private relations = ['paymentSlips'];
+  private excludes = ['inserted_at', 'updated_at'];
 
   constructor(
     @Inject('CUSTOMER_REPOSITORY')
@@ -26,8 +28,11 @@ export class CustomerService {
     return this.customerRepository.save(items);
   }
 
-  findAll(options?: Record<string, unknown>) {
-    return getManager().query(`select * from customers`);
+  async findAll(options?: Record<string, unknown>) {
+    const items = await getManager().query(
+      `select * from customers order by inserted_at desc`,
+    );
+    return dto(items, this.excludes);
     return this.customerRepository
       .createQueryBuilder('customers')
       .leftJoinAndSelect('customers.paymentSlips', 'paymentSlips')
@@ -45,10 +50,11 @@ export class CustomerService {
       [id],
     );
 
-    const paymentSlips = await getManager().query(
-      `select * from payment_slips where customer_id = $1`,
+    let paymentSlips = await getManager().query(
+      `select * from payment_slips where customer_id = $1 order by id desc`,
       [id],
     );
+    paymentSlips = dto(paymentSlips, this.excludes);
 
     if (customer.length === 0) {
       throw new NotFoundException();

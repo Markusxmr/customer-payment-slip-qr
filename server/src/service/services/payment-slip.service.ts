@@ -3,6 +3,7 @@ import { CreatePaymentSlipDto } from '../../api/dto/payment-slip/create-payment-
 import { UpdatePaymentSlipDto } from '../../api/dto/payment-slip/update-payment-slip.dto';
 import { Repository, getManager } from 'typeorm';
 import { PaymentSlip } from '../../entities/payment-slip.entity';
+import { dto } from '../helpers/dto';
 
 @Injectable()
 export class PaymentSlipService {
@@ -25,8 +26,11 @@ export class PaymentSlipService {
     return this.paymentSlipRepository.insert(items);
   }
 
-  findAll() {
-    return getManager().query(`select * from payment_slips`);
+  async findAll() {
+    const items = await getManager().query(
+      `select * from payment_slips order by id desc`,
+    );
+    return dto(items, ['inserted_at', 'updated_at']);
   }
 
   findOne(id: number) {

@@ -3,6 +3,7 @@ import { CreateIspDto } from '../../api/dto/isp/create-isp.dto';
 import { UpdateIspDto } from '../../api/dto/isp/update-isp.dto';
 import { getManager, Repository } from 'typeorm';
 import { Isp } from '../../entities/isp.entity';
+import { dto } from '../helpers/dto';
 
 @Injectable()
 export class IspService {
@@ -25,8 +26,11 @@ export class IspService {
     return this.ispRepository.insert(items);
   }
 
-  findAll() {
-    return getManager().query(`select * from isps`);
+  async findAll() {
+    const items = await getManager().query(
+      `select * from isps order by id desc`,
+    );
+    return dto(items, ['inserted_at', 'updated_at']);
   }
 
   async findOne(id: number) {

@@ -2,7 +2,7 @@
   import { debounce } from "lodash";
   import Handsontable from "handsontable";
   import { onMount } from "svelte";
-  import { deleteIsp, getIsps, updateIsp } from "src/services/http";
+  import { createIsp, deleteIsp, getIsps, updateIsp } from "src/services/http";
   import { store } from "src/store";
 
   let search = "";
@@ -96,16 +96,25 @@
       dropdownMenu: true,
       manualColumnResize: true,
       manualRowResize: true,
+      contextMenu: true,
       afterChange: function (changes, source) {
-        if (changes) {
-          for (const change of changes) {
-            let [index, column, prevVal, newVal] = change ?? [];
-            if (source === "loadData") {
-              return; //don't save this change
-            }
-            let item = { ...data[index], [column]: newVal };
-            updateIsp(item).then(() => listIsp());
+        console.log(changes);
+        console.log(source);
+
+        if (!changes) return;
+
+        for (const change of changes) {
+          let [index, column, prevVal, newVal] = change ?? [];
+          if (source === "loadData") {
+            return; //don't save this change
           }
+          let item = {
+            ...(data[index]?.data ?? data[index]),
+            [column]: newVal,
+          };
+
+          if (item?.id) updateIsp(item).then(() => listIsp());
+          if (!item?.id) createIsp(item).then(() => listIsp());
         }
       },
 
