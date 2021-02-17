@@ -48,7 +48,9 @@
   }
 </script>
 
-<h3 class="noprint" style="text-align: center">{customer?.naziv ?? "..."}</h3>
+<h3 class="noprint" style="text-align: center">
+  {customer?.naziv ?? "Obrada..."}
+</h3>
 
 {#each paymentSlips as model, i}
   <div class="print">
@@ -63,37 +65,39 @@
   <br />
 {/if}
 
-<fieldset class="noprint" style="text-align: center">
-  <div class="dropdown" style="display: inline-block">
-    <button
-      class="btn btn-primary btn-sm dropdown-toggle"
-      type="button"
-      name="novi-nalog"
-      id="dropdownMenuButton1"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      Novi nalog
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      {#each isps as isp}
-        <li>
-          <button class="dropdown-item" on:click={() => addPaymentSlip(isp)}
-            >{isp.name}</button
-          >
-        </li>
-      {/each}
-    </ul>
-  </div>
+{#if paymentSlips.length > 0}
+  <fieldset class="noprint" style="text-align: center">
+    <div class="dropdown" style="display: inline-block">
+      <button
+        class="btn btn-primary btn-sm dropdown-toggle"
+        type="button"
+        name="novi-nalog"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Novi nalog
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        {#each isps as isp}
+          <li>
+            <button class="dropdown-item" on:click={() => addPaymentSlip(isp)}
+              >{isp.name}</button
+            >
+          </li>
+        {/each}
+      </ul>
+    </div>
 
-  <button class="btn btn-warning btn-sm" on:click={printWithBackground}
-    >Print</button
-  >
-  <button class="btn btn-warning btn-sm" on:click={printTextOnly}
-    >Print bez slike</button
-  >
-</fieldset>
-<br />
+    <button class="btn btn-warning btn-sm" on:click={printWithBackground}
+      >Print</button
+    >
+    <button class="btn btn-warning btn-sm" on:click={printTextOnly}
+      >Print bez slike</button
+    >
+  </fieldset>
+  <br />
+{/if}
 
 <div class="accordion noprint" id="accordionExample">
   {#each paymentSlips as item, i}
@@ -121,7 +125,5 @@
         </div>
       </div>
     </div>
-  {:else}
-    <h3 class="text-align: center">Nema naloga</h3>
-  {/each}
+  {:else}{/each}
 </div>

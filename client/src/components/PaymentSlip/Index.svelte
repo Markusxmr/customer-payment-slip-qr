@@ -73,6 +73,14 @@
             });
         }
       },
+      beforeRemoveRow: function (
+        index: number,
+        amount: number,
+        physicalRows: number[],
+        source: Handsontable.ChangeSource
+      ) {
+        let item = data[index];
+      },
       licenseKey: "non-commercial-and-evaluation",
     });
   }

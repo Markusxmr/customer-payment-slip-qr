@@ -66,23 +66,15 @@
   function actionRenderer(instance, td, row, col, prop, value, cellProperties) {
     var stringifiedValue = Handsontable.helper.stringify(value);
     let viewBtn = document.createElement("a");
-    let deleteBtn = document.createElement("a");
     viewBtn.href = `/#/isp/${stringifiedValue}`;
     viewBtn.className = "btn btn-success btn-sm";
-    deleteBtn.className = "btn btn-danger btn-sm";
     viewBtn.textContent = "Pregled";
-    deleteBtn.textContent = "Izbriši";
-    deleteBtn.addEventListener("click", (event) => {
-      deleteIsp(stringifiedValue).then(() => listIsp());
-    });
 
     let container = document.createElement("div");
     container.appendChild(viewBtn);
-    container.appendChild(deleteBtn);
     Handsontable.dom.addEvent(container, "mousedown", function (e) {
       e.preventDefault(); // prevent selection quirk
     });
-
     Handsontable.dom.empty(td);
     td.appendChild(container);
   }
@@ -115,7 +107,15 @@
           if (!item?.id) createIsp(item).then(() => listIsp());
         }
       },
-
+      beforeRemoveRow: function (
+        index: number,
+        amount: number,
+        physicalRows: number[],
+        source: Handsontable.ChangeSource
+      ) {
+        let item = data[index];
+        if (item?.id) deleteIsp(item?.id);
+      },
       columns: [
         ...Object.keys(data[0]).map((key) => {
           if (key === "Akcije")

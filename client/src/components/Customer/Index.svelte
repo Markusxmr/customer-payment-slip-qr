@@ -53,19 +53,15 @@
   function actionRenderer(instance, td, row, col, prop, value, cellProperties) {
     var stringifiedValue = Handsontable.helper.stringify(value);
     let viewBtn = document.createElement("a");
-    let deleteBtn = document.createElement("a");
+    let icon = document.createElement("i");
+    icon.className = "arrow-right-square";
+    viewBtn.appendChild(icon);
     viewBtn.href = `/#/korisnik/${stringifiedValue}`;
     viewBtn.className = "btn btn-success btn-sm";
-    deleteBtn.className = "btn btn-danger btn-sm";
     viewBtn.textContent = "Pregled";
-    deleteBtn.textContent = "Izbriši";
-    deleteBtn.addEventListener("click", (event) => {
-      deleteCustomer(stringifiedValue);
-    });
 
     let container = document.createElement("div");
     container.appendChild(viewBtn);
-    container.appendChild(deleteBtn);
     Handsontable.dom.addEvent(container, "mousedown", function (e) {
       e.preventDefault(); // prevent selection quirk
     });
@@ -101,6 +97,15 @@
           if (item?.id) updateCustomer(item);
           if (!item?.id) createCustomer(item).then(() => getCustomers());
         }
+      },
+      beforeRemoveRow: function (
+        index: number,
+        amount: number,
+        physicalRows: number[],
+        source: Handsontable.ChangeSource
+      ) {
+        let item = data[index];
+        if (item?.id) deleteCustomer(item?.id);
       },
       columns: [
         ...Object.keys(data[0]).map((key) => {
