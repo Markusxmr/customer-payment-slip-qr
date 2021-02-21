@@ -6,6 +6,8 @@ export declare class CustomerResolver {
     private readonly customerService;
     constructor(customerService: CustomerService);
     createCustomer(createCustomerInput: CreateCustomerInput): Promise<{
+        obveza: string | number;
+        cijena_opreme: string | number;
         id: number;
         šifra: number;
         naziv: string;
@@ -36,6 +38,7 @@ export declare class CustomerResolver {
         država_primatelja: string;
         pošta_primatelja: string;
         mjesto_primatelja: string;
+        iznos_opreme: any;
         paymentSlips: import("../../entities/payment-slip.entity").PaymentSlip[];
         inserted_at: Date;
         updated_at: Date;

@@ -1,6 +1,11 @@
 <script lang="ts">
   import Handsontable from "handsontable";
-  import { getCustomer, updatePaymentSlip } from "../../services/http";
+  import {
+    deletePaymentSlip,
+    getCustomer,
+    getPaymentSlips,
+    updatePaymentSlip,
+  } from "../../services/http";
   import { onMount } from "svelte";
   import { store } from "../../store";
 
@@ -16,7 +21,6 @@
 
   store.subscribe((state) => {
     paymentSlips = state?.paymentSlips;
-
     setTableData();
   });
 
@@ -67,10 +71,11 @@
             [column]: newVal,
           };
 
-          if (item?.id)
+          if (item?.id) {
             updatePaymentSlip(item).then(() => {
               getCustomer({ id: item?.customer_id });
             });
+          }
         }
       },
       beforeRemoveRow: function (
@@ -79,7 +84,20 @@
         physicalRows: number[],
         source: Handsontable.ChangeSource
       ) {
-        let item = data[index];
+        const promptVal = confirm(
+          `Izbrisati ${amount} ${amount === 1 ? "stupac" : "stupca"}?`
+        );
+        if (!promptVal) return;
+        for (const row of physicalRows) {
+          let item = data[row];
+          if (item?.id) {
+            deletePaymentSlip(item?.id).then(() => {
+              if (row + 1 === amount) {
+                getPaymentSlips();
+              }
+            });
+          }
+        }
       },
       licenseKey: "non-commercial-and-evaluation",
     });

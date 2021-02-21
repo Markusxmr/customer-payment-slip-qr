@@ -165,6 +165,16 @@ __decorate([
     __metadata("design:type", String)
 ], Customer.prototype, "mjesto_primatelja", void 0);
 __decorate([
+    graphql_1.Field(() => Number),
+    typeorm_1.Column({ type: 'decimal', nullable: true }),
+    __metadata("design:type", Object)
+], Customer.prototype, "obveza", void 0);
+__decorate([
+    graphql_1.Field(() => Number),
+    typeorm_1.Column({ type: 'decimal', nullable: true }),
+    __metadata("design:type", Object)
+], Customer.prototype, "iznos_opreme", void 0);
+__decorate([
     graphql_1.Field(() => [payment_slip_entity_1.PaymentSlip]),
     typeorm_1.OneToMany(() => payment_slip_entity_1.PaymentSlip, (entity) => entity.customer, {
         eager: true,

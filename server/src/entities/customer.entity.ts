@@ -131,6 +131,14 @@ export class Customer {
   @Column({ type: 'varchar', nullable: true })
   mjesto_primatelja: string;
 
+  @Field(() => Number)
+  @Column({ type: 'decimal', nullable: true })
+  obveza;
+
+  @Field(() => Number)
+  @Column({ type: 'decimal', nullable: true })
+  iznos_opreme;
+
   @Field(() => [PaymentSlip])
   @OneToMany(() => PaymentSlip, (entity) => entity.customer, {
     eager: true,

@@ -17,6 +17,10 @@ __decorate([
     graphql_1.Field(() => graphql_1.Int, { description: 'ISP ID' }),
     __metadata("design:type", Number)
 ], CreatePaymentSlipInput.prototype, "isp_id", void 0);
+__decorate([
+    graphql_1.Field(() => graphql_1.Int, { description: 'CUSTOMER ID' }),
+    __metadata("design:type", Number)
+], CreatePaymentSlipInput.prototype, "customer_id", void 0);
 CreatePaymentSlipInput = __decorate([
     graphql_1.InputType()
 ], CreatePaymentSlipInput);

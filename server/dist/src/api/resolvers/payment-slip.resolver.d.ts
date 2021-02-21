@@ -10,19 +10,12 @@ export declare class PaymentSlipResolver {
     findOne(id: number): Promise<PaymentSlip>;
     updatePaymentSlip(updatePaymentSlipInput: UpdatePaymentSlipInput): Promise<{
         isp_id: number;
-        id: number;
         customer_id: number;
-        month: number;
-        year: number;
-        model: string;
-        pnb: string;
-        amount: number;
-        description: string;
+        id: number;
+        mjesec: number;
+        godina: number;
         customer: import("../../entities/customer.entity").Customer;
         isp: import("../../entities/isp.entity").Isp;
-        inserted_at: Date;
-        updated_at: Date;
-        deleted: Date;
         poziv_na_broj_platitelja: string;
         poziv_na_broj_primatelja: string;
         iznos: string;
@@ -42,6 +35,9 @@ export declare class PaymentSlipResolver {
         naziv_primatelja: string;
         opis_placanja: string;
         nalog: string;
+        inserted_at: Date;
+        updated_at: Date;
+        deleted_at: Date;
     } & PaymentSlip>;
     removePaymentSlip(id: number): Promise<import("typeorm").DeleteResult>;
 }

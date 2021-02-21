@@ -47,10 +47,6 @@ export async function getIsps(search = "") {
 }
 
 export async function deleteIsp(id) {
-  const promptVal = confirm("Izbrisati?");
-
-  if (!promptVal) return;
-
   return fetch(`${config.url}/isp/${id}`, {
     method: "DELETE",
     headers: {
@@ -72,6 +68,7 @@ export async function getCustomer(params) {
     },
   }).then(async (res) => {
     let item = await res.json();
+
     store.update((state) => ({
       ...state,
       customer: item,
@@ -130,6 +127,20 @@ export async function updatePaymentSlip(item) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(item),
+  }).then(async (res) => {
+    let item = await res.json();
+
+    return item;
+  });
+}
+
+export async function deletePaymentSlip(id) {
+  return fetch(`${config.url}/payment-slip/${id}`, {
+    method: "DELETE",
+    headers: {
+      accept: "application/json",
+      "Content-Type": "application/json",
+    },
   }).then(async (res) => {
     let item = await res.json();
 

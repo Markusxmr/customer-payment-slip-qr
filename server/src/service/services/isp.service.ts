@@ -27,16 +27,24 @@ export class IspService {
   }
 
   async findAll() {
-    const items = await getManager().query(
-      `select * from isps order by id desc`,
-    );
+    const items = await getManager().query(`select * from isps order by id desc`);
     return dto(items, ['inserted_at', 'updated_at']);
   }
 
   async findOne(id: number) {
-    const isps = await getManager().query(`select * from isps where id = $1`, [
-      id,
-    ]);
+    const isp = await this.ispRepository.findOne(id);
+
+    if (!isp) {
+      throw new NotFoundException();
+    }
+
+    return isp;
+  }
+
+  async findOneDefault() {
+    const isps = await this.ispRepository.find({
+      where: { defaultIsp: true },
+    });
 
     if (isps.length === 0) {
       throw new NotFoundException();

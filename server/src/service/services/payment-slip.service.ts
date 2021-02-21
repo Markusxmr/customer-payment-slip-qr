@@ -4,16 +4,32 @@ import { UpdatePaymentSlipDto } from '../../api/dto/payment-slip/update-payment-
 import { Repository, getManager } from 'typeorm';
 import { PaymentSlip } from '../../entities/payment-slip.entity';
 import { dto } from '../helpers/dto';
+import { paymentSlipDomain, setIspPaymentSlip } from 'src/domain/payment-slip.domain';
+import { Isp } from 'src/entities/isp.entity';
+import { Customer } from 'src/entities/customer.entity';
 
 @Injectable()
 export class PaymentSlipService {
+  private relations = ['customer'];
+
   constructor(
     @Inject('PAYMENT_SLIP_REPOSITORY')
     private paymentSlipRepository: Repository<PaymentSlip>,
+    @Inject('ISP_REPOSITORY')
+    private ispRepository: Repository<Isp>,
+    @Inject('CUSTOMER_REPOSITORY')
+    private customerRepository: Repository<Customer>,
   ) {}
 
-  create(createPaymentSlipDto: CreatePaymentSlipDto) {
+  async create(createPaymentSlipDto: CreatePaymentSlipDto) {
     let item = new PaymentSlip();
+    let isp = await this.ispRepository.findOne(createPaymentSlipDto?.isp_id);
+    let customer = await this.customerRepository.findOne(createPaymentSlipDto?.customer_id);
+    let paymentSlips = customer?.paymentSlips?.sort((a, b) => b?.mjesec - a?.mjesec);
+    let sortedPaymentSlip = paymentSlips.length > 0 ? paymentSlips[0] : { mjesec: 0 };
+
+    let updateItem = paymentSlipDomain({ isp, customer }, sortedPaymentSlip?.mjesec + 1);
+    createPaymentSlipDto = { ...createPaymentSlipDto, ...updateItem };
     item = { ...item, ...createPaymentSlipDto };
     return this.paymentSlipRepository.save(item);
   }
@@ -26,11 +42,30 @@ export class PaymentSlipService {
     return this.paymentSlipRepository.insert(items);
   }
 
+  saveMany(updatePaymentSlipDtos: CreatePaymentSlipDto[]) {
+    let items = [];
+    for (const item of updatePaymentSlipDtos) {
+      items.push(item);
+    }
+    return this.paymentSlipRepository.save(items);
+  }
+
   async findAll() {
-    const items = await getManager().query(
-      `select * from payment_slips order by id desc`,
-    );
-    return dto(items, ['inserted_at', 'updated_at']);
+    const items = await getManager().query(`select * from payment_slips order by id desc`);
+    return dto(items, ['inserted_at', 'updated_at', 'deleted_at']);
+  }
+
+  async findAllBy(options) {
+    const items = await this.paymentSlipRepository.find({
+      relations: this.relations,
+      where: {
+        customer_id: options?.customer_id,
+      },
+      order: {
+        id: 'DESC',
+      },
+    });
+    return dto(items, ['inserted_at', 'updated_at', 'deleted_at']);
   }
 
   findOne(id: number) {
@@ -40,6 +75,16 @@ export class PaymentSlipService {
   async update(id: number, updatePaymentSlipDto: UpdatePaymentSlipDto) {
     let item = await this.findOne(id);
     if (!item) throw new NotFoundException();
+
+    let updatedIsp;
+    for (const key of Object.keys(updatePaymentSlipDto)) {
+      if (key === 'isp_id' && item?.isp_id !== updatePaymentSlipDto[key]) {
+        let isp = await this.ispRepository.findOne(updatePaymentSlipDto[key]);
+        updatedIsp = setIspPaymentSlip(isp);
+        updatePaymentSlipDto = { ...updatePaymentSlipDto, ...updatedIsp };
+      }
+    }
+
     return this.paymentSlipRepository.save({
       ...item,
       ...updatePaymentSlipDto,

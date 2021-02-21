@@ -6,7 +6,19 @@ export declare class IspController {
     constructor(ispService: IspService);
     create(createIspDto: CreateIspDto): Promise<import("../../entities/isp.entity").Isp>;
     findAll(): Promise<any[]>;
-    findOne(id: string): Promise<any>;
-    update(id: string, updateIspDto: UpdateIspDto): Promise<any>;
+    findOne(id: string): Promise<import("../../entities/isp.entity").Isp>;
+    update(id: string, updateIspDto: UpdateIspDto): Promise<{
+        id: number;
+        name: string;
+        street: string;
+        postalCode: number;
+        city: string;
+        oib: number;
+        iban: string;
+        defaultIsp: boolean;
+        paymentSlips: import("../../entities/payment-slip.entity").PaymentSlip[];
+        inserted_at: Date;
+        updated_at: Date;
+    } & import("../../entities/isp.entity").Isp>;
     remove(id: string): Promise<import("typeorm").DeleteResult>;
 }

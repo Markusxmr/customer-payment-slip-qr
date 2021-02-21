@@ -4,17 +4,10 @@ export declare class PaymentSlip {
     id: number;
     customer_id: number;
     isp_id: number;
-    month: number;
-    year: number;
-    model: string;
-    pnb: string;
-    amount: number;
-    description: string;
+    mjesec: number;
+    godina: number;
     customer: Customer;
     isp: Isp;
-    inserted_at: Date;
-    updated_at: Date;
-    deleted: Date;
     poziv_na_broj_platitelja: string;
     poziv_na_broj_primatelja: string;
     iznos: string;
@@ -34,4 +27,7 @@ export declare class PaymentSlip {
     naziv_primatelja: string;
     opis_placanja: string;
     nalog: string;
+    inserted_at: Date;
+    updated_at: Date;
+    deleted_at: Date;
 }

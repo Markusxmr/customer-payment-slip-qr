@@ -37,35 +37,15 @@ __decorate([
     graphql_1.Field(() => graphql_1.Int),
     typeorm_1.Column({ type: 'int2', nullable: true, default: 1 }),
     __metadata("design:type", Number)
-], PaymentSlip.prototype, "month", void 0);
+], PaymentSlip.prototype, "mjesec", void 0);
 __decorate([
     graphql_1.Field(() => graphql_1.Int),
     typeorm_1.Column({ type: 'int4', nullable: true, default: new Date().getFullYear() }),
     __metadata("design:type", Number)
-], PaymentSlip.prototype, "year", void 0);
-__decorate([
-    graphql_1.Field(() => String),
-    typeorm_1.Column({ type: 'varchar', length: 2, nullable: true }),
-    __metadata("design:type", String)
-], PaymentSlip.prototype, "model", void 0);
-__decorate([
-    graphql_1.Field(() => String),
-    typeorm_1.Column({ type: 'varchar', length: 22, nullable: true }),
-    __metadata("design:type", String)
-], PaymentSlip.prototype, "pnb", void 0);
-__decorate([
-    graphql_1.Field(() => graphql_1.Float),
-    typeorm_1.Column({ type: 'decimal', nullable: true }),
-    __metadata("design:type", Number)
-], PaymentSlip.prototype, "amount", void 0);
-__decorate([
-    graphql_1.Field(() => String),
-    typeorm_1.Column({ type: 'text', nullable: true }),
-    __metadata("design:type", String)
-], PaymentSlip.prototype, "description", void 0);
+], PaymentSlip.prototype, "godina", void 0);
 __decorate([
     graphql_1.Field(() => customer_entity_1.Customer),
-    typeorm_1.ManyToOne(() => customer_entity_1.Customer, (entity) => entity.paymentSlips, {
+    typeorm_1.ManyToOne(() => customer_entity_1.Customer, entity => entity.paymentSlips, {
         onDelete: 'CASCADE',
     }),
     typeorm_1.JoinColumn({ name: 'customer_id', referencedColumnName: 'id' }),
@@ -73,27 +53,12 @@ __decorate([
 ], PaymentSlip.prototype, "customer", void 0);
 __decorate([
     graphql_1.Field(() => isp_entity_1.Isp),
-    typeorm_1.ManyToOne(() => isp_entity_1.Isp, (entity) => entity.paymentSlips, {
+    typeorm_1.ManyToOne(() => isp_entity_1.Isp, entity => entity.paymentSlips, {
         onDelete: 'CASCADE',
     }),
     typeorm_1.JoinColumn({ name: 'isp_id', referencedColumnName: 'id' }),
     __metadata("design:type", isp_entity_1.Isp)
 ], PaymentSlip.prototype, "isp", void 0);
-__decorate([
-    graphql_1.Field(() => Date),
-    typeorm_1.CreateDateColumn(),
-    __metadata("design:type", Date)
-], PaymentSlip.prototype, "inserted_at", void 0);
-__decorate([
-    graphql_1.Field(() => Date),
-    typeorm_1.UpdateDateColumn(),
-    __metadata("design:type", Date)
-], PaymentSlip.prototype, "updated_at", void 0);
-__decorate([
-    graphql_1.Field(() => Date),
-    typeorm_1.DeleteDateColumn(),
-    __metadata("design:type", Date)
-], PaymentSlip.prototype, "deleted", void 0);
 __decorate([
     graphql_1.Field(() => String),
     typeorm_1.Column({ type: 'varchar', nullable: true }),
@@ -189,6 +154,21 @@ __decorate([
     typeorm_1.Column({ type: 'varchar', nullable: true }),
     __metadata("design:type", String)
 ], PaymentSlip.prototype, "nalog", void 0);
+__decorate([
+    graphql_1.Field(() => Date),
+    typeorm_1.CreateDateColumn(),
+    __metadata("design:type", Date)
+], PaymentSlip.prototype, "inserted_at", void 0);
+__decorate([
+    graphql_1.Field(() => Date),
+    typeorm_1.UpdateDateColumn(),
+    __metadata("design:type", Date)
+], PaymentSlip.prototype, "updated_at", void 0);
+__decorate([
+    graphql_1.Field(() => Date),
+    typeorm_1.DeleteDateColumn(),
+    __metadata("design:type", Date)
+], PaymentSlip.prototype, "deleted_at", void 0);
 PaymentSlip = __decorate([
     graphql_1.ObjectType(),
     typeorm_1.Entity('payment_slips')

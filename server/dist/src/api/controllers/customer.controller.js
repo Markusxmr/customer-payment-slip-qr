@@ -22,19 +22,25 @@ const create_customer_dto_1 = require("../dto/customer/create-customer.dto");
 const update_customer_dto_1 = require("../dto/customer/update-customer.dto");
 const platform_express_1 = require("@nestjs/platform-express");
 const payment_slip_service_1 = require("../../service/services/payment-slip.service");
-const set_payment_slip_1 = require("../../common/set-payment-slip");
+const isp_service_1 = require("../../service/services/isp.service");
+const payment_slip_domain_1 = require("../../domain/payment-slip.domain");
 let CustomerController = class CustomerController {
-    constructor(customerService, paymentSlipService) {
+    constructor(ispService, customerService, paymentSlipService) {
+        this.ispService = ispService;
         this.customerService = customerService;
         this.paymentSlipService = paymentSlipService;
     }
     async create(createCustomerDto) {
-        const isp = { isp_id: 1 };
-        const customer = await this.customerService.create(createCustomerDto);
-        const items = new Array(12);
-        for (const item of items) {
-            await this.paymentSlipService.create(set_payment_slip_1.setPaymentSlip({ isp, customer }));
+        var _a, _b;
+        const isp = await this.ispService.findOneDefault();
+        const customer = await this.customerService.create(Object.assign(Object.assign({}, createCustomerDto), { obveza: (_a = createCustomerDto === null || createCustomerDto === void 0 ? void 0 : createCustomerDto.obveza) !== null && _a !== void 0 ? _a : `125.00`, cijena_opreme: (_b = createCustomerDto === null || createCustomerDto === void 0 ? void 0 : createCustomerDto.cijena_opreme) !== null && _b !== void 0 ? _b : `0.0` }));
+        let items = new Array(12);
+        let paymentSlips = [];
+        for (let i = 0, len = items.length; i < len; i++) {
+            let newVal = payment_slip_domain_1.paymentSlipDomain({ isp, customer }, i + 1);
+            paymentSlips.push(newVal);
         }
+        await this.paymentSlipService.createMany(paymentSlips);
         return this.customerService.findOne(customer === null || customer === void 0 ? void 0 : customer.id);
     }
     findAll(options) {
@@ -53,7 +59,6 @@ let CustomerController = class CustomerController {
         return this.customerService.remove(+id);
     }
     async uploadFile(res, file) {
-        const isp = { isp_id: 1 };
         const filePath = path_1.join(process.cwd(), 'files', file.originalname);
         const jsonPath = filePath.replace('xlsx', 'json').replace('xls', 'json');
         fs.writeFileSync(filePath, file.buffer, {});
@@ -66,7 +71,7 @@ let CustomerController = class CustomerController {
             if (err)
                 console.error(err);
             else
-                return results.map((item) => {
+                return results.map(item => {
                     return Object.keys(item).reduce((acc, key) => {
                         return Object.assign(Object.assign({}, acc), { [key.toLowerCase().replace(' ', '_')]: item[key] });
                     }, {});
@@ -75,17 +80,26 @@ let CustomerController = class CustomerController {
         let source = fs.readFileSync(jsonPath);
         let customers = JSON.parse(source);
         if (Array.isArray(customers)) {
-            customers = customers.map((item) => {
+            customers = customers
+                .map(item => (Object.assign(Object.assign({}, item), { obveza: `125.00`, iznos_opreme: `115.00` })))
+                .map(item => {
                 return Object.keys(item).reduce((acc, key) => {
                     return item[key]
                         ? Object.assign(Object.assign({}, acc), { [key.toLowerCase().replace(' ', '_')]: item[key] }) : acc;
                 }, {});
             });
+            const isp = await this.ispService.findOneDefault();
             try {
                 const customerInstances = await this.customerService.createMany(customers);
-                for (const customer of customerInstances) {
-                    const items = new Array(12).fill(set_payment_slip_1.setPaymentSlip({ isp, customer }));
-                    await this.paymentSlipService.createMany(items);
+                for (let i = 0, len = customerInstances.length; i < len; i++) {
+                    let customer = customerInstances[i];
+                    let items = new Array(12);
+                    let paymentSlips = [];
+                    for (let i = 0, len = items.length; i < len; i++) {
+                        let newVal = payment_slip_domain_1.paymentSlipDomain({ isp, customer }, i + 1);
+                        paymentSlips.push(newVal);
+                    }
+                    await this.paymentSlipService.createMany(paymentSlips);
                 }
             }
             catch (error) {
@@ -120,8 +134,7 @@ __decorate([
 ], CustomerController.prototype, "findOne", null);
 __decorate([
     common_1.Put(':id'),
-    __param(0, common_1.Param('id')),
-    __param(1, common_1.Body()),
+    __param(0, common_1.Param('id')), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, update_customer_dto_1.UpdateCustomerDto]),
     __metadata("design:returntype", void 0)
@@ -149,7 +162,8 @@ __decorate([
 ], CustomerController.prototype, "uploadFile", null);
 CustomerController = __decorate([
     common_1.Controller('customer'),
-    __metadata("design:paramtypes", [customer_service_1.CustomerService,
+    __metadata("design:paramtypes", [isp_service_1.IspService,
+        customer_service_1.CustomerService,
         payment_slip_service_1.PaymentSlipService])
 ], CustomerController);
 exports.CustomerController = CustomerController;

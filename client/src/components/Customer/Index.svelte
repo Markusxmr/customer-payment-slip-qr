@@ -104,8 +104,20 @@
         physicalRows: number[],
         source: Handsontable.ChangeSource
       ) {
-        let item = data[index];
-        if (item?.id) deleteCustomer(item?.id);
+        const promptVal = confirm(
+          `Izbrisati ${amount} ${amount === 1 ? "stupac" : "stupca"}?`
+        );
+        if (!promptVal) return;
+        for (const row of physicalRows) {
+          let item = data[row];
+
+          if (item?.id)
+            deleteCustomer(item?.id).then(() => {
+              if (row + 1 === amount) {
+                getCustomers();
+              }
+            });
+        }
       },
       columns: [
         ...Object.keys(data[0]).map((key) => {
@@ -158,18 +170,12 @@
   getCustomers();
 
   function deleteCustomer(id) {
-    const promptVal = confirm("Izbrisati?");
-
-    if (!promptVal) return;
-
-    fetch(`${config.url}/customer/${id}`, {
+    return fetch(`${config.url}/customer/${id}`, {
       method: "DELETE",
       headers: {
         accept: "application/json",
         "Content-Type": "application/json",
       },
-    }).then(async (res) => {
-      getCustomers();
     });
   }
 

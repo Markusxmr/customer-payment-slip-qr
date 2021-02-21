@@ -5,17 +5,27 @@
   import Potvrda from "./Potvrda.svelte";
   import SifraNamjene from "./SifraNamjene.svelte";
   import BarcodePayment from "../lib/BarcodePayment";
-  import config from "src/config";
+  import config from "../config";
+  import { getCustomer } from "../services/http";
+  import { store } from "../store";
   export let key = Math.random();
   export let model;
   export let printing = false;
-  export let getCustomer;
   let genexUrl = "http://188.34.178.129";
   let loaded = false;
   let loadstart = "Učitavanje...";
   let hub3_code;
   let showDecoder = false;
+  let customer;
   export let textOnlyPrint = false;
+
+  store.subscribe((state) => {
+    customer = state?.customer;
+  });
+
+  $: if (model) {
+    model = { ...model, iznos: model?.iznos.replace(".", "") };
+  }
 
   async function generatePDF() {
     await fetch(`${genexUrl}:5000/uplatnica`, {
@@ -50,7 +60,7 @@
       body: JSON.stringify(model),
     });
 
-    await getCustomer();
+    await getCustomer(customer);
   }
 
   async function deletePaymentSlip(id) {
@@ -59,8 +69,9 @@
     await fetch(`${config.url}/payment-slip/${id}`, {
       method: "DELETE",
     });
+    console.log(model);
 
-    await getCustomer();
+    await getCustomer(customer);
   }
 </script>
 

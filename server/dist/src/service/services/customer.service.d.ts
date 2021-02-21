@@ -2,12 +2,18 @@ import { CreateCustomerDto } from '../../api/dto/customer/create-customer.dto';
 import { UpdateCustomerDto } from '../../api/dto/customer/update-customer.dto';
 import { DeleteResult, Repository } from 'typeorm';
 import { Customer } from '../../entities/customer.entity';
+import { Isp } from '../../entities/isp.entity';
+import { PaymentSlip } from '../../entities/payment-slip.entity';
 export declare class CustomerService {
+    private paymentSlipRepository;
+    private ispRepository;
     private customerRepository;
     private relations;
     private excludes;
-    constructor(customerRepository: Repository<Customer>);
+    constructor(paymentSlipRepository: Repository<PaymentSlip>, ispRepository: Repository<Isp>, customerRepository: Repository<Customer>);
     create(createCustomerDto: CreateCustomerDto): Promise<{
+        obveza: string | number;
+        cijena_opreme: string | number;
         id: number;
         šifra: number;
         naziv: string;
@@ -38,7 +44,8 @@ export declare class CustomerService {
         država_primatelja: string;
         pošta_primatelja: string;
         mjesto_primatelja: string;
-        paymentSlips: import("../../entities/payment-slip.entity").PaymentSlip[];
+        iznos_opreme: any;
+        paymentSlips: PaymentSlip[];
         inserted_at: Date;
         updated_at: Date;
     } & Customer>;

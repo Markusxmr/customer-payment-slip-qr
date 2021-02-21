@@ -38,9 +38,16 @@ let IspService = class IspService {
         return dto_1.dto(items, ['inserted_at', 'updated_at']);
     }
     async findOne(id) {
-        const isps = await typeorm_1.getManager().query(`select * from isps where id = $1`, [
-            id,
-        ]);
+        const isp = await this.ispRepository.findOne(id);
+        if (!isp) {
+            throw new common_1.NotFoundException();
+        }
+        return isp;
+    }
+    async findOneDefault() {
+        const isps = await this.ispRepository.find({
+            where: { defaultIsp: true },
+        });
         if (isps.length === 0) {
             throw new common_1.NotFoundException();
         }

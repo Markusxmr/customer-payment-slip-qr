@@ -7,6 +7,7 @@ export declare class Isp {
     city: string;
     oib: number;
     iban: string;
+    defaultIsp: boolean;
     paymentSlips: PaymentSlip[];
     inserted_at: Date;
     updated_at: Date;

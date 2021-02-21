@@ -51,6 +51,11 @@ __decorate([
     __metadata("design:type", String)
 ], Isp.prototype, "iban", void 0);
 __decorate([
+    graphql_1.Field(() => Boolean),
+    typeorm_1.Column({ type: 'boolean', default: false, nullable: true }),
+    __metadata("design:type", Boolean)
+], Isp.prototype, "defaultIsp", void 0);
+__decorate([
     graphql_1.Field(() => [payment_slip_entity_1.PaymentSlip]),
     typeorm_1.OneToMany(() => payment_slip_entity_1.PaymentSlip, (entity) => entity.isp, {
         eager: true,

@@ -16,6 +16,7 @@ export default class CreateIsps implements Seeder {
           city: 'Ogulin',
           oib: 60472483107,
           iban: 'HR2224020061100294882',
+          defaultIsp: true,
         },
         {
           name: 'GENEX d.o.o.',
@@ -24,6 +25,7 @@ export default class CreateIsps implements Seeder {
           city: 'Ogulin',
           oib: 17751264789,
           iban: 'HR3823900011101044344',
+          defaultIsp: false,
         },
       ])
       .execute();

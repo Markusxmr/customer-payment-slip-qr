@@ -5,4 +5,5 @@ import { InputType, Field, Int, PartialType } from '@nestjs/graphql';
 export class UpdateCustomerInput extends PartialType(CreateCustomerInput) {
   @Field(() => Int)
   id: number;
+  paymentSlips: Record<string, unknown>[];
 }

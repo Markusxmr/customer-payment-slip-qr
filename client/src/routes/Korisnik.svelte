@@ -4,6 +4,7 @@
   import Uplatnica from "../components/Uplatnica.svelte";
   import { getCustomer, getIsps, newPaymentSlip } from "src/services/http";
   import { store } from "src/store";
+  import { onMount } from "svelte";
 
   export let params = {};
   let customer;
@@ -33,10 +34,12 @@
   });
 
   function fetchCustomer(params) {
-    getCustomer(params);
+    getCustomer(params).then(() => getIsps());
   }
 
-  fetchCustomer(params);
+  onMount(() => {
+    fetchCustomer(params);
+  });
 
   function addPaymentSlip(isp) {
     newPaymentSlip(setPaymentSlip({ isp, customer })).then(async (data) => {

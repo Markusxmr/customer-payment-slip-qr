@@ -40,6 +40,10 @@ export class Isp {
   @Column({ type: 'varchar', length: 21, nullable: true })
   iban: string;
 
+  @Field(() => Boolean)
+  @Column({ type: 'boolean', default: false, nullable: true })
+  defaultIsp: boolean;
+
   @Field(() => [PaymentSlip])
   @OneToMany(() => PaymentSlip, (entity) => entity.isp, {
     eager: true,

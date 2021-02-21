@@ -1,3 +1,4 @@
 export declare class CreateCustomerInput {
-    exampleField: number;
+    obveza: number | string;
+    cijena_opreme: number | string;
 }

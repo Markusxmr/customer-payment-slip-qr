@@ -32,53 +32,25 @@ export class PaymentSlip {
 
   @Field(() => Int)
   @Column({ type: 'int2', nullable: true, default: 1 })
-  month: number;
+  mjesec: number;
 
   @Field(() => Int)
   @Column({ type: 'int4', nullable: true, default: new Date().getFullYear() })
-  year: number;
-
-  @Field(() => String)
-  @Column({ type: 'varchar', length: 2, nullable: true })
-  model: string;
-
-  @Field(() => String)
-  @Column({ type: 'varchar', length: 22, nullable: true })
-  pnb: string;
-
-  @Field(() => Float)
-  @Column({ type: 'decimal', nullable: true })
-  amount: number;
-
-  @Field(() => String)
-  @Column({ type: 'text', nullable: true })
-  description: string;
+  godina: number;
 
   @Field(() => Customer)
-  @ManyToOne(() => Customer, (entity) => entity.paymentSlips, {
+  @ManyToOne(() => Customer, entity => entity.paymentSlips, {
     onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'customer_id', referencedColumnName: 'id' })
   customer: Customer;
 
   @Field(() => Isp)
-  @ManyToOne(() => Isp, (entity) => entity.paymentSlips, {
+  @ManyToOne(() => Isp, entity => entity.paymentSlips, {
     onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'isp_id', referencedColumnName: 'id' })
   isp: Isp;
-
-  @Field(() => Date)
-  @CreateDateColumn()
-  inserted_at: Date;
-
-  @Field(() => Date)
-  @UpdateDateColumn()
-  updated_at: Date;
-
-  @Field(() => Date)
-  @DeleteDateColumn()
-  deleted: Date;
 
   // Model for visual payment slip
   @Field(() => String)
@@ -157,4 +129,16 @@ export class PaymentSlip {
   @Field(() => String)
   @Column({ type: 'varchar', nullable: true })
   nalog: string;
+
+  @Field(() => Date)
+  @CreateDateColumn()
+  inserted_at: Date;
+
+  @Field(() => Date)
+  @UpdateDateColumn()
+  updated_at: Date;
+
+  @Field(() => Date)
+  @DeleteDateColumn()
+  deleted_at: Date;
 }

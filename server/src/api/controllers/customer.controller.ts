@@ -19,24 +19,33 @@ import { CreateCustomerDto } from '../dto/customer/create-customer.dto';
 import { UpdateCustomerDto } from '../dto/customer/update-customer.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { PaymentSlipService } from '../../service/services/payment-slip.service';
-import { setPaymentSlip } from 'src/common/set-payment-slip';
+import { IspService } from 'src/service/services/isp.service';
+import { paymentSlipDomain } from '../../domain/payment-slip.domain';
 
 @Controller('customer')
 export class CustomerController {
   constructor(
+    private readonly ispService: IspService,
     private readonly customerService: CustomerService,
     private readonly paymentSlipService: PaymentSlipService,
   ) {}
 
   @Post()
   async create(@Body() createCustomerDto: CreateCustomerDto) {
-    const isp = { isp_id: 1 };
-    const customer = await this.customerService.create(createCustomerDto);
+    const isp = await this.ispService.findOneDefault();
+    const customer = await this.customerService.create({
+      ...createCustomerDto,
+      obveza: createCustomerDto?.obveza ?? `125.00`,
+      cijena_opreme: createCustomerDto?.cijena_opreme ?? `0.0`,
+    });
 
-    const items = new Array(12);
-    for (const item of items) {
-      await this.paymentSlipService.create(setPaymentSlip({ isp, customer }));
+    let items = new Array(12);
+    let paymentSlips = [];
+    for (let i = 0, len = items.length; i < len; i++) {
+      let newVal = paymentSlipDomain({ isp, customer }, i + 1);
+      paymentSlips.push(newVal);
     }
+    await this.paymentSlipService.createMany(paymentSlips);
 
     return this.customerService.findOne(customer?.id);
   }
@@ -52,10 +61,7 @@ export class CustomerController {
   }
 
   @Put(':id')
-  update(
-    @Param('id') id: string,
-    @Body() updateCustomerDto: UpdateCustomerDto,
-  ) {
+  update(@Param('id') id: string, @Body() updateCustomerDto: UpdateCustomerDto) {
     return this.customerService.update(+id, updateCustomerDto);
   }
 
@@ -72,7 +78,6 @@ export class CustomerController {
   @Post('xls')
   @UseInterceptors(FileInterceptor('file'))
   async uploadFile(@Response() res, @UploadedFile() file) {
-    const isp = { isp_id: 1 };
     const filePath = join(process.cwd(), 'files', file.originalname);
     const jsonPath = filePath.replace('xlsx', 'json').replace('xls', 'json');
     fs.writeFileSync(filePath, file.buffer, {});
@@ -88,7 +93,7 @@ export class CustomerController {
       function (err, results) {
         if (err) console.error(err);
         else
-          return results.map((item) => {
+          return results.map(item => {
             return Object.keys(item).reduce((acc, key) => {
               return {
                 ...acc,
@@ -103,24 +108,34 @@ export class CustomerController {
     let customers = JSON.parse(source);
 
     if (Array.isArray(customers)) {
-      customers = customers.map((item) => {
-        return Object.keys(item).reduce((acc, key) => {
-          return item[key]
-            ? {
-                ...acc,
-                [key.toLowerCase().replace(' ', '_')]: item[key],
-              }
-            : acc;
-        }, {});
-      });
+      customers = customers
+        .map(item => ({ ...item, obveza: `125.00`, iznos_opreme: `115.00` }))
+        .map(item => {
+          return Object.keys(item).reduce((acc, key) => {
+            return item[key]
+              ? {
+                  ...acc,
+                  [key.toLowerCase().replace(' ', '_')]: item[key],
+                }
+              : acc;
+          }, {});
+        });
+      const isp = await this.ispService.findOneDefault();
 
       try {
-        const customerInstances = await this.customerService.createMany(
-          customers,
-        );
-        for (const customer of customerInstances) {
-          const items = new Array(12).fill(setPaymentSlip({ isp, customer }));
-          await this.paymentSlipService.createMany(items);
+        const customerInstances = await this.customerService.createMany(customers);
+
+        for (let i = 0, len = customerInstances.length; i < len; i++) {
+          let customer = customerInstances[i];
+          let items = new Array(12);
+          let paymentSlips = [];
+
+          for (let i = 0, len = items.length; i < len; i++) {
+            let newVal = paymentSlipDomain({ isp, customer }, i + 1);
+            paymentSlips.push(newVal);
+          }
+
+          await this.paymentSlipService.createMany(paymentSlips);
         }
       } catch (error) {
         console.log(error);

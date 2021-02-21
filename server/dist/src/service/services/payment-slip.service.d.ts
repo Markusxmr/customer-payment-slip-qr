@@ -2,28 +2,28 @@ import { CreatePaymentSlipDto } from '../../api/dto/payment-slip/create-payment-
 import { UpdatePaymentSlipDto } from '../../api/dto/payment-slip/update-payment-slip.dto';
 import { Repository } from 'typeorm';
 import { PaymentSlip } from '../../entities/payment-slip.entity';
+import { Isp } from 'src/entities/isp.entity';
+import { Customer } from 'src/entities/customer.entity';
 export declare class PaymentSlipService {
     private paymentSlipRepository;
-    constructor(paymentSlipRepository: Repository<PaymentSlip>);
+    private ispRepository;
+    private customerRepository;
+    private relations;
+    constructor(paymentSlipRepository: Repository<PaymentSlip>, ispRepository: Repository<Isp>, customerRepository: Repository<Customer>);
     create(createPaymentSlipDto: CreatePaymentSlipDto): Promise<PaymentSlip>;
     createMany(createPaymentSlipDtos: CreatePaymentSlipDto[]): Promise<import("typeorm").InsertResult>;
+    saveMany(updatePaymentSlipDtos: CreatePaymentSlipDto[]): Promise<any[]>;
     findAll(): Promise<any[]>;
+    findAllBy(options: any): Promise<any[]>;
     findOne(id: number): Promise<PaymentSlip>;
     update(id: number, updatePaymentSlipDto: UpdatePaymentSlipDto): Promise<{
         isp_id: number;
-        id: number;
         customer_id: number;
-        month: number;
-        year: number;
-        model: string;
-        pnb: string;
-        amount: number;
-        description: string;
-        customer: import("../../entities/customer.entity").Customer;
-        isp: import("../../entities/isp.entity").Isp;
-        inserted_at: Date;
-        updated_at: Date;
-        deleted: Date;
+        id: number;
+        mjesec: number;
+        godina: number;
+        customer: Customer;
+        isp: Isp;
         poziv_na_broj_platitelja: string;
         poziv_na_broj_primatelja: string;
         iznos: string;
@@ -43,6 +43,9 @@ export declare class PaymentSlipService {
         naziv_primatelja: string;
         opis_placanja: string;
         nalog: string;
+        inserted_at: Date;
+        updated_at: Date;
+        deleted_at: Date;
     } & PaymentSlip>;
     remove(id: number): Promise<import("typeorm").DeleteResult>;
 }

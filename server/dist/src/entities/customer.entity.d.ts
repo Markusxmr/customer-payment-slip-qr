@@ -30,6 +30,8 @@ export declare class Customer {
     država_primatelja: string;
     pošta_primatelja: string;
     mjesto_primatelja: string;
+    obveza: any;
+    iznos_opreme: any;
     paymentSlips: PaymentSlip[];
     inserted_at: Date;
     updated_at: Date;

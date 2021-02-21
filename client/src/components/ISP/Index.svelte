@@ -113,8 +113,20 @@
         physicalRows: number[],
         source: Handsontable.ChangeSource
       ) {
-        let item = data[index];
-        if (item?.id) deleteIsp(item?.id);
+        const promptVal = confirm(
+          `Izbrisati ${amount} ${amount === 1 ? "stupac" : "stupca"}?`
+        );
+        if (!promptVal) return;
+        for (const row of physicalRows) {
+          let item = data[row];
+          if (item?.id) {
+            deleteIsp(item?.id).then(() => {
+              if (row + 1 === amount) {
+                listIsp();
+              }
+            });
+          }
+        }
       },
       columns: [
         ...Object.keys(data[0]).map((key) => {
