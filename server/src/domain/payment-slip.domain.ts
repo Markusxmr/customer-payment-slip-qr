@@ -1,10 +1,3 @@
-// export let primatelj = {
-//   naziv_primatelja: 'TEHNICORE d.o.o.',
-//   ulica_i_broj_primatelja: 'Sveti Jakov 116',
-//   postanski_i_grad_primatelja: `47300 Ogulin`,
-//   iban_primatelja: 'HR1723600001101234565',
-// };
-
 export function setIspPaymentSlip(isp) {
   return {
     iban_primatelja: isp?.iban,
@@ -39,9 +32,11 @@ export function setPaymentSlip({ isp, customer }) {
 
 export function monthFormater(customer, i: number) {
   let { obveza = null, iznos_opreme = null } = customer;
+  obveza = Number(obveza);
+  iznos_opreme = Number(iznos_opreme);
   let date = new Date();
   let year = date.getFullYear();
-  let iznos = 0.0;
+  let iznos = obveza && iznos_opreme ? obveza + iznos_opreme : 0.0;
   let opis_placanja;
   let formatedMonth = i > 9 ? i : `0${i}`;
   let šifra = `${customer?.šifra} - ` ?? '';

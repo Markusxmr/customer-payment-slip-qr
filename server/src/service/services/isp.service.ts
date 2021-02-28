@@ -33,24 +33,14 @@ export class IspService {
 
   async findOne(id: number) {
     const isp = await this.ispRepository.findOne(id);
-
-    if (!isp) {
-      throw new NotFoundException();
-    }
-
+    if (!isp) throw new NotFoundException();
     return isp;
   }
 
   async findOneDefault() {
-    const isps = await this.ispRepository.find({
-      where: { defaultIsp: true },
-    });
-
-    if (isps.length === 0) {
-      throw new NotFoundException();
-    }
-
-    return isps[0];
+    const isp = await this.ispRepository.findOne({ where: { defaultIsp: true } });
+    if (!isp) throw new NotFoundException();
+    return isp;
   }
 
   async update(id: number, updateIspDto: UpdateIspDto) {

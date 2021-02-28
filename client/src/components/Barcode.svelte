@@ -21,20 +21,20 @@ COST
 Troskovi za 1. mjesec`;
 
   $: if (props) {
-    hub3_code = `<p>HRVHUB30</p>
-<p>${props?.valuta_placanja}</p>
-<p>${props?.iznos}</p>
-<p>${props?.ime_i_prezime_platitelja}</p>
-<p>${props?.ulica_i_broj_platitelja}</p>
-<p>${props?.postanski_i_grad_platitelja}</p>
-<p>${props?.naziv_primatelja}</p>
-<p>${props?.ulica_i_broj_primatelja}</p>
-<p>${props?.postanski_i_grad_primatelja}</p>
-<p>${props?.iban_primatelja}</p>
-<p>${props?.model_primatelja}</p>
-<p>${props?.poziv_na_broj_primatelja}</p>
-<p>${props?.sifra_namjene}</p>
-<p>${props?.opis_placanja}</p>`;
+    hub3_code = `HRVHUB30
+${props?.valuta_placanja}
+${props?.iznos}
+${props?.ime_i_prezime_platitelja}
+${props?.ulica_i_broj_platitelja}
+${props?.postanski_i_grad_platitelja}
+${props?.naziv_primatelja}
+${props?.ulica_i_broj_primatelja}
+${props?.postanski_i_grad_primatelja}
+${props?.iban_primatelja}
+${props?.model_primatelja}
+${props?.poziv_na_broj_primatelja}
+${props?.sifra_namjene}
+${props?.opis_placanja}`;
   }
 
   $: if (hub3_code && canvas) {
@@ -105,4 +105,3 @@ Troskovi za 1. mjesec`;
 
 <div id="barcode-{key}" />
 <canvas bind:this={canvas} class="uplatnica__barcode" />
-{@html hub3_code}

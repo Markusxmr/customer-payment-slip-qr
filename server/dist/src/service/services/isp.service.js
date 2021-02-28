@@ -39,19 +39,15 @@ let IspService = class IspService {
     }
     async findOne(id) {
         const isp = await this.ispRepository.findOne(id);
-        if (!isp) {
+        if (!isp)
             throw new common_1.NotFoundException();
-        }
         return isp;
     }
     async findOneDefault() {
-        const isps = await this.ispRepository.find({
-            where: { defaultIsp: true },
-        });
-        if (isps.length === 0) {
+        const isp = await this.ispRepository.findOne({ where: { defaultIsp: true } });
+        if (!isp)
             throw new common_1.NotFoundException();
-        }
-        return isps[0];
+        return isp;
     }
     async update(id, updateIspDto) {
         let item = await this.findOne(id);

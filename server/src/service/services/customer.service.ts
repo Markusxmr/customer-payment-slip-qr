@@ -48,40 +48,36 @@ export class CustomerService {
   }
 
   async findOne(id: number) {
-    const customers = await getManager().query(`select * from customers where id = $1`, [id]);
-
-    let paymentSlips = await getManager().query(`select * from payment_slips where customer_id = $1 order by id desc`, [
-      id,
-    ]);
+    const customer = await this.customerRepository.findOne(id);
+    if (!customer) throw new NotFoundException();
+    let paymentSlips = await getManager().query(
+      `
+    select * from payment_slips where customer_id = $1 order by id desc`,
+      [id],
+    );
     paymentSlips = dto(paymentSlips, this.excludes);
-
-    if (customers.length === 0) {
-      throw new NotFoundException();
-    }
-
-    return { ...customers[0], paymentSlips };
+    return { ...customer, paymentSlips };
 
     return this.customerRepository
       .createQueryBuilder('customers')
-      .leftJoinAndSelect('customers.paymentSlips', 'paymentSlips')
+      .innerJoinAndSelect('customers.paymentSlips', 'paymentSlips')
       .orderBy('paymentSlips.id', 'DESC')
       .where('customers.id = :id', { id })
       .getOne();
   }
 
   async update(id: number, updateCustomerDto: UpdateCustomerDto) {
-    let item = await this.findOne(id);
-    if (!item) throw new NotFoundException();
-    delete updateCustomerDto?.paymentSlips;
-    let customer = await this.customerRepository.save({ ...item, ...updateCustomerDto });
-    let paymentSlips = await getManager().query(`select * from payment_slips where customer_id = $1`, [item?.id]);
+    let customer = await this.findOne(id);
+    if (!customer) throw new NotFoundException();
+    customer = await this.customerRepository.save({ ...customer, ...updateCustomerDto });
+    let paymentSlips = await this.paymentSlipRepository
+      .createQueryBuilder('payment_slips')
+      .innerJoinAndSelect('payment_slips.isp', 'isp')
+      .where('payment_slips.customer_id = :customerId', { customerId: id })
+      .getMany();
 
-    let isp;
     for (const paymentSlip of paymentSlips) {
-      if (!isp || isp?.id !== paymentSlip?.isp_id) {
-        isp = await this.ispRepository.findOne(paymentSlip?.isp_id);
-      }
-      let updatedPaymentSlip = paymentSlipDomain({ isp, customer }, paymentSlip?.mjesec);
+      let updatedPaymentSlip = paymentSlipDomain({ isp: paymentSlip.isp, customer }, paymentSlip?.mjesec);
       await this.paymentSlipRepository.update(paymentSlip?.id, updatedPaymentSlip);
     }
 

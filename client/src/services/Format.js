@@ -23,8 +23,10 @@ const Format = (value) => {
     return "";
   }
   if (typeof value === "number") {
-    value = value.toString();
+    value = value.toString().slice(0, -2);
   }
+
+  value = value.slice(0, -2);
 
   let round = `${value.substring(0, value.length - 2)}`;
   let decimale = `${value.charAt(value.length - 2)}${value.charAt(

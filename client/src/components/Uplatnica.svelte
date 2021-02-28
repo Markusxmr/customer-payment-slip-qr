@@ -24,7 +24,7 @@
   });
 
   $: if (model) {
-    model = { ...model, iznos: model?.iznos.replace(".", "") };
+    model = { ...model, iznos: model?.iznos?.replace(".", "") };
   }
 
   async function generatePDF() {
@@ -69,7 +69,6 @@
     await fetch(`${config.url}/payment-slip/${id}`, {
       method: "DELETE",
     });
-    console.log(model);
 
     await getCustomer(customer);
   }
@@ -162,7 +161,7 @@
               id="{key}-hitno"
               class="form-field form-field--hitno"
               type="text"
-              placeholder="hitno"
+              placeholder=""
               maxlength="1"
               bind:value={model.hitno}
             />
@@ -184,7 +183,7 @@
               class:form-field-invalid={!model.iznos}
               type="text"
               placeholder="iznos uplate"
-              bind:value={model.iznos}
+              value={(model.iznos ?? "0").slice(0, -2)}
             />
           </div>
         </div>
@@ -252,7 +251,7 @@
             <input
               id="{key}-datum_izvrsenja"
               class="form-field form-field--datum_izvrsenja"
-              placeholder="Datum izvrsenja"
+              placeholder=""
               maxlength="8"
               type="text"
               bind:value={model.datum_izvrsenja}

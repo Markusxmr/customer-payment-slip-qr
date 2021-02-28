@@ -114,7 +114,7 @@
           aria-expanded="true"
           aria-controls="collapse{i}"
         >
-          <strong>Uplatnica {i + 1}</strong>
+          <strong>Mjesec - {item?.mjesec}</strong>
         </button>
       </h2>
       <div

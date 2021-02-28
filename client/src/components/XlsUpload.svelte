@@ -27,18 +27,19 @@
 <div>
   <label for="">Unos korisnika preko xls datoteke</label>
   <input id="fileUpload" type="file" bind:files />
+  {#if files}
+    <button class="btn btn-secondary btn-sm" on:click={upload}>Upload</button>
+  {:else}
+    <button class="btn btn-secondary btn-sm" on:click={upload} disabled
+      >Upload</button
+    >
+  {/if}
+
+  <slot />
 </div>
 
 {#if dataFile && files[0]}
   <p>
     {files[0].name}
   </p>
-{/if}
-
-{#if files}
-  <button class="btn btn-secondary btn-sm" on:click={upload}>Submit</button>
-{:else}
-  <button class="btn btn-secondary btn-sm" on:click={upload} disabled
-    >Submit</button
-  >
 {/if}

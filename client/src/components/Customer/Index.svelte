@@ -52,16 +52,15 @@
 
   function actionRenderer(instance, td, row, col, prop, value, cellProperties) {
     var stringifiedValue = Handsontable.helper.stringify(value);
-    let viewBtn = document.createElement("a");
+    let viewLink = document.createElement("a");
     let icon = document.createElement("i");
     icon.className = "arrow-right-square";
-    viewBtn.appendChild(icon);
-    viewBtn.href = `/#/korisnik/${stringifiedValue}`;
-    viewBtn.className = "btn btn-success btn-sm";
-    viewBtn.textContent = "Pregled";
+    viewLink.appendChild(icon);
+    viewLink.href = `/#/korisnik/${stringifiedValue}`;
+    viewLink.textContent = "Pregled";
 
     let container = document.createElement("div");
-    container.appendChild(viewBtn);
+    container.appendChild(viewLink);
     Handsontable.dom.addEvent(container, "mousedown", function (e) {
       e.preventDefault(); // prevent selection quirk
     });
@@ -196,11 +195,12 @@
 <h3>Korisnici</h3>
 
 <div>
-  <XlsUpload callback={getCustomers} />
-  <br /><br />
-  <a class="btn btn-secondary btn-sm" href="/#/korisnik/new">Novi korisnik</a>
-  <button class="btn btn-secondary btn-sm" on:click={deleteCustomers}
-    >Izbriši sve</button
+  <XlsUpload callback={getCustomers}>
+    <!-- <a class="btn btn-secondary btn-sm" href="/#/korisnik/new">Novi korisnik</a> -->
+    <button
+      class="btn btn-secondary btn-danger btn-sm"
+      on:click={deleteCustomers}>Izbriši sve</button
+    ></XlsUpload
   >
 </div>
 

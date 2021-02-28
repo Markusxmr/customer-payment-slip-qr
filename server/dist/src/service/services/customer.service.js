@@ -48,35 +48,32 @@ let CustomerService = class CustomerService {
         return dto_1.dto(items, this.excludes);
     }
     async findOne(id) {
-        const customers = await typeorm_1.getManager().query(`select * from customers where id = $1`, [id]);
-        let paymentSlips = await typeorm_1.getManager().query(`select * from payment_slips where customer_id = $1 order by id desc`, [
-            id,
-        ]);
-        paymentSlips = dto_1.dto(paymentSlips, this.excludes);
-        if (customers.length === 0) {
+        const customer = await this.customerRepository.findOne(id);
+        if (!customer)
             throw new common_1.NotFoundException();
-        }
-        return Object.assign(Object.assign({}, customers[0]), { paymentSlips });
+        let paymentSlips = await typeorm_1.getManager().query(`
+    select * from payment_slips where customer_id = $1 order by id desc`, [id]);
+        paymentSlips = dto_1.dto(paymentSlips, this.excludes);
+        return Object.assign(Object.assign({}, customer), { paymentSlips });
         return this.customerRepository
             .createQueryBuilder('customers')
-            .leftJoinAndSelect('customers.paymentSlips', 'paymentSlips')
+            .innerJoinAndSelect('customers.paymentSlips', 'paymentSlips')
             .orderBy('paymentSlips.id', 'DESC')
             .where('customers.id = :id', { id })
             .getOne();
     }
     async update(id, updateCustomerDto) {
-        let item = await this.findOne(id);
-        if (!item)
+        let customer = await this.findOne(id);
+        if (!customer)
             throw new common_1.NotFoundException();
-        updateCustomerDto === null || updateCustomerDto === void 0 ? true : delete updateCustomerDto.paymentSlips;
-        let customer = await this.customerRepository.save(Object.assign(Object.assign({}, item), updateCustomerDto));
-        let paymentSlips = await typeorm_1.getManager().query(`select * from payment_slips where customer_id = $1`, [item === null || item === void 0 ? void 0 : item.id]);
-        let isp;
+        customer = await this.customerRepository.save(Object.assign(Object.assign({}, customer), updateCustomerDto));
+        let paymentSlips = await this.paymentSlipRepository
+            .createQueryBuilder('payment_slips')
+            .innerJoinAndSelect('payment_slips.isp', 'isp')
+            .where('payment_slips.customer_id = :customerId', { customerId: id })
+            .getMany();
         for (const paymentSlip of paymentSlips) {
-            if (!isp || (isp === null || isp === void 0 ? void 0 : isp.id) !== (paymentSlip === null || paymentSlip === void 0 ? void 0 : paymentSlip.isp_id)) {
-                isp = await this.ispRepository.findOne(paymentSlip === null || paymentSlip === void 0 ? void 0 : paymentSlip.isp_id);
-            }
-            let updatedPaymentSlip = payment_slip_domain_1.paymentSlipDomain({ isp, customer }, paymentSlip === null || paymentSlip === void 0 ? void 0 : paymentSlip.mjesec);
+            let updatedPaymentSlip = payment_slip_domain_1.paymentSlipDomain({ isp: paymentSlip.isp, customer }, paymentSlip === null || paymentSlip === void 0 ? void 0 : paymentSlip.mjesec);
             await this.paymentSlipRepository.update(paymentSlip === null || paymentSlip === void 0 ? void 0 : paymentSlip.id, updatedPaymentSlip);
         }
         return customer;
