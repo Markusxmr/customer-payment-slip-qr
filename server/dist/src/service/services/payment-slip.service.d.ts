@@ -24,9 +24,9 @@ export declare class PaymentSlipService {
         godina: number;
         customer: Customer;
         isp: Isp;
+        iznos: number;
         poziv_na_broj_platitelja: string;
         poziv_na_broj_primatelja: string;
-        iznos: string;
         iban_primatelja: string;
         iban_platitelja: string;
         model_primatelja: string;

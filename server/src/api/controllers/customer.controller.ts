@@ -35,8 +35,8 @@ export class CustomerController {
     const isp = await this.ispService.findOneDefault();
     const customer = await this.customerService.create({
       ...createCustomerDto,
-      obveza: createCustomerDto?.obveza ?? `125.00`,
-      cijena_opreme: createCustomerDto?.cijena_opreme ?? `0.0`,
+      obveza: createCustomerDto?.obveza ?? 125.0,
+      cijena_opreme: createCustomerDto?.cijena_opreme ?? 0.0,
     });
 
     let items = new Array(12);
@@ -109,7 +109,7 @@ export class CustomerController {
 
     if (Array.isArray(customers)) {
       customers = customers
-        .map(item => ({ ...item, obveza: `125.00`, iznos_opreme: `115.00` }))
+        .map(item => ({ ...item, obveza: 125.0, iznos_opreme: 115.0 }))
         .map(item => {
           return Object.keys(item).reduce((acc, key) => {
             return item[key]

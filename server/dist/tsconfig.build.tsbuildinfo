@@ -2,8 +2,8 @@
   "program": {
     "fileInfos": {
       "../node_modules/typescript/lib/lib.es5.d.ts": {
-        "version": "9622e8bd7cc72a7dab819a8011ecbf81d443638082e5cb99ecf2e75ff56ffc9d",
-        "signature": "9622e8bd7cc72a7dab819a8011ecbf81d443638082e5cb99ecf2e75ff56ffc9d",
+        "version": "b3584bc5798ed422ce2516df360ffa9cf2d80b5eae852867db9ba3743145f895",
+        "signature": "b3584bc5798ed422ce2516df360ffa9cf2d80b5eae852867db9ba3743145f895",
         "affectsGlobalScope": true
       },
       "../node_modules/typescript/lib/lib.es2015.d.ts": {
@@ -27,8 +27,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typescript/lib/lib.dom.d.ts": {
-        "version": "abadddbf660adeec27e9a56584907d52fa1d6e1e1dc49f639a921baa951b7a84",
-        "signature": "abadddbf660adeec27e9a56584907d52fa1d6e1e1dc49f639a921baa951b7a84",
+        "version": "feeeb1dd8a80fb76be42b0426e8f3ffa9bdef3c2f3c12c147e7660b1c5ba8b3b",
+        "signature": "feeeb1dd8a80fb76be42b0426e8f3ffa9bdef3c2f3c12c147e7660b1c5ba8b3b",
         "affectsGlobalScope": true
       },
       "../node_modules/typescript/lib/lib.dom.iterable.d.ts": {
@@ -72,13 +72,13 @@
         "affectsGlobalScope": true
       },
       "../node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
-        "version": "7207e317a2cb07a177e7d963ab7b8c0e85dde7f9ddb50351f830239bf597569e",
-        "signature": "7207e317a2cb07a177e7d963ab7b8c0e85dde7f9ddb50351f830239bf597569e",
+        "version": "810627a82ac06fb5166da5ada4159c4ec11978dfbb0805fe804c86406dab8357",
+        "signature": "810627a82ac06fb5166da5ada4159c4ec11978dfbb0805fe804c86406dab8357",
         "affectsGlobalScope": true
       },
       "../node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
-        "version": "cb609802a8698aa28b9c56331d4b53f590ca3c1c3a255350304ae3d06017779d",
-        "signature": "cb609802a8698aa28b9c56331d4b53f590ca3c1c3a255350304ae3d06017779d",
+        "version": "62d80405c46c3f4c527ee657ae9d43fda65a0bf582292429aea1e69144a522a6",
+        "signature": "62d80405c46c3f4c527ee657ae9d43fda65a0bf582292429aea1e69144a522a6",
         "affectsGlobalScope": true
       },
       "../node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
@@ -157,8 +157,8 @@
         "affectsGlobalScope": true
       },
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts": {
-        "version": "89bf2b7a601b73ea4311eda9c41f86a58994fec1bee3b87c4a14d68d9adcdcbd",
-        "signature": "89bf2b7a601b73ea4311eda9c41f86a58994fec1bee3b87c4a14d68d9adcdcbd",
+        "version": "506b80b9951c9381dc5f11897b31fca5e2a65731d96ddefa19687fbc26b23c6e",
+        "signature": "506b80b9951c9381dc5f11897b31fca5e2a65731d96ddefa19687fbc26b23c6e",
         "affectsGlobalScope": true
       },
       "../node_modules/typescript/lib/lib.es2017.full.d.ts": {
@@ -4136,82 +4136,82 @@
         "signature": "492f1057dce50ccc62693accc44caf47a5ea9b33b059db85a9540da4b55b9336",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/lib/polyfills/array.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/array.d.ts": {
         "version": "86abf2ee3ef84a8d40947efc8141596e7b071239c3649bbe05c3b7cbf4ff25aa",
         "signature": "86abf2ee3ef84a8d40947efc8141596e7b071239c3649bbe05c3b7cbf4ff25aa",
         "affectsGlobalScope": true
       },
-      "../node_modules/apollo-env/lib/polyfills/object.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/object.d.ts": {
         "version": "7e834906dceaaa112cc0ee0cbc277d0688cb2401d5d22d1cc8fd50982895507d",
         "signature": "7e834906dceaaa112cc0ee0cbc277d0688cb2401d5d22d1cc8fd50982895507d",
         "affectsGlobalScope": true
       },
-      "../node_modules/apollo-env/lib/polyfills/index.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts": {
         "version": "b97a55b37476e5d8a355ff53ce54d39d93e04326f286a28c72b1631bc489c7e4",
         "signature": "b97a55b37476e5d8a355ff53ce54d39d93e04326f286a28c72b1631bc489c7e4",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/lib/typescript-utility-types.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/typescript-utility-types.d.ts": {
         "version": "644f7a7f1a6918d41a4549f24b73d8423512ef64bf00ede77c6f496429f653ce",
         "signature": "644f7a7f1a6918d41a4549f24b73d8423512ef64bf00ede77c6f496429f653ce",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/node_modules/form-data/index.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts": {
         "version": "736097ddbb2903bef918bb3b5811ef1c9c5656f2a73bd39b22a91b9cc2525e50",
         "signature": "736097ddbb2903bef918bb3b5811ef1c9c5656f2a73bd39b22a91b9cc2525e50",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/node_modules/@types/node-fetch/externals.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/externals.d.ts": {
         "version": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
         "signature": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts": {
         "version": "f51382950fa81e3a54e9fd9f343fe583cfbb221f15a51936e12411699347effe",
         "signature": "f51382950fa81e3a54e9fd9f343fe583cfbb221f15a51936e12411699347effe",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/lib/fetch/fetch.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts": {
         "version": "97b59dfb4a4ce0f64e56899f781dfc88c6980da0d6579e90a9419326ef1ea527",
         "signature": "97b59dfb4a4ce0f64e56899f781dfc88c6980da0d6579e90a9419326ef1ea527",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/lib/fetch/url.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts": {
         "version": "f2266e9e985339c2bce2521131502b6de12ce658c71f75fb23518ae73060aa23",
         "signature": "f2266e9e985339c2bce2521131502b6de12ce658c71f75fb23518ae73060aa23",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/lib/fetch/index.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts": {
         "version": "0f397719640ef73aaff6344f5b3fc27c69d0850dcd3f20854e322671cc8da5ae",
         "signature": "0f397719640ef73aaff6344f5b3fc27c69d0850dcd3f20854e322671cc8da5ae",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/lib/utils/createHash.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts": {
         "version": "134fce06b423352ff05e15abd8d25f766e0ebcc939a4b80bb5464b7c37795f0e",
         "signature": "134fce06b423352ff05e15abd8d25f766e0ebcc939a4b80bb5464b7c37795f0e",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/lib/utils/isNodeLike.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/isNodeLike.d.ts": {
         "version": "69edcc3a497cf02aba61a4a0e602786a8ae1dc2e650b54e89f8e19a75ef9d62f",
         "signature": "69edcc3a497cf02aba61a4a0e602786a8ae1dc2e650b54e89f8e19a75ef9d62f",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/lib/utils/mapValues.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/mapValues.d.ts": {
         "version": "b5e284217b0f1b760fbecd6e5bd72d8e7292d6d2a91131718a1617a7600895fc",
         "signature": "b5e284217b0f1b760fbecd6e5bd72d8e7292d6d2a91131718a1617a7600895fc",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/lib/utils/predicates.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/predicates.d.ts": {
         "version": "bbe60ef612ccc9b627648fd0d56e4e04c52bf670c25c4cd2b681cdbedfe16927",
         "signature": "bbe60ef612ccc9b627648fd0d56e4e04c52bf670c25c4cd2b681cdbedfe16927",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/lib/utils/index.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts": {
         "version": "bfb6158d32d15a5f518529d2941030215c6d6d31ba468faf805a427a9056f192",
         "signature": "bfb6158d32d15a5f518529d2941030215c6d6d31ba468faf805a427a9056f192",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-env/lib/index.d.ts": {
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts": {
         "version": "0115d4b56667395d868039054ea4487f0cd08c7d93364d957bc27d6ddc3803a7",
         "signature": "0115d4b56667395d868039054ea4487f0cd08c7d93364d957bc27d6ddc3803a7",
         "affectsGlobalScope": false
@@ -4357,8 +4357,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/koa/index.d.ts": {
-        "version": "2ae67e4603f9b6ba0e01fb39db485ca3324e64d83c62ba16c95ba88bf2c4b469",
-        "signature": "2ae67e4603f9b6ba0e01fb39db485ca3324e64d83c62ba16c95ba88bf2c4b469",
+        "version": "7a8d7a2d241556d322c18e6e069d56a5bb4f49ad26d39cde762c2817f75fc3ce",
+        "signature": "7a8d7a2d241556d322c18e6e069d56a5bb4f49ad26d39cde762c2817f75fc3ce",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/fs-capacitor/index.d.ts": {
@@ -4540,7 +4540,7 @@
         "version": "a60c9f01043a35226d902dc87596395e18837ca42529036507dc38bb41d21724",
         "affectsGlobalScope": false
       },
-      "../node_modules/typescript/lib/typescript.d.ts": {
+      "../node_modules/@ts-morph/common/node_modules/typescript/lib/typescript.d.ts": {
         "version": "e219a21f5ad8412f7123ea70e59e1287e7fca5c41157be496847f7959fc1e0c4",
         "signature": "e219a21f5ad8412f7123ea70e59e1287e7fca5c41157be496847f7959fc1e0c4",
         "affectsGlobalScope": false
@@ -5386,13 +5386,13 @@
         "affectsGlobalScope": false
       },
       "../src/entities/customer.entity.ts": {
-        "version": "8edce485024487965a607a654b589306c07ea32a8053df50f2dea74c3370ef4f",
-        "signature": "660a5b451d5b4f06979e047ebff4684724dbf9851b7e25fd02b7264d8045975e",
+        "version": "ab23ee3d363fec2540a5295539ba8d954c6ec69ede5956b88d1c958fd3f4915b",
+        "signature": "a2a87c2a8d975b2a79b28e78f8a752b63caaea3f439303ab4aef73ffa4009141",
         "affectsGlobalScope": false
       },
       "../src/entities/payment-slip.entity.ts": {
-        "version": "5d8de469f74cb6c65d3dbe9ec3cc40c03f25e2cb0937f31f1820b4546973143c",
-        "signature": "3554cc19a0e298a6a9d7444568ce7c79534463de69020e1b9672bff976dbafd4",
+        "version": "7f76ee0fc319b432b7965d135ce8c38fe9899af23c47e85ff17db7766d098a37",
+        "signature": "db1dd6045a276a600f6884317fbe2bfd1a183f27199cef04eed9381ec5555852",
         "affectsGlobalScope": false
       },
       "../src/entities/isp.entity.ts": {
@@ -5491,13 +5491,13 @@
         "affectsGlobalScope": false
       },
       "../src/domain/payment-slip.domain.ts": {
-        "version": "343b59e9db70de8f4ae789c11c1bb3948d9701e9c872cba5329d451422562324",
-        "signature": "2d9fe7dcfaa0c685bc5c71cdd8cc1e9fb681c3636abeeb1c09e1340a5a98bc25",
+        "version": "828983fd6c81ca2d29d8f227ee8463a0428a0c7615a7bea8c8d5a729ed521dd3",
+        "signature": "44d40389565061fc7f5320983d1b01757ec8258ff519b83466ee1749747f9501",
         "affectsGlobalScope": false
       },
       "../src/service/services/payment-slip.service.ts": {
-        "version": "65f4db2423e1b780838055d3ce28a9e11db939b83c7980a5fa466f449c07f9a0",
-        "signature": "c28b3a7d802032b28d6acce301592b8e2d9efc3704e317e0bfc3db76675edb93",
+        "version": "590fefcb754c059f0b22c1cd7d064f9504d51f3d1c4d92cafa45ba11c0ff4405",
+        "signature": "e180c669b9d12273e2856f9aec0dca65aced84a092fbdd8e4bac98470cf9657f",
         "affectsGlobalScope": false
       },
       "../src/common/load-files.ts": {
@@ -5507,7 +5507,7 @@
       },
       "../src/api/controllers/payment-slip.controller.ts": {
         "version": "7ab11cbf3e48c3aad2790ba9fe209562451a78f74fc68c5657a5804b98dc9223",
-        "signature": "2622345f5c27cd45677a8e72798a0aaa38d03ae5458a331d69f6b89826526a93",
+        "signature": "7e2b86da261dbd45e217d311322b48598b85fe750c73d3a532534172a984bfdf",
         "affectsGlobalScope": false
       },
       "../src/api/dto/customer/create-customer.dto.ts": {
@@ -5522,7 +5522,7 @@
       },
       "../src/service/services/customer.service.ts": {
         "version": "d83960d7009fdaeb1ecec463a1c5806cbba6cc1a0c0eff1e29e2c98f65091512",
-        "signature": "0dcdfee06a085f1d31906f299ead555fa8e1c39e5ea4aaa36efcea5bb4a197ac",
+        "signature": "febe31b007b235fa37b56a62d65b1f2b71059c76ffd93eda02b72dc706cfcea6",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts": {
@@ -5606,7 +5606,7 @@
         "affectsGlobalScope": false
       },
       "../src/api/controllers/customer.controller.ts": {
-        "version": "8e860966b41b660f81f2ad64c51c900140e4ec176b1892d185b984515da7785b",
+        "version": "180479dd4dce97a2c6e5e166810afceba20a10430aeeebdef2cbf38e24f21d0f",
         "signature": "42bf5e32bf5e6d254beab2f2555583a83d460bd9e198e3bfbb1b0935fc701699",
         "affectsGlobalScope": false
       },
@@ -5622,7 +5622,7 @@
       },
       "../src/api/resolvers/customer.resolver.ts": {
         "version": "cc20f0da0a9febfe96610d95fff5b0b788aec3142ce3569313917caea9acc19d",
-        "signature": "b7cb7da2f2843a504ee8161e221136965a11d835c062cc97eb912580c3af0508",
+        "signature": "d0848ed8ba6b23970e2a007de162f0383e4e7708350734392f99f8e32f06487f",
         "affectsGlobalScope": false
       },
       "../src/api/dto/payment-slip/create-payment-slip.input.ts": {
@@ -5637,7 +5637,7 @@
       },
       "../src/api/resolvers/payment-slip.resolver.ts": {
         "version": "1812b56da777e1a9e67e2f7f08beb4f0c74ca5d4283d0d3d3a361d382e6ca46c",
-        "signature": "36333bfa0bd53bf12880497f2c2f2cbed76eb618dcacab0bff4b9a11e887ee37",
+        "signature": "5cf4696d5ee971aa5488bb29b4c95c4f6d55a9b9bc7416bcdf71b340b4078122",
         "affectsGlobalScope": false
       },
       "../src/service/service.providers.ts": {
@@ -6142,7 +6142,7 @@
         "../node_modules/@apollographql/apollo-tools/lib/buildServiceDefinition.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/schema/index.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/utilities/index.d.ts",
-        "../node_modules/apollo-env/lib/index.d.ts"
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts"
       ],
       "../node_modules/@apollographql/apollo-tools/lib/schema/index.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/schema/resolveObject.d.ts",
@@ -6165,6 +6165,51 @@
         "../node_modules/@apollographql/apollo-tools/lib/utilities/graphql.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/utilities/invariant.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/utilities/predicates.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/externals.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts": [
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/typescript-utility-types.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/array.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/object.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts": [
+        "../node_modules/@types/node/crypto.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/mapValues.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/predicates.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
       ],
       "../node_modules/@babel/parser/typings/babel-parser.d.ts": [
         "../node_modules/@babel/types/lib/index.d.ts"
@@ -7575,7 +7620,7 @@
         "../node_modules/@nestjs/typeorm/dist/index.d.ts"
       ],
       "../node_modules/@ts-morph/common/lib/ts-morph-common.d.ts": [
-        "../node_modules/typescript/lib/typescript.d.ts"
+        "../node_modules/@ts-morph/common/node_modules/typescript/lib/typescript.d.ts"
       ],
       "../node_modules/@types/accepts/index.d.ts": [
         "../node_modules/@types/node/http.d.ts",
@@ -8072,51 +8117,6 @@
       "../node_modules/apollo-engine-reporting/dist/index.d.ts": [
         "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
         "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/fetch/fetch.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/https.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/fetch/index.d.ts": [
-        "../node_modules/apollo-env/lib/fetch/fetch.d.ts",
-        "../node_modules/apollo-env/lib/fetch/url.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/fetch/url.d.ts": [
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/url.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/index.d.ts": [
-        "../node_modules/apollo-env/lib/fetch/index.d.ts",
-        "../node_modules/apollo-env/lib/polyfills/index.d.ts",
-        "../node_modules/apollo-env/lib/typescript-utility-types.d.ts",
-        "../node_modules/apollo-env/lib/utils/index.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/polyfills/index.d.ts": [
-        "../node_modules/apollo-env/lib/polyfills/array.d.ts",
-        "../node_modules/apollo-env/lib/polyfills/object.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/utils/createHash.d.ts": [
-        "../node_modules/@types/node/crypto.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/utils/index.d.ts": [
-        "../node_modules/apollo-env/lib/utils/createHash.d.ts",
-        "../node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
-        "../node_modules/apollo-env/lib/utils/mapValues.d.ts",
-        "../node_modules/apollo-env/lib/utils/predicates.d.ts"
-      ],
-      "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/url.d.ts",
-        "../node_modules/apollo-env/node_modules/@types/node-fetch/externals.d.ts",
-        "../node_modules/apollo-env/node_modules/form-data/index.d.ts"
-      ],
-      "../node_modules/apollo-env/node_modules/form-data/index.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/stream.d.ts"
       ],
       "../node_modules/apollo-graphql/lib/index.d.ts": [
         "../node_modules/apollo-graphql/lib/operationId.d.ts",
@@ -10927,7 +10927,7 @@
         "../node_modules/@apollographql/apollo-tools/lib/buildServiceDefinition.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/schema/index.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/utilities/index.d.ts",
-        "../node_modules/apollo-env/lib/index.d.ts"
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts"
       ],
       "../node_modules/@apollographql/apollo-tools/lib/schema/index.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/schema/resolveObject.d.ts",
@@ -10950,6 +10950,51 @@
         "../node_modules/@apollographql/apollo-tools/lib/utilities/graphql.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/utilities/invariant.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/utilities/predicates.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/externals.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts": [
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/typescript-utility-types.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/array.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/object.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts": [
+        "../node_modules/@types/node/crypto.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts": [
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/mapValues.d.ts",
+        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/predicates.d.ts"
+      ],
+      "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
       ],
       "../node_modules/@babel/parser/typings/babel-parser.d.ts": [
         "../node_modules/@babel/types/lib/index.d.ts"
@@ -12360,7 +12405,7 @@
         "../node_modules/@nestjs/typeorm/dist/index.d.ts"
       ],
       "../node_modules/@ts-morph/common/lib/ts-morph-common.d.ts": [
-        "../node_modules/typescript/lib/typescript.d.ts"
+        "../node_modules/@ts-morph/common/node_modules/typescript/lib/typescript.d.ts"
       ],
       "../node_modules/@types/accepts/index.d.ts": [
         "../node_modules/@types/node/http.d.ts",
@@ -12857,51 +12902,6 @@
       "../node_modules/apollo-engine-reporting/dist/index.d.ts": [
         "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
         "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/fetch/fetch.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/https.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/fetch/index.d.ts": [
-        "../node_modules/apollo-env/lib/fetch/fetch.d.ts",
-        "../node_modules/apollo-env/lib/fetch/url.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/fetch/url.d.ts": [
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/url.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/index.d.ts": [
-        "../node_modules/apollo-env/lib/fetch/index.d.ts",
-        "../node_modules/apollo-env/lib/polyfills/index.d.ts",
-        "../node_modules/apollo-env/lib/typescript-utility-types.d.ts",
-        "../node_modules/apollo-env/lib/utils/index.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/polyfills/index.d.ts": [
-        "../node_modules/apollo-env/lib/polyfills/array.d.ts",
-        "../node_modules/apollo-env/lib/polyfills/object.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/utils/createHash.d.ts": [
-        "../node_modules/@types/node/crypto.d.ts"
-      ],
-      "../node_modules/apollo-env/lib/utils/index.d.ts": [
-        "../node_modules/apollo-env/lib/utils/createHash.d.ts",
-        "../node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
-        "../node_modules/apollo-env/lib/utils/mapValues.d.ts",
-        "../node_modules/apollo-env/lib/utils/predicates.d.ts"
-      ],
-      "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/url.d.ts",
-        "../node_modules/apollo-env/node_modules/@types/node-fetch/externals.d.ts",
-        "../node_modules/apollo-env/node_modules/form-data/index.d.ts"
-      ],
-      "../node_modules/apollo-env/node_modules/form-data/index.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/stream.d.ts"
       ],
       "../node_modules/apollo-graphql/lib/index.d.ts": [
         "../node_modules/apollo-graphql/lib/operationId.d.ts",
@@ -15565,6 +15565,22 @@
       "../node_modules/@apollographql/apollo-tools/lib/utilities/index.d.ts",
       "../node_modules/@apollographql/apollo-tools/lib/utilities/invariant.d.ts",
       "../node_modules/@apollographql/apollo-tools/lib/utilities/predicates.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/externals.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/array.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/object.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/typescript-utility-types.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/mapValues.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/predicates.d.ts",
+      "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts",
       "../node_modules/@apollographql/graphql-playground-html/dist/render-playground-page.d.ts",
       "../node_modules/@babel/parser/typings/babel-parser.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
@@ -15912,6 +15928,7 @@
       "../node_modules/@nestjs/typeorm/dist/typeorm.module.d.ts",
       "../node_modules/@nestjs/typeorm/index.d.ts",
       "../node_modules/@ts-morph/common/lib/ts-morph-common.d.ts",
+      "../node_modules/@ts-morph/common/node_modules/typescript/lib/typescript.d.ts",
       "../node_modules/@types/accepts/index.d.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@types/babel__core/index.d.ts",
@@ -16036,22 +16053,6 @@
       "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
       "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts",
       "../node_modules/apollo-engine-reporting/dist/index.d.ts",
-      "../node_modules/apollo-env/lib/fetch/fetch.d.ts",
-      "../node_modules/apollo-env/lib/fetch/index.d.ts",
-      "../node_modules/apollo-env/lib/fetch/url.d.ts",
-      "../node_modules/apollo-env/lib/index.d.ts",
-      "../node_modules/apollo-env/lib/polyfills/array.d.ts",
-      "../node_modules/apollo-env/lib/polyfills/index.d.ts",
-      "../node_modules/apollo-env/lib/polyfills/object.d.ts",
-      "../node_modules/apollo-env/lib/typescript-utility-types.d.ts",
-      "../node_modules/apollo-env/lib/utils/createHash.d.ts",
-      "../node_modules/apollo-env/lib/utils/index.d.ts",
-      "../node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
-      "../node_modules/apollo-env/lib/utils/mapValues.d.ts",
-      "../node_modules/apollo-env/lib/utils/predicates.d.ts",
-      "../node_modules/apollo-env/node_modules/@types/node-fetch/externals.d.ts",
-      "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts",
-      "../node_modules/apollo-env/node_modules/form-data/index.d.ts",
       "../node_modules/apollo-graphql/lib/index.d.ts",
       "../node_modules/apollo-graphql/lib/operationId.d.ts",
       "../node_modules/apollo-graphql/lib/schema/GraphQLSchemaValidationError.d.ts",
@@ -16694,7 +16695,6 @@
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-      "../node_modules/typescript/lib/typescript.d.ts",
       "../node_modules/zen-observable-ts/lib/index.d.ts",
       "../node_modules/zen-observable-ts/lib/types.d.ts",
       "../node_modules/zen-observable-ts/lib/zenObservable.d.ts",
@@ -16735,5 +16735,5 @@
       "../src/service/transaction/transactional-connection.ts"
     ]
   },
-  "version": "4.1.5"
+  "version": "4.2.2"
 }

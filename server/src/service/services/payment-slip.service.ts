@@ -79,7 +79,8 @@ export class PaymentSlipService {
     let updatedIsp;
     for (const key of Object.keys(updatePaymentSlipDto)) {
       if (key === 'isp_id' && item?.isp_id !== updatePaymentSlipDto[key]) {
-        let isp = await this.ispRepository.findOne(updatePaymentSlipDto[key]);
+        let requestIspId = updatePaymentSlipDto[key];
+        let isp = await this.ispRepository.findOne(requestIspId);
         updatedIsp = setIspPaymentSlip(isp);
         updatePaymentSlipDto = { ...updatePaymentSlipDto, ...updatedIsp };
       }

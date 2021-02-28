@@ -33,7 +33,7 @@ let CustomerController = class CustomerController {
     async create(createCustomerDto) {
         var _a, _b;
         const isp = await this.ispService.findOneDefault();
-        const customer = await this.customerService.create(Object.assign(Object.assign({}, createCustomerDto), { obveza: (_a = createCustomerDto === null || createCustomerDto === void 0 ? void 0 : createCustomerDto.obveza) !== null && _a !== void 0 ? _a : `125.00`, cijena_opreme: (_b = createCustomerDto === null || createCustomerDto === void 0 ? void 0 : createCustomerDto.cijena_opreme) !== null && _b !== void 0 ? _b : `0.0` }));
+        const customer = await this.customerService.create(Object.assign(Object.assign({}, createCustomerDto), { obveza: (_a = createCustomerDto === null || createCustomerDto === void 0 ? void 0 : createCustomerDto.obveza) !== null && _a !== void 0 ? _a : 125.0, cijena_opreme: (_b = createCustomerDto === null || createCustomerDto === void 0 ? void 0 : createCustomerDto.cijena_opreme) !== null && _b !== void 0 ? _b : 0.0 }));
         let items = new Array(12);
         let paymentSlips = [];
         for (let i = 0, len = items.length; i < len; i++) {
@@ -81,7 +81,7 @@ let CustomerController = class CustomerController {
         let customers = JSON.parse(source);
         if (Array.isArray(customers)) {
             customers = customers
-                .map(item => (Object.assign(Object.assign({}, item), { obveza: `125.00`, iznos_opreme: `115.00` })))
+                .map(item => (Object.assign(Object.assign({}, item), { obveza: 125.0, iznos_opreme: 115.0 })))
                 .map(item => {
                 return Object.keys(item).reduce((acc, key) => {
                     return item[key]

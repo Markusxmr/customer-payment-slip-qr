@@ -22,7 +22,7 @@ __decorate([
 ], Customer.prototype, "id", void 0);
 __decorate([
     graphql_1.Field(() => graphql_1.Int),
-    typeorm_1.Column({ name: 'šifra', type: 'integer', nullable: true }),
+    typeorm_1.Column({ name: 'šifra', type: 'integer', unique: true, nullable: true }),
     __metadata("design:type", Number)
 ], Customer.prototype, "\u0161ifra", void 0);
 __decorate([
@@ -30,6 +30,16 @@ __decorate([
     typeorm_1.Column({ type: 'varchar', nullable: true }),
     __metadata("design:type", String)
 ], Customer.prototype, "naziv", void 0);
+__decorate([
+    graphql_1.Field(() => Number),
+    typeorm_1.Column({ type: 'numeric', precision: 10, scale: 4, nullable: true }),
+    __metadata("design:type", Object)
+], Customer.prototype, "obveza", void 0);
+__decorate([
+    graphql_1.Field(() => Number),
+    typeorm_1.Column({ type: 'numeric', precision: 10, scale: 4, nullable: true }),
+    __metadata("design:type", Object)
+], Customer.prototype, "iznos_opreme", void 0);
 __decorate([
     graphql_1.Field(() => String),
     typeorm_1.Column({ type: 'varchar', nullable: true }),
@@ -165,18 +175,8 @@ __decorate([
     __metadata("design:type", String)
 ], Customer.prototype, "mjesto_primatelja", void 0);
 __decorate([
-    graphql_1.Field(() => Number),
-    typeorm_1.Column({ type: 'decimal', nullable: true }),
-    __metadata("design:type", Object)
-], Customer.prototype, "obveza", void 0);
-__decorate([
-    graphql_1.Field(() => Number),
-    typeorm_1.Column({ type: 'decimal', nullable: true }),
-    __metadata("design:type", Object)
-], Customer.prototype, "iznos_opreme", void 0);
-__decorate([
     graphql_1.Field(() => [payment_slip_entity_1.PaymentSlip]),
-    typeorm_1.OneToMany(() => payment_slip_entity_1.PaymentSlip, (entity) => entity.customer, {
+    typeorm_1.OneToMany(() => payment_slip_entity_1.PaymentSlip, entity => entity.customer, {
         eager: true,
     }),
     __metadata("design:type", Array)

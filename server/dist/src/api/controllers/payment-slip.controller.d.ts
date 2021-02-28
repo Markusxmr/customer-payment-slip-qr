@@ -16,9 +16,9 @@ export declare class PaymentSlipController {
         godina: number;
         customer: import("../../entities/customer.entity").Customer;
         isp: import("../../entities/isp.entity").Isp;
+        iznos: number;
         poziv_na_broj_platitelja: string;
         poziv_na_broj_primatelja: string;
-        iznos: string;
         iban_primatelja: string;
         iban_platitelja: string;
         model_primatelja: string;

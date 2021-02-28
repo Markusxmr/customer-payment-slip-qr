@@ -17,6 +17,7 @@ export declare class CustomerService {
         id: number;
         šifra: number;
         naziv: string;
+        iznos_opreme: any;
         adresa: string;
         država: string;
         pošta: number;
@@ -44,7 +45,6 @@ export declare class CustomerService {
         država_primatelja: string;
         pošta_primatelja: string;
         mjesto_primatelja: string;
-        iznos_opreme: any;
         paymentSlips: PaymentSlip[];
         inserted_at: Date;
         updated_at: Date;

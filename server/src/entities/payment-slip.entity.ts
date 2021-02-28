@@ -52,7 +52,10 @@ export class PaymentSlip {
   @JoinColumn({ name: 'isp_id', referencedColumnName: 'id' })
   isp: Isp;
 
-  // Model for visual payment slip
+  @Field(() => Float)
+  @Column({ type: 'numeric', precision: 10, scale: 4, nullable: true })
+  iznos: number;
+
   @Field(() => String)
   @Column({ type: 'varchar', nullable: true })
   poziv_na_broj_platitelja: string;
@@ -60,10 +63,6 @@ export class PaymentSlip {
   @Field(() => String)
   @Column({ type: 'varchar', nullable: true })
   poziv_na_broj_primatelja: string;
-
-  @Field(() => String)
-  @Column({ type: 'varchar', default: '000', nullable: true })
-  iznos: string;
 
   @Field(() => String)
   @Column({ type: 'varchar', nullable: true })

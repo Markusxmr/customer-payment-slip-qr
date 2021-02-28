@@ -60,6 +60,11 @@ __decorate([
     __metadata("design:type", isp_entity_1.Isp)
 ], PaymentSlip.prototype, "isp", void 0);
 __decorate([
+    graphql_1.Field(() => graphql_1.Float),
+    typeorm_1.Column({ type: 'numeric', precision: 10, scale: 4, nullable: true }),
+    __metadata("design:type", Number)
+], PaymentSlip.prototype, "iznos", void 0);
+__decorate([
     graphql_1.Field(() => String),
     typeorm_1.Column({ type: 'varchar', nullable: true }),
     __metadata("design:type", String)
@@ -69,11 +74,6 @@ __decorate([
     typeorm_1.Column({ type: 'varchar', nullable: true }),
     __metadata("design:type", String)
 ], PaymentSlip.prototype, "poziv_na_broj_primatelja", void 0);
-__decorate([
-    graphql_1.Field(() => String),
-    typeorm_1.Column({ type: 'varchar', default: '000', nullable: true }),
-    __metadata("design:type", String)
-], PaymentSlip.prototype, "iznos", void 0);
 __decorate([
     graphql_1.Field(() => String),
     typeorm_1.Column({ type: 'varchar', nullable: true }),

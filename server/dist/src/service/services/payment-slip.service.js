@@ -79,7 +79,8 @@ let PaymentSlipService = class PaymentSlipService {
         let updatedIsp;
         for (const key of Object.keys(updatePaymentSlipDto)) {
             if (key === 'isp_id' && (item === null || item === void 0 ? void 0 : item.isp_id) !== updatePaymentSlipDto[key]) {
-                let isp = await this.ispRepository.findOne(updatePaymentSlipDto[key]);
+                let requestIspId = updatePaymentSlipDto[key];
+                let isp = await this.ispRepository.findOne(requestIspId);
                 updatedIsp = payment_slip_domain_1.setIspPaymentSlip(isp);
                 updatePaymentSlipDto = Object.assign(Object.assign({}, updatePaymentSlipDto), updatedIsp);
             }

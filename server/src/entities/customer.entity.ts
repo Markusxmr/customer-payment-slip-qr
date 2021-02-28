@@ -1,11 +1,4 @@
-import {
-  Entity,
-  Column,
-  PrimaryGeneratedColumn,
-  OneToMany,
-  CreateDateColumn,
-  UpdateDateColumn,
-} from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 import { ObjectType, Field, Int } from '@nestjs/graphql';
 import { PaymentSlip } from './payment-slip.entity';
 
@@ -17,12 +10,20 @@ export class Customer {
   id: number;
 
   @Field(() => Int)
-  @Column({ name: 'šifra', type: 'integer', nullable: true })
+  @Column({ name: 'šifra', type: 'integer', unique: true, nullable: true })
   šifra: number;
 
   @Field(() => String)
   @Column({ type: 'varchar', nullable: true })
   naziv: string;
+
+  @Field(() => Number)
+  @Column({ type: 'numeric', precision: 10, scale: 4, nullable: true })
+  obveza;
+
+  @Field(() => Number)
+  @Column({ type: 'numeric', precision: 10, scale: 4, nullable: true })
+  iznos_opreme;
 
   @Field(() => String)
   @Column({ type: 'varchar', nullable: true })
@@ -131,16 +132,8 @@ export class Customer {
   @Column({ type: 'varchar', nullable: true })
   mjesto_primatelja: string;
 
-  @Field(() => Number)
-  @Column({ type: 'decimal', nullable: true })
-  obveza;
-
-  @Field(() => Number)
-  @Column({ type: 'decimal', nullable: true })
-  iznos_opreme;
-
   @Field(() => [PaymentSlip])
-  @OneToMany(() => PaymentSlip, (entity) => entity.customer, {
+  @OneToMany(() => PaymentSlip, entity => entity.customer, {
     eager: true,
   })
   paymentSlips: PaymentSlip[];

@@ -11,7 +11,7 @@ export function setIspPaymentSlip(isp) {
     ulica_i_broj_primatelja: `${isp?.street}`,
     postanski_i_grad_primatelja: `${isp?.postalCode} ${isp?.city}`,
     naziv_primatelja: isp?.name,
-    model_primatelja: '',
+    model_primatelja: 'HR01',
     isp_id: isp?.id,
   };
 }
@@ -19,7 +19,6 @@ export function setIspPaymentSlip(isp) {
 export function setPaymentSlip({ isp, customer }) {
   return {
     // poziv_na_broj_platitelja: '',
-    // poziv_na_broj_primatelja: '',
     // iznos: '',
     iban_platitelja: customer?.transakcijski_račun ? `HR${customer?.transakcijski_račun}` : '',
     // model_platitelja: '',
@@ -42,16 +41,17 @@ export function monthFormater(customer, i: number) {
   let { obveza = null, iznos_opreme = null } = customer;
   let date = new Date();
   let year = date.getFullYear();
-  let iznos: string = `0.00`;
+  let iznos = 0.0;
   let opis_placanja;
   let formatedMonth = i > 9 ? i : `0${i}`;
+  let šifra = `${customer?.šifra} - ` ?? '';
+
   if (i < 4 && i > 0) {
-    iznos = obveza && iznos_opreme ? (parseFloat(obveza) + parseFloat(iznos_opreme)).toFixed(2) : `0.00`;
-    let val = iznos !== `0.00` ? `${iznos + ' - '}` : '';
-    opis_placanja = val + `Internet usluge za ${i}/${year} + oprema ${i}/3`;
+    iznos = obveza && iznos_opreme ? obveza + iznos_opreme : 0.0;
+    opis_placanja = šifra + `Internet usluge za ${i}/${year} + oprema ${i}/3`;
   } else {
     iznos = obveza;
-    opis_placanja = `${iznos ? iznos + ' - ' : ''}Internet usluge za ${i}/${year}`;
+    opis_placanja = šifra + `Internet usluge za ${i}/${year}`;
   }
 
   return {
@@ -66,13 +66,17 @@ export function buildPaymentSlipDomain() {
     let date = new Date();
     let year = date.getFullYear();
     let newVal = setPaymentSlip({ isp, customer });
+    let šifra = `${customer?.šifra}-` ?? '';
     let { formatedMonth, opis_placanja, iznos } = monthFormater(customer, i);
+
     return {
       ...newVal,
+      poziv_na_broj_primatelja: `${šifra}${i}`,
       mjesec: i,
       godina: year,
       iznos,
-      datum_izvrsenja: `01${formatedMonth}${year}`,
+      // datum_izvrsenja: `01${formatedMonth}${year}`,
+      datum_izvrsenja: '',
       opis_placanja,
     };
   };
