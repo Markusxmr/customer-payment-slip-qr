@@ -16,6 +16,10 @@ export class GlobalSetting {
   @Column({ type: 'integer', nullable: true })
   paymentSlipMarginTop: number;
 
+  @Field(() => Int)
+  @Column({ type: 'integer', nullable: true })
+  paymentSlipMarginLeft: number;
+
   @Field(() => Date)
   @CreateDateColumn()
   inserted_at: Date;

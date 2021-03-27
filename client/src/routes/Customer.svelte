@@ -20,7 +20,8 @@
   let paymentSlips = [];
   let textOnlyPrint = false;
   let scale = 1.0;
-  let marginBottom = 0;
+  let topMargin = 0;
+  let leftMargin = 0;
   let printItemMarginTopFirst = 10;
   let printItemMarginTop = 80;
 
@@ -68,12 +69,18 @@
   async function fetchGlobalSetting() {
     const data = await getGlobalSetting(1);
     scale = Number(data?.paymentSlipPrintScale) ?? 1.0;
+    topMargin = Number(data?.paymentSlipMarginTop) ?? 0;
+    leftMargin = Number(data?.paymentSlipMarginLeft) ?? 0;
   }
 
   fetchGlobalSetting();
 
   async function submitGlobalSetting() {
-    await updateGlobalSetting(1, { paymentSlipPrintScale: Number(scale) });
+    await updateGlobalSetting(1, {
+      paymentSlipPrintScale: Number(scale),
+      paymentSlipMarginTop: Number(topMargin),
+      paymentSlipMarginLeft: Number(leftMargin),
+    });
     await fetchGlobalSetting();
   }
 </script>
@@ -82,7 +89,10 @@
   {customer?.naziv ?? "Obrada..."}
 </h3>
 
-<div class="print" style="--scale: {scale}">
+<div
+  class="print"
+  style="--scale: {scale}; --print-margin-top: {topMargin}px; --print-margin-left: {leftMargin}px"
+>
   {#each paymentSlips as model, i}
     <div
       class="print-item"
@@ -133,7 +143,7 @@
       >Print bez slike</button
     >
     <form on:submit|preventDefault={submitGlobalSetting}>
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="mb-2 col-md-2 col-sm-6">
           <label for="scale">Skala uplatnica</label>
           <input
@@ -149,13 +159,25 @@
           />
         </div>
         <div class="mb-2 col-md-2 col-sm-6">
-          <label for="marginBottom">Razmak uplatnica</label>
+          <label for="topMargin">Gornja margina</label>
           <input
             class="form-control"
-            id="marginBottom"
-            name="marginBottom"
+            id="topMargin"
+            name="topMargin"
             type="number"
-            bind:value={marginBottom}
+            on:change={submitGlobalSetting}
+            bind:value={topMargin}
+          />
+        </div>
+        <div class="mb-2 col-md-2 col-sm-6">
+          <label for="leftMargin">Lijeva margina</label>
+          <input
+            class="form-control"
+            id="leftMargin"
+            name="leftMargin"
+            type="number"
+            on:change={submitGlobalSetting}
+            bind:value={leftMargin}
           />
         </div>
       </div>

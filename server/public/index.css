@@ -10,7 +10,9 @@ label.svelte-1ln3bo1{text-align:right}
   .print {
     position: absolute;
     display: block;
-    text-align: left !important; }
+    text-align: left !important;
+    margin-top: var(--print-margin-top) !important;
+    margin-left: var(--print-margin-left) !important; }
   .print-item {
     margin-top: var(--print-item-margin-top) !important;
     transform: scale(var(--scale)); }

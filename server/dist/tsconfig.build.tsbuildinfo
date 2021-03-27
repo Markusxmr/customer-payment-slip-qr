@@ -5891,18 +5891,18 @@
         "affectsGlobalScope": false
       },
       "../src/entities/global-setting.entity.ts": {
-        "version": "1a83ca5c59a5e512132a4a1029ebe820e500274e265d778ea9e8c4cc4b8bb029",
-        "signature": "144fcfa0aed0acbe8330e80a7ad9a92872af5d5ee0c9ad5110625f4bd3501d01",
+        "version": "17c64861d7776a368852638f47c2ffb5033b9325f758755491b6126b529aa3e0",
+        "signature": "43af458cf05621f7af98402580d11542579e0d667a3240ee109a6d9a5cdc3811",
         "affectsGlobalScope": false
       },
       "../src/service/services/global-setting.service.ts": {
         "version": "247ca6d40c9dcec7d1b9d144535e80764df842b6b3a3c54c44be0bd61a5b76cc",
-        "signature": "e4551c12856d8152e61b833bdaad74afcc8353afef42ad2d11bde36e2df72969",
+        "signature": "2d3daf9d55a4b8e87dfcbefa2874a5f136c86cc0efcee8ee21a41f3b26e0ac43",
         "affectsGlobalScope": false
       },
       "../src/api/controllers/global-setting.controller.ts": {
         "version": "8c80232d345066019c86417be7d9b24e6594e1d84f1169b1184e6605554b7b19",
-        "signature": "dab2b1f234a37227ebdf659eadd4ab3362ab80cb29c7d7979bcba38392d22d68",
+        "signature": "b4daa8feb43925b8c94a25f6f418ac16c9f2e3ef6fec00e5830f6875c7392482",
         "affectsGlobalScope": false
       },
       "../src/api/dto/customer/create-customer.input.ts": {
