@@ -4,6 +4,7 @@ exports.serviceProviders = void 0;
 const isp_entity_1 = require("../entities/isp.entity");
 const customer_entity_1 = require("../entities/customer.entity");
 const payment_slip_entity_1 = require("../entities/payment-slip.entity");
+const global_setting_entity_1 = require("../entities/global-setting.entity");
 exports.serviceProviders = [
     {
         provide: 'PAYMENT_SLIP_REPOSITORY',
@@ -18,6 +19,11 @@ exports.serviceProviders = [
     {
         provide: 'ISP_REPOSITORY',
         useFactory: (connection) => connection.getRepository(isp_entity_1.Isp),
+        inject: ['DATABASE_CONNECTION'],
+    },
+    {
+        provide: 'GLOBAL_SETTING_REPOSITORY',
+        useFactory: (connection) => connection.getRepository(global_setting_entity_1.GlobalSetting),
         inject: ['DATABASE_CONNECTION'],
     },
 ];

@@ -52,15 +52,11 @@ let CustomerService = class CustomerService {
         if (!customer)
             throw new common_1.NotFoundException();
         let paymentSlips = await typeorm_1.getManager().query(`
-    select * from payment_slips where customer_id = $1 order by id desc`, [id]);
+    select * from payment_slips
+    where customer_id = $1
+    order by id asc`, [id]);
         paymentSlips = dto_1.dto(paymentSlips, this.excludes);
         return Object.assign(Object.assign({}, customer), { paymentSlips });
-        return this.customerRepository
-            .createQueryBuilder('customers')
-            .innerJoinAndSelect('customers.paymentSlips', 'paymentSlips')
-            .orderBy('paymentSlips.id', 'DESC')
-            .where('customers.id = :id', { id })
-            .getOne();
     }
     async update(id, updateCustomerDto) {
         let customer = await this.findOne(id);

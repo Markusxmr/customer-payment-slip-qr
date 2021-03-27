@@ -4,23 +4,32 @@
         padding: 0 !important;
         max-width: 100% !important;
     }
+
     .print {
+        position: absolute;
         display: block;
         text-align: left !important;
-        padding: 0px;
     }
 
-    .print {
-        margin-top: -89px;
+    .print-item {
+        margin-top: (var(--print-item-margin-top)) !important;
+        transform: scale(var(--scale));
     }
 
-    .print:nth-of-type(1){
-        margin-top: -18px;
+    .print-item:nth-of-type(1) {
+        margin-top: (var(--print-item-margin-top-first)) !important;
     }
 
-    .print:nth-of-type(3) {
-        margin-top: -90px !important;
+    .uplatnica {
     }
+
+    // .print:nth-of-type(1){
+    //     margin-top: 80px;
+    // }
+
+    // .print:nth-of-type(3) {
+    //     margin-top: -90px !important;
+    // }
 
     .noprint {
         display: none;

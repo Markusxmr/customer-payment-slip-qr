@@ -2272,8 +2272,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts": {
-        "version": "b39f2cda4a737fff520a9ee5395cca51db63993027d47ed5f74da2983fb91635",
-        "signature": "b39f2cda4a737fff520a9ee5395cca51db63993027d47ed5f74da2983fb91635",
+        "version": "1f9cc8013b709369d82a9f19813cd09cd478481553a0e8262b3b7f28ab52b0b2",
+        "signature": "1f9cc8013b709369d82a9f19813cd09cd478481553a0e8262b3b7f28ab52b0b2",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/common/interfaces/external/https-options.interface.d.ts": {
@@ -2742,13 +2742,13 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/common/pipes/default-value.pipe.d.ts": {
-        "version": "a1a3339a334f1389927088846b52bd99d5e0b484c366a251bc92585aa856a43e",
-        "signature": "a1a3339a334f1389927088846b52bd99d5e0b484c366a251bc92585aa856a43e",
+        "version": "66e351f3739da4f30b9a0274e16b3a850014931896f31d568746a3056076fcef",
+        "signature": "66e351f3739da4f30b9a0274e16b3a850014931896f31d568746a3056076fcef",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts": {
-        "version": "eb20edc881e3278158cec41eeedfdc7250ba492ecc1c6677f87d9e3cda2b168a",
-        "signature": "eb20edc881e3278158cec41eeedfdc7250ba492ecc1c6677f87d9e3cda2b168a",
+        "version": "ebbe6765a836bfa7f03181bc433c8984ca29626270ca1e240c009851222cb8a7",
+        "signature": "ebbe6765a836bfa7f03181bc433c8984ca29626270ca1e240c009851222cb8a7",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/common/interfaces/external/validator-options.interface.d.ts": {
@@ -2762,28 +2762,28 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/common/pipes/validation.pipe.d.ts": {
-        "version": "8f5e19eddf60c08458443b9170f15007121445c4987ebbfd2fdb8ed007238498",
-        "signature": "8f5e19eddf60c08458443b9170f15007121445c4987ebbfd2fdb8ed007238498",
+        "version": "89df6c6a92c4501a0455a9d94784da870bdfb4034a139c4878bbf5fcaaf4f19e",
+        "signature": "89df6c6a92c4501a0455a9d94784da870bdfb4034a139c4878bbf5fcaaf4f19e",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/common/pipes/parse-array.pipe.d.ts": {
-        "version": "fd957ca0ac4e2ec215a9b15de793be35ebcde7c63401537a1ad2c78c5a644aeb",
-        "signature": "fd957ca0ac4e2ec215a9b15de793be35ebcde7c63401537a1ad2c78c5a644aeb",
+        "version": "8f0ab38ea72ffbd177ac897c1b559334362373261b8bffda7950ed3961a8fcc5",
+        "signature": "8f0ab38ea72ffbd177ac897c1b559334362373261b8bffda7950ed3961a8fcc5",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/common/pipes/parse-bool.pipe.d.ts": {
-        "version": "fa1f3704fc31ab3251c183c5653c6cbd253058da76531b6f14accb2c40749380",
-        "signature": "fa1f3704fc31ab3251c183c5653c6cbd253058da76531b6f14accb2c40749380",
+        "version": "425208368b07a6a747f13975d261688c6a874a67555a3fb518fb52f42867e394",
+        "signature": "425208368b07a6a747f13975d261688c6a874a67555a3fb518fb52f42867e394",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/common/pipes/parse-int.pipe.d.ts": {
-        "version": "b50e1d78706fcc470f50f5f99db96875984fab08725efe78e1588e8240239d58",
-        "signature": "b50e1d78706fcc470f50f5f99db96875984fab08725efe78e1588e8240239d58",
+        "version": "36a789256b8e764f16c089ca9da548fea3e21fb268cefcd1ee7118fbea39cbd1",
+        "signature": "36a789256b8e764f16c089ca9da548fea3e21fb268cefcd1ee7118fbea39cbd1",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/common/pipes/parse-uuid.pipe.d.ts": {
-        "version": "56bfcc1ad68a19b868022ceae3d285b7f9ba697b5f51c0189b6bd7e0c25898a6",
-        "signature": "56bfcc1ad68a19b868022ceae3d285b7f9ba697b5f51c0189b6bd7e0c25898a6",
+        "version": "e3f5060e98d678e320df7fed7391e6c1291849df4b9e36c8b2ab6dc5604d8f37",
+        "signature": "e3f5060e98d678e320df7fed7391e6c1291849df4b9e36c8b2ab6dc5604d8f37",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/common/pipes/index.d.ts": {
@@ -3357,8 +3357,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-env/dist/fetch.d.ts": {
-        "version": "d0c0df73d616f061b0ad9438b6e714b818af58b26c06e076719859dd7648514f",
-        "signature": "d0c0df73d616f061b0ad9438b6e714b818af58b26c06e076719859dd7648514f",
+        "version": "fb4bc853d32ae7fb5fcfe7e20e7917ce4f28a5ea1e8e7417cda72a6683b6400e",
+        "signature": "fb4bc853d32ae7fb5fcfe7e20e7917ce4f28a5ea1e8e7417cda72a6683b6400e",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-env/dist/url.d.ts": {
@@ -3377,28 +3377,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/gateway/src/make-fetch-happen.d.ts": {
-        "version": "7f4a157379ac35015b1d7a3fa195751bdeb352d819d9c20c0e98d648c65aa02f",
-        "signature": "7f4a157379ac35015b1d7a3fa195751bdeb352d819d9c20c0e98d648c65aa02f",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/fetch.d.ts": {
-        "version": "fb4bc853d32ae7fb5fcfe7e20e7917ce4f28a5ea1e8e7417cda72a6683b6400e",
-        "signature": "fb4bc853d32ae7fb5fcfe7e20e7917ce4f28a5ea1e8e7417cda72a6683b6400e",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/url.d.ts": {
-        "version": "1405854caa9cf70783113872afb1072091331d1bcdc01dd541389170f2f4e291",
-        "signature": "1405854caa9cf70783113872afb1072091331d1bcdc01dd541389170f2f4e291",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/typescript-utility-types.d.ts": {
-        "version": "1835fccd13a829c665e2fa4e09f5f6d114dd769ea7c8f974edb9dcc63449ac3a",
-        "signature": "1835fccd13a829c665e2fa4e09f5f6d114dd769ea7c8f974edb9dcc63449ac3a",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/index.d.ts": {
-        "version": "60cf0d8fdeb387919902b4c310d3df7ebf170123fc00b889ad4d7385703686d2",
-        "signature": "60cf0d8fdeb387919902b4c310d3df7ebf170123fc00b889ad4d7385703686d2",
+        "version": "6dc4e19eb853a208095ffc1ccc521840cc63da39c7d341c51fa30feffc2e0322",
+        "signature": "6dc4e19eb853a208095ffc1ccc521840cc63da39c7d341c51fa30feffc2e0322",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-caching/dist/KeyValueCache.d.ts": {
@@ -3441,7 +3421,7 @@
         "signature": "931278fdee439596382fb5783f955c70f5d7eae4369667b47cf89588fa470fd7",
         "affectsGlobalScope": false
       },
-      "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts": {
+      "../node_modules/apollo-server-types/dist/index.d.ts": {
         "version": "2fa88952973ead32eb5d2477bd891f223dafa941f11e7f7d5e20132c08ce98a0",
         "signature": "2fa88952973ead32eb5d2477bd891f223dafa941f11e7f7d5e20132c08ce98a0",
         "affectsGlobalScope": false
@@ -3451,12 +3431,7 @@
         "signature": "897bafc7cd36d400b65d61e2cd3c646f5d3759aa763867d0968993f1cea35b59",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-cache-control/node_modules/apollo-server-types/dist/index.d.ts": {
-        "version": "2fa88952973ead32eb5d2477bd891f223dafa941f11e7f7d5e20132c08ce98a0",
-        "signature": "2fa88952973ead32eb5d2477bd891f223dafa941f11e7f7d5e20132c08ce98a0",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts": {
+      "../node_modules/apollo-server-plugin-base/dist/index.d.ts": {
         "version": "3c8aa6e26f7ee68d539fadb149143b30a297c9ef89d2e89228c4e649f221de30",
         "signature": "3c8aa6e26f7ee68d539fadb149143b30a297c9ef89d2e89228c4e649f221de30",
         "affectsGlobalScope": false
@@ -3469,26 +3444,6 @@
       "../node_modules/apollo-datasource/dist/index.d.ts": {
         "version": "ad88412b97996eb3cf5f3f78bee6ad455c5007296fc09323cc600e72b5609a5b",
         "signature": "ad88412b97996eb3cf5f3f78bee6ad455c5007296fc09323cc600e72b5609a5b",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-engine-reporting-protobuf/dist/protobuf.d.ts": {
-        "version": "7d55c8ddbe2668b8744e5a49e94cd5422af94509d796a0bb3c5b0cdb8a0efa5f",
-        "signature": "7d55c8ddbe2668b8744e5a49e94cd5422af94509d796a0bb3c5b0cdb8a0efa5f",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts": {
-        "version": "931278fdee439596382fb5783f955c70f5d7eae4369667b47cf89588fa470fd7",
-        "signature": "931278fdee439596382fb5783f955c70f5d7eae4369667b47cf89588fa470fd7",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-server-types/dist/index.d.ts": {
-        "version": "5a553979406dee2dba028437e87245d706fa0b5b9493b4a27182b32ae877dc5f",
-        "signature": "5a553979406dee2dba028437e87245d706fa0b5b9493b4a27182b32ae877dc5f",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-server-plugin-base/dist/index.d.ts": {
-        "version": "66aae36538952c6916d2224dbf9bb1a2e00416b7abc45dcbbfe7a07b95ae069b",
-        "signature": "66aae36538952c6916d2224dbf9bb1a2e00416b7abc45dcbbfe7a07b95ae069b",
         "affectsGlobalScope": false
       },
       "../node_modules/graphql-tools/dist/schemaVisitor.d.ts": {
@@ -3837,8 +3792,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
-        "version": "e9a43c3ee6fb8376bb9a4d318a660412c6abcfe5161c106e801e5431b41b7476",
-        "signature": "e9a43c3ee6fb8376bb9a4d318a660412c6abcfe5161c106e801e5431b41b7476",
+        "version": "25b4a0c4fab47c373ee49df4c239826ee3430019fc0c1b5e59edc3e398b7468d",
+        "signature": "25b4a0c4fab47c373ee49df4c239826ee3430019fc0c1b5e59edc3e398b7468d",
         "affectsGlobalScope": true
       },
       "../node_modules/@types/node/async_hooks.d.ts": {
@@ -3852,8 +3807,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/child_process.d.ts": {
-        "version": "89a3409a743c2a408d02bd68255a61d8416225b76c2c66d8e2e74dad3e00bc5d",
-        "signature": "89a3409a743c2a408d02bd68255a61d8416225b76c2c66d8e2e74dad3e00bc5d",
+        "version": "674bedbfd2004e233e2a266a3d2286e524f0d58787a98522d834d6ccda1d215a",
+        "signature": "674bedbfd2004e233e2a266a3d2286e524f0d58787a98522d834d6ccda1d215a",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/cluster.d.ts": {
@@ -3912,8 +3867,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/http2.d.ts": {
-        "version": "4c260129d649d69f0608cd123e7016e61364b553a5ca2de9b66b0398594959cf",
-        "signature": "4c260129d649d69f0608cd123e7016e61364b553a5ca2de9b66b0398594959cf",
+        "version": "9aff68f1b847b846d3d50a58c9f8f99389bedd0258d1b1c201f11b97ecfd36f8",
+        "signature": "9aff68f1b847b846d3d50a58c9f8f99389bedd0258d1b1c201f11b97ecfd36f8",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/https.d.ts": {
@@ -4036,11 +3991,6 @@
         "signature": "515ef1d99036ff0dafa5bf738e02222edea94e0d97a0aa0ff277ac5e96b57977",
         "affectsGlobalScope": false
       },
-      "../node_modules/@types/node/ts3.4/base.d.ts": {
-        "version": "d44028ae0127eb3e9fcfa5f55a8b81d64775ce15aca1020fe25c511bbb055834",
-        "signature": "d44028ae0127eb3e9fcfa5f55a8b81d64775ce15aca1020fe25c511bbb055834",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@types/node/globals.global.d.ts": {
         "version": "2708349d5a11a5c2e5f3a0765259ebe7ee00cdcc8161cb9990cb4910328442a1",
         "signature": "2708349d5a11a5c2e5f3a0765259ebe7ee00cdcc8161cb9990cb4910328442a1",
@@ -4052,8 +4002,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/ts3.6/base.d.ts": {
-        "version": "ad1ae5ae98eceb9af99061e83e867b9897d267aebc8f3b938c9424deabadf4bb",
-        "signature": "ad1ae5ae98eceb9af99061e83e867b9897d267aebc8f3b938c9424deabadf4bb",
+        "version": "ae68a04912ee5a0f589276f9ec60b095f8c40d48128a4575b3fdd7d93806931c",
+        "signature": "ae68a04912ee5a0f589276f9ec60b095f8c40d48128a4575b3fdd7d93806931c",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/assert.d.ts": {
@@ -4077,8 +4027,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@apollographql/graphql-playground-html/dist/render-playground-page.d.ts": {
-        "version": "08a099b8b135aae9d5682d920afa23329f7381b3e87cd6117fc62532b3949067",
-        "signature": "08a099b8b135aae9d5682d920afa23329f7381b3e87cd6117fc62532b3949067",
+        "version": "27cc7f5770dd4d1c9815faa4a2751c5d307cf0d517f7f435e2c1e3a48010fa08",
+        "signature": "27cc7f5770dd4d1c9815faa4a2751c5d307cf0d517f7f435e2c1e3a48010fa08",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-core/dist/playground.d.ts": {
@@ -4121,97 +4071,82 @@
         "signature": "7668c31fc1a0d6c5ee0ae1048d41f7232a56fbe18367929f78bd0c77303af11e",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-engine-reporting/dist/agent.d.ts": {
-        "version": "46443ae22544f40415c1939197f4382d1fa396b145496f44820d9a9ed27a2926",
-        "signature": "46443ae22544f40415c1939197f4382d1fa396b145496f44820d9a9ed27a2926",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts": {
-        "version": "be7ee4c1a8fbfe0d5e9c88fddcf298ca2e3a550f50501c0eeb2600824dbd0236",
-        "signature": "be7ee4c1a8fbfe0d5e9c88fddcf298ca2e3a550f50501c0eeb2600824dbd0236",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-engine-reporting/dist/index.d.ts": {
-        "version": "492f1057dce50ccc62693accc44caf47a5ea9b33b059db85a9540da4b55b9336",
-        "signature": "492f1057dce50ccc62693accc44caf47a5ea9b33b059db85a9540da4b55b9336",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/array.d.ts": {
+      "../node_modules/apollo-env/lib/polyfills/array.d.ts": {
         "version": "86abf2ee3ef84a8d40947efc8141596e7b071239c3649bbe05c3b7cbf4ff25aa",
         "signature": "86abf2ee3ef84a8d40947efc8141596e7b071239c3649bbe05c3b7cbf4ff25aa",
         "affectsGlobalScope": true
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/object.d.ts": {
+      "../node_modules/apollo-env/lib/polyfills/object.d.ts": {
         "version": "7e834906dceaaa112cc0ee0cbc277d0688cb2401d5d22d1cc8fd50982895507d",
         "signature": "7e834906dceaaa112cc0ee0cbc277d0688cb2401d5d22d1cc8fd50982895507d",
         "affectsGlobalScope": true
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts": {
+      "../node_modules/apollo-env/lib/polyfills/index.d.ts": {
         "version": "b97a55b37476e5d8a355ff53ce54d39d93e04326f286a28c72b1631bc489c7e4",
         "signature": "b97a55b37476e5d8a355ff53ce54d39d93e04326f286a28c72b1631bc489c7e4",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/typescript-utility-types.d.ts": {
+      "../node_modules/apollo-env/lib/typescript-utility-types.d.ts": {
         "version": "644f7a7f1a6918d41a4549f24b73d8423512ef64bf00ede77c6f496429f653ce",
         "signature": "644f7a7f1a6918d41a4549f24b73d8423512ef64bf00ede77c6f496429f653ce",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts": {
+      "../node_modules/apollo-env/node_modules/form-data/index.d.ts": {
         "version": "736097ddbb2903bef918bb3b5811ef1c9c5656f2a73bd39b22a91b9cc2525e50",
         "signature": "736097ddbb2903bef918bb3b5811ef1c9c5656f2a73bd39b22a91b9cc2525e50",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/externals.d.ts": {
+      "../node_modules/apollo-env/node_modules/@types/node-fetch/externals.d.ts": {
         "version": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
         "signature": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts": {
+      "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts": {
         "version": "f51382950fa81e3a54e9fd9f343fe583cfbb221f15a51936e12411699347effe",
         "signature": "f51382950fa81e3a54e9fd9f343fe583cfbb221f15a51936e12411699347effe",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts": {
+      "../node_modules/apollo-env/lib/fetch/fetch.d.ts": {
         "version": "97b59dfb4a4ce0f64e56899f781dfc88c6980da0d6579e90a9419326ef1ea527",
         "signature": "97b59dfb4a4ce0f64e56899f781dfc88c6980da0d6579e90a9419326ef1ea527",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts": {
+      "../node_modules/apollo-env/lib/fetch/url.d.ts": {
         "version": "f2266e9e985339c2bce2521131502b6de12ce658c71f75fb23518ae73060aa23",
         "signature": "f2266e9e985339c2bce2521131502b6de12ce658c71f75fb23518ae73060aa23",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts": {
+      "../node_modules/apollo-env/lib/fetch/index.d.ts": {
         "version": "0f397719640ef73aaff6344f5b3fc27c69d0850dcd3f20854e322671cc8da5ae",
         "signature": "0f397719640ef73aaff6344f5b3fc27c69d0850dcd3f20854e322671cc8da5ae",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts": {
+      "../node_modules/apollo-env/lib/utils/createHash.d.ts": {
         "version": "134fce06b423352ff05e15abd8d25f766e0ebcc939a4b80bb5464b7c37795f0e",
         "signature": "134fce06b423352ff05e15abd8d25f766e0ebcc939a4b80bb5464b7c37795f0e",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/isNodeLike.d.ts": {
+      "../node_modules/apollo-env/lib/utils/isNodeLike.d.ts": {
         "version": "69edcc3a497cf02aba61a4a0e602786a8ae1dc2e650b54e89f8e19a75ef9d62f",
         "signature": "69edcc3a497cf02aba61a4a0e602786a8ae1dc2e650b54e89f8e19a75ef9d62f",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/mapValues.d.ts": {
+      "../node_modules/apollo-env/lib/utils/mapValues.d.ts": {
         "version": "b5e284217b0f1b760fbecd6e5bd72d8e7292d6d2a91131718a1617a7600895fc",
         "signature": "b5e284217b0f1b760fbecd6e5bd72d8e7292d6d2a91131718a1617a7600895fc",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/predicates.d.ts": {
+      "../node_modules/apollo-env/lib/utils/predicates.d.ts": {
         "version": "bbe60ef612ccc9b627648fd0d56e4e04c52bf670c25c4cd2b681cdbedfe16927",
         "signature": "bbe60ef612ccc9b627648fd0d56e4e04c52bf670c25c4cd2b681cdbedfe16927",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts": {
+      "../node_modules/apollo-env/lib/utils/index.d.ts": {
         "version": "bfb6158d32d15a5f518529d2941030215c6d6d31ba468faf805a427a9056f192",
         "signature": "bfb6158d32d15a5f518529d2941030215c6d6d31ba468faf805a427a9056f192",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts": {
+      "../node_modules/apollo-env/lib/index.d.ts": {
         "version": "0115d4b56667395d868039054ea4487f0cd08c7d93364d957bc27d6ddc3803a7",
         "signature": "0115d4b56667395d868039054ea4487f0cd08c7d93364d957bc27d6ddc3803a7",
         "affectsGlobalScope": false
@@ -4261,9 +4196,49 @@
         "signature": "fdfa8b2285c4164e3bae08aaa475124d762016045148fdf3b780ba5d3dfbf11f",
         "affectsGlobalScope": false
       },
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts": {
+        "version": "2d2132b4880b88ba282ca10150c3b86097845da9015c79ec9ce71fc4d764fe7c",
+        "signature": "2d2132b4880b88ba282ca10150c3b86097845da9015c79ec9ce71fc4d764fe7c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts": {
+        "version": "e542c82a0431b99b0a4a666f3e6266ba0275c62b6ea2caec022c08f883c34b10",
+        "signature": "e542c82a0431b99b0a4a666f3e6266ba0275c62b6ea2caec022c08f883c34b10",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts": {
+        "version": "3ebb609562247356837714d63dc48d609943c4830c6efd6ae55056a83d091f07",
+        "signature": "3ebb609562247356837714d63dc48d609943c4830c6efd6ae55056a83d091f07",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts": {
+        "version": "8090f097a78f10892007bfce1745f69e11dde0e8e45a5908331faa5e6bedc7bc",
+        "signature": "8090f097a78f10892007bfce1745f69e11dde0e8e45a5908331faa5e6bedc7bc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts": {
+        "version": "cd7b4968685acfd6650b164d27820bf0847093bf8e4bd18078c38e075ca9cac4",
+        "signature": "cd7b4968685acfd6650b164d27820bf0847093bf8e4bd18078c38e075ca9cac4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts": {
+        "version": "80b7b938d97638e02418c57708fc97519ebf48b9441025d659a2d2bbaf665da3",
+        "signature": "80b7b938d97638e02418c57708fc97519ebf48b9441025d659a2d2bbaf665da3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts": {
+        "version": "27f2bf456385980a3ef693dae26ad114ee3e811951e6b5d0c08eefd8cc853f4f",
+        "signature": "27f2bf456385980a3ef693dae26ad114ee3e811951e6b5d0c08eefd8cc853f4f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-server-core/dist/plugin/index.d.ts": {
+        "version": "7b967ccb2dc24441a09fbd1b12a82403ff4c10f59b730f6ce13a5bb652a02ee4",
+        "signature": "7b967ccb2dc24441a09fbd1b12a82403ff4c10f59b730f6ce13a5bb652a02ee4",
+        "affectsGlobalScope": false
+      },
       "../node_modules/apollo-server-core/dist/types.d.ts": {
-        "version": "4a44b5fa48f1607f970b6ce413993a325cfbd7c983d389aa96f06d23ef67c3ee",
-        "signature": "4a44b5fa48f1607f970b6ce413993a325cfbd7c983d389aa96f06d23ef67c3ee",
+        "version": "d8abca7b34ebe4d1571904985505fd615172c79c29084db7f640810fee5c9f90",
+        "signature": "d8abca7b34ebe4d1571904985505fd615172c79c29084db7f640810fee5c9f90",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-core/dist/requestPipeline.d.ts": {
@@ -4272,8 +4247,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-core/dist/ApolloServer.d.ts": {
-        "version": "fb0c55531c23bb66f87c132acdb9ab7ccd57912dc8d84e2503ebfccd5764ef25",
-        "signature": "fb0c55531c23bb66f87c132acdb9ab7ccd57912dc8d84e2503ebfccd5764ef25",
+        "version": "f03a328e81655c10a7eb645e014ec56a6827e572a591ba1327c63952fd116c77",
+        "signature": "f03a328e81655c10a7eb645e014ec56a6827e572a591ba1327c63952fd116c77",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts": {
@@ -4357,8 +4332,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/koa/index.d.ts": {
-        "version": "7a8d7a2d241556d322c18e6e069d56a5bb4f49ad26d39cde762c2817f75fc3ce",
-        "signature": "7a8d7a2d241556d322c18e6e069d56a5bb4f49ad26d39cde762c2817f75fc3ce",
+        "version": "d6d4d8896885d268b2f15bbbf4cfffeb04208d37ebc74b2bdde2bb279a147ca4",
+        "signature": "d6d4d8896885d268b2f15bbbf4cfffeb04208d37ebc74b2bdde2bb279a147ca4",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/fs-capacitor/index.d.ts": {
@@ -4366,34 +4341,99 @@
         "signature": "ca106dc27136bcfabaf1e0b261e9721e7c8119c7ff9dfd5c96ec2211cff926bd",
         "affectsGlobalScope": false
       },
-      "../node_modules/@types/graphql-upload/index.d.ts": {
-        "version": "74da2e9262096f5d5cfd1b2c4b2c16d6f40b771cd558a47e0525e02ede8b5ea9",
-        "signature": "74da2e9262096f5d5cfd1b2c4b2c16d6f40b771cd558a47e0525e02ede8b5ea9",
+      "../node_modules/@apollographql/graphql-upload-8-fork/index.d.ts": {
+        "version": "ecb5d69a694f29349f81337a3d62fd06931471662790b45747467480b5a65650",
+        "signature": "ecb5d69a694f29349f81337a3d62fd06931471662790b45747467480b5a65650",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-core/dist/processFileUploads.d.ts": {
-        "version": "f7f734fc503f4bc2d4cb1c81461ac976b05340514a854eb5cb897fa2ebed2065",
-        "signature": "f7f734fc503f4bc2d4cb1c81461ac976b05340514a854eb5cb897fa2ebed2065",
+        "version": "bca531f28de5606f74537d9d426c0dbda23e3af8a19151bc6aa04ec6847b7320",
+        "signature": "bca531f28de5606f74537d9d426c0dbda23e3af8a19151bc6aa04ec6847b7320",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-core/dist/index.d.ts": {
-        "version": "afdd5e5c99b363597241670c999b5c637559e42e6ecceceba4aa277bb7943d66",
-        "signature": "afdd5e5c99b363597241670c999b5c637559e42e6ecceceba4aa277bb7943d66",
+        "version": "a7d73b8255abe01c21223bbd33d88405b12dd074f72978dc227a10b51b71ea90",
+        "signature": "a7d73b8255abe01c21223bbd33d88405b12dd074f72978dc227a10b51b71ea90",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/pretty-format/build/types.d.ts": {
+        "version": "5d72971a459517c44c1379dab9ed248e87a61ba0a1e0f25c9d67e1e640cd9a09",
+        "signature": "5d72971a459517c44c1379dab9ed248e87a61ba0a1e0f25c9d67e1e640cd9a09",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/queryPlanSerializer.d.ts": {
+        "version": "61007fd860110966273df8769a4532d8860211813bc6d7c8060b33bf364fe268",
+        "signature": "61007fd860110966273df8769a4532d8860211813bc6d7c8060b33bf364fe268",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/astSerializer.d.ts": {
+        "version": "1b84e2c4b98f843b66ea1fc8fef1588867518f2ff2a74bc9e755662628d29f65",
+        "signature": "1b84e2c4b98f843b66ea1fc8fef1588867518f2ff2a74bc9e755662628d29f65",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/index.d.ts": {
+        "version": "e21960b50956f466c286e5b8fac6517f4de34ab673b9711b5bf7417369d6232c",
+        "signature": "e21960b50956f466c286e5b8fac6517f4de34ab673b9711b5bf7417369d6232c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@apollo/query-planner/dist/prettyFormatQueryPlan.d.ts": {
+        "version": "6c4f68a43c35a10f1228f82a260286e0ac1beae3c00a3689d2ce9960f307b395",
+        "signature": "6c4f68a43c35a10f1228f82a260286e0ac1beae3c00a3689d2ce9960f307b395",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@apollo/query-planner/dist/index.d.ts": {
+        "version": "ccae324e292de24eb3cdafc3122ba2ba9e35ef00f504ce93a6ca1da4698ae67f",
+        "signature": "ccae324e292de24eb3cdafc3122ba2ba9e35ef00f504ce93a6ca1da4698ae67f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@apollo/gateway/dist/buildQueryPlan.d.ts": {
+        "version": "082fad7ee52acb5d89a957bfcbbeecb2792e12e3cc8e2069a5f3ec22802a4382",
+        "signature": "082fad7ee52acb5d89a957bfcbbeecb2792e12e3cc8e2069a5f3ec22802a4382",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@apollo/gateway/dist/datasources/types.d.ts": {
+        "version": "f2c0bbb248b6c8ff7d79ccb66bbf67a5c8589447de7cfdb45718376f08c7beab",
+        "signature": "f2c0bbb248b6c8ff7d79ccb66bbf67a5c8589447de7cfdb45718376f08c7beab",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@apollo/gateway/dist/executeQueryPlan.d.ts": {
+        "version": "aebd18410bd57efcf473dfa258bf51309f13ed7eb9486e9b7a29414db6d2f899",
+        "signature": "aebd18410bd57efcf473dfa258bf51309f13ed7eb9486e9b7a29414db6d2f899",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": {
+        "version": "736097ddbb2903bef918bb3b5811ef1c9c5656f2a73bd39b22a91b9cc2525e50",
+        "signature": "736097ddbb2903bef918bb3b5811ef1c9c5656f2a73bd39b22a91b9cc2525e50",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node-fetch/externals.d.ts": {
+        "version": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
+        "signature": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node-fetch/index.d.ts": {
+        "version": "9895aad6ad1d505e2b03c8e41c8643b60a813ad130eb68f843b736b2db7d42e1",
+        "signature": "9895aad6ad1d505e2b03c8e41c8643b60a813ad130eb68f843b736b2db7d42e1",
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/federation/dist/composition/types.d.ts": {
-        "version": "23da04b838431e4adb7206c94bcc3a56af9bf06a2537b5e9909307fd3776f323",
-        "signature": "23da04b838431e4adb7206c94bcc3a56af9bf06a2537b5e9909307fd3776f323",
+        "version": "521d2981d2a7e966975b9f6d9c112b541ac625ee23579e72e068bfda6447e9f8",
+        "signature": "521d2981d2a7e966975b9f6d9c112b541ac625ee23579e72e068bfda6447e9f8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@apollo/federation/dist/composition/utils.d.ts": {
+        "version": "ffeba1e73e538d9d79395bd1ae550c2d4b9304f58688ac671cf228e8c410367f",
+        "signature": "ffeba1e73e538d9d79395bd1ae550c2d4b9304f58688ac671cf228e8c410367f",
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/federation/dist/composition/compose.d.ts": {
-        "version": "3e196b79d3e6105a07502de4bf8db54208f82f7d41ffd14cf4aa5733b6315717",
-        "signature": "3e196b79d3e6105a07502de4bf8db54208f82f7d41ffd14cf4aa5733b6315717",
+        "version": "cce67860a60aafc71667b7a58c0e274d012a6e5b908cfe20c63c27e1bc404ad6",
+        "signature": "cce67860a60aafc71667b7a58c0e274d012a6e5b908cfe20c63c27e1bc404ad6",
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/federation/dist/composition/composeAndValidate.d.ts": {
-        "version": "77641453480a062144b87a1b20ac05a4d9facbf948f4c48030be20122b61a5d7",
-        "signature": "77641453480a062144b87a1b20ac05a4d9facbf948f4c48030be20122b61a5d7",
+        "version": "29ccc4ab05cc48fc5ca682cac827a7bc099657ecf4020ee8fc72eb63c8e4dde4",
+        "signature": "29ccc4ab05cc48fc5ca682cac827a7bc099657ecf4020ee8fc72eb63c8e4dde4",
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/federation/dist/composition/rules.d.ts": {
@@ -4406,19 +4446,14 @@
         "signature": "f530db7713191e7eb6981e02dac4569b690169207b0e7084b9ea659456b04a8b",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollo/federation/dist/composition/utils.d.ts": {
-        "version": "044cc17846a339fa425782a28d9963f9c68c32bcc18276bf659c3920c3d6bfa4",
-        "signature": "044cc17846a339fa425782a28d9963f9c68c32bcc18276bf659c3920c3d6bfa4",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@apollo/federation/dist/composition/index.d.ts": {
-        "version": "b644855cfd21cd85880961170d4819b1efcb4c1cf8e364fdd348bd100776d4db",
-        "signature": "b644855cfd21cd85880961170d4819b1efcb4c1cf8e364fdd348bd100776d4db",
+        "version": "90ca7b85ae3a9c7e85ad94483aecc0ca249ef1da71db44af0eb23726fbf2ad73",
+        "signature": "90ca7b85ae3a9c7e85ad94483aecc0ca249ef1da71db44af0eb23726fbf2ad73",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-graphql/lib/operationId.d.ts": {
-        "version": "e62a1b6efb21fcc9a2d2bb58db9766eeff9cd265c9421298b66a6878d01d90a6",
-        "signature": "e62a1b6efb21fcc9a2d2bb58db9766eeff9cd265c9421298b66a6878d01d90a6",
+        "version": "7598b76b3394c000734b4907f785cc32f132b15bf47f556f88471719bbcefbc6",
+        "signature": "7598b76b3394c000734b4907f785cc32f132b15bf47f556f88471719bbcefbc6",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-graphql/lib/schema/resolverMap.d.ts": {
@@ -4452,18 +4487,18 @@
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-graphql/lib/index.d.ts": {
-        "version": "f5976b53626ca7ad34c5dc34ffe059a0ebaca5de7bb0ac835a5967f385f11d66",
-        "signature": "f5976b53626ca7ad34c5dc34ffe059a0ebaca5de7bb0ac835a5967f385f11d66",
+        "version": "e2d4346f8dccf7c9f1e1251cf1aa653e4cb6ad943ee5b18787cfaab99f09dec2",
+        "signature": "e2d4346f8dccf7c9f1e1251cf1aa653e4cb6ad943ee5b18787cfaab99f09dec2",
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/federation/dist/service/buildFederatedSchema.d.ts": {
-        "version": "9569e7e9d00a59c6ba94013f13c3fb9e9099948fa9289fcbd77a15c917d8fec3",
-        "signature": "9569e7e9d00a59c6ba94013f13c3fb9e9099948fa9289fcbd77a15c917d8fec3",
+        "version": "bb1ab65aefb81f84bcb5417cd9055bdd04a8aedddb5e4cf7a0ba21765191ccda",
+        "signature": "bb1ab65aefb81f84bcb5417cd9055bdd04a8aedddb5e4cf7a0ba21765191ccda",
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/federation/dist/service/printFederatedSchema.d.ts": {
-        "version": "f13c48d677a1189759901b2b04f32194298e3c4d29da0ffad3fb549ec69f8be1",
-        "signature": "f13c48d677a1189759901b2b04f32194298e3c4d29da0ffad3fb549ec69f8be1",
+        "version": "d8de0bf1f89213b4da8869239bf55968f96a7d4ea9cc340603a794d5987cb7cb",
+        "signature": "d8de0bf1f89213b4da8869239bf55968f96a7d4ea9cc340603a794d5987cb7cb",
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/federation/dist/service/index.d.ts": {
@@ -4476,44 +4511,14 @@
         "signature": "9d5db526561869b4ecec835223c3a509e143f66114b69f0aa0757201f624a988",
         "affectsGlobalScope": false
       },
-      "../node_modules/@apollo/gateway/dist/FieldSet.d.ts": {
-        "version": "eaf6f4d3ff7263fdfa27c20e5e14b35a39d72d71def7dc007b366e342a3a2c6c",
-        "signature": "eaf6f4d3ff7263fdfa27c20e5e14b35a39d72d71def7dc007b366e342a3a2c6c",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@apollo/gateway/dist/QueryPlan.d.ts": {
-        "version": "b0c99518946c7610ec2de33efe4b8da30b74eba2850c315098328dda77cd8cfb",
-        "signature": "b0c99518946c7610ec2de33efe4b8da30b74eba2850c315098328dda77cd8cfb",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@apollo/gateway/dist/buildQueryPlan.d.ts": {
-        "version": "efc59bf7600e9fa9509e8c4655572a72f0b0c322c31c6c5f1b4447005bf4ca6b",
-        "signature": "efc59bf7600e9fa9509e8c4655572a72f0b0c322c31c6c5f1b4447005bf4ca6b",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@apollo/gateway/dist/datasources/types.d.ts": {
-        "version": "f2c0bbb248b6c8ff7d79ccb66bbf67a5c8589447de7cfdb45718376f08c7beab",
-        "signature": "f2c0bbb248b6c8ff7d79ccb66bbf67a5c8589447de7cfdb45718376f08c7beab",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@apollo/gateway/dist/executeQueryPlan.d.ts": {
-        "version": "54ab4d66a420cb4fb92ccb442935bf73c5f50db01a2b460fe4dc40863e269aa4",
-        "signature": "54ab4d66a420cb4fb92ccb442935bf73c5f50db01a2b460fe4dc40863e269aa4",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@apollo/gateway/dist/loadServicesFromStorage.d.ts": {
-        "version": "b44666f6ee58cf2fd29ebb94d1ed6b83a274017b20ef40d5e0c11ce5a4a832ab",
-        "signature": "b44666f6ee58cf2fd29ebb94d1ed6b83a274017b20ef40d5e0c11ce5a4a832ab",
+        "version": "826b08aee9cc2e6a27fccb686a47c1673d7671aa1d4a4961336033d0f2de9d3a",
+        "signature": "826b08aee9cc2e6a27fccb686a47c1673d7671aa1d4a4961336033d0f2de9d3a",
         "affectsGlobalScope": false
       },
-      "../node_modules/@types/node-fetch/externals.d.ts": {
-        "version": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
-        "signature": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/node-fetch/index.d.ts": {
-        "version": "27401d471614076257eb419b8cb402dfb856c5160308bd94f60ff5356a53edcf",
-        "signature": "27401d471614076257eb419b8cb402dfb856c5160308bd94f60ff5356a53edcf",
+      "../node_modules/@apollo/gateway/dist/config.d.ts": {
+        "version": "9260a2d243e77383ce194ae4242d61827cbc9749ab6c7ec952caabd915241962",
+        "signature": "9260a2d243e77383ce194ae4242d61827cbc9749ab6c7ec952caabd915241962",
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/gateway/dist/datasources/LocalGraphQLDataSource.d.ts": {
@@ -4522,8 +4527,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/gateway/dist/datasources/RemoteGraphQLDataSource.d.ts": {
-        "version": "679687b471f4e3084f1abae2987c39f16c8a84f9142d5a89d98a8a35925c7087",
-        "signature": "679687b471f4e3084f1abae2987c39f16c8a84f9142d5a89d98a8a35925c7087",
+        "version": "ddf1e77137974a20739b0bfd8cd40365c00587613029ca2fb089bde51d95e1bb",
+        "signature": "ddf1e77137974a20739b0bfd8cd40365c00587613029ca2fb089bde51d95e1bb",
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/gateway/dist/datasources/index.d.ts": {
@@ -4532,27 +4537,287 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/gateway/dist/index.d.ts": {
-        "version": "f6fd9f8c338d7b648828e807664fc20d4730aa2171e797eebdf9fbaef2ee5365",
-        "signature": "f6fd9f8c338d7b648828e807664fc20d4730aa2171e797eebdf9fbaef2ee5365",
+        "version": "2bf334236c07cc281a31762fbacf0851d1ba1233151c4cbc82e5615b8e415ac7",
+        "signature": "2bf334236c07cc281a31762fbacf0851d1ba1233151c4cbc82e5615b8e415ac7",
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/gateway/src/datasources/types.ts": {
         "version": "a60c9f01043a35226d902dc87596395e18837ca42529036507dc38bb41d21724",
         "affectsGlobalScope": false
       },
-      "../node_modules/@ts-morph/common/node_modules/typescript/lib/typescript.d.ts": {
-        "version": "e219a21f5ad8412f7123ea70e59e1287e7fca5c41157be496847f7959fc1e0c4",
-        "signature": "e219a21f5ad8412f7123ea70e59e1287e7fca5c41157be496847f7959fc1e0c4",
+      "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts": {
+        "version": "952d81d65c1cb9a3bb736f233db638e50fdd4e7ae75a5624e7b8be24dad92851",
+        "signature": "952d81d65c1cb9a3bb736f233db638e50fdd4e7ae75a5624e7b8be24dad92851",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/Interfaces.d.ts": {
+        "version": "2767eb79f4b9e754efff56d654aa71715baac18a6157170f423cbd460f2445ab",
+        "signature": "2767eb79f4b9e754efff56d654aa71715baac18a6157170f423cbd460f2445ab",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/loaders.d.ts": {
+        "version": "3d6f89fb6ab035027268da5a90e31369876b5f2c37339b1212590c8727bc920a",
+        "signature": "3d6f89fb6ab035027268da5a90e31369876b5f2c37339b1212590c8727bc920a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/helpers.d.ts": {
+        "version": "6b05adc37cce53629f7740a2ce72a17d231cb1332dd20d725f49918db5f90ec4",
+        "signature": "6b05adc37cce53629f7740a2ce72a17d231cb1332dd20d725f49918db5f90ec4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/debug-log.d.ts": {
+        "version": "cb364f282ace685f66e8fa777804a36e96892e4c92cf4e8816ae9156c3551453",
+        "signature": "cb364f282ace685f66e8fa777804a36e96892e4c92cf4e8816ae9156c3551453",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/fix-windows-path.d.ts": {
+        "version": "afe1be833b5a9e15f35b72d4aedaac24c0fd903e374c4eb4be90334a0e5ad9ae",
+        "signature": "afe1be833b5a9e15f35b72d4aedaac24c0fd903e374c4eb4be90334a0e5ad9ae",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/flatten-array.d.ts": {
+        "version": "42b59521c78a8daeaf087752adb5de9753e7c4b701fc7c3e435ef1d737140091",
+        "signature": "42b59521c78a8daeaf087752adb5de9753e7c4b701fc7c3e435ef1d737140091",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/get-directives.d.ts": {
+        "version": "eedad1c380f5737f1220feb0ee83212f602acae8f0553837c098878e5c73c198",
+        "signature": "eedad1c380f5737f1220feb0ee83212f602acae8f0553837c098878e5c73c198",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/get-fields-with-directives.d.ts": {
+        "version": "e0fdb256e83c39f7794908de553930ce2581ba109b8de90937bf972fa75485d5",
+        "signature": "e0fdb256e83c39f7794908de553930ce2581ba109b8de90937bf972fa75485d5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/get-implementing-types.d.ts": {
+        "version": "dafdf0b0ccb55128f83fe0acaddadfb5d223887a7e8d59a0623860a68b1f59a7",
+        "signature": "dafdf0b0ccb55128f83fe0acaddadfb5d223887a7e8d59a0623860a68b1f59a7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/types.d.ts": {
+        "version": "6f3ef4208d2d6933180ac1bc813efbfb319b05e49ef0cdbeea15126b982578c4",
+        "signature": "6f3ef4208d2d6933180ac1bc813efbfb319b05e49ef0cdbeea15126b982578c4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/print-schema-with-directives.d.ts": {
+        "version": "43473654ed8d320d5854bbe99b3b3c8ee51ef447d38e588e4e60ea1c2150409e",
+        "signature": "43473654ed8d320d5854bbe99b3b3c8ee51ef447d38e588e4e60ea1c2150409e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/validate-documents.d.ts": {
+        "version": "685b232bf1f8763afa58c62d964f677478fac68ccd9e761e4d9a0cf6b5f9a378",
+        "signature": "685b232bf1f8763afa58c62d964f677478fac68ccd9e761e4d9a0cf6b5f9a378",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/fix-schema-ast.d.ts": {
+        "version": "2d205c767099a9c1719b2884eeb878470d81e3418ffe9ae8db8139e597f3e34d",
+        "signature": "2d205c767099a9c1719b2884eeb878470d81e3418ffe9ae8db8139e597f3e34d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/parse-graphql-json.d.ts": {
+        "version": "0c0ccc47a6e4cdaf336181d46a262c591dad7098f431a4234364fccf7ced258f",
+        "signature": "0c0ccc47a6e4cdaf336181d46a262c591dad7098f431a4234364fccf7ced258f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/parse-graphql-sdl.d.ts": {
+        "version": "cf68f71517959967c83d4585d1cd37376fbbe8174ddd0140274c228488149190",
+        "signature": "cf68f71517959967c83d4585d1cd37376fbbe8174ddd0140274c228488149190",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/get-user-types-from-schema.d.ts": {
+        "version": "d6cadb48c29a13aeb7be79d14980f2aa4ebfe9c6118726a906cc429fba582079",
+        "signature": "d6cadb48c29a13aeb7be79d14980f2aa4ebfe9c6118726a906cc429fba582079",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/create-schema-definition.d.ts": {
+        "version": "56e6a902d2aa94175f75bdc0ad822bf787b67bb6dbf52018c389d3643d203539",
+        "signature": "56e6a902d2aa94175f75bdc0ad822bf787b67bb6dbf52018c389d3643d203539",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/build-operation-for-field.d.ts": {
+        "version": "650b748b635b9299a8d2ba23ff02f403aac044a946b7e10bfb95942367bc1489",
+        "signature": "650b748b635b9299a8d2ba23ff02f403aac044a946b7e10bfb95942367bc1489",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/filterSchema.d.ts": {
+        "version": "c4e474945611676435f1807a5ab049becffc54a32a1a4cfc96731cdb34fdc8c1",
+        "signature": "c4e474945611676435f1807a5ab049becffc54a32a1a4cfc96731cdb34fdc8c1",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/clone.d.ts": {
+        "version": "a23c0e88e5d4204898c2087a5950b974c594343f78aa8e3e758bb85c3d30dfde",
+        "signature": "a23c0e88e5d4204898c2087a5950b974c594343f78aa8e3e758bb85c3d30dfde",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/heal.d.ts": {
+        "version": "8d071caad80707dc1853c718e6372349df8fdd4790ac57550cb243545ac91806",
+        "signature": "8d071caad80707dc1853c718e6372349df8fdd4790ac57550cb243545ac91806",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/SchemaDirectiveVisitor.d.ts": {
+        "version": "6138f6a183b6ab187becc7f4f37ea7b9b072874c75699d2bd10950fe07726aec",
+        "signature": "6138f6a183b6ab187becc7f4f37ea7b9b072874c75699d2bd10950fe07726aec",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/visitSchema.d.ts": {
+        "version": "ddbafa89c2b1b11251b96deef3869fa0b567766c43bd31224838ecb024297b8b",
+        "signature": "ddbafa89c2b1b11251b96deef3869fa0b567766c43bd31224838ecb024297b8b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/getResolversFromSchema.d.ts": {
+        "version": "3cc6ec5641587a673473f9613880b63f531446bc631a6f96adbb033672cf6d2d",
+        "signature": "3cc6ec5641587a673473f9613880b63f531446bc631a6f96adbb033672cf6d2d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/forEachField.d.ts": {
+        "version": "3901548cb8b4d914800927f9def278f34dfa106e65be38ee47d59c4efdd45ef9",
+        "signature": "3901548cb8b4d914800927f9def278f34dfa106e65be38ee47d59c4efdd45ef9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/forEachDefaultValue.d.ts": {
+        "version": "21856903077f053172be7ab1027ccfb94fecbb0d22dbc34e7208c4553575ccbc",
+        "signature": "21856903077f053172be7ab1027ccfb94fecbb0d22dbc34e7208c4553575ccbc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/mapSchema.d.ts": {
+        "version": "6cf6409ce9b90a14cd1e146d00fd21973d5d6b2da875283f3da0f27e0b786eaa",
+        "signature": "6cf6409ce9b90a14cd1e146d00fd21973d5d6b2da875283f3da0f27e0b786eaa",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/addTypes.d.ts": {
+        "version": "2a527df5c4828328fa6b35cf8b8f5bf0640933a4602c517faace7a1c3af0d446",
+        "signature": "2a527df5c4828328fa6b35cf8b8f5bf0640933a4602c517faace7a1c3af0d446",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/rewire.d.ts": {
+        "version": "2a46d72fe8eac64f8337c839bba3e558a07cdf6f2574d88dd5852d6ee8bf7d9c",
+        "signature": "2a46d72fe8eac64f8337c839bba3e558a07cdf6f2574d88dd5852d6ee8bf7d9c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/prune.d.ts": {
+        "version": "0787ec67c199917f7c0f2a127432dc65f5d422e15992b8a7c3d7765f94075390",
+        "signature": "0787ec67c199917f7c0f2a127432dc65f5d422e15992b8a7c3d7765f94075390",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/mergeDeep.d.ts": {
+        "version": "8494cb4b789a1f5e0710a4db2e111b4e20ee373251cb958b79f2d19d8adb3743",
+        "signature": "8494cb4b789a1f5e0710a4db2e111b4e20ee373251cb958b79f2d19d8adb3743",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/stub.d.ts": {
+        "version": "b8a25d32e4a2a187e2169f0936416cfcac8926f56166f3895fb5f82942f3150e",
+        "signature": "b8a25d32e4a2a187e2169f0936416cfcac8926f56166f3895fb5f82942f3150e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/selectionSets.d.ts": {
+        "version": "7552cf0a2915702d6cf9a8c6a2a242b713214728dbb81353132d2d986e74e521",
+        "signature": "7552cf0a2915702d6cf9a8c6a2a242b713214728dbb81353132d2d986e74e521",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/getResponseKeyFromInfo.d.ts": {
+        "version": "c3789c53874f2aba5a7c21e1ac1e467f95522ba5a0c8f9c8b8c519efa7aec51b",
+        "signature": "c3789c53874f2aba5a7c21e1ac1e467f95522ba5a0c8f9c8b8c519efa7aec51b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/fields.d.ts": {
+        "version": "dec52a42c912503c35463f974fb86cb1a772cab001c2c9ed413093845be2f677",
+        "signature": "dec52a42c912503c35463f974fb86cb1a772cab001c2c9ed413093845be2f677",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/renameType.d.ts": {
+        "version": "d2a2a7be324ab271073676edb22f5de259d4baf5bad32bd2e5545f957f503ac4",
+        "signature": "d2a2a7be324ab271073676edb22f5de259d4baf5bad32bd2e5545f957f503ac4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/collectFields.d.ts": {
+        "version": "63fd6e8e4f5403337124c82bf46fb17ce24923d8a9223b387ad312a4b075e7c9",
+        "signature": "63fd6e8e4f5403337124c82bf46fb17ce24923d8a9223b387ad312a4b075e7c9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/transformInputValue.d.ts": {
+        "version": "bce453d2e25d1104b3b84c97aee92111e194691e5b254af318499745c8e041c6",
+        "signature": "bce453d2e25d1104b3b84c97aee92111e194691e5b254af318499745c8e041c6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/mapAsyncIterator.d.ts": {
+        "version": "c6ac5363d42c31bf001b178d72bb8ac688d592977e3f811e278558ca69b0c618",
+        "signature": "c6ac5363d42c31bf001b178d72bb8ac688d592977e3f811e278558ca69b0c618",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/updateArgument.d.ts": {
+        "version": "0afe2ed080fb1ca424bbcecca1874d7fa24aaba54535722b00607d38dd150f8a",
+        "signature": "0afe2ed080fb1ca424bbcecca1874d7fa24aaba54535722b00607d38dd150f8a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/implementsAbstractType.d.ts": {
+        "version": "04260ae2a15ef601034f94c4b4c91b76a4c4197d48137d04859d9aa9c83f2f16",
+        "signature": "04260ae2a15ef601034f94c4b4c91b76a4c4197d48137d04859d9aa9c83f2f16",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/errors.d.ts": {
+        "version": "507fe2b965da84e42b4d17d35264be1e70694a8692c75fc07207d38deda42ad7",
+        "signature": "507fe2b965da84e42b4d17d35264be1e70694a8692c75fc07207d38deda42ad7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/toConfig.d.ts": {
+        "version": "4a9bdce843a6bc8bdc71287de2808e7438fd718e17c55d175f0f2d0a8883947e",
+        "signature": "4a9bdce843a6bc8bdc71287de2808e7438fd718e17c55d175f0f2d0a8883947e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/observableToAsyncIterable.d.ts": {
+        "version": "8a0a5c90711b4d4d55b0edf7d097faf872f65d6f7be1a5a42fdcfb62c751a135",
+        "signature": "8a0a5c90711b4d4d55b0edf7d097faf872f65d6f7be1a5a42fdcfb62c751a135",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/visitResult.d.ts": {
+        "version": "756c0a51db689803dcbcb94cec65edd6f0212fcda9abf264001ae975a5c6a18b",
+        "signature": "756c0a51db689803dcbcb94cec65edd6f0212fcda9abf264001ae975a5c6a18b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/getArgumentValues.d.ts": {
+        "version": "2873b8fe4083b54fb60dd1d03ee8b22496e41f96a4e536e06cd59a481aba01de",
+        "signature": "2873b8fe4083b54fb60dd1d03ee8b22496e41f96a4e536e06cd59a481aba01de",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/valueMatchesCriteria.d.ts": {
+        "version": "5fc9e50135f4163989ce74b83b68a5ee44d151f04ec44078adbe913c8dad694e",
+        "signature": "5fc9e50135f4163989ce74b83b68a5ee44d151f04ec44078adbe913c8dad694e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/isAsyncIterable.d.ts": {
+        "version": "321c7e382d36a823c6bf9ecb6cc8a4e5bf60265b4b37c86fdfcc85973ede2c1d",
+        "signature": "321c7e382d36a823c6bf9ecb6cc8a4e5bf60265b4b37c86fdfcc85973ede2c1d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/isDocumentNode.d.ts": {
+        "version": "34a80ad568a06a539e43bde102bed1fcb8bec196811caa9abc3a0cf44a95fdde",
+        "signature": "34a80ad568a06a539e43bde102bed1fcb8bec196811caa9abc3a0cf44a95fdde",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/astFromValueUntyped.d.ts": {
+        "version": "e634a64172adde8d23f6df23f252d35e16eaa4bc33e881700967498a955e0b25",
+        "signature": "e634a64172adde8d23f6df23f252d35e16eaa4bc33e881700967498a955e0b25",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@graphql-tools/utils/index.d.ts": {
+        "version": "624e58767385f8276acdd1d655f2a65a59d4ec4536ee5b0cb42d890273049a28",
+        "signature": "624e58767385f8276acdd1d655f2a65a59d4ec4536ee5b0cb42d890273049a28",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@ts-morph/common/lib/typescript.d.ts": {
+        "version": "b4e3edb529b83431180aba7ea2d39302afe8919962344db98d71fe0253951b62",
+        "signature": "b4e3edb529b83431180aba7ea2d39302afe8919962344db98d71fe0253951b62",
         "affectsGlobalScope": false
       },
       "../node_modules/@ts-morph/common/lib/ts-morph-common.d.ts": {
-        "version": "c4c9d8b4d6bdff6cc73523e7eba2ae0ffdfb2af3667675797a29ac9667623958",
-        "signature": "c4c9d8b4d6bdff6cc73523e7eba2ae0ffdfb2af3667675797a29ac9667623958",
+        "version": "e6fc895e92e3bd1525fcf3fc7c364e14ea11ec375dded7fca9125dbea30a9adf",
+        "signature": "e6fc895e92e3bd1525fcf3fc7c364e14ea11ec375dded7fca9125dbea30a9adf",
         "affectsGlobalScope": false
       },
       "../node_modules/ts-morph/lib/ts-morph.d.ts": {
-        "version": "75c7780b58997e18d201c59221505182db6da51572508a05b6d6e7bcd8f941eb",
-        "signature": "75c7780b58997e18d201c59221505182db6da51572508a05b6d6e7bcd8f941eb",
+        "version": "8d1e2994e64e3834f3afd9617052eb5dd8ac3c4dcd27b48b9089514b92e43819",
+        "signature": "8d1e2994e64e3834f3afd9617052eb5dd8ac3c4dcd27b48b9089514b92e43819",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/graphql-ast.explorer.d.ts": {
@@ -4561,8 +4826,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/interfaces/gql-module-options.interface.d.ts": {
-        "version": "a0ec31c76a5253a91bffef89e699774f862d67664338a7d91e132868e892684f",
-        "signature": "a0ec31c76a5253a91bffef89e699774f862d67664338a7d91e132868e892684f",
+        "version": "33bc7968f20f54236bcd7d35d8140d870fcc2ad909f5ddc5093b00d787bdaa3c",
+        "signature": "33bc7968f20f54236bcd7d35d8140d870fcc2ad909f5ddc5093b00d787bdaa3c",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/interfaces/gql-gateway-module-options.interface.d.ts": {
@@ -4626,8 +4891,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/decorators/interface-type.decorator.d.ts": {
-        "version": "65310cd351e6090b31ecc2a72bf13667ea238beddfc1c9d6484c6bc0f000149b",
-        "signature": "65310cd351e6090b31ecc2a72bf13667ea238beddfc1c9d6484c6bc0f000149b",
+        "version": "79d031aeef6d8b8308d27824e522fbc52fb50973ac56e83590dcc7fd76dddfcc",
+        "signature": "79d031aeef6d8b8308d27824e522fbc52fb50973ac56e83590dcc7fd76dddfcc",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/decorators/mutation.decorator.d.ts": {
@@ -4771,8 +5036,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/schema-builder/factories/ast-definition-node.factory.d.ts": {
-        "version": "d739f1688b20e69c057f198a829af5c68a7ca75915c54cda0c8372191f3607f0",
-        "signature": "d739f1688b20e69c057f198a829af5c68a7ca75915c54cda0c8372191f3607f0",
+        "version": "8773edadc4bb1d0fad33cebeedbfb89685ffe72bdfe5d2c2da230db686f0fa37",
+        "signature": "8773edadc4bb1d0fad33cebeedbfb89685ffe72bdfe5d2c2da230db686f0fa37",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/schema-builder/factories/input-type-definition.factory.d.ts": {
@@ -4781,8 +5046,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/schema-builder/metadata/interface.metadata.d.ts": {
-        "version": "d3b40eba40db921d891da713c014b16138636eddb1fc0f26e4c8241c310fb63c",
-        "signature": "d3b40eba40db921d891da713c014b16138636eddb1fc0f26e4c8241c310fb63c",
+        "version": "32b457a43b19f02c0fa6b92ed3171e2052cdd0eb2819fddb60b7324d4bc3b406",
+        "signature": "32b457a43b19f02c0fa6b92ed3171e2052cdd0eb2819fddb60b7324d4bc3b406",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/schema-builder/factories/output-type.factory.d.ts": {
@@ -4796,8 +5061,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/schema-builder/factories/interface-definition.factory.d.ts": {
-        "version": "7ebba7feb46372499f7dad1c62f17682d40b2aa56ce2fe706a9474f7fa9124f1",
-        "signature": "7ebba7feb46372499f7dad1c62f17682d40b2aa56ce2fe706a9474f7fa9124f1",
+        "version": "20c8eca485f3f73c9d5855a1c99029f2907846b88d0ec81dcc11d6abc20f5653",
+        "signature": "20c8eca485f3f73c9d5855a1c99029f2907846b88d0ec81dcc11d6abc20f5653",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/schema-builder/metadata/object-type.metadata.d.ts": {
@@ -5330,9 +5595,14 @@
         "signature": "33bb0d96cea9782d701332e6b7390f8efae3af92fd3e2aa2ac45e4a610e705d6",
         "affectsGlobalScope": false
       },
+      "../node_modules/iterall/index.d.ts": {
+        "version": "41449e5c8ad2b4ad46497762cb72ec680457e35e03b658842f257a79da3d694c",
+        "signature": "41449e5c8ad2b4ad46497762cb72ec680457e35e03b658842f257a79da3d694c",
+        "affectsGlobalScope": false
+      },
       "../node_modules/@nestjs/graphql/dist/utils/async-iterator.util.d.ts": {
-        "version": "e17c04131bfa9cf07635b4f003a95321fddda2852dd473b7b3d55d7da544bc34",
-        "signature": "e17c04131bfa9cf07635b4f003a95321fddda2852dd473b7b3d55d7da544bc34",
+        "version": "7e421e5582d7678fcbc774c539360f9c7ae2c5e6380950904ba12afaea3060d2",
+        "signature": "7e421e5582d7678fcbc774c539360f9c7ae2c5e6380950904ba12afaea3060d2",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/graphql/dist/utils/extend.util.d.ts": {
@@ -5391,7 +5661,7 @@
         "affectsGlobalScope": false
       },
       "../src/entities/payment-slip.entity.ts": {
-        "version": "7f76ee0fc319b432b7965d135ce8c38fe9899af23c47e85ff17db7766d098a37",
+        "version": "25329138de7b0e02134da7f3b6c03bbd8d31922522810a7a819d50aad839f1bd",
         "signature": "db1dd6045a276a600f6884317fbe2bfd1a183f27199cef04eed9381ec5555852",
         "affectsGlobalScope": false
       },
@@ -5471,7 +5741,7 @@
         "affectsGlobalScope": false
       },
       "../src/service/services/isp.service.ts": {
-        "version": "5b2eba1ef3997aa2270cfcfadf5cbc14caf54c2dc869e07e7b3863907f166e36",
+        "version": "85b7da863dd9fda42bd1a75ecaff23639147817d174029701936f58196d9fca6",
         "signature": "a4223da7a397024e14a4b7618553b182d16bdb649ea9f61a82b5ad8cb0f54972",
         "affectsGlobalScope": false
       },
@@ -5521,7 +5791,7 @@
         "affectsGlobalScope": false
       },
       "../src/service/services/customer.service.ts": {
-        "version": "99d3fb89c754d7fca2bca6009c158c39d7e7bbd4d4b58f8421644d050ac2cef1",
+        "version": "fc1f6b2a6afebdb6a6a86e0245dc3f7fff60001424393aff0f5a2db888f6b127",
         "signature": "e05cbce6c63ede68b337fbec397cabbc76a03f8aba9fba725805564635e9e7db",
         "affectsGlobalScope": false
       },
@@ -5610,6 +5880,31 @@
         "signature": "95e6384f6ea9fa2b2eadd16893716532d227389c43d726d90fe993b6fffe24a6",
         "affectsGlobalScope": false
       },
+      "../src/api/dto/global-setting/create-global-setting.dto.ts": {
+        "version": "1f75e0894694a6f8663666fbc330a5610f2f2dfdfb159bc3d850fd1173f3494b",
+        "signature": "7d7d60ff58769d8489fc6c363f4f532fc4a632ef76266d193273b947be9fe261",
+        "affectsGlobalScope": false
+      },
+      "../src/api/dto/global-setting/update-global-setting.dto.ts": {
+        "version": "a34a23b688a09f135cd6b9c98c6535391d319c808af8ae61ef72a079a6b99573",
+        "signature": "990935b1506cc5e21672a1f081097d335206f0fd9499bc3ce00e19841539e08c",
+        "affectsGlobalScope": false
+      },
+      "../src/entities/global-setting.entity.ts": {
+        "version": "1a83ca5c59a5e512132a4a1029ebe820e500274e265d778ea9e8c4cc4b8bb029",
+        "signature": "144fcfa0aed0acbe8330e80a7ad9a92872af5d5ee0c9ad5110625f4bd3501d01",
+        "affectsGlobalScope": false
+      },
+      "../src/service/services/global-setting.service.ts": {
+        "version": "247ca6d40c9dcec7d1b9d144535e80764df842b6b3a3c54c44be0bd61a5b76cc",
+        "signature": "e4551c12856d8152e61b833bdaad74afcc8353afef42ad2d11bde36e2df72969",
+        "affectsGlobalScope": false
+      },
+      "../src/api/controllers/global-setting.controller.ts": {
+        "version": "8c80232d345066019c86417be7d9b24e6594e1d84f1169b1184e6605554b7b19",
+        "signature": "dab2b1f234a37227ebdf659eadd4ab3362ab80cb29c7d7979bcba38392d22d68",
+        "affectsGlobalScope": false
+      },
       "../src/api/dto/customer/create-customer.input.ts": {
         "version": "625023b6868916007cd1bff796201fc191ff84024c141242dfc084721890801c",
         "signature": "35c4c6495b3ba7fb1e3a457143839f6b319aaa7a3fd62354b47fc7db4c1609d9",
@@ -5641,8 +5936,8 @@
         "affectsGlobalScope": false
       },
       "../src/service/service.providers.ts": {
-        "version": "4107717f29671f457af3592d5237488ee74653cb4910e8f40a31f7cdc63255b5",
-        "signature": "52795bfb14c634aa9cc50e7fdebccf56c4a245c386dfb982256fa0c0eef387a2",
+        "version": "a06788ab44de6226ce436cba553075d69ee74c9f88014c213cf24f9f0a404037",
+        "signature": "33ea1ec498b8860fd6a3cd5371eefb3376e9a6f96fc7d37e6cbc11b8b9917703",
         "affectsGlobalScope": false
       },
       "../src/database/database.providers.ts": {
@@ -5656,12 +5951,12 @@
         "affectsGlobalScope": false
       },
       "../src/service/service.module.ts": {
-        "version": "cad80f31c17b61d2270c5d9489ebcb723558e719c9ed30af180bc07fd5fa70ed",
+        "version": "77aa2696248767c8df819e0d1e910824b969c2fa1775f6a025ee43c0499b74fe",
         "signature": "25cc05c61302b69deba89083f451d273a907ad2acc1b32ef6f0ec46a60990f72",
         "affectsGlobalScope": false
       },
       "../src/api/api.module.ts": {
-        "version": "db88957560915a354df347fd457114e5f8227ac56d411d7badf37fac2e60280b",
+        "version": "290b94f323d77de6ba94cd966c9a8dbfa1e84c464651998572ff602a6e15b0dc",
         "signature": "f31e2438efeae62abb8b2b946f674b164b0b4c1804a5ff9209894b120de2911d",
         "affectsGlobalScope": false
       },
@@ -5840,19 +6135,14 @@
         "signature": "b4439890c168d646357928431100daac5cbdee1d345a34e6bf6eca9f3abe22bc",
         "affectsGlobalScope": false
       },
-      "../node_modules/pretty-format/build/types.d.ts": {
-        "version": "5d72971a459517c44c1379dab9ed248e87a61ba0a1e0f25c9d67e1e640cd9a09",
-        "signature": "5d72971a459517c44c1379dab9ed248e87a61ba0a1e0f25c9d67e1e640cd9a09",
-        "affectsGlobalScope": false
-      },
       "../node_modules/pretty-format/build/index.d.ts": {
         "version": "02d734976af36f4273d930bea88b3e62adf6b078cf120c1c63d49aa8d8427c5c",
         "signature": "02d734976af36f4273d930bea88b3e62adf6b078cf120c1c63d49aa8d8427c5c",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/jest/index.d.ts": {
-        "version": "71f30fba971582dc744373cbc8b06c1eb64dc24a6ccbc9b457f94fb68c67cb4e",
-        "signature": "71f30fba971582dc744373cbc8b06c1eb64dc24a6ccbc9b457f94fb68c67cb4e",
+        "version": "650f66071a829bfef85d892b6c41abeb6ffda45956c0c38ebf564e543dcc371c",
+        "signature": "650f66071a829bfef85d892b6c41abeb6ffda45956c0c38ebf564e543dcc371c",
         "affectsGlobalScope": true
       },
       "../node_modules/@types/json5/index.d.ts": {
@@ -6023,12 +6313,12 @@
     "referencedMap": {
       "../node_modules/@apollo/federation/dist/composition/compose.d.ts": [
         "../node_modules/@apollo/federation/dist/composition/types.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/@apollo/federation/dist/composition/utils.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/federation/dist/composition/composeAndValidate.d.ts": [
         "../node_modules/@apollo/federation/dist/composition/types.d.ts",
-        "../node_modules/graphql/index.d.ts"
+        "../node_modules/@apollo/federation/dist/composition/utils.d.ts"
       ],
       "../node_modules/@apollo/federation/dist/composition/index.d.ts": [
         "../node_modules/@apollo/federation/dist/composition/compose.d.ts",
@@ -6050,7 +6340,6 @@
       ],
       "../node_modules/@apollo/federation/dist/composition/utils.d.ts": [
         "../node_modules/@apollo/federation/dist/composition/types.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/federation/dist/index.d.ts": [
@@ -6059,7 +6348,6 @@
       ],
       "../node_modules/@apollo/federation/dist/service/buildFederatedSchema.d.ts": [
         "../node_modules/apollo-graphql/lib/index.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/federation/dist/service/index.d.ts": [
@@ -6069,15 +6357,21 @@
       "../node_modules/@apollo/federation/dist/service/printFederatedSchema.d.ts": [
         "../node_modules/graphql/index.d.ts"
       ],
-      "../node_modules/@apollo/gateway/dist/FieldSet.d.ts": [
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/@apollo/gateway/dist/QueryPlan.d.ts": [
-        "../node_modules/graphql/index.d.ts"
-      ],
       "../node_modules/@apollo/gateway/dist/buildQueryPlan.d.ts": [
-        "../node_modules/@apollo/gateway/dist/FieldSet.d.ts",
-        "../node_modules/@apollo/gateway/dist/QueryPlan.d.ts",
+        "../node_modules/@apollo/gateway/dist/index.d.ts",
+        "../node_modules/@apollo/query-planner/dist/index.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@apollo/gateway/dist/config.d.ts": [
+        "../node_modules/@apollo/federation/dist/index.d.ts",
+        "../node_modules/@apollo/gateway/dist/datasources/types.d.ts",
+        "../node_modules/@apollo/gateway/dist/executeQueryPlan.d.ts",
+        "../node_modules/@apollo/gateway/dist/index.d.ts",
+        "../node_modules/@apollo/gateway/dist/loadServicesFromStorage.d.ts",
+        "../node_modules/@apollo/query-planner/dist/index.d.ts",
+        "../node_modules/@types/node-fetch/index.d.ts",
+        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/gateway/dist/datasources/LocalGraphQLDataSource.d.ts": [
@@ -6100,29 +6394,27 @@
         "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/@apollo/gateway/dist/executeQueryPlan.d.ts": [
-        "../node_modules/@apollo/gateway/dist/QueryPlan.d.ts",
         "../node_modules/@apollo/gateway/dist/datasources/types.d.ts",
+        "../node_modules/@apollo/gateway/dist/index.d.ts",
+        "../node_modules/@apollo/query-planner/dist/index.d.ts",
         "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/gateway/dist/index.d.ts": [
-        "../node_modules/@apollo/federation/dist/index.d.ts",
-        "../node_modules/@apollo/gateway/dist/QueryPlan.d.ts",
         "../node_modules/@apollo/gateway/dist/buildQueryPlan.d.ts",
+        "../node_modules/@apollo/gateway/dist/config.d.ts",
         "../node_modules/@apollo/gateway/dist/datasources/index.d.ts",
         "../node_modules/@apollo/gateway/dist/datasources/types.d.ts",
         "../node_modules/@apollo/gateway/dist/executeQueryPlan.d.ts",
-        "../node_modules/@apollo/gateway/dist/loadServicesFromStorage.d.ts",
         "../node_modules/@apollo/gateway/src/make-fetch-happen.d.ts",
-        "../node_modules/@types/node-fetch/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
+        "../node_modules/@apollo/query-planner/dist/index.d.ts",
         "../node_modules/apollo-server-core/dist/index.d.ts",
         "../node_modules/apollo-server-env/dist/index.d.ts",
         "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/gateway/dist/loadServicesFromStorage.d.ts": [
-        "../node_modules/@apollo/gateway/dist/index.d.ts",
+        "../node_modules/@apollo/gateway/dist/config.d.ts",
         "../node_modules/apollo-server-env/dist/index.d.ts"
       ],
       "../node_modules/@apollo/gateway/src/datasources/types.ts": [
@@ -6134,6 +6426,25 @@
       "../node_modules/@apollo/protobufjs/index.d.ts": [
         "../node_modules/@types/long/index.d.ts"
       ],
+      "../node_modules/@apollo/query-planner/dist/index.d.ts": [
+        "../node_modules/@apollo/query-planner/dist/prettyFormatQueryPlan.d.ts",
+        "../node_modules/@apollo/query-planner/dist/snapshotSerializers/index.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@apollo/query-planner/dist/prettyFormatQueryPlan.d.ts": [
+        "../node_modules/@apollo/query-planner/dist/index.d.ts"
+      ],
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/astSerializer.d.ts": [
+        "../node_modules/graphql/index.d.ts",
+        "../node_modules/pretty-format/build/types.d.ts"
+      ],
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/index.d.ts": [
+        "../node_modules/@apollo/query-planner/dist/snapshotSerializers/astSerializer.d.ts",
+        "../node_modules/@apollo/query-planner/dist/snapshotSerializers/queryPlanSerializer.d.ts"
+      ],
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/queryPlanSerializer.d.ts": [
+        "../node_modules/pretty-format/build/types.d.ts"
+      ],
       "../node_modules/@apollographql/apollo-tools/lib/buildServiceDefinition.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/schema/resolverMap.d.ts",
         "../node_modules/graphql/index.d.ts"
@@ -6142,7 +6453,7 @@
         "../node_modules/@apollographql/apollo-tools/lib/buildServiceDefinition.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/schema/index.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/utilities/index.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts"
+        "../node_modules/apollo-env/lib/index.d.ts"
       ],
       "../node_modules/@apollographql/apollo-tools/lib/schema/index.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/schema/resolveObject.d.ts",
@@ -6166,53 +6477,222 @@
         "../node_modules/@apollographql/apollo-tools/lib/utilities/invariant.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/utilities/predicates.d.ts"
       ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/externals.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts",
+      "../node_modules/@apollographql/graphql-upload-8-fork/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/fs-capacitor/index.d.ts",
+        "../node_modules/@types/koa/index.d.ts",
         "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/url.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts",
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/https.d.ts",
-        "../node_modules/@types/node/index.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts": [
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/url.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/typescript-utility-types.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/array.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/object.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts": [
-        "../node_modules/@types/node/crypto.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/mapValues.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/predicates.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/stream.d.ts"
+        "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@babel/parser/typings/babel-parser.d.ts": [
         "../node_modules/@babel/types/lib/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/Interfaces.d.ts": [
+        "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/SchemaDirectiveVisitor.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/addTypes.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/astFromValueUntyped.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/build-operation-for-field.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/clone.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/collectFields.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/create-schema-definition.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/errors.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/fields.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/filterSchema.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/fix-schema-ast.d.ts": [
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/forEachDefaultValue.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/forEachField.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/get-directives.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/get-fields-with-directives.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/get-implementing-types.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/get-user-types-from-schema.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/getArgumentValues.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/getResolversFromSchema.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/getResponseKeyFromInfo.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/heal.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/helpers.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/implementsAbstractType.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/index.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/@graphql-tools/utils/SchemaDirectiveVisitor.d.ts",
+        "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts",
+        "../node_modules/@graphql-tools/utils/addTypes.d.ts",
+        "../node_modules/@graphql-tools/utils/astFromValueUntyped.d.ts",
+        "../node_modules/@graphql-tools/utils/build-operation-for-field.d.ts",
+        "../node_modules/@graphql-tools/utils/clone.d.ts",
+        "../node_modules/@graphql-tools/utils/collectFields.d.ts",
+        "../node_modules/@graphql-tools/utils/create-schema-definition.d.ts",
+        "../node_modules/@graphql-tools/utils/debug-log.d.ts",
+        "../node_modules/@graphql-tools/utils/errors.d.ts",
+        "../node_modules/@graphql-tools/utils/fields.d.ts",
+        "../node_modules/@graphql-tools/utils/filterSchema.d.ts",
+        "../node_modules/@graphql-tools/utils/fix-schema-ast.d.ts",
+        "../node_modules/@graphql-tools/utils/fix-windows-path.d.ts",
+        "../node_modules/@graphql-tools/utils/flatten-array.d.ts",
+        "../node_modules/@graphql-tools/utils/forEachDefaultValue.d.ts",
+        "../node_modules/@graphql-tools/utils/forEachField.d.ts",
+        "../node_modules/@graphql-tools/utils/get-directives.d.ts",
+        "../node_modules/@graphql-tools/utils/get-fields-with-directives.d.ts",
+        "../node_modules/@graphql-tools/utils/get-implementing-types.d.ts",
+        "../node_modules/@graphql-tools/utils/get-user-types-from-schema.d.ts",
+        "../node_modules/@graphql-tools/utils/getArgumentValues.d.ts",
+        "../node_modules/@graphql-tools/utils/getResolversFromSchema.d.ts",
+        "../node_modules/@graphql-tools/utils/getResponseKeyFromInfo.d.ts",
+        "../node_modules/@graphql-tools/utils/heal.d.ts",
+        "../node_modules/@graphql-tools/utils/helpers.d.ts",
+        "../node_modules/@graphql-tools/utils/implementsAbstractType.d.ts",
+        "../node_modules/@graphql-tools/utils/isAsyncIterable.d.ts",
+        "../node_modules/@graphql-tools/utils/isDocumentNode.d.ts",
+        "../node_modules/@graphql-tools/utils/loaders.d.ts",
+        "../node_modules/@graphql-tools/utils/mapAsyncIterator.d.ts",
+        "../node_modules/@graphql-tools/utils/mapSchema.d.ts",
+        "../node_modules/@graphql-tools/utils/mergeDeep.d.ts",
+        "../node_modules/@graphql-tools/utils/observableToAsyncIterable.d.ts",
+        "../node_modules/@graphql-tools/utils/parse-graphql-json.d.ts",
+        "../node_modules/@graphql-tools/utils/parse-graphql-sdl.d.ts",
+        "../node_modules/@graphql-tools/utils/print-schema-with-directives.d.ts",
+        "../node_modules/@graphql-tools/utils/prune.d.ts",
+        "../node_modules/@graphql-tools/utils/renameType.d.ts",
+        "../node_modules/@graphql-tools/utils/rewire.d.ts",
+        "../node_modules/@graphql-tools/utils/selectionSets.d.ts",
+        "../node_modules/@graphql-tools/utils/stub.d.ts",
+        "../node_modules/@graphql-tools/utils/toConfig.d.ts",
+        "../node_modules/@graphql-tools/utils/transformInputValue.d.ts",
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/@graphql-tools/utils/updateArgument.d.ts",
+        "../node_modules/@graphql-tools/utils/validate-documents.d.ts",
+        "../node_modules/@graphql-tools/utils/valueMatchesCriteria.d.ts",
+        "../node_modules/@graphql-tools/utils/visitResult.d.ts",
+        "../node_modules/@graphql-tools/utils/visitSchema.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/isDocumentNode.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/loaders.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts",
+        "../node_modules/graphql/type/schema.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/mapSchema.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/parse-graphql-json.d.ts": [
+        "../node_modules/@graphql-tools/utils/loaders.d.ts",
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/graphql/index.d.ts",
+        "../node_modules/graphql/type/schema.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/parse-graphql-sdl.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/print-schema-with-directives.d.ts": [
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/prune.d.ts": [
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/renameType.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/rewire.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/selectionSets.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/stub.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/toConfig.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/transformInputValue.d.ts": [
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/types.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/updateArgument.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/validate-documents.d.ts": [
+        "../node_modules/@graphql-tools/utils/loaders.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/visitResult.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/visitSchema.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts",
+        "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@nestjs/common/cache/cache.module.d.ts": [
         "../node_modules/@nestjs/common/cache/interfaces/cache-module.interface.d.ts",
@@ -6621,7 +7101,7 @@
         "../node_modules/rxjs/index.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/default-value.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/index.d.ts": [
         "../node_modules/@nestjs/common/pipes/default-value.pipe.d.ts",
@@ -6632,29 +7112,25 @@
         "../node_modules/@nestjs/common/pipes/validation.pipe.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/parse-array.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
         "../node_modules/@nestjs/common/pipes/validation.pipe.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/parse-bool.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
         "../node_modules/@nestjs/common/utils/http-error-by-code.util.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/parse-int.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
         "../node_modules/@nestjs/common/utils/http-error-by-code.util.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/parse-uuid.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
         "../node_modules/@nestjs/common/utils/http-error-by-code.util.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/validation.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/external/validation-error.interface.d.ts",
         "../node_modules/@nestjs/common/interfaces/external/validator-options.interface.d.ts",
         "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
         "../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
@@ -7142,6 +7618,7 @@
         "../node_modules/@nestjs/graphql/dist/interfaces/gql-module-options.interface.d.ts"
       ],
       "../node_modules/@nestjs/graphql/dist/interfaces/gql-module-options.interface.d.ts": [
+        "../node_modules/@graphql-tools/utils/index.d.ts",
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
         "../node_modules/@nestjs/graphql/dist/graphql-ast.explorer.d.ts",
@@ -7215,6 +7692,7 @@
       "../node_modules/@nestjs/graphql/dist/schema-builder/factories/interface-definition.factory.d.ts": [
         "../node_modules/@nestjs/graphql/dist/interfaces/index.d.ts",
         "../node_modules/@nestjs/graphql/dist/schema-builder/factories/args.factory.d.ts",
+        "../node_modules/@nestjs/graphql/dist/schema-builder/factories/ast-definition-node.factory.d.ts",
         "../node_modules/@nestjs/graphql/dist/schema-builder/factories/output-type.factory.d.ts",
         "../node_modules/@nestjs/graphql/dist/schema-builder/factories/resolve-type.factory.d.ts",
         "../node_modules/@nestjs/graphql/dist/schema-builder/metadata/interface.metadata.d.ts",
@@ -7456,6 +7934,9 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/graphql/dist/interfaces/class-decorator-factory.interface.d.ts"
       ],
+      "../node_modules/@nestjs/graphql/dist/utils/async-iterator.util.d.ts": [
+        "../node_modules/iterall/index.d.ts"
+      ],
       "../node_modules/@nestjs/graphql/dist/utils/extract-metadata.util.d.ts": [
         "../node_modules/@nestjs/graphql/dist/interfaces/resolver-metadata.interface.d.ts",
         "../node_modules/reflect-metadata/index.d.ts"
@@ -7620,7 +8101,7 @@
         "../node_modules/@nestjs/typeorm/dist/index.d.ts"
       ],
       "../node_modules/@ts-morph/common/lib/ts-morph-common.d.ts": [
-        "../node_modules/@ts-morph/common/node_modules/typescript/lib/typescript.d.ts"
+        "../node_modules/@ts-morph/common/lib/typescript.d.ts"
       ],
       "../node_modules/@types/accepts/index.d.ts": [
         "../node_modules/@types/node/http.d.ts",
@@ -7689,13 +8170,6 @@
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
-      "../node_modules/@types/graphql-upload/index.d.ts": [
-        "../node_modules/@types/express/index.d.ts",
-        "../node_modules/@types/fs-capacitor/index.d.ts",
-        "../node_modules/@types/koa/index.d.ts",
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
       "../node_modules/@types/istanbul-lib-report/index.d.ts": [
         "../node_modules/@types/istanbul-lib-coverage/index.d.ts"
       ],
@@ -7729,7 +8203,13 @@
         "../node_modules/@types/node-fetch/externals.d.ts",
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/url.d.ts"
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/apollo-env/node_modules/form-data/index.d.ts"
+      ],
+      "../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
       ],
       "../node_modules/@types/node/assert.d.ts": [
         "../node_modules/@types/node/assert.d.ts"
@@ -7882,7 +8362,7 @@
       "../node_modules/@types/node/trace_events.d.ts": [
         "../node_modules/@types/node/trace_events.d.ts"
       ],
-      "../node_modules/@types/node/ts3.4/base.d.ts": [
+      "../node_modules/@types/node/ts3.6/base.d.ts": [
         "../node_modules/@types/node/async_hooks.d.ts",
         "../node_modules/@types/node/buffer.d.ts",
         "../node_modules/@types/node/child_process.d.ts",
@@ -7897,6 +8377,7 @@
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/fs/promises.d.ts",
         "../node_modules/@types/node/globals.d.ts",
+        "../node_modules/@types/node/globals.global.d.ts",
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/@types/node/http2.d.ts",
         "../node_modules/@types/node/https.d.ts",
@@ -7921,13 +8402,9 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/v8.d.ts",
         "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/@types/node/wasi.d.ts",
         "../node_modules/@types/node/worker_threads.d.ts",
         "../node_modules/@types/node/zlib.d.ts"
-      ],
-      "../node_modules/@types/node/ts3.6/base.d.ts": [
-        "../node_modules/@types/node/globals.global.d.ts",
-        "../node_modules/@types/node/ts3.4/base.d.ts",
-        "../node_modules/@types/node/wasi.d.ts"
       ],
       "../node_modules/@types/node/tty.d.ts": [
         "../node_modules/@types/node/net.d.ts",
@@ -8078,45 +8555,59 @@
       ],
       "../node_modules/apollo-cache-control/dist/index.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/schema/resolveObject.d.ts",
-        "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts",
         "../node_modules/apollo-graphql/lib/schema/resolveObject.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts",
         "../node_modules/graphql/type/definition.d.ts"
-      ],
-      "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts": [
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/apollo-cache-control/node_modules/apollo-server-types/dist/index.d.ts": [
-        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-datasource/dist/index.d.ts": [
         "../node_modules/apollo-server-caching/dist/index.d.ts"
       ],
-      "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts": [
-        "../node_modules/apollo-engine-reporting-protobuf/dist/protobuf.d.ts"
+      "../node_modules/apollo-env/lib/fetch/fetch.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts"
       ],
-      "../node_modules/apollo-engine-reporting-protobuf/dist/protobuf.d.ts": [
-        "../node_modules/@apollo/protobufjs/index.d.ts",
-        "../node_modules/@types/long/index.d.ts"
+      "../node_modules/apollo-env/lib/fetch/index.d.ts": [
+        "../node_modules/apollo-env/lib/fetch/fetch.d.ts",
+        "../node_modules/apollo-env/lib/fetch/url.d.ts"
       ],
-      "../node_modules/apollo-engine-reporting/dist/agent.d.ts": [
-        "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
+      "../node_modules/apollo-env/lib/fetch/url.d.ts": [
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/url.d.ts"
       ],
-      "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts": [
-        "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts"
+      "../node_modules/apollo-env/lib/index.d.ts": [
+        "../node_modules/apollo-env/lib/fetch/index.d.ts",
+        "../node_modules/apollo-env/lib/polyfills/index.d.ts",
+        "../node_modules/apollo-env/lib/typescript-utility-types.d.ts",
+        "../node_modules/apollo-env/lib/utils/index.d.ts"
       ],
-      "../node_modules/apollo-engine-reporting/dist/index.d.ts": [
-        "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
-        "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts"
+      "../node_modules/apollo-env/lib/polyfills/index.d.ts": [
+        "../node_modules/apollo-env/lib/polyfills/array.d.ts",
+        "../node_modules/apollo-env/lib/polyfills/object.d.ts"
+      ],
+      "../node_modules/apollo-env/lib/utils/createHash.d.ts": [
+        "../node_modules/@types/node/crypto.d.ts"
+      ],
+      "../node_modules/apollo-env/lib/utils/index.d.ts": [
+        "../node_modules/apollo-env/lib/utils/createHash.d.ts",
+        "../node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
+        "../node_modules/apollo-env/lib/utils/mapValues.d.ts",
+        "../node_modules/apollo-env/lib/utils/predicates.d.ts"
+      ],
+      "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/apollo-env/node_modules/@types/node-fetch/externals.d.ts",
+        "../node_modules/apollo-env/node_modules/form-data/index.d.ts"
+      ],
+      "../node_modules/apollo-env/node_modules/form-data/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
       ],
       "../node_modules/apollo-graphql/lib/index.d.ts": [
         "../node_modules/apollo-graphql/lib/operationId.d.ts",
@@ -8192,6 +8683,8 @@
       ],
       "../node_modules/apollo-server-core/dist/ApolloServer.d.ts": [
         "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/http2.d.ts",
+        "../node_modules/@types/node/https.d.ts",
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/@types/ws/index.d.ts",
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
@@ -8217,6 +8710,7 @@
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts",
         "../node_modules/apollo-server-core/dist/playground.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/index.d.ts",
         "../node_modules/apollo-server-core/dist/processFileUploads.d.ts",
         "../node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts",
         "../node_modules/apollo-server-core/dist/runHttpQuery.d.ts",
@@ -8233,8 +8727,48 @@
       "../node_modules/apollo-server-core/dist/playground.d.ts": [
         "../node_modules/@apollographql/graphql-playground-html/dist/render-playground-page.d.ts"
       ],
+      "../node_modules/apollo-server-core/dist/plugin/index.d.ts": [
+        "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts",
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts": [
+        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts": [
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts": [
+        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts": [
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts": [
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
+        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts": [
+        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts": [
+        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
+        "../node_modules/apollo-server-env/dist/index.d.ts"
+      ],
       "../node_modules/apollo-server-core/dist/processFileUploads.d.ts": [
-        "../node_modules/@types/graphql-upload/index.d.ts"
+        "../node_modules/@apollographql/graphql-upload-8-fork/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/requestPipeline.d.ts": [
         "../node_modules/apollo-datasource/dist/index.d.ts",
@@ -8258,10 +8792,10 @@
         "../node_modules/@apollographql/apollo-tools/lib/index.d.ts",
         "../node_modules/@types/ws/index.d.ts",
         "../node_modules/apollo-cache-control/dist/index.d.ts",
-        "../node_modules/apollo-engine-reporting/dist/index.d.ts",
         "../node_modules/apollo-server-caching/dist/index.d.ts",
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-core/dist/playground.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/index.d.ts",
         "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
         "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql-extensions/dist/index.d.ts",
@@ -8285,7 +8819,7 @@
         "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/apollo-server-types/dist/index.d.ts": [
-        "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts",
+        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
         "../node_modules/apollo-server-caching/dist/index.d.ts",
         "../node_modules/apollo-server-env/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
@@ -8333,23 +8867,8 @@
         "../node_modules/@types/node/index.d.ts"
       ],
       "../node_modules/graphql-extensions/dist/index.d.ts": [
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/fetch.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/https.d.ts"
-      ],
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/index.d.ts": [
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/fetch.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/typescript-utility-types.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/url.d.ts"
-      ],
-      "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts": [
-        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/graphql-tools/dist/Interfaces.d.ts": [
@@ -10639,6 +11158,7 @@
       "../src/api/api.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/api/controllers/customer.controller.ts",
+        "../src/api/controllers/global-setting.controller.ts",
         "../src/api/controllers/isp.controller.ts",
         "../src/api/controllers/payment-slip.controller.ts",
         "../src/api/resolvers/customer.resolver.ts",
@@ -10656,6 +11176,12 @@
         "../src/service/services/customer.service.ts",
         "../src/service/services/isp.service.ts",
         "../src/service/services/payment-slip.service.ts"
+      ],
+      "../src/api/controllers/global-setting.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/api/dto/global-setting/create-global-setting.dto.ts",
+        "../src/api/dto/global-setting/update-global-setting.dto.ts",
+        "../src/service/services/global-setting.service.ts"
       ],
       "../src/api/controllers/isp.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -10682,6 +11208,10 @@
       "../src/api/dto/customer/update-customer.input.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../src/api/dto/customer/create-customer.input.ts"
+      ],
+      "../src/api/dto/global-setting/update-global-setting.dto.ts": [
+        "../node_modules/@nestjs/mapped-types/index.d.ts",
+        "../src/api/dto/global-setting/create-global-setting.dto.ts"
       ],
       "../src/api/dto/isp/update-isp.dto.ts": [
         "../node_modules/@nestjs/mapped-types/index.d.ts",
@@ -10741,6 +11271,10 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/entities/payment-slip.entity.ts"
       ],
+      "../src/entities/global-setting.entity.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../node_modules/typeorm/index.d.ts"
+      ],
       "../src/entities/isp.entity.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
@@ -10763,12 +11297,14 @@
         "../src/database/database.module.ts",
         "../src/service/service.providers.ts",
         "../src/service/services/customer.service.ts",
+        "../src/service/services/global-setting.service.ts",
         "../src/service/services/isp.service.ts",
         "../src/service/services/payment-slip.service.ts"
       ],
       "../src/service/service.providers.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/entities/customer.entity.ts",
+        "../src/entities/global-setting.entity.ts",
         "../src/entities/isp.entity.ts",
         "../src/entities/payment-slip.entity.ts"
       ],
@@ -10781,6 +11317,14 @@
         "../src/entities/customer.entity.ts",
         "../src/entities/isp.entity.ts",
         "../src/entities/payment-slip.entity.ts",
+        "../src/service/helpers/dto.ts"
+      ],
+      "../src/service/services/global-setting.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/api/dto/global-setting/create-global-setting.dto.ts",
+        "../src/api/dto/global-setting/update-global-setting.dto.ts",
+        "../src/entities/global-setting.entity.ts",
         "../src/service/helpers/dto.ts"
       ],
       "../src/service/services/isp.service.ts": [
@@ -10811,12 +11355,12 @@
     "exportedModulesMap": {
       "../node_modules/@apollo/federation/dist/composition/compose.d.ts": [
         "../node_modules/@apollo/federation/dist/composition/types.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/@apollo/federation/dist/composition/utils.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/federation/dist/composition/composeAndValidate.d.ts": [
         "../node_modules/@apollo/federation/dist/composition/types.d.ts",
-        "../node_modules/graphql/index.d.ts"
+        "../node_modules/@apollo/federation/dist/composition/utils.d.ts"
       ],
       "../node_modules/@apollo/federation/dist/composition/index.d.ts": [
         "../node_modules/@apollo/federation/dist/composition/compose.d.ts",
@@ -10838,7 +11382,6 @@
       ],
       "../node_modules/@apollo/federation/dist/composition/utils.d.ts": [
         "../node_modules/@apollo/federation/dist/composition/types.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/federation/dist/index.d.ts": [
@@ -10847,7 +11390,6 @@
       ],
       "../node_modules/@apollo/federation/dist/service/buildFederatedSchema.d.ts": [
         "../node_modules/apollo-graphql/lib/index.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/federation/dist/service/index.d.ts": [
@@ -10857,15 +11399,21 @@
       "../node_modules/@apollo/federation/dist/service/printFederatedSchema.d.ts": [
         "../node_modules/graphql/index.d.ts"
       ],
-      "../node_modules/@apollo/gateway/dist/FieldSet.d.ts": [
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/@apollo/gateway/dist/QueryPlan.d.ts": [
-        "../node_modules/graphql/index.d.ts"
-      ],
       "../node_modules/@apollo/gateway/dist/buildQueryPlan.d.ts": [
-        "../node_modules/@apollo/gateway/dist/FieldSet.d.ts",
-        "../node_modules/@apollo/gateway/dist/QueryPlan.d.ts",
+        "../node_modules/@apollo/gateway/dist/index.d.ts",
+        "../node_modules/@apollo/query-planner/dist/index.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@apollo/gateway/dist/config.d.ts": [
+        "../node_modules/@apollo/federation/dist/index.d.ts",
+        "../node_modules/@apollo/gateway/dist/datasources/types.d.ts",
+        "../node_modules/@apollo/gateway/dist/executeQueryPlan.d.ts",
+        "../node_modules/@apollo/gateway/dist/index.d.ts",
+        "../node_modules/@apollo/gateway/dist/loadServicesFromStorage.d.ts",
+        "../node_modules/@apollo/query-planner/dist/index.d.ts",
+        "../node_modules/@types/node-fetch/index.d.ts",
+        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/gateway/dist/datasources/LocalGraphQLDataSource.d.ts": [
@@ -10888,29 +11436,27 @@
         "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/@apollo/gateway/dist/executeQueryPlan.d.ts": [
-        "../node_modules/@apollo/gateway/dist/QueryPlan.d.ts",
         "../node_modules/@apollo/gateway/dist/datasources/types.d.ts",
+        "../node_modules/@apollo/gateway/dist/index.d.ts",
+        "../node_modules/@apollo/query-planner/dist/index.d.ts",
         "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/gateway/dist/index.d.ts": [
-        "../node_modules/@apollo/federation/dist/index.d.ts",
-        "../node_modules/@apollo/gateway/dist/QueryPlan.d.ts",
         "../node_modules/@apollo/gateway/dist/buildQueryPlan.d.ts",
+        "../node_modules/@apollo/gateway/dist/config.d.ts",
         "../node_modules/@apollo/gateway/dist/datasources/index.d.ts",
         "../node_modules/@apollo/gateway/dist/datasources/types.d.ts",
         "../node_modules/@apollo/gateway/dist/executeQueryPlan.d.ts",
-        "../node_modules/@apollo/gateway/dist/loadServicesFromStorage.d.ts",
         "../node_modules/@apollo/gateway/src/make-fetch-happen.d.ts",
-        "../node_modules/@types/node-fetch/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
+        "../node_modules/@apollo/query-planner/dist/index.d.ts",
         "../node_modules/apollo-server-core/dist/index.d.ts",
         "../node_modules/apollo-server-env/dist/index.d.ts",
         "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@apollo/gateway/dist/loadServicesFromStorage.d.ts": [
-        "../node_modules/@apollo/gateway/dist/index.d.ts",
+        "../node_modules/@apollo/gateway/dist/config.d.ts",
         "../node_modules/apollo-server-env/dist/index.d.ts"
       ],
       "../node_modules/@apollo/gateway/src/make-fetch-happen.d.ts": [
@@ -10918,6 +11464,25 @@
       ],
       "../node_modules/@apollo/protobufjs/index.d.ts": [
         "../node_modules/@types/long/index.d.ts"
+      ],
+      "../node_modules/@apollo/query-planner/dist/index.d.ts": [
+        "../node_modules/@apollo/query-planner/dist/prettyFormatQueryPlan.d.ts",
+        "../node_modules/@apollo/query-planner/dist/snapshotSerializers/index.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@apollo/query-planner/dist/prettyFormatQueryPlan.d.ts": [
+        "../node_modules/@apollo/query-planner/dist/index.d.ts"
+      ],
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/astSerializer.d.ts": [
+        "../node_modules/graphql/index.d.ts",
+        "../node_modules/pretty-format/build/types.d.ts"
+      ],
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/index.d.ts": [
+        "../node_modules/@apollo/query-planner/dist/snapshotSerializers/astSerializer.d.ts",
+        "../node_modules/@apollo/query-planner/dist/snapshotSerializers/queryPlanSerializer.d.ts"
+      ],
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/queryPlanSerializer.d.ts": [
+        "../node_modules/pretty-format/build/types.d.ts"
       ],
       "../node_modules/@apollographql/apollo-tools/lib/buildServiceDefinition.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/schema/resolverMap.d.ts",
@@ -10927,7 +11492,7 @@
         "../node_modules/@apollographql/apollo-tools/lib/buildServiceDefinition.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/schema/index.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/utilities/index.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts"
+        "../node_modules/apollo-env/lib/index.d.ts"
       ],
       "../node_modules/@apollographql/apollo-tools/lib/schema/index.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/schema/resolveObject.d.ts",
@@ -10951,53 +11516,222 @@
         "../node_modules/@apollographql/apollo-tools/lib/utilities/invariant.d.ts",
         "../node_modules/@apollographql/apollo-tools/lib/utilities/predicates.d.ts"
       ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/externals.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts",
+      "../node_modules/@apollographql/graphql-upload-8-fork/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/fs-capacitor/index.d.ts",
+        "../node_modules/@types/koa/index.d.ts",
         "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/url.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts",
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/https.d.ts",
-        "../node_modules/@types/node/index.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts": [
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/url.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/typescript-utility-types.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/array.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/object.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts": [
-        "../node_modules/@types/node/crypto.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/mapValues.d.ts",
-        "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/predicates.d.ts"
-      ],
-      "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/stream.d.ts"
+        "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@babel/parser/typings/babel-parser.d.ts": [
         "../node_modules/@babel/types/lib/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/Interfaces.d.ts": [
+        "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/SchemaDirectiveVisitor.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/addTypes.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/astFromValueUntyped.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/build-operation-for-field.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/clone.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/collectFields.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/create-schema-definition.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/errors.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/fields.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/filterSchema.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/fix-schema-ast.d.ts": [
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/forEachDefaultValue.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/forEachField.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/get-directives.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/get-fields-with-directives.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/get-implementing-types.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/get-user-types-from-schema.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/getArgumentValues.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/getResolversFromSchema.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/getResponseKeyFromInfo.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/heal.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/helpers.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/implementsAbstractType.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/index.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/@graphql-tools/utils/SchemaDirectiveVisitor.d.ts",
+        "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts",
+        "../node_modules/@graphql-tools/utils/addTypes.d.ts",
+        "../node_modules/@graphql-tools/utils/astFromValueUntyped.d.ts",
+        "../node_modules/@graphql-tools/utils/build-operation-for-field.d.ts",
+        "../node_modules/@graphql-tools/utils/clone.d.ts",
+        "../node_modules/@graphql-tools/utils/collectFields.d.ts",
+        "../node_modules/@graphql-tools/utils/create-schema-definition.d.ts",
+        "../node_modules/@graphql-tools/utils/debug-log.d.ts",
+        "../node_modules/@graphql-tools/utils/errors.d.ts",
+        "../node_modules/@graphql-tools/utils/fields.d.ts",
+        "../node_modules/@graphql-tools/utils/filterSchema.d.ts",
+        "../node_modules/@graphql-tools/utils/fix-schema-ast.d.ts",
+        "../node_modules/@graphql-tools/utils/fix-windows-path.d.ts",
+        "../node_modules/@graphql-tools/utils/flatten-array.d.ts",
+        "../node_modules/@graphql-tools/utils/forEachDefaultValue.d.ts",
+        "../node_modules/@graphql-tools/utils/forEachField.d.ts",
+        "../node_modules/@graphql-tools/utils/get-directives.d.ts",
+        "../node_modules/@graphql-tools/utils/get-fields-with-directives.d.ts",
+        "../node_modules/@graphql-tools/utils/get-implementing-types.d.ts",
+        "../node_modules/@graphql-tools/utils/get-user-types-from-schema.d.ts",
+        "../node_modules/@graphql-tools/utils/getArgumentValues.d.ts",
+        "../node_modules/@graphql-tools/utils/getResolversFromSchema.d.ts",
+        "../node_modules/@graphql-tools/utils/getResponseKeyFromInfo.d.ts",
+        "../node_modules/@graphql-tools/utils/heal.d.ts",
+        "../node_modules/@graphql-tools/utils/helpers.d.ts",
+        "../node_modules/@graphql-tools/utils/implementsAbstractType.d.ts",
+        "../node_modules/@graphql-tools/utils/isAsyncIterable.d.ts",
+        "../node_modules/@graphql-tools/utils/isDocumentNode.d.ts",
+        "../node_modules/@graphql-tools/utils/loaders.d.ts",
+        "../node_modules/@graphql-tools/utils/mapAsyncIterator.d.ts",
+        "../node_modules/@graphql-tools/utils/mapSchema.d.ts",
+        "../node_modules/@graphql-tools/utils/mergeDeep.d.ts",
+        "../node_modules/@graphql-tools/utils/observableToAsyncIterable.d.ts",
+        "../node_modules/@graphql-tools/utils/parse-graphql-json.d.ts",
+        "../node_modules/@graphql-tools/utils/parse-graphql-sdl.d.ts",
+        "../node_modules/@graphql-tools/utils/print-schema-with-directives.d.ts",
+        "../node_modules/@graphql-tools/utils/prune.d.ts",
+        "../node_modules/@graphql-tools/utils/renameType.d.ts",
+        "../node_modules/@graphql-tools/utils/rewire.d.ts",
+        "../node_modules/@graphql-tools/utils/selectionSets.d.ts",
+        "../node_modules/@graphql-tools/utils/stub.d.ts",
+        "../node_modules/@graphql-tools/utils/toConfig.d.ts",
+        "../node_modules/@graphql-tools/utils/transformInputValue.d.ts",
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/@graphql-tools/utils/updateArgument.d.ts",
+        "../node_modules/@graphql-tools/utils/validate-documents.d.ts",
+        "../node_modules/@graphql-tools/utils/valueMatchesCriteria.d.ts",
+        "../node_modules/@graphql-tools/utils/visitResult.d.ts",
+        "../node_modules/@graphql-tools/utils/visitSchema.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/isDocumentNode.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/loaders.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts",
+        "../node_modules/graphql/type/schema.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/mapSchema.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/parse-graphql-json.d.ts": [
+        "../node_modules/@graphql-tools/utils/loaders.d.ts",
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/graphql/index.d.ts",
+        "../node_modules/graphql/type/schema.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/parse-graphql-sdl.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/print-schema-with-directives.d.ts": [
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/prune.d.ts": [
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/renameType.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/rewire.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/selectionSets.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/stub.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/toConfig.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/transformInputValue.d.ts": [
+        "../node_modules/@graphql-tools/utils/types.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/types.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/updateArgument.d.ts": [
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/validate-documents.d.ts": [
+        "../node_modules/@graphql-tools/utils/loaders.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/visitResult.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@graphql-tools/utils/visitSchema.d.ts": [
+        "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+        "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts",
+        "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@nestjs/common/cache/cache.module.d.ts": [
         "../node_modules/@nestjs/common/cache/interfaces/cache-module.interface.d.ts",
@@ -11406,7 +12140,7 @@
         "../node_modules/rxjs/index.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/default-value.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/index.d.ts": [
         "../node_modules/@nestjs/common/pipes/default-value.pipe.d.ts",
@@ -11417,29 +12151,25 @@
         "../node_modules/@nestjs/common/pipes/validation.pipe.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/parse-array.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
         "../node_modules/@nestjs/common/pipes/validation.pipe.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/parse-bool.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
         "../node_modules/@nestjs/common/utils/http-error-by-code.util.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/parse-int.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
         "../node_modules/@nestjs/common/utils/http-error-by-code.util.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/parse-uuid.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
         "../node_modules/@nestjs/common/utils/http-error-by-code.util.d.ts"
       ],
       "../node_modules/@nestjs/common/pipes/validation.pipe.d.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/external/validation-error.interface.d.ts",
         "../node_modules/@nestjs/common/interfaces/external/validator-options.interface.d.ts",
         "../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
         "../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
@@ -11927,6 +12657,7 @@
         "../node_modules/@nestjs/graphql/dist/interfaces/gql-module-options.interface.d.ts"
       ],
       "../node_modules/@nestjs/graphql/dist/interfaces/gql-module-options.interface.d.ts": [
+        "../node_modules/@graphql-tools/utils/index.d.ts",
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
         "../node_modules/@nestjs/graphql/dist/graphql-ast.explorer.d.ts",
@@ -12000,6 +12731,7 @@
       "../node_modules/@nestjs/graphql/dist/schema-builder/factories/interface-definition.factory.d.ts": [
         "../node_modules/@nestjs/graphql/dist/interfaces/index.d.ts",
         "../node_modules/@nestjs/graphql/dist/schema-builder/factories/args.factory.d.ts",
+        "../node_modules/@nestjs/graphql/dist/schema-builder/factories/ast-definition-node.factory.d.ts",
         "../node_modules/@nestjs/graphql/dist/schema-builder/factories/output-type.factory.d.ts",
         "../node_modules/@nestjs/graphql/dist/schema-builder/factories/resolve-type.factory.d.ts",
         "../node_modules/@nestjs/graphql/dist/schema-builder/metadata/interface.metadata.d.ts",
@@ -12241,6 +12973,9 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/graphql/dist/interfaces/class-decorator-factory.interface.d.ts"
       ],
+      "../node_modules/@nestjs/graphql/dist/utils/async-iterator.util.d.ts": [
+        "../node_modules/iterall/index.d.ts"
+      ],
       "../node_modules/@nestjs/graphql/dist/utils/extract-metadata.util.d.ts": [
         "../node_modules/@nestjs/graphql/dist/interfaces/resolver-metadata.interface.d.ts",
         "../node_modules/reflect-metadata/index.d.ts"
@@ -12405,7 +13140,7 @@
         "../node_modules/@nestjs/typeorm/dist/index.d.ts"
       ],
       "../node_modules/@ts-morph/common/lib/ts-morph-common.d.ts": [
-        "../node_modules/@ts-morph/common/node_modules/typescript/lib/typescript.d.ts"
+        "../node_modules/@ts-morph/common/lib/typescript.d.ts"
       ],
       "../node_modules/@types/accepts/index.d.ts": [
         "../node_modules/@types/node/http.d.ts",
@@ -12474,13 +13209,6 @@
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
-      "../node_modules/@types/graphql-upload/index.d.ts": [
-        "../node_modules/@types/express/index.d.ts",
-        "../node_modules/@types/fs-capacitor/index.d.ts",
-        "../node_modules/@types/koa/index.d.ts",
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
       "../node_modules/@types/istanbul-lib-report/index.d.ts": [
         "../node_modules/@types/istanbul-lib-coverage/index.d.ts"
       ],
@@ -12514,7 +13242,13 @@
         "../node_modules/@types/node-fetch/externals.d.ts",
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/node/url.d.ts"
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/apollo-env/node_modules/form-data/index.d.ts"
+      ],
+      "../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
       ],
       "../node_modules/@types/node/assert.d.ts": [
         "../node_modules/@types/node/assert.d.ts"
@@ -12667,7 +13401,7 @@
       "../node_modules/@types/node/trace_events.d.ts": [
         "../node_modules/@types/node/trace_events.d.ts"
       ],
-      "../node_modules/@types/node/ts3.4/base.d.ts": [
+      "../node_modules/@types/node/ts3.6/base.d.ts": [
         "../node_modules/@types/node/async_hooks.d.ts",
         "../node_modules/@types/node/buffer.d.ts",
         "../node_modules/@types/node/child_process.d.ts",
@@ -12682,6 +13416,7 @@
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/fs/promises.d.ts",
         "../node_modules/@types/node/globals.d.ts",
+        "../node_modules/@types/node/globals.global.d.ts",
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/@types/node/http2.d.ts",
         "../node_modules/@types/node/https.d.ts",
@@ -12706,13 +13441,9 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/v8.d.ts",
         "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/@types/node/wasi.d.ts",
         "../node_modules/@types/node/worker_threads.d.ts",
         "../node_modules/@types/node/zlib.d.ts"
-      ],
-      "../node_modules/@types/node/ts3.6/base.d.ts": [
-        "../node_modules/@types/node/globals.global.d.ts",
-        "../node_modules/@types/node/ts3.4/base.d.ts",
-        "../node_modules/@types/node/wasi.d.ts"
       ],
       "../node_modules/@types/node/tty.d.ts": [
         "../node_modules/@types/node/net.d.ts",
@@ -12863,45 +13594,59 @@
       ],
       "../node_modules/apollo-cache-control/dist/index.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/schema/resolveObject.d.ts",
-        "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts",
         "../node_modules/apollo-graphql/lib/schema/resolveObject.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts",
         "../node_modules/graphql/type/definition.d.ts"
-      ],
-      "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts": [
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/apollo-cache-control/node_modules/apollo-server-types/dist/index.d.ts": [
-        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-datasource/dist/index.d.ts": [
         "../node_modules/apollo-server-caching/dist/index.d.ts"
       ],
-      "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts": [
-        "../node_modules/apollo-engine-reporting-protobuf/dist/protobuf.d.ts"
+      "../node_modules/apollo-env/lib/fetch/fetch.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts"
       ],
-      "../node_modules/apollo-engine-reporting-protobuf/dist/protobuf.d.ts": [
-        "../node_modules/@apollo/protobufjs/index.d.ts",
-        "../node_modules/@types/long/index.d.ts"
+      "../node_modules/apollo-env/lib/fetch/index.d.ts": [
+        "../node_modules/apollo-env/lib/fetch/fetch.d.ts",
+        "../node_modules/apollo-env/lib/fetch/url.d.ts"
       ],
-      "../node_modules/apollo-engine-reporting/dist/agent.d.ts": [
-        "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
+      "../node_modules/apollo-env/lib/fetch/url.d.ts": [
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/url.d.ts"
       ],
-      "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts": [
-        "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts"
+      "../node_modules/apollo-env/lib/index.d.ts": [
+        "../node_modules/apollo-env/lib/fetch/index.d.ts",
+        "../node_modules/apollo-env/lib/polyfills/index.d.ts",
+        "../node_modules/apollo-env/lib/typescript-utility-types.d.ts",
+        "../node_modules/apollo-env/lib/utils/index.d.ts"
       ],
-      "../node_modules/apollo-engine-reporting/dist/index.d.ts": [
-        "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
-        "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts"
+      "../node_modules/apollo-env/lib/polyfills/index.d.ts": [
+        "../node_modules/apollo-env/lib/polyfills/array.d.ts",
+        "../node_modules/apollo-env/lib/polyfills/object.d.ts"
+      ],
+      "../node_modules/apollo-env/lib/utils/createHash.d.ts": [
+        "../node_modules/@types/node/crypto.d.ts"
+      ],
+      "../node_modules/apollo-env/lib/utils/index.d.ts": [
+        "../node_modules/apollo-env/lib/utils/createHash.d.ts",
+        "../node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
+        "../node_modules/apollo-env/lib/utils/mapValues.d.ts",
+        "../node_modules/apollo-env/lib/utils/predicates.d.ts"
+      ],
+      "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/apollo-env/node_modules/@types/node-fetch/externals.d.ts",
+        "../node_modules/apollo-env/node_modules/form-data/index.d.ts"
+      ],
+      "../node_modules/apollo-env/node_modules/form-data/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
       ],
       "../node_modules/apollo-graphql/lib/index.d.ts": [
         "../node_modules/apollo-graphql/lib/operationId.d.ts",
@@ -12977,6 +13722,8 @@
       ],
       "../node_modules/apollo-server-core/dist/ApolloServer.d.ts": [
         "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/http2.d.ts",
+        "../node_modules/@types/node/https.d.ts",
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/@types/ws/index.d.ts",
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
@@ -13002,6 +13749,7 @@
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts",
         "../node_modules/apollo-server-core/dist/playground.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/index.d.ts",
         "../node_modules/apollo-server-core/dist/processFileUploads.d.ts",
         "../node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts",
         "../node_modules/apollo-server-core/dist/runHttpQuery.d.ts",
@@ -13018,8 +13766,48 @@
       "../node_modules/apollo-server-core/dist/playground.d.ts": [
         "../node_modules/@apollographql/graphql-playground-html/dist/render-playground-page.d.ts"
       ],
+      "../node_modules/apollo-server-core/dist/plugin/index.d.ts": [
+        "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts",
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts": [
+        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts": [
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts": [
+        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts": [
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts": [
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
+        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts": [
+        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
+        "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts": [
+        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
+        "../node_modules/apollo-server-env/dist/index.d.ts"
+      ],
       "../node_modules/apollo-server-core/dist/processFileUploads.d.ts": [
-        "../node_modules/@types/graphql-upload/index.d.ts"
+        "../node_modules/@apollographql/graphql-upload-8-fork/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/requestPipeline.d.ts": [
         "../node_modules/apollo-datasource/dist/index.d.ts",
@@ -13043,10 +13831,10 @@
         "../node_modules/@apollographql/apollo-tools/lib/index.d.ts",
         "../node_modules/@types/ws/index.d.ts",
         "../node_modules/apollo-cache-control/dist/index.d.ts",
-        "../node_modules/apollo-engine-reporting/dist/index.d.ts",
         "../node_modules/apollo-server-caching/dist/index.d.ts",
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-core/dist/playground.d.ts",
+        "../node_modules/apollo-server-core/dist/plugin/index.d.ts",
         "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
         "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql-extensions/dist/index.d.ts",
@@ -13070,7 +13858,7 @@
         "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/apollo-server-types/dist/index.d.ts": [
-        "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts",
+        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
         "../node_modules/apollo-server-caching/dist/index.d.ts",
         "../node_modules/apollo-server-env/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
@@ -13118,23 +13906,8 @@
         "../node_modules/@types/node/index.d.ts"
       ],
       "../node_modules/graphql-extensions/dist/index.d.ts": [
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/fetch.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/https.d.ts"
-      ],
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/index.d.ts": [
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/fetch.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/typescript-utility-types.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/url.d.ts"
-      ],
-      "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts": [
-        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/graphql-tools/dist/Interfaces.d.ts": [
@@ -15428,6 +16201,13 @@
         "../src/service/services/isp.service.ts",
         "../src/service/services/payment-slip.service.ts"
       ],
+      "../src/api/controllers/global-setting.controller.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/api/dto/global-setting/create-global-setting.dto.ts",
+        "../src/api/dto/global-setting/update-global-setting.dto.ts",
+        "../src/entities/global-setting.entity.ts",
+        "../src/service/services/global-setting.service.ts"
+      ],
       "../src/api/controllers/isp.controller.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/api/dto/isp/create-isp.dto.ts",
@@ -15452,6 +16232,10 @@
       "../src/api/dto/customer/update-customer.input.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/api/dto/customer/create-customer.input.ts"
+      ],
+      "../src/api/dto/global-setting/update-global-setting.dto.ts": [
+        "../node_modules/@nestjs/mapped-types/index.d.ts",
+        "../src/api/dto/global-setting/create-global-setting.dto.ts"
       ],
       "../src/api/dto/isp/update-isp.dto.ts": [
         "../node_modules/@nestjs/mapped-types/index.d.ts",
@@ -15501,6 +16285,7 @@
       "../src/service/service.providers.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/entities/customer.entity.ts",
+        "../src/entities/global-setting.entity.ts",
         "../src/entities/isp.entity.ts",
         "../src/entities/payment-slip.entity.ts"
       ],
@@ -15511,6 +16296,12 @@
         "../src/entities/customer.entity.ts",
         "../src/entities/isp.entity.ts",
         "../src/entities/payment-slip.entity.ts"
+      ],
+      "../src/service/services/global-setting.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/api/dto/global-setting/create-global-setting.dto.ts",
+        "../src/api/dto/global-setting/update-global-setting.dto.ts",
+        "../src/entities/global-setting.entity.ts"
       ],
       "../src/service/services/isp.service.ts": [
         "../node_modules/typeorm/index.d.ts",
@@ -15543,9 +16334,8 @@
       "../node_modules/@apollo/federation/dist/service/buildFederatedSchema.d.ts",
       "../node_modules/@apollo/federation/dist/service/index.d.ts",
       "../node_modules/@apollo/federation/dist/service/printFederatedSchema.d.ts",
-      "../node_modules/@apollo/gateway/dist/FieldSet.d.ts",
-      "../node_modules/@apollo/gateway/dist/QueryPlan.d.ts",
       "../node_modules/@apollo/gateway/dist/buildQueryPlan.d.ts",
+      "../node_modules/@apollo/gateway/dist/config.d.ts",
       "../node_modules/@apollo/gateway/dist/datasources/LocalGraphQLDataSource.d.ts",
       "../node_modules/@apollo/gateway/dist/datasources/RemoteGraphQLDataSource.d.ts",
       "../node_modules/@apollo/gateway/dist/datasources/index.d.ts",
@@ -15556,6 +16346,11 @@
       "../node_modules/@apollo/gateway/src/datasources/types.ts",
       "../node_modules/@apollo/gateway/src/make-fetch-happen.d.ts",
       "../node_modules/@apollo/protobufjs/index.d.ts",
+      "../node_modules/@apollo/query-planner/dist/index.d.ts",
+      "../node_modules/@apollo/query-planner/dist/prettyFormatQueryPlan.d.ts",
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/astSerializer.d.ts",
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/index.d.ts",
+      "../node_modules/@apollo/query-planner/dist/snapshotSerializers/queryPlanSerializer.d.ts",
       "../node_modules/@apollographql/apollo-tools/lib/buildServiceDefinition.d.ts",
       "../node_modules/@apollographql/apollo-tools/lib/index.d.ts",
       "../node_modules/@apollographql/apollo-tools/lib/schema/index.d.ts",
@@ -15565,25 +16360,62 @@
       "../node_modules/@apollographql/apollo-tools/lib/utilities/index.d.ts",
       "../node_modules/@apollographql/apollo-tools/lib/utilities/invariant.d.ts",
       "../node_modules/@apollographql/apollo-tools/lib/utilities/predicates.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/externals.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/@types/node-fetch/index.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/fetch.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/index.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/fetch/url.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/index.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/array.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/index.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/polyfills/object.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/typescript-utility-types.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/createHash.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/index.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/mapValues.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/apollo-env/lib/utils/predicates.d.ts",
-      "../node_modules/@apollographql/apollo-tools/node_modules/form-data/index.d.ts",
       "../node_modules/@apollographql/graphql-playground-html/dist/render-playground-page.d.ts",
+      "../node_modules/@apollographql/graphql-upload-8-fork/index.d.ts",
       "../node_modules/@babel/parser/typings/babel-parser.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
+      "../node_modules/@graphql-tools/utils/Interfaces.d.ts",
+      "../node_modules/@graphql-tools/utils/SchemaDirectiveVisitor.d.ts",
+      "../node_modules/@graphql-tools/utils/SchemaVisitor.d.ts",
+      "../node_modules/@graphql-tools/utils/addTypes.d.ts",
+      "../node_modules/@graphql-tools/utils/astFromValueUntyped.d.ts",
+      "../node_modules/@graphql-tools/utils/build-operation-for-field.d.ts",
+      "../node_modules/@graphql-tools/utils/clone.d.ts",
+      "../node_modules/@graphql-tools/utils/collectFields.d.ts",
+      "../node_modules/@graphql-tools/utils/create-schema-definition.d.ts",
+      "../node_modules/@graphql-tools/utils/debug-log.d.ts",
+      "../node_modules/@graphql-tools/utils/errors.d.ts",
+      "../node_modules/@graphql-tools/utils/fields.d.ts",
+      "../node_modules/@graphql-tools/utils/filterSchema.d.ts",
+      "../node_modules/@graphql-tools/utils/fix-schema-ast.d.ts",
+      "../node_modules/@graphql-tools/utils/fix-windows-path.d.ts",
+      "../node_modules/@graphql-tools/utils/flatten-array.d.ts",
+      "../node_modules/@graphql-tools/utils/forEachDefaultValue.d.ts",
+      "../node_modules/@graphql-tools/utils/forEachField.d.ts",
+      "../node_modules/@graphql-tools/utils/get-directives.d.ts",
+      "../node_modules/@graphql-tools/utils/get-fields-with-directives.d.ts",
+      "../node_modules/@graphql-tools/utils/get-implementing-types.d.ts",
+      "../node_modules/@graphql-tools/utils/get-user-types-from-schema.d.ts",
+      "../node_modules/@graphql-tools/utils/getArgumentValues.d.ts",
+      "../node_modules/@graphql-tools/utils/getResolversFromSchema.d.ts",
+      "../node_modules/@graphql-tools/utils/getResponseKeyFromInfo.d.ts",
+      "../node_modules/@graphql-tools/utils/heal.d.ts",
+      "../node_modules/@graphql-tools/utils/helpers.d.ts",
+      "../node_modules/@graphql-tools/utils/implementsAbstractType.d.ts",
+      "../node_modules/@graphql-tools/utils/index.d.ts",
+      "../node_modules/@graphql-tools/utils/isAsyncIterable.d.ts",
+      "../node_modules/@graphql-tools/utils/isDocumentNode.d.ts",
+      "../node_modules/@graphql-tools/utils/loaders.d.ts",
+      "../node_modules/@graphql-tools/utils/mapAsyncIterator.d.ts",
+      "../node_modules/@graphql-tools/utils/mapSchema.d.ts",
+      "../node_modules/@graphql-tools/utils/mergeDeep.d.ts",
+      "../node_modules/@graphql-tools/utils/observableToAsyncIterable.d.ts",
+      "../node_modules/@graphql-tools/utils/parse-graphql-json.d.ts",
+      "../node_modules/@graphql-tools/utils/parse-graphql-sdl.d.ts",
+      "../node_modules/@graphql-tools/utils/print-schema-with-directives.d.ts",
+      "../node_modules/@graphql-tools/utils/prune.d.ts",
+      "../node_modules/@graphql-tools/utils/renameType.d.ts",
+      "../node_modules/@graphql-tools/utils/rewire.d.ts",
+      "../node_modules/@graphql-tools/utils/selectionSets.d.ts",
+      "../node_modules/@graphql-tools/utils/stub.d.ts",
+      "../node_modules/@graphql-tools/utils/toConfig.d.ts",
+      "../node_modules/@graphql-tools/utils/transformInputValue.d.ts",
+      "../node_modules/@graphql-tools/utils/types.d.ts",
+      "../node_modules/@graphql-tools/utils/updateArgument.d.ts",
+      "../node_modules/@graphql-tools/utils/validate-documents.d.ts",
+      "../node_modules/@graphql-tools/utils/valueMatchesCriteria.d.ts",
+      "../node_modules/@graphql-tools/utils/visitResult.d.ts",
+      "../node_modules/@graphql-tools/utils/visitSchema.d.ts",
       "../node_modules/@nestjs/common/cache/cache.constants.d.ts",
       "../node_modules/@nestjs/common/cache/cache.module.d.ts",
       "../node_modules/@nestjs/common/cache/decorators/cache-key.decorator.d.ts",
@@ -15928,7 +16760,7 @@
       "../node_modules/@nestjs/typeorm/dist/typeorm.module.d.ts",
       "../node_modules/@nestjs/typeorm/index.d.ts",
       "../node_modules/@ts-morph/common/lib/ts-morph-common.d.ts",
-      "../node_modules/@ts-morph/common/node_modules/typescript/lib/typescript.d.ts",
+      "../node_modules/@ts-morph/common/lib/typescript.d.ts",
       "../node_modules/@types/accepts/index.d.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@types/babel__core/index.d.ts",
@@ -15948,7 +16780,6 @@
       "../node_modules/@types/express/index.d.ts",
       "../node_modules/@types/fs-capacitor/index.d.ts",
       "../node_modules/@types/graceful-fs/index.d.ts",
-      "../node_modules/@types/graphql-upload/index.d.ts",
       "../node_modules/@types/http-assert/index.d.ts",
       "../node_modules/@types/http-errors/index.d.ts",
       "../node_modules/@types/istanbul-lib-coverage/index.d.ts",
@@ -15965,6 +16796,7 @@
       "../node_modules/@types/minimatch/index.d.ts",
       "../node_modules/@types/node-fetch/externals.d.ts",
       "../node_modules/@types/node-fetch/index.d.ts",
+      "../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts",
       "../node_modules/@types/node/assert.d.ts",
       "../node_modules/@types/node/async_hooks.d.ts",
       "../node_modules/@types/node/base.d.ts",
@@ -16002,7 +16834,6 @@
       "../node_modules/@types/node/timers.d.ts",
       "../node_modules/@types/node/tls.d.ts",
       "../node_modules/@types/node/trace_events.d.ts",
-      "../node_modules/@types/node/ts3.4/base.d.ts",
       "../node_modules/@types/node/ts3.6/base.d.ts",
       "../node_modules/@types/node/tty.d.ts",
       "../node_modules/@types/node/url.d.ts",
@@ -16045,14 +16876,23 @@
       "../node_modules/@wry/equality/lib/equality.d.ts",
       "../node_modules/anymatch/index.d.ts",
       "../node_modules/apollo-cache-control/dist/index.d.ts",
-      "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-      "../node_modules/apollo-cache-control/node_modules/apollo-server-types/dist/index.d.ts",
       "../node_modules/apollo-datasource/dist/index.d.ts",
-      "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts",
-      "../node_modules/apollo-engine-reporting-protobuf/dist/protobuf.d.ts",
-      "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
-      "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts",
-      "../node_modules/apollo-engine-reporting/dist/index.d.ts",
+      "../node_modules/apollo-env/lib/fetch/fetch.d.ts",
+      "../node_modules/apollo-env/lib/fetch/index.d.ts",
+      "../node_modules/apollo-env/lib/fetch/url.d.ts",
+      "../node_modules/apollo-env/lib/index.d.ts",
+      "../node_modules/apollo-env/lib/polyfills/array.d.ts",
+      "../node_modules/apollo-env/lib/polyfills/index.d.ts",
+      "../node_modules/apollo-env/lib/polyfills/object.d.ts",
+      "../node_modules/apollo-env/lib/typescript-utility-types.d.ts",
+      "../node_modules/apollo-env/lib/utils/createHash.d.ts",
+      "../node_modules/apollo-env/lib/utils/index.d.ts",
+      "../node_modules/apollo-env/lib/utils/isNodeLike.d.ts",
+      "../node_modules/apollo-env/lib/utils/mapValues.d.ts",
+      "../node_modules/apollo-env/lib/utils/predicates.d.ts",
+      "../node_modules/apollo-env/node_modules/@types/node-fetch/externals.d.ts",
+      "../node_modules/apollo-env/node_modules/@types/node-fetch/index.d.ts",
+      "../node_modules/apollo-env/node_modules/form-data/index.d.ts",
       "../node_modules/apollo-graphql/lib/index.d.ts",
       "../node_modules/apollo-graphql/lib/operationId.d.ts",
       "../node_modules/apollo-graphql/lib/schema/GraphQLSchemaValidationError.d.ts",
@@ -16076,6 +16916,14 @@
       "../node_modules/apollo-server-core/dist/index.d.ts",
       "../node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts",
       "../node_modules/apollo-server-core/dist/playground.d.ts",
+      "../node_modules/apollo-server-core/dist/plugin/index.d.ts",
+      "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts",
+      "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts",
+      "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts",
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts",
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts",
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
+      "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts",
       "../node_modules/apollo-server-core/dist/processFileUploads.d.ts",
       "../node_modules/apollo-server-core/dist/requestPipeline.d.ts",
       "../node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts",
@@ -16108,11 +16956,6 @@
       "../node_modules/dotenv/types/index.d.ts",
       "../node_modules/eventemitter3/index.d.ts",
       "../node_modules/graphql-extensions/dist/index.d.ts",
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/fetch.d.ts",
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/index.d.ts",
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/typescript-utility-types.d.ts",
-      "../node_modules/graphql-extensions/node_modules/apollo-server-env/dist/url.d.ts",
-      "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
       "../node_modules/graphql-tools/dist/Interfaces.d.ts",
       "../node_modules/graphql-tools/dist/generate/SchemaError.d.ts",
       "../node_modules/graphql-tools/dist/generate/addResolveFunctionsToSchema.d.ts",
@@ -16254,6 +17097,7 @@
       "../node_modules/graphql/validation/specifiedRules.d.ts",
       "../node_modules/graphql/validation/validate.d.ts",
       "../node_modules/graphql/version.d.ts",
+      "../node_modules/iterall/index.d.ts",
       "../node_modules/jest-diff/build/cleanupSemantic.d.ts",
       "../node_modules/jest-diff/build/diffLines.d.ts",
       "../node_modules/jest-diff/build/index.d.ts",
@@ -16701,12 +17545,15 @@
       "../priv/repo/seeds/001-isp-seeding.ts",
       "../src/api/api.module.ts",
       "../src/api/controllers/customer.controller.ts",
+      "../src/api/controllers/global-setting.controller.ts",
       "../src/api/controllers/isp.controller.ts",
       "../src/api/controllers/payment-slip.controller.ts",
       "../src/api/dto/customer/create-customer.dto.ts",
       "../src/api/dto/customer/create-customer.input.ts",
       "../src/api/dto/customer/update-customer.dto.ts",
       "../src/api/dto/customer/update-customer.input.ts",
+      "../src/api/dto/global-setting/create-global-setting.dto.ts",
+      "../src/api/dto/global-setting/update-global-setting.dto.ts",
       "../src/api/dto/isp/create-isp.dto.ts",
       "../src/api/dto/isp/update-isp.dto.ts",
       "../src/api/dto/payment-slip/create-payment-slip.dto.ts",
@@ -16723,6 +17570,7 @@
       "../src/database/database.providers.ts",
       "../src/domain/payment-slip.domain.ts",
       "../src/entities/customer.entity.ts",
+      "../src/entities/global-setting.entity.ts",
       "../src/entities/isp.entity.ts",
       "../src/entities/payment-slip.entity.ts",
       "../src/main.ts",
@@ -16730,10 +17578,11 @@
       "../src/service/service.module.ts",
       "../src/service/service.providers.ts",
       "../src/service/services/customer.service.ts",
+      "../src/service/services/global-setting.service.ts",
       "../src/service/services/isp.service.ts",
       "../src/service/services/payment-slip.service.ts",
       "../src/service/transaction/transactional-connection.ts"
     ]
   },
-  "version": "4.2.2"
+  "version": "4.2.3"
 }

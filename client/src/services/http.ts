@@ -25,7 +25,6 @@ export async function updateIsp(item) {
     body: JSON.stringify(item),
   }).then(async (res) => {
     let item = await res.json();
-
     return item;
   });
 }
@@ -55,7 +54,6 @@ export async function deleteIsp(id) {
     },
   }).then(async (res) => {
     let item = await res.json();
-
     return item;
   });
 }
@@ -68,7 +66,6 @@ export async function getCustomer(params) {
     },
   }).then(async (res) => {
     let item = await res.json();
-
     store.update((state) => ({
       ...state,
       customer: item,
@@ -129,7 +126,6 @@ export async function updatePaymentSlip(item) {
     body: JSON.stringify(item),
   }).then(async (res) => {
     let item = await res.json();
-
     return item;
   });
 }
@@ -143,7 +139,37 @@ export async function deletePaymentSlip(id) {
     },
   }).then(async (res) => {
     let item = await res.json();
+    return item;
+  });
+}
 
+export async function getGlobalSetting(id) {
+  return fetch(`${config.url}/global-setting/${id}`, {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  })
+    .then(async (res) => {
+      let item = await res.json();
+      return item;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
+
+export async function updateGlobalSetting(id, params) {
+  return fetch(`${config.url}/global-setting/${id}`, {
+    method: "PUT",
+    headers: {
+      accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(params),
+  }).then(async (res) => {
+    let item = await res.json();
     return item;
   });
 }

@@ -52,18 +52,14 @@ export class CustomerService {
     if (!customer) throw new NotFoundException();
     let paymentSlips = await getManager().query(
       `
-    select * from payment_slips where customer_id = $1 order by id desc`,
+    select * from payment_slips
+    where customer_id = $1
+    order by id asc`,
       [id],
     );
+
     paymentSlips = dto(paymentSlips, this.excludes);
     return { ...customer, paymentSlips };
-
-    return this.customerRepository
-      .createQueryBuilder('customers')
-      .innerJoinAndSelect('customers.paymentSlips', 'paymentSlips')
-      .orderBy('paymentSlips.id', 'DESC')
-      .where('customers.id = :id', { id })
-      .getOne();
   }
 
   async update(id: number, updateCustomerDto: UpdateCustomerDto) {

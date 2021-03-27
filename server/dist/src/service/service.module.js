@@ -10,6 +10,7 @@ exports.ServiceModule = exports.ServiceCoreModule = void 0;
 const common_1 = require("@nestjs/common");
 const customer_service_1 = require("./services/customer.service");
 const isp_service_1 = require("./services/isp.service");
+const global_setting_service_1 = require("./services/global-setting.service");
 const payment_slip_service_1 = require("./services/payment-slip.service");
 const service_providers_1 = require("./service.providers");
 const database_module_1 = require("../database/database.module");
@@ -18,18 +19,8 @@ let ServiceCoreModule = class ServiceCoreModule {
 ServiceCoreModule = __decorate([
     common_1.Module({
         imports: [database_module_1.DatabaseModule],
-        providers: [
-            payment_slip_service_1.PaymentSlipService,
-            customer_service_1.CustomerService,
-            isp_service_1.IspService,
-            ...service_providers_1.serviceProviders,
-        ],
-        exports: [
-            payment_slip_service_1.PaymentSlipService,
-            customer_service_1.CustomerService,
-            isp_service_1.IspService,
-            ...service_providers_1.serviceProviders,
-        ],
+        providers: [payment_slip_service_1.PaymentSlipService, customer_service_1.CustomerService, isp_service_1.IspService, global_setting_service_1.GlobalSettingService, ...service_providers_1.serviceProviders],
+        exports: [payment_slip_service_1.PaymentSlipService, customer_service_1.CustomerService, isp_service_1.IspService, global_setting_service_1.GlobalSettingService, ...service_providers_1.serviceProviders],
     })
 ], ServiceCoreModule);
 exports.ServiceCoreModule = ServiceCoreModule;

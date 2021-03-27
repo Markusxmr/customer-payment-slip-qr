@@ -11,6 +11,7 @@ const common_1 = require("@nestjs/common");
 const isp_controller_1 = require("./controllers/isp.controller");
 const payment_slip_controller_1 = require("./controllers/payment-slip.controller");
 const customer_controller_1 = require("./controllers/customer.controller");
+const global_setting_controller_1 = require("./controllers/global-setting.controller");
 const customer_resolver_1 = require("./resolvers/customer.resolver");
 const payment_slip_resolver_1 = require("./resolvers/payment-slip.resolver");
 const service_module_1 = require("../service/service.module");
@@ -19,7 +20,7 @@ let ApiModule = class ApiModule {
 ApiModule = __decorate([
     common_1.Module({
         imports: [service_module_1.ServiceModule],
-        controllers: [payment_slip_controller_1.PaymentSlipController, customer_controller_1.CustomerController, isp_controller_1.IspController],
+        controllers: [payment_slip_controller_1.PaymentSlipController, customer_controller_1.CustomerController, isp_controller_1.IspController, global_setting_controller_1.GlobalSettingController],
         providers: [service_module_1.ServiceModule, payment_slip_resolver_1.PaymentSlipResolver, customer_resolver_1.CustomerResolver],
         exports: [payment_slip_resolver_1.PaymentSlipResolver, customer_resolver_1.CustomerResolver],
     })

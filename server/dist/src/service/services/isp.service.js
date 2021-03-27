@@ -38,16 +38,16 @@ let IspService = class IspService {
         return dto_1.dto(items, ['inserted_at', 'updated_at']);
     }
     async findOne(id) {
-        const isp = await this.ispRepository.findOne(id);
-        if (!isp)
+        const item = await this.ispRepository.findOne(id);
+        if (!item)
             throw new common_1.NotFoundException();
-        return isp;
+        return item;
     }
     async findOneDefault() {
-        const isp = await this.ispRepository.findOne({ where: { defaultIsp: true } });
-        if (!isp)
+        const item = await this.ispRepository.findOne({ where: { defaultIsp: true } });
+        if (!item)
             throw new common_1.NotFoundException();
-        return isp;
+        return item;
     }
     async update(id, updateIspDto) {
         let item = await this.findOne(id);

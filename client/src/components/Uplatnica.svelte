@@ -83,7 +83,7 @@
         loaded = true;
         loadstart = "";
       }}
-      class="uplatnica__img {textOnlyPrint ? 'noprint-image' : ''}"
+      class="uplatnica__img {textOnlyPrint ? '' : ''}"
       alt="Uplatnica"
       src="https://knee-cola.github.io/generator-opce-uplatnice/img/uplatnica.jpg"
     />

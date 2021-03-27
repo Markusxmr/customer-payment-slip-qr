@@ -34,12 +34,12 @@
           <a
             class="nav-link"
             use:active={{
-              path: "/#/korisnik/*",
+              path: "/#/customer/*",
               className: "active",
               inactiveClassName: "inactive",
             }}
             aria-current="page"
-            href="/#/korisnik">Korisnici</a
+            href="/#/customer">Korisnici</a
           >
         </li>
         <li class="nav-item">

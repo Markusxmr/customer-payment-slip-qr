@@ -24,13 +24,11 @@ __decorate([
 __decorate([
     graphql_1.Field(() => graphql_1.Int),
     typeorm_1.Column({ type: 'integer' }),
-    typeorm_1.RelationId((entity) => entity.customer),
     __metadata("design:type", Number)
 ], PaymentSlip.prototype, "customer_id", void 0);
 __decorate([
     graphql_1.Field(() => graphql_1.Int),
     typeorm_1.Column({ type: 'integer' }),
-    typeorm_1.RelationId((entity) => entity.customer),
     __metadata("design:type", Number)
 ], PaymentSlip.prototype, "isp_id", void 0);
 __decorate([

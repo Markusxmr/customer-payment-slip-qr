@@ -22,12 +22,10 @@ export class PaymentSlip {
 
   @Field(() => Int)
   @Column({ type: 'integer' })
-  @RelationId((entity: PaymentSlip) => entity.customer)
   customer_id: number;
 
   @Field(() => Int)
   @Column({ type: 'integer' })
-  @RelationId((entity: PaymentSlip) => entity.customer)
   isp_id: number;
 
   @Field(() => Int)

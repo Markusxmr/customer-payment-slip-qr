@@ -56,7 +56,7 @@
     let icon = document.createElement("i");
     icon.className = "arrow-right-square";
     viewLink.appendChild(icon);
-    viewLink.href = `/#/korisnik/${stringifiedValue}`;
+    viewLink.href = `/#/customer/${stringifiedValue}`;
     viewLink.textContent = "Pregled";
 
     let container = document.createElement("div");
@@ -196,7 +196,7 @@
 
 <div>
   <XlsUpload callback={getCustomers}>
-    <!-- <a class="btn btn-secondary btn-sm" href="/#/korisnik/new">Novi korisnik</a> -->
+    <!-- <a class="btn btn-secondary btn-sm" href="/#/customer/new">Novi korisnik</a> -->
     <button
       class="btn btn-secondary btn-danger btn-sm"
       on:click={deleteCustomers}>Izbriši sve</button

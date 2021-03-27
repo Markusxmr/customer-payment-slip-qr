@@ -3,7 +3,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -19,7 +18,7 @@ body {
 
 .uplatnica {
     position: relative;
-    display: block;
+    /* display: block; */
     width: 906px;
 }
 

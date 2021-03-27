@@ -7,6 +7,8 @@ $top6: 185px !important;
 $opis-placanja-top: 172px !important;
 $datum_izvrsenja-top: 222px !important;
 $uplatnica__barcode-top: 246px !important;
+$uplatnica__barcode-left: 28px !important;
+$uplatnica__barcode-width: 244px !important;
 
 @media print {
     .fieldset-platitelj {
@@ -79,8 +81,8 @@ $uplatnica__barcode-top: 246px !important;
 
     .uplatnica__barcode {
         top: $uplatnica__barcode-top;
-        left: 14px !important;
-        width: 244px !important;
+        left: $uplatnica__barcode-left;
+        width: $uplatnica__barcode-width;
     }
 }
 

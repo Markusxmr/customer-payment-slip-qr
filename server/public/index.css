@@ -8,15 +8,14 @@ label.svelte-1ln3bo1{text-align:right}
     padding: 0 !important;
     max-width: 100% !important; }
   .print {
+    position: absolute;
     display: block;
-    text-align: left !important;
-    padding: 0px; }
-  .print {
-    margin-top: -89px; }
-  .print:nth-of-type(1) {
-    margin-top: -18px; }
-  .print:nth-of-type(3) {
-    margin-top: -90px !important; }
+    text-align: left !important; }
+  .print-item {
+    margin-top: var(--print-item-margin-top) !important;
+    transform: scale(var(--scale)); }
+  .print-item:nth-of-type(1) {
+    margin-top: var(--print-item-margin-top-first) !important; }
   .noprint {
     display: none; }
   .noprint-image {
@@ -71,7 +70,7 @@ label.svelte-1ln3bo1{text-align:right}
     top: 222px !important; }
   .uplatnica__barcode {
     top: 246px !important;
-    left: 14px !important;
+    left: 28px !important;
     width: 244px !important; } }
 
 body {
@@ -89,7 +88,7 @@ body {
 
 .uplatnica {
   position: relative;
-  display: block;
+  /* display: block; */
   width: 906px; }
 
 .uplatnica .form-field {
@@ -7905,8 +7904,8 @@ textarea.form-control-lg {
  * INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER ARISING
  * FROM USE OR INABILITY TO USE THIS SOFTWARE.
  * 
- * Version: 8.3.1
- * Release date: 10/02/2021 (built at 09/02/2021 09:15:44)
+ * Version: 8.3.2
+ * Release date: 16/03/2021 (built at 16/03/2021 11:26:09)
  */
 /**
  * Fix for bootstrap styles
@@ -7955,7 +7954,7 @@ textarea.form-control-lg {
 .handsontable .table > thead > tr > td,
 .handsontable .table > thead > tr > th {
   line-height: 21px;
-  padding: 0 4px;
+  padding: 0;
 }
 
 .col-lg-1.handsontable, .col-lg-10.handsontable, .col-lg-11.handsontable, .col-lg-12.handsontable,
@@ -8059,8 +8058,7 @@ textarea.form-control-lg {
   vertical-align: top;
   overflow: hidden;
   outline-width: 0;
-  white-space: pre-line;
-  /* preserve new line character in cell */
+  white-space: pre-wrap;
 }
 
 .handsontable th:last-child {
@@ -8229,6 +8227,10 @@ innerBorderBottom - Property controlled by bottom overlay
 .ht_clone_left .wtHolder,
 .ht_clone_bottom .wtHolder {
   overflow: hidden;
+}
+
+.handsontable {
+  touch-action: manipulation;
 }
 
 .handsontable.htAutoSize {
