@@ -2,7 +2,7 @@
   import config from "../config";
   import { store } from "../store";
 
-  import PaymentSlip from "../components/PaymentSlip/Index.svelte";
+  import PaymentSlipTable from "../components/PaymentSlipTable/PaymentSlipTable.svelte";
   import { getPaymentSlips } from "../services/http";
 
   let paymentSlips: any[] = [];
@@ -19,5 +19,5 @@
 <h3>Uplatnice</h3>
 
 {#if paymentSlips.length > 0}
-  <PaymentSlip {paymentSlips} />
+  <PaymentSlipTable {paymentSlips} />
 {/if}

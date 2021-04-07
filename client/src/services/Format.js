@@ -18,7 +18,7 @@ const FormatCurrency = (value) => {
   return value[0] + "," + decimale;
 };
 
-const Format = (value) => {
+const FormatIntegerToDecimal = (value, options = null) => {
   if (value == "" || !value) {
     return "";
   }
@@ -32,7 +32,9 @@ const Format = (value) => {
   let decimale = `${value.charAt(value.length - 2)}${value.charAt(
     value.length - 1
   )}`;
-  return `${round},${decimale}`;
+  let dot = options?.dot ?? null;
+
+  return `${round}${dot ? "." : ","}${decimale}`;
 };
 
-export { Format, FormatCurrency };
+export { FormatIntegerToDecimal, FormatCurrency };

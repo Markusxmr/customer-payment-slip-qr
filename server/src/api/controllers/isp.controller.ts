@@ -1,12 +1,4 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Put,
-  Param,
-  Delete,
-} from '@nestjs/common';
+import { Controller, Get, Post, Body, Put, Param, Delete } from '@nestjs/common';
 import { IspService } from '../../service/services/isp.service';
 import { CreateIspDto } from '../dto/isp/create-isp.dto';
 import { UpdateIspDto } from '../dto/isp/update-isp.dto';
@@ -38,5 +30,16 @@ export class IspController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.ispService.remove(+id);
+  }
+
+  @Post()
+  login(@Body() login: any) {
+    const currentUsername = 'genex';
+    const currentPassword = 'ogulin1808';
+
+    const username = login?.username;
+    const password = login?.password;
+
+    return currentUsername === username && currentPassword === password;
   }
 }

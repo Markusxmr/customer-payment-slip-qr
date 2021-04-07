@@ -22,17 +22,6 @@
         margin-top: (var(--print-item-margin-top-first)) !important;
     }
 
-    .uplatnica {
-    }
-
-    // .print:nth-of-type(1){
-    //     margin-top: 80px;
-    // }
-
-    // .print:nth-of-type(3) {
-    //     margin-top: -90px !important;
-    // }
-
     .noprint {
         display: none;
     }
@@ -49,6 +38,7 @@
         padding: 0;
     }
 }
+
 
 @media only screen {
     .print {

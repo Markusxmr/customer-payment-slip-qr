@@ -1,6 +1,5 @@
 <script lang="ts">
   import { setPaymentSlip } from "../services/set-payment-slip";
-  import Uplatnica from "../components/Uplatnica.svelte";
   import config from "../config";
 
   export let params = {};

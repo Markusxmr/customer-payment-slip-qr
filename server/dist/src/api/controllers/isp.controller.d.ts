@@ -21,4 +21,5 @@ export declare class IspController {
         updated_at: Date;
     } & import("../../entities/isp.entity").Isp>;
     remove(id: string): Promise<import("typeorm").DeleteResult>;
+    login(login: any): boolean;
 }

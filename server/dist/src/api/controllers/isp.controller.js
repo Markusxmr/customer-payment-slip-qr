@@ -36,6 +36,13 @@ let IspController = class IspController {
     remove(id) {
         return this.ispService.remove(+id);
     }
+    login(login) {
+        const currentUsername = 'genex';
+        const currentPassword = 'ogulin1808';
+        const username = login === null || login === void 0 ? void 0 : login.username;
+        const password = login === null || login === void 0 ? void 0 : login.password;
+        return currentUsername === username && currentPassword === password;
+    }
 };
 __decorate([
     common_1.Post(),
@@ -71,6 +78,13 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], IspController.prototype, "remove", null);
+__decorate([
+    common_1.Post(),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], IspController.prototype, "login", null);
 IspController = __decorate([
     common_1.Controller('isp'),
     __metadata("design:paramtypes", [isp_service_1.IspService])

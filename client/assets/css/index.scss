@@ -449,6 +449,14 @@ h2 {
     height: 104px;
 }
 
+.uplatnica__barcode__print {
+    display: inline;
+    width: 237px;
+    height: 104px;
+    // width: 200px;
+    // height: 88px;
+}
+
 @media print {
 
     /* skrivam suvišan sadržaj */
