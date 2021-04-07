@@ -16,14 +16,13 @@
   export let params = {};
   let customer;
   let isps = [];
-  let isp_id;
-  let model;
   let paymentSlips = [];
   let textOnlyPrint = false;
   let barcodeOnlyPrint = false;
   let scale = 1.0;
   let topMargin = 0;
   let leftMargin = 0;
+  let bottomMarginItem = -70;
   let printItemMarginTopFirst = 10;
   let printItemMarginTop = 80;
 
@@ -80,6 +79,7 @@
     scale = Number(data?.paymentSlipPrintScale) ?? 1.0;
     topMargin = Number(data?.paymentSlipMarginTop) ?? 0;
     leftMargin = Number(data?.paymentSlipMarginLeft) ?? 0;
+    bottomMarginItem = Number(data?.paymentSlipItemMarginBottom) ?? 0;
   }
 
   fetchGlobalSetting();
@@ -89,6 +89,7 @@
       paymentSlipPrintScale: Number(scale),
       paymentSlipMarginTop: Number(topMargin),
       paymentSlipMarginLeft: Number(leftMargin),
+      paymentSlipItemMarginBottom: Number(bottomMarginItem),
     });
     await fetchGlobalSetting();
   }
@@ -108,8 +109,9 @@
     <div
       class="print-item"
       style="
-      --print-item-margin-top: -{printItemMarginTop}px;
-      --print-item-margin-top-first: -{printItemMarginTopFirst}px"
+      --print-item-margin-top-first: {printItemMarginTopFirst}px
+      --print-item-margin-top: {printItemMarginTop}px;
+      --print-item-margin-bottom: {bottomMarginItem}px"
     >
       <PaymentSlip bind:model printing={true} {textOnlyPrint} />
     </div>
@@ -193,6 +195,17 @@
             type="number"
             on:change={submitGlobalSetting}
             bind:value={leftMargin}
+          />
+        </div>
+        <div class="mb-2 col-md-2 col-sm-6">
+          <label for="topMargin">Donja margina između uplatnica</label>
+          <input
+            class="form-control"
+            id="bottomMarginItem"
+            name="bottomMarginItem"
+            type="number"
+            on:change={submitGlobalSetting}
+            bind:value={bottomMarginItem}
           />
         </div>
       </div>

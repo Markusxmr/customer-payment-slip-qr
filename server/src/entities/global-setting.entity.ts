@@ -18,6 +18,10 @@ export class GlobalSetting {
 
   @Field(() => Int)
   @Column({ type: 'integer', nullable: true })
+  paymentSlipItemMarginBottom: number;
+
+  @Field(() => Int)
+  @Column({ type: 'integer', nullable: true })
   paymentSlipMarginLeft: number;
 
   @Field(() => Date)

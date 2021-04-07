@@ -1,7 +1,7 @@
-form.svelte-ce9r8q{font-size:0.9rem;line-height:1}.form-container.svelte-ce9r8q{text-align:center}@media print{.form-container.svelte-ce9r8q{text-align:left !important}}form.svelte-ce9r8q{display:inline-block}
-@media all{.barcode-container.svelte-13m92zd{top:0px;position:relative;margin-top:-50px !important;margin-left:10px !important}.barcode-list-item-description.svelte-13m92zd{line-height:1;font-size:1rem;margin-bottom:5px}.barcode-list-logo.svelte-13m92zd{position:absolute;right:10px;top:0px;width:250px}.barcode-list-title.svelte-13m92zd{font-size:0.9rem;margin-bottom:55px}.row-print.svelte-13m92zd{--bs-gutter-x:1.5rem;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(var(--bs-gutter-y) * -1);margin-right:calc(var(--bs-gutter-x) / -2);margin-left:calc(var(--bs-gutter-x) / -2)}.barcode-list-container.svelte-13m92zd{font-size:0.8rem;margin-bottom:40px;line-height:0.9}.barcode-list-item-barcode.svelte-13m92zd{margin-top:-5px}.barcode-list-item-info.svelte-13m92zd{margin-bottom:5px}.barcode-list-item-info-price.svelte-13m92zd{font-size:1rem;font-weight:bold}.barcode-list-support.svelte-13m92zd{font-size:0.9rem}.col-print-4.svelte-13m92zd{width:33%;float:left}}
-label.svelte-1ln3bo1{text-align:right}
-label.svelte-1ln3bo1{text-align:right}
+form.svelte-4d7l12{font-size:0.9rem;line-height:1}.form-container.svelte-4d7l12{text-align:center}@media print{.form-container.svelte-4d7l12{text-align:left !important}}form.svelte-4d7l12{display:inline-block}
+@media all{.barcode-container.svelte-1hnkvvx{top:0px;position:relative;margin-top:-50px !important;margin-left:10px !important}.barcode-list-item-description.svelte-1hnkvvx{line-height:1;font-size:1rem;margin-bottom:5px}.barcode-list-logo.svelte-1hnkvvx{position:absolute;right:10px;top:0px;width:250px}.barcode-list-title.svelte-1hnkvvx{font-size:0.9rem;margin-bottom:55px}.row-print.svelte-1hnkvvx{--bs-gutter-x:1.5rem;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(var(--bs-gutter-y) * -1);margin-right:calc(var(--bs-gutter-x) / -2);margin-left:calc(var(--bs-gutter-x) / -2)}.barcode-list-container.svelte-1hnkvvx{font-size:0.8rem;margin-bottom:40px;line-height:0.9}.barcode-list-item-barcode.svelte-1hnkvvx{margin-top:-5px}.barcode-list-item-info.svelte-1hnkvvx{margin-bottom:5px}.barcode-list-item-info-price.svelte-1hnkvvx{font-size:1rem;font-weight:bold}.barcode-list-support.svelte-1hnkvvx{font-size:0.9rem}.col-print-4.svelte-1hnkvvx{width:33%;float:left}}
+label.svelte-16iagh9{text-align:right}
+label.svelte-16iagh9{text-align:right}
 @charset "UTF-8";
 @media print {
   .container {
@@ -15,10 +15,8 @@ label.svelte-1ln3bo1{text-align:right}
     margin-top: var(--print-margin-top) !important;
     margin-left: var(--print-margin-left) !important; }
   .print-item {
-    margin-top: var(--print-item-margin-top) !important;
+    margin-bottom: var(--print-item-margin-bottom) !important;
     transform: scale(var(--scale)); }
-  .print-item:nth-of-type(1) {
-    margin-top: var(--print-item-margin-top-first) !important; }
   .noprint {
     display: none; }
   .noprint-image {
