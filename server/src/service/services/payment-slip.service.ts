@@ -4,9 +4,10 @@ import { UpdatePaymentSlipDto } from '../../api/dto/payment-slip/update-payment-
 import { Repository, getManager } from 'typeorm';
 import { PaymentSlip } from '../../entities/payment-slip.entity';
 import { dto } from '../helpers/dto';
-import { paymentSlipDomain, setIspPaymentSlip } from 'src/domain/payment-slip.domain';
-import { Isp } from 'src/entities/isp.entity';
-import { Customer } from 'src/entities/customer.entity';
+import { paymentSlipDomain, setIspPaymentSlip } from '../../domain/payment-slip.domain';
+import { controlNumber } from '../../domain/control-number';
+import { Isp } from '../../entities/isp.entity';
+import { Customer } from '../../entities/customer.entity';
 
 @Injectable()
 export class PaymentSlipService {
@@ -53,6 +54,18 @@ export class PaymentSlipService {
   async findAll() {
     const items = await getManager().query(`select * from payment_slips order by id desc`);
     return dto(items, ['inserted_at', 'updated_at', 'deleted_at']);
+  }
+
+  async updateAllPaymentSlips() {
+    const items = await getManager().query(`select * from payment_slips order by id desc`);
+
+    for (const item of items) {
+      this.customerRepository.findOne(item?.customer_id).then(customer => {
+        let šifra = `${customer?.šifra}-` ?? '';
+        const poziv_na_broj_primatelja = `${šifra}${controlNumber(customer?.šifra)}`;
+        this.update(item.id, { poziv_na_broj_primatelja });
+      });
+    }
   }
 
   async findAllBy(options) {

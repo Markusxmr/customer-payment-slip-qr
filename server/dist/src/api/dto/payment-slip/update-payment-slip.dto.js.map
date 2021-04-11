@@ -1,1 +1,1 @@
-{"version":3,"file":"update-payment-slip.dto.js","sourceRoot":"","sources":["../../../../../src/api/dto/payment-slip/update-payment-slip.dto.ts"],"names":[],"mappings":";;;AAAA,uDAAmD;AACnD,uEAAiE;AAEjE,MAAa,oBAAqB,SAAQ,0BAAW,CAAC,8CAAoB,CAAC;CAAG;AAA9E,oDAA8E"}
+{"version":3,"file":"update-payment-slip.dto.js","sourceRoot":"","sources":["../../../../../src/api/dto/payment-slip/update-payment-slip.dto.ts"],"names":[],"mappings":";;;AAAA,uDAAmD;AACnD,uEAAiE;AAEjE,MAAa,oBAAqB,SAAQ,0BAAW,CAAC,8CAAoB,CAAC;CAE1E;AAFD,oDAEC"}

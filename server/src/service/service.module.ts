@@ -5,11 +5,12 @@ import { GlobalSettingService } from './services/global-setting.service';
 import { PaymentSlipService } from './services/payment-slip.service';
 import { serviceProviders } from './service.providers';
 import { DatabaseModule } from '../database/database.module';
+import { UserService } from './services/user.service';
 
 @Module({
   imports: [DatabaseModule],
-  providers: [PaymentSlipService, CustomerService, IspService, GlobalSettingService, ...serviceProviders],
-  exports: [PaymentSlipService, CustomerService, IspService, GlobalSettingService, ...serviceProviders],
+  providers: [UserService, PaymentSlipService, CustomerService, IspService, GlobalSettingService, ...serviceProviders],
+  exports: [UserService, PaymentSlipService, CustomerService, IspService, GlobalSettingService, ...serviceProviders],
 })
 export class ServiceCoreModule {}
 

@@ -1,3 +1,5 @@
+import { controlNumber } from './control-number';
+
 export function setIspPaymentSlip(isp) {
   return {
     iban_primatelja: isp?.iban,
@@ -66,7 +68,7 @@ export function buildPaymentSlipDomain() {
 
     return {
       ...newVal,
-      poziv_na_broj_primatelja: `${šifra}${i}`,
+      poziv_na_broj_primatelja: `${šifra}${controlNumber(customer?.šifra)}`,
       mjesec: i,
       godina: year,
       iznos,

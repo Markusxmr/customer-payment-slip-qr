@@ -16,6 +16,10 @@ export class GlobalSetting {
   @Column({ type: 'integer', nullable: true })
   paymentSlipMarginTop: number;
 
+  @Field(() => Boolean)
+  @Column({ type: 'boolean', default: true, nullable: true })
+  showDecimalOnPaymentSlips: boolean;
+
   @Field(() => Int)
   @Column({ type: 'integer', nullable: true })
   paymentSlipItemMarginBottom: number;

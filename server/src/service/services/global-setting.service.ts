@@ -1,9 +1,8 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateGlobalSettingDto } from '../../api/dto/global-setting/create-global-setting.dto';
 import { UpdateGlobalSettingDto } from '../../api/dto/global-setting/update-global-setting.dto';
-import { getManager, Repository } from 'typeorm';
+import { Repository } from 'typeorm';
 import { GlobalSetting } from '../../entities/global-setting.entity';
-import { dto } from '../helpers/dto';
 
 @Injectable()
 export class GlobalSettingService {

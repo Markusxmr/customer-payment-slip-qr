@@ -14,13 +14,14 @@ const global_setting_service_1 = require("./services/global-setting.service");
 const payment_slip_service_1 = require("./services/payment-slip.service");
 const service_providers_1 = require("./service.providers");
 const database_module_1 = require("../database/database.module");
+const user_service_1 = require("./services/user.service");
 let ServiceCoreModule = class ServiceCoreModule {
 };
 ServiceCoreModule = __decorate([
     common_1.Module({
         imports: [database_module_1.DatabaseModule],
-        providers: [payment_slip_service_1.PaymentSlipService, customer_service_1.CustomerService, isp_service_1.IspService, global_setting_service_1.GlobalSettingService, ...service_providers_1.serviceProviders],
-        exports: [payment_slip_service_1.PaymentSlipService, customer_service_1.CustomerService, isp_service_1.IspService, global_setting_service_1.GlobalSettingService, ...service_providers_1.serviceProviders],
+        providers: [user_service_1.UserService, payment_slip_service_1.PaymentSlipService, customer_service_1.CustomerService, isp_service_1.IspService, global_setting_service_1.GlobalSettingService, ...service_providers_1.serviceProviders],
+        exports: [user_service_1.UserService, payment_slip_service_1.PaymentSlipService, customer_service_1.CustomerService, isp_service_1.IspService, global_setting_service_1.GlobalSettingService, ...service_providers_1.serviceProviders],
     })
 ], ServiceCoreModule);
 exports.ServiceCoreModule = ServiceCoreModule;

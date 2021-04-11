@@ -9,6 +9,7 @@ export declare class PaymentSlipController {
     findAll(): Promise<any[]>;
     findOne(id: string): Promise<import("../../entities/payment-slip.entity").PaymentSlip>;
     update(id: string, updatePaymentSlipDto: UpdatePaymentSlipDto): Promise<{
+        poziv_na_broj_primatelja: string;
         isp_id: number;
         customer_id: number;
         id: number;
@@ -18,7 +19,6 @@ export declare class PaymentSlipController {
         isp: import("../../entities/isp.entity").Isp;
         iznos: number;
         poziv_na_broj_platitelja: string;
-        poziv_na_broj_primatelja: string;
         iban_primatelja: string;
         iban_platitelja: string;
         model_primatelja: string;

@@ -21,6 +21,10 @@ __decorate([
 __decorate([
     graphql_1.Field(() => String),
     __metadata("design:type", String)
+], UpdatePaymentSlipInput.prototype, "poziv_na_broj_primatelja", void 0);
+__decorate([
+    graphql_1.Field(() => String),
+    __metadata("design:type", String)
 ], UpdatePaymentSlipInput.prototype, "iznos", void 0);
 UpdatePaymentSlipInput = __decorate([
     graphql_1.InputType()

@@ -3,6 +3,7 @@ import { Isp } from '../entities/isp.entity';
 import { Customer } from '../entities/customer.entity';
 import { PaymentSlip } from '../entities/payment-slip.entity';
 import { GlobalSetting } from '../entities/global-setting.entity';
+import { User } from '../entities/user.entity';
 
 export const serviceProviders = [
   {
@@ -18,6 +19,11 @@ export const serviceProviders = [
   {
     provide: 'ISP_REPOSITORY',
     useFactory: (connection: Connection) => connection.getRepository(Isp),
+    inject: ['DATABASE_CONNECTION'],
+  },
+  {
+    provide: 'USER_REPOSITORY',
+    useFactory: (connection: Connection) => connection.getRepository(User),
     inject: ['DATABASE_CONNECTION'],
   },
   {

@@ -2,8 +2,8 @@ import { CreatePaymentSlipDto } from '../../api/dto/payment-slip/create-payment-
 import { UpdatePaymentSlipDto } from '../../api/dto/payment-slip/update-payment-slip.dto';
 import { Repository } from 'typeorm';
 import { PaymentSlip } from '../../entities/payment-slip.entity';
-import { Isp } from 'src/entities/isp.entity';
-import { Customer } from 'src/entities/customer.entity';
+import { Isp } from '../../entities/isp.entity';
+import { Customer } from '../../entities/customer.entity';
 export declare class PaymentSlipService {
     private paymentSlipRepository;
     private ispRepository;
@@ -14,9 +14,11 @@ export declare class PaymentSlipService {
     createMany(createPaymentSlipDtos: CreatePaymentSlipDto[]): Promise<import("typeorm").InsertResult>;
     saveMany(updatePaymentSlipDtos: CreatePaymentSlipDto[]): Promise<any[]>;
     findAll(): Promise<any[]>;
+    updateAllPaymentSlips(): Promise<void>;
     findAllBy(options: any): Promise<any[]>;
     findOne(id: number): Promise<PaymentSlip>;
     update(id: number, updatePaymentSlipDto: UpdatePaymentSlipDto): Promise<{
+        poziv_na_broj_primatelja: string;
         isp_id: number;
         customer_id: number;
         id: number;
@@ -26,7 +28,6 @@ export declare class PaymentSlipService {
         isp: Isp;
         iznos: number;
         poziv_na_broj_platitelja: string;
-        poziv_na_broj_primatelja: string;
         iban_primatelja: string;
         iban_platitelja: string;
         model_primatelja: string;

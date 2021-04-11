@@ -18,8 +18,7 @@ const typeorm_1 = require("typeorm");
 const payment_slip_entity_1 = require("../../entities/payment-slip.entity");
 const dto_1 = require("../helpers/dto");
 const payment_slip_domain_1 = require("../../domain/payment-slip.domain");
-const isp_entity_1 = require("../../entities/isp.entity");
-const customer_entity_1 = require("../../entities/customer.entity");
+const control_number_1 = require("../../domain/control-number");
 let PaymentSlipService = class PaymentSlipService {
     constructor(paymentSlipRepository, ispRepository, customerRepository) {
         this.paymentSlipRepository = paymentSlipRepository;
@@ -56,6 +55,17 @@ let PaymentSlipService = class PaymentSlipService {
     async findAll() {
         const items = await typeorm_1.getManager().query(`select * from payment_slips order by id desc`);
         return dto_1.dto(items, ['inserted_at', 'updated_at', 'deleted_at']);
+    }
+    async updateAllPaymentSlips() {
+        const items = await typeorm_1.getManager().query(`select * from payment_slips order by id desc`);
+        for (const item of items) {
+            this.customerRepository.findOne(item === null || item === void 0 ? void 0 : item.customer_id).then(customer => {
+                var _a;
+                let šifra = (_a = `${customer === null || customer === void 0 ? void 0 : customer.šifra}-`) !== null && _a !== void 0 ? _a : '';
+                const poziv_na_broj_primatelja = `${šifra}${control_number_1.controlNumber(customer === null || customer === void 0 ? void 0 : customer.šifra)}`;
+                this.update(item.id, { poziv_na_broj_primatelja });
+            });
+        }
     }
     async findAllBy(options) {
         const items = await this.paymentSlipRepository.find({
