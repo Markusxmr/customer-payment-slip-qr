@@ -1,23 +1,26 @@
 <script lang="ts">
-  import Barcode from "./Barcode.svelte";
-  import ModelPlatitelja from "./ModelPlatitelja.svelte";
-  import ModelPrimatelja from "./ModelPrimatelja.svelte";
-  import Confirmation from "./Confirmation.svelte";
-  import SifraNamjene from "./SifraNamjene.svelte";
-  import BarcodePayment from "../../lib/BarcodePayment";
-  import config from "../../config";
-  import { getCustomer } from "../../services/http";
+  import Barcode from "../Barcode/Barcode.svelte";
+  import ModelPlatitelja from "./components/ModelPlatitelja.svelte";
+  import ModelPrimatelja from "./components/ModelPrimatelja.svelte";
+  import Confirmation from "./components/Confirmation.svelte";
+  import SifraNamjene from "./components/SifraNamjene.svelte";
+  import {
+    deletePaymentSlip,
+    getCustomer,
+    updatePaymentSlip,
+  } from "../../services/http";
   import { store } from "../../store";
+  import { FormatIntegerToDecimal } from "../../services/Format";
   export let key = Math.random();
   export let model;
   export let printing = false;
-  let genexUrl = "http://188.34.178.129";
+  export let textOnlyPrint = false;
+  export let showDecimalOnPaymentSlips = true;
   let loaded = false;
   let loadstart = "Učitavanje...";
   let hub3_code;
   let showDecoder = false;
   let customer;
-  export let textOnlyPrint = false;
 
   store.subscribe((state) => {
     customer = state?.customer;
@@ -27,57 +30,27 @@
     model = { ...model, iznos: model?.iznos?.replace(".", "") };
   }
 
-  async function generatePDF() {
-    await fetch(`${genexUrl}:5000/uplatnica`, {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json;application/pdf",
-      },
-      method: "POST",
-      mode: "no-cors",
-      body: JSON.stringify(model),
-    });
-  }
-
-  async function print() {
-    await generatePDF();
-    setTimeout(() => {
-      window.open(`${genexUrl}:8000/uplatnica.pdf`);
-    }, 1000);
-  }
-
   function decoder() {
     showDecoder = !showDecoder;
   }
 
-  async function updatePaymentSlip() {
-    await fetch(`${config.url}/payment-slip/${model.id}`, {
-      headers: {
-        accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      method: "PUT",
-      body: JSON.stringify(model),
-    });
-
+  async function submitUpdatePaymentSlip() {
+    await updatePaymentSlip(model);
     await getCustomer(customer);
   }
 
-  async function deletePaymentSlip(id) {
+  async function submitDeletePaymentSlip(id) {
     const cnfrm = confirm("Izbrisati?");
     if (!cnfrm) return;
-    await fetch(`${config.url}/payment-slip/${id}`, {
-      method: "DELETE",
-    });
-
+    await deletePaymentSlip(id);
     await getCustomer(customer);
   }
 </script>
 
 <h4 style="text-align: center">{loadstart}</h4>
 
-<div class="form-container">
-  <form class="uplatnica" on:submit|preventDefault>
+<div class="payment-slip-form-container">
+  <form class="payment-slip uplatnica" on:submit|preventDefault>
     <img
       on:load={() => {
         loaded = true;
@@ -183,7 +156,9 @@
               class:form-field-invalid={!model.iznos}
               type="text"
               placeholder="iznos uplate"
-              value={(model.iznos ?? "0").slice(0, -2)}
+              value={showDecimalOnPaymentSlips
+                ? FormatIntegerToDecimal(model.iznos)
+                : (model.iznos ?? "0").slice(0, -2)}
             />
           </div>
         </div>
@@ -285,21 +260,18 @@
         </fieldset>
         {#if !printing}
           <fieldset style="text-align: center">
-            <!--  <button class="btn btn-warning btn-sm" name="novi-nalog">NOVI NALOG</button> --><button
+            <button
               class="btn btn-primary btn-sm"
               name="print"
-              on:click={updatePaymentSlip}>Spremi nalog</button
+              on:click={submitUpdatePaymentSlip}>Spremi nalog</button
             >
-            <button class="btn btn-warning btn-sm" name="print" on:click={print}
-              >Ispis naloga</button
-            >
-            <!-- <button class="btn btn-primary" on:click={generatePDF} name="print">GENERIRAJ NALOG</button> -->
             <button class="btn btn-warning btn-sm" on:click={decoder}
               >Dekodirano</button
             >
             <button
               class="btn btn-danger btn-sm"
-              on:click={() => deletePaymentSlip(model?.id)}>Izbriši</button
+              on:click={() => submitDeletePaymentSlip(model?.id)}
+              >Izbriši</button
             >
           </fieldset>
           <br />
@@ -321,19 +293,18 @@
 </div>
 
 <style>
-  form {
+  .payment-slip {
     font-size: 0.9rem;
     line-height: 1;
+    display: inline-block;
   }
-  .form-container {
+  .payment-slip-form-container {
     text-align: center;
   }
+
   @media print {
-    .form-container {
+    .payment-slip-form-container {
       text-align: left !important;
     }
-  }
-  form {
-    display: inline-block;
   }
 </style>

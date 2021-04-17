@@ -1,5 +1,11 @@
 <script lang="ts">
+  import { store } from "src/store";
   import active from "svelte-spa-router/active";
+
+  function signout() {
+    localStorage.removeItem("user");
+    store.update((state) => ({ ...state, user: null }));
+  }
 </script>
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -52,6 +58,19 @@
             }}
             aria-current="page"
             href="/#/uplatnica">Uplatnice</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            use:active={{
+              path: "/#/signin/",
+              className: "active",
+              inactiveClassName: "inactive",
+            }}
+            aria-current="page"
+            on:click={signout}
+            href="/#/signin">Odjava</a
           >
         </li>
       </ul>

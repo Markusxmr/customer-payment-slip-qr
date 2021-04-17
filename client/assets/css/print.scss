@@ -14,28 +14,25 @@
     }
 
     .print-item {
-        // margin-top: (var(--print-item-margin-top)) !important;
         margin-bottom: (var(--print-item-margin-bottom)) !important;
         transform: scale(var(--scale));
     }
-
-    .print-item:nth-of-type(1) {
-        // margin-top: (var(--print-item-margin-top-first)) !important;
+    
+    .print-item:nth-child(4n) {
+        margin-top: 0px !important;
+        page-break-after: auto;
     }
-
     .noprint {
         display: none;
     }
-    
     .noprint-image {
         visibility: hidden;
     }
 
     @page {
         margin: 0;
-        margin-top: 10px;
         margin-right: -13px;
-        margin-bottom: -90px;
+        margin-bottom: -100px;
         padding: 0;
     }
 }

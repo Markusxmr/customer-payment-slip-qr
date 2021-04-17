@@ -1,23 +1,13 @@
 <script lang="ts">
   import { setPaymentSlip } from "../services/set-payment-slip";
   import config from "../config";
+  import { authorization, createCustomer, unauthorizedError, getIsp } from "../services/http";
 
   export let params = {};
   let isp;
   let model;
 
-  async function getIsp() {
-    fetch(`${config.url}/isp/${params.id}`, {
-      headers: {
-        accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    }).then(async (res) => {
-      isp = await res.json();
-    });
-  }
-
-  getIsp();
+  getIsp(params.id).then((item => isp = item));
 </script>
 
 <h3 style="text-align: center">{isp?.name ?? "..."}</h3>

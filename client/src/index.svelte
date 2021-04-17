@@ -1,14 +1,20 @@
 <script lang="ts">
-  import Router, { replace } from "svelte-spa-router";
+  import Router, { push } from "svelte-spa-router";
   import Navbar from "./components/Navbar.svelte";
   import routes from "./routes";
+  import { store } from "./store";
 
+  let user;
   let logbox = "";
+  store.subscribe((state) => {
+    user = state.user;
+  });
+
   function conditionsFailed(event) {
     console.error("Caught event conditionsFailed", event.detail);
     logbox += "conditionsFailed - " + JSON.stringify(event.detail) + "\n";
     // Replace the route
-    replace("/wild/conditions-failed");
+    push("#/signin");
   }
   function routeLoaded(event) {
     console.info("Caught event routeLoaded", event.detail);
@@ -20,9 +26,11 @@
   }
 </script>
 
-<div class="noprint" style="margin-bottom: 89px">
-  <Navbar />
-</div>
+{#if user}
+  <div class="noprint" style="margin-bottom: 89px">
+    <Navbar />
+  </div>
+{/if}
 <div>
   <Router
     {routes}

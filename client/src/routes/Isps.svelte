@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ISPS from "../components/ISP/Index.svelte";
+  import ISPList from "../components/ISP/ISPList.svelte";
 </script>
 
-<ISPS />
+<ISPList />

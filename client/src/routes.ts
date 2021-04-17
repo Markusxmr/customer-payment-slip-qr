@@ -1,3 +1,4 @@
+import Signin from "./routes/Signin.svelte";
 import Home from "./routes/Home.svelte";
 import Isps from "./routes/Isps.svelte";
 import Isp from "./routes/Isp.svelte";
@@ -7,39 +8,73 @@ import NewISP from "./components/ISP/New.svelte";
 import EditCustomer from "./components/Customer/Edit.svelte";
 import NewCustomer from "./components/Customer/New.svelte";
 import CustomerList from "./routes/CustomerList.svelte";
-import PaymentSlips from "./routes/PaymentSlips.svelte";
+import PaymentSlips from "./routes/PaymentSlipList.svelte";
 import NotFound from "./routes/NotFound.svelte";
+import { wrap } from "svelte-spa-router/wrap";
+import { get } from "svelte/store";
+import { store } from "./store";
 
-let routes;
-const urlParams = new URLSearchParams(window.location.search);
-if (!urlParams.has("routemap")) {
-  routes = {
-    "/": CustomerList,
-    "/customer": CustomerList,
-    "/customer/new": NewCustomer,
-    "/customer/:id/edit": EditCustomer,
-    "/customer/:id": CustomerPaymentSlips,
-    "/isp": Isps,
-    "/isp/new": NewISP,
-    "/isp/:id/edit": EditISP,
-    "/isp/:id": Isp,
-    "/uplatnica": PaymentSlips,
-    "/logout": Home,
-    "*": NotFound,
-  };
-} else {
-  routes = new Map();
-  routes.set("/", CustomerList);
-  routes.set("/customer", CustomerList);
-  routes.set("/customer/new", NewCustomer);
-  routes.set("/customer/:id/edit", EditCustomer);
-  routes.set("/customer/:id", CustomerPaymentSlips);
-  routes.set("/isp", Isps);
-  routes.set("/isp/new", NewISP);
-  routes.set("/isp/:id/edit", EditISP);
-  routes.set("/isp/:id", Isp);
-  routes.set("/uplatnica", PaymentSlips);
-  routes.set("*", NotFound);
-}
+const auth = () => {
+  const { user } = get(store);
+  if (!user) return false;
+  return true;
+};
+
+const authConditions = {
+  conditions: [
+    () => {
+      return auth();
+    },
+  ],
+};
+
+const routes = {
+  "/signin": Signin,
+  "/": wrap({
+    component: CustomerList,
+    ...authConditions,
+  }),
+  "/customer": wrap({
+    component: CustomerList,
+    ...authConditions,
+  }),
+  "/customer/new": wrap({
+    component: NewCustomer,
+    ...authConditions,
+  }),
+  "/customer/:id/edit": wrap({
+    component: EditCustomer,
+    ...authConditions,
+  }),
+  "/customer/:id": wrap({
+    component: CustomerPaymentSlips,
+    ...authConditions,
+  }),
+  "/isp": wrap({
+    component: Isps,
+    ...authConditions,
+  }),
+  "/isp/new": wrap({
+    component: NewISP,
+    ...authConditions,
+  }),
+  "/isp/:id/edit": wrap({
+    component: EditISP,
+    ...authConditions,
+  }),
+  "/isp/:id": wrap({
+    component: Isp,
+    ...authConditions,
+  }),
+  "/uplatnica": wrap({
+    component: PaymentSlips,
+    ...authConditions,
+  }),
+  "/logout": wrap({
+    component: Home,
+    ...authConditions,
+  }),
+  "*": NotFound,
+};
 
 export default routes;

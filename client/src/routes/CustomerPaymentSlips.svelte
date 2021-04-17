@@ -1,5 +1,6 @@
 <script lang="ts">
-  import PaymentSlipTable from "../components/PaymentSlipTable/PaymentSlipTable.svelte";
+  import Spinner from "./../components/Spinner.svelte";
+  import PaymentSlipTable from "../components/PaymentSlip/PaymentSlipList.svelte";
   import { setPaymentSlip } from "../services/set-payment-slip";
   import PaymentSlip from "../components/PaymentSlip/PaymentSlip.svelte";
   import {
@@ -11,7 +12,7 @@
   } from "src/services/http";
   import { store } from "src/store";
   import { onMount } from "svelte";
-  import BarcodeList from "../components/PaymentSlip/BarcodeList.svelte";
+  import BarcodeList from "../components/Barcode/BarcodeList.svelte";
 
   export let params = {};
   let customer;
@@ -23,13 +24,7 @@
   let topMargin = 0;
   let leftMargin = 0;
   let bottomMarginItem = -70;
-  let printItemMarginTopFirst = 10;
-  let printItemMarginTop = 80;
-
-  $: if (scale) {
-    printItemMarginTop = printItemMarginTop + Number(`${scale}0`);
-    printItemMarginTopFirst = printItemMarginTopFirst + Number(`${scale}0`);
-  }
+  let showDecimalOnPaymentSlips = true;
 
   store.subscribe((state) => {
     customer = state?.customer;
@@ -51,7 +46,8 @@
   function printBarcodes() {
     barcodeOnlyPrint = true;
     textOnlyPrint = false;
-    setTimeout(() => window.print(), 1000);}
+    setTimeout(() => window.print(), 1000);
+  }
 
   getIsps().then(async (data) => {
     isps = data;
@@ -80,6 +76,7 @@
     topMargin = Number(data?.paymentSlipMarginTop) ?? 0;
     leftMargin = Number(data?.paymentSlipMarginLeft) ?? 0;
     bottomMarginItem = Number(data?.paymentSlipItemMarginBottom) ?? 0;
+    showDecimalOnPaymentSlips = data?.showDecimalOnPaymentSlips;
   }
 
   fetchGlobalSetting();
@@ -90,6 +87,7 @@
       paymentSlipMarginTop: Number(topMargin),
       paymentSlipMarginLeft: Number(leftMargin),
       paymentSlipItemMarginBottom: Number(bottomMarginItem),
+      showDecimalOnPaymentSlips,
     });
     await fetchGlobalSetting();
   }
@@ -98,25 +96,29 @@
 <h3 class="noprint" style="text-align: center">
   {customer?.naziv ?? "Obrada..."}
 </h3>
+<Spinner loading={!customer?.naziv} />
 
 {#if !barcodeOnlyPrint}
-<div
-  class="print"
-  style="
+  <div
+    class="print"
+    style="
       --scale: {scale}; --print-margin-top: {topMargin}px; --print-margin-left: {leftMargin}px"
->
-  {#each paymentSlips as model, i}
-    <div
-      class="print-item"
-      style="
-      --print-item-margin-top-first: {printItemMarginTopFirst}px
-      --print-item-margin-top: {printItemMarginTop}px;
+  >
+    {#each paymentSlips as model, i}
+      <div
+        class="print-item"
+        style="
       --print-item-margin-bottom: {bottomMarginItem}px"
-    >
-      <PaymentSlip bind:model printing={true} {textOnlyPrint} />
-    </div>
-  {/each}
-</div>
+      >
+        <PaymentSlip
+          bind:model
+          printing={true}
+          {textOnlyPrint}
+          {showDecimalOnPaymentSlips}
+        />
+      </div>
+    {/each}
+  </div>
 {/if}
 
 {#if paymentSlips.length > 0}
@@ -128,6 +130,19 @@
 
 {#if paymentSlips.length > 0}
   <fieldset class="noprint" style="text-align: center">
+    <div class="form-check text-center" style="width: 250px; margin: 0 auto">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        bind:checked={showDecimalOnPaymentSlips}
+        on:change={submitGlobalSetting}
+        id="showDecimalOnPaymentSlips"
+      />
+      <label class="form-check-label" for="showDecimalOnPaymentSlips">
+        Prikaz decimale na uplatnici
+      </label>
+    </div>
+
     <div class="dropdown" style="display: inline-block">
       <button
         class="btn btn-primary btn-sm dropdown-toggle"
@@ -198,7 +213,7 @@
           />
         </div>
         <div class="mb-2 col-md-2 col-sm-6">
-          <label for="topMargin">Donja margina između uplatnica</label>
+          <label for="topMargin">Donja margina uplatnica</label>
           <input
             class="form-control"
             id="bottomMarginItem"
@@ -236,7 +251,11 @@
         data-bs-parent="#accordionExample"
       >
         <div class="accordion-body">
-          <PaymentSlip bind:model={item} {textOnlyPrint} />
+          <PaymentSlip
+            bind:model={item}
+            {textOnlyPrint}
+            {showDecimalOnPaymentSlips}
+          />
         </div>
       </div>
     </div>
