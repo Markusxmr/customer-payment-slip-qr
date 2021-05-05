@@ -39,7 +39,7 @@ export class IspService {
 
   async findOneDefault() {
     const item = await this.ispRepository.findOne({ where: { defaultIsp: true } });
-    if (!item) throw new NotFoundException();
+    if (!item) throw new NotFoundException('ISP not found');
     return item;
   }
 

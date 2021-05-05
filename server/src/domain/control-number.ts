@@ -3,6 +3,10 @@
  * izracun kontrolnog broja po modulu 11 ili u HR mod11ini
  */
 export function controlNumber(x: number = 0) {
+  if (!x) {
+    x = 0;
+  }
+
   let s = x.toString();
   let i = 0;
   let v = 0;
