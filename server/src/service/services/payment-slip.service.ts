@@ -20,7 +20,7 @@ export class PaymentSlipService {
     private ispRepository: Repository<Isp>,
     @Inject('CUSTOMER_REPOSITORY')
     private customerRepository: Repository<Customer>,
-  ) {}
+  ) { }
 
   async create(createPaymentSlipDto: CreatePaymentSlipDto) {
     let item = new PaymentSlip();
@@ -40,7 +40,7 @@ export class PaymentSlipService {
     for (const item of createPaymentSlipDtos) {
       items.push(item);
     }
-    return this.paymentSlipRepository.insert(items);
+    return this.paymentSlipRepository.save(items);
   }
 
   saveMany(updatePaymentSlipDtos: CreatePaymentSlipDto[]) {

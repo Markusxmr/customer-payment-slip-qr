@@ -12,7 +12,7 @@ const database_providers_1 = require("./database.providers");
 let DatabaseModule = class DatabaseModule {
 };
 DatabaseModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         providers: [...database_providers_1.databaseProviders],
         exports: [...database_providers_1.databaseProviders],
     })

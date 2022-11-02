@@ -12,14 +12,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateCustomerInput = void 0;
 const create_customer_input_1 = require("./create-customer.input");
 const graphql_1 = require("@nestjs/graphql");
-let UpdateCustomerInput = class UpdateCustomerInput extends graphql_1.PartialType(create_customer_input_1.CreateCustomerInput) {
+let UpdateCustomerInput = class UpdateCustomerInput extends (0, graphql_1.PartialType)(create_customer_input_1.CreateCustomerInput) {
 };
 __decorate([
-    graphql_1.Field(() => graphql_1.Int),
+    (0, graphql_1.Field)(() => graphql_1.Int),
     __metadata("design:type", Number)
 ], UpdateCustomerInput.prototype, "id", void 0);
 UpdateCustomerInput = __decorate([
-    graphql_1.InputType()
+    (0, graphql_1.InputType)()
 ], UpdateCustomerInput);
 exports.UpdateCustomerInput = UpdateCustomerInput;
 //# sourceMappingURL=update-customer.input.js.map

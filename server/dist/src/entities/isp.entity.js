@@ -16,65 +16,65 @@ const payment_slip_entity_1 = require("./payment-slip.entity");
 let Isp = class Isp {
 };
 __decorate([
-    graphql_1.Field(() => graphql_1.Int),
-    typeorm_1.PrimaryGeneratedColumn({ type: 'bigint' }),
+    (0, graphql_1.Field)(() => graphql_1.Int),
+    (0, typeorm_1.PrimaryGeneratedColumn)({ type: 'integer' }),
     __metadata("design:type", Number)
 ], Isp.prototype, "id", void 0);
 __decorate([
-    graphql_1.Field(() => graphql_1.Int),
-    typeorm_1.Column({ type: 'varchar' }),
+    (0, graphql_1.Field)(() => graphql_1.Int),
+    (0, typeorm_1.Column)({ type: 'varchar' }),
     __metadata("design:type", String)
 ], Isp.prototype, "name", void 0);
 __decorate([
-    graphql_1.Field(() => graphql_1.Int),
-    typeorm_1.Column({ type: 'varchar', nullable: true }),
+    (0, graphql_1.Field)(() => graphql_1.Int),
+    (0, typeorm_1.Column)({ type: 'varchar', nullable: true }),
     __metadata("design:type", String)
 ], Isp.prototype, "street", void 0);
 __decorate([
-    graphql_1.Field(() => graphql_1.Int),
-    typeorm_1.Column({ type: 'integer', nullable: true }),
+    (0, graphql_1.Field)(() => graphql_1.Int),
+    (0, typeorm_1.Column)({ type: 'integer', nullable: true }),
     __metadata("design:type", Number)
 ], Isp.prototype, "postalCode", void 0);
 __decorate([
-    graphql_1.Field(() => graphql_1.Int),
-    typeorm_1.Column({ type: 'varchar', nullable: true }),
+    (0, graphql_1.Field)(() => graphql_1.Int),
+    (0, typeorm_1.Column)({ type: 'varchar', nullable: true }),
     __metadata("design:type", String)
 ], Isp.prototype, "city", void 0);
 __decorate([
-    graphql_1.Field(() => graphql_1.Int),
-    typeorm_1.Column({ type: 'bigint', nullable: true }),
+    (0, graphql_1.Field)(() => graphql_1.Int),
+    (0, typeorm_1.Column)({ type: 'bigint', nullable: true }),
     __metadata("design:type", Number)
 ], Isp.prototype, "oib", void 0);
 __decorate([
-    graphql_1.Field(() => graphql_1.Int),
-    typeorm_1.Column({ type: 'varchar', length: 21, nullable: true }),
+    (0, graphql_1.Field)(() => graphql_1.Int),
+    (0, typeorm_1.Column)({ type: 'varchar', length: 21, nullable: true }),
     __metadata("design:type", String)
 ], Isp.prototype, "iban", void 0);
 __decorate([
-    graphql_1.Field(() => Boolean),
-    typeorm_1.Column({ type: 'boolean', default: false, nullable: true }),
+    (0, graphql_1.Field)(() => Boolean),
+    (0, typeorm_1.Column)({ type: 'boolean', default: false, nullable: true }),
     __metadata("design:type", Boolean)
 ], Isp.prototype, "defaultIsp", void 0);
 __decorate([
-    graphql_1.Field(() => [payment_slip_entity_1.PaymentSlip]),
-    typeorm_1.OneToMany(() => payment_slip_entity_1.PaymentSlip, (entity) => entity.isp, {
+    (0, graphql_1.Field)(() => [payment_slip_entity_1.PaymentSlip]),
+    (0, typeorm_1.OneToMany)(() => payment_slip_entity_1.PaymentSlip, (entity) => entity.isp, {
         eager: true,
     }),
     __metadata("design:type", Array)
 ], Isp.prototype, "paymentSlips", void 0);
 __decorate([
-    graphql_1.Field(() => Date),
-    typeorm_1.CreateDateColumn(),
+    (0, graphql_1.Field)(() => Date),
+    (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], Isp.prototype, "inserted_at", void 0);
 __decorate([
-    graphql_1.Field(() => Date),
-    typeorm_1.UpdateDateColumn(),
+    (0, graphql_1.Field)(() => Date),
+    (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
 ], Isp.prototype, "updated_at", void 0);
 Isp = __decorate([
-    graphql_1.ObjectType(),
-    typeorm_1.Entity('isps')
+    (0, graphql_1.ObjectType)(),
+    (0, typeorm_1.Entity)('isps')
 ], Isp);
 exports.Isp = Isp;
 //# sourceMappingURL=isp.entity.js.map

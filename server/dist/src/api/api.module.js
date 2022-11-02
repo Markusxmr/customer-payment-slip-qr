@@ -24,7 +24,7 @@ const jwt_auth_guard_1 = require("./auth/guards/jwt-auth.guard");
 let ApiModule = class ApiModule {
 };
 ApiModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         imports: [service_module_1.ServiceModule, auth_module_1.AuthModule],
         controllers: [
             auth_controller_1.AuthController,

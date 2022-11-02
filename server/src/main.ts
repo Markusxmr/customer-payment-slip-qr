@@ -8,12 +8,12 @@ import { join } from 'path';
 const PORT = process.env.PORT;
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, { logger: true });
+  const app = await NestFactory.create(AppModule);
 
   app.enableCors({
     credentials: true,
     allowedHeaders: ['authorization', 'content-type'],
-    origin: ['http://localhost:10001'],
+    origin: "*",
   });
   // @ts-ignore
   app.useStaticAssets(join(__dirname, '../..', 'public'));

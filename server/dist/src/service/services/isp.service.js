@@ -34,8 +34,8 @@ let IspService = class IspService {
         return this.ispRepository.insert(items);
     }
     async findAll() {
-        const items = await typeorm_1.getManager().query(`select * from isps order by id desc`);
-        return dto_1.dto(items, ['inserted_at', 'updated_at']);
+        const items = await (0, typeorm_1.getManager)().query(`select * from isps order by id desc`);
+        return (0, dto_1.dto)(items, ['inserted_at', 'updated_at']);
     }
     async findOne(id) {
         const item = await this.ispRepository.findOne(id);
@@ -44,9 +44,14 @@ let IspService = class IspService {
         return item;
     }
     async findOneDefault() {
-        const item = await this.ispRepository.findOne({ where: { defaultIsp: true } });
-        if (!item)
-            throw new common_1.NotFoundException('ISP not found');
+        let item = await this.ispRepository.findOne({ where: { defaultIsp: true } });
+        if (!item) {
+            const items = await this.findAll();
+            item = items[0];
+            if (!item)
+                throw new common_1.NotFoundException('ISP not found');
+        }
+        ;
         return item;
     }
     async update(id, updateIspDto) {
@@ -65,8 +70,8 @@ let IspService = class IspService {
     }
 };
 IspService = __decorate([
-    common_1.Injectable(),
-    __param(0, common_1.Inject('ISP_REPOSITORY')),
+    (0, common_1.Injectable)(),
+    __param(0, (0, common_1.Inject)('ISP_REPOSITORY')),
     __metadata("design:paramtypes", [typeorm_1.Repository])
 ], IspService);
 exports.IspService = IspService;

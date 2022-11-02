@@ -20,7 +20,7 @@ export class CustomerService {
     private ispRepository: Repository<Isp>,
     @Inject('CUSTOMER_REPOSITORY')
     private customerRepository: Repository<Customer>,
-  ) {}
+  ) { }
 
   create(createCustomerDto: CreateCustomerDto) {
     let item = new Customer();
@@ -38,9 +38,9 @@ export class CustomerService {
   async findAll(options?: Record<string, unknown>) {
     const items = await this.customerRepository
       .createQueryBuilder('customers')
-      .where('naziv ilike :naziv', { naziv: `%${options?.naziv}%` })
-      .orWhere('adresa ilike :adresa', { adresa: `%${options?.adresa}%` })
-      .orWhere('mjesto ilike :mjesto', { mjesto: `%${options?.mjesto}%` })
+      .where('naziv like :naziv', { naziv: `%${options?.naziv}%` })
+      .orWhere('adresa like :adresa', { adresa: `%${options?.adresa}%` })
+      .orWhere('mjesto like :mjesto', { mjesto: `%${options?.mjesto}%` })
       .orderBy('customers.id', 'DESC')
       .getMany();
 
@@ -52,9 +52,9 @@ export class CustomerService {
     if (!customer) throw new NotFoundException();
     let paymentSlips = await getManager().query(
       `
-    select * from payment_slips
-    where customer_id = $1
-    order by id asc`,
+      select * from payment_slips
+      where customer_id = ?
+      order by id asc`,
       [id],
     );
 

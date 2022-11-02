@@ -14,15 +14,15 @@ const graphql_1 = require("@nestjs/graphql");
 let CreatePaymentSlipInput = class CreatePaymentSlipInput {
 };
 __decorate([
-    graphql_1.Field(() => graphql_1.Int, { description: 'ISP ID' }),
+    (0, graphql_1.Field)(() => graphql_1.Int, { description: 'ISP ID' }),
     __metadata("design:type", Number)
 ], CreatePaymentSlipInput.prototype, "isp_id", void 0);
 __decorate([
-    graphql_1.Field(() => graphql_1.Int, { description: 'CUSTOMER ID' }),
+    (0, graphql_1.Field)(() => graphql_1.Int, { description: 'CUSTOMER ID' }),
     __metadata("design:type", Number)
 ], CreatePaymentSlipInput.prototype, "customer_id", void 0);
 CreatePaymentSlipInput = __decorate([
-    graphql_1.InputType()
+    (0, graphql_1.InputType)()
 ], CreatePaymentSlipInput);
 exports.CreatePaymentSlipInput = CreatePaymentSlipInput;
 //# sourceMappingURL=create-payment-slip.input.js.map

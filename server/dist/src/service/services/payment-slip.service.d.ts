@@ -11,7 +11,7 @@ export declare class PaymentSlipService {
     private relations;
     constructor(paymentSlipRepository: Repository<PaymentSlip>, ispRepository: Repository<Isp>, customerRepository: Repository<Customer>);
     create(createPaymentSlipDto: CreatePaymentSlipDto): Promise<PaymentSlip>;
-    createMany(createPaymentSlipDtos: CreatePaymentSlipDto[]): Promise<import("typeorm").InsertResult>;
+    createMany(createPaymentSlipDtos: CreatePaymentSlipDto[]): Promise<any[]>;
     saveMany(updatePaymentSlipDtos: CreatePaymentSlipDto[]): Promise<any[]>;
     findAll(): Promise<any[]>;
     updateAllPaymentSlips(): Promise<void>;

@@ -25,9 +25,8 @@ let PaymentSlipController = class PaymentSlipController {
         this.paymentSlipService = paymentSlipService;
     }
     findFiles() {
-        const dir = path_1.join(process.cwd(), 'files');
-        let files = load_files_1.getFilesFromDir(dir, '.pdf');
-        console.log(files);
+        const dir = (0, path_1.join)(process.cwd(), 'files');
+        let files = (0, load_files_1.getFilesFromDir)(dir, '.pdf');
         return files;
         let data = {};
         function readFiles(dirname, onFileContent, onError) {
@@ -71,48 +70,48 @@ let PaymentSlipController = class PaymentSlipController {
     }
 };
 __decorate([
-    common_1.Get('/files'),
+    (0, common_1.Get)('/files'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], PaymentSlipController.prototype, "findFiles", null);
 __decorate([
-    common_1.Post(),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_payment_slip_dto_1.CreatePaymentSlipDto]),
     __metadata("design:returntype", void 0)
 ], PaymentSlipController.prototype, "create", null);
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], PaymentSlipController.prototype, "findAll", null);
 __decorate([
-    common_1.Get(':id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)(':id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], PaymentSlipController.prototype, "findOne", null);
 __decorate([
-    common_1.Put(':id'),
-    __param(0, common_1.Param('id')),
-    __param(1, common_1.Body()),
+    (0, common_1.Put)(':id'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, update_payment_slip_dto_1.UpdatePaymentSlipDto]),
     __metadata("design:returntype", void 0)
 ], PaymentSlipController.prototype, "update", null);
 __decorate([
-    common_1.Delete(':id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Delete)(':id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], PaymentSlipController.prototype, "remove", null);
 PaymentSlipController = __decorate([
-    common_1.Controller('payment-slip'),
+    (0, common_1.Controller)('payment-slip'),
     __metadata("design:paramtypes", [payment_slip_service_1.PaymentSlipService])
 ], PaymentSlipController);
 exports.PaymentSlipController = PaymentSlipController;

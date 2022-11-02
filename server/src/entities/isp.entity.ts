@@ -13,7 +13,7 @@ import { PaymentSlip } from './payment-slip.entity';
 @Entity('isps')
 export class Isp {
   @Field(() => Int)
-  @PrimaryGeneratedColumn({ type: 'bigint' })
+  @PrimaryGeneratedColumn({ type: 'integer' })
   id: number;
 
   @Field(() => Int)

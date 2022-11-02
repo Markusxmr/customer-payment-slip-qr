@@ -10,22 +10,13 @@ export default class CreateIsps implements Seeder {
       .into(Isp)
       .values([
         {
-          name: 'TEHNICORE d.o.o.',
-          street: 'Zrinski Trg 4',
+          name: 'Company d.o.o.',
+          street: 'Street Address',
           postalCode: 47300,
           city: 'Ogulin',
-          oib: 60472483107,
-          iban: 'HR2224020061100294882',
+          oib: 50472483107,
+          iban: 'HR1224020061100294882',
           defaultIsp: true,
-        },
-        {
-          name: 'GENEX d.o.o.',
-          street: 'Zrinski Trg 4',
-          postalCode: 47300,
-          city: 'Ogulin',
-          oib: 17751264789,
-          iban: 'HR3823900011101044344',
-          defaultIsp: false,
         },
       ])
       .execute();

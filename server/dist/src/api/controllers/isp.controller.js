@@ -45,48 +45,49 @@ let IspController = class IspController {
     }
 };
 __decorate([
-    common_1.Post(),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_isp_dto_1.CreateIspDto]),
     __metadata("design:returntype", void 0)
 ], IspController.prototype, "create", null);
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], IspController.prototype, "findAll", null);
 __decorate([
-    common_1.Get(':id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)(':id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], IspController.prototype, "findOne", null);
 __decorate([
-    common_1.Put(':id'),
-    __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+    (0, common_1.Put)(':id'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, update_isp_dto_1.UpdateIspDto]),
     __metadata("design:returntype", void 0)
 ], IspController.prototype, "update", null);
 __decorate([
-    common_1.Delete(':id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Delete)(':id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], IspController.prototype, "remove", null);
 __decorate([
-    common_1.Post(),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], IspController.prototype, "login", null);
 IspController = __decorate([
-    common_1.Controller('isp'),
+    (0, common_1.Controller)('isp'),
     __metadata("design:paramtypes", [isp_service_1.IspService])
 ], IspController);
 exports.IspController = IspController;

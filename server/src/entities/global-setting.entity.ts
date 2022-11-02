@@ -5,7 +5,7 @@ import { ObjectType, Field, Int, Float } from '@nestjs/graphql';
 @Entity('global_settings')
 export class GlobalSetting {
   @Field(() => Int)
-  @PrimaryGeneratedColumn({ type: 'bigint' })
+  @PrimaryGeneratedColumn({ type: 'integer' })
   id: number;
 
   @Field(() => Float)

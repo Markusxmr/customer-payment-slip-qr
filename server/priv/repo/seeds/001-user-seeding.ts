@@ -10,8 +10,9 @@ export default class CreateUsers implements Seeder {
       .into(User)
       .values([
         {
-          username: 'admin',
-          password: 'ogulin1808',
+          username: process.env.ADMIN_USERNAME,
+          password: process.env.ADMIN_PASSWORD,
+          email: process.env.ADMIN_EMAIL,
         },
       ])
       .execute();

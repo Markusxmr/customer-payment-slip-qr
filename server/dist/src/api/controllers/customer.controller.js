@@ -37,7 +37,7 @@ let CustomerController = class CustomerController {
         let items = new Array(12);
         let paymentSlips = [];
         for (let i = 0, len = items.length; i < len; i++) {
-            let newVal = payment_slip_domain_1.paymentSlipDomain({ isp, customer }, i + 1);
+            let newVal = (0, payment_slip_domain_1.paymentSlipDomain)({ isp, customer }, i + 1);
             paymentSlips.push(newVal);
         }
         await this.paymentSlipService.createMany(paymentSlips);
@@ -59,7 +59,7 @@ let CustomerController = class CustomerController {
         return this.customerService.remove(+id);
     }
     async uploadFile(res, file) {
-        const filePath = path_1.join(process.cwd(), 'files', file.originalname);
+        const filePath = (0, path_1.join)(process.cwd(), 'files', file.originalname);
         const jsonPath = filePath.replace('xlsx', 'json').replace('xls', 'json');
         fs.writeFileSync(filePath, file.buffer, {});
         xls_json({
@@ -96,7 +96,7 @@ let CustomerController = class CustomerController {
                     let items = new Array(12);
                     let paymentSlips = [];
                     for (let i = 0, len = items.length; i < len; i++) {
-                        let newVal = payment_slip_domain_1.paymentSlipDomain({ isp, customer }, i + 1);
+                        let newVal = (0, payment_slip_domain_1.paymentSlipDomain)({ isp, customer }, i + 1);
                         paymentSlips.push(newVal);
                     }
                     await this.paymentSlipService.createMany(paymentSlips);
@@ -112,56 +112,58 @@ let CustomerController = class CustomerController {
     }
 };
 __decorate([
-    common_1.Post(),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_customer_dto_1.CreateCustomerDto]),
     __metadata("design:returntype", Promise)
 ], CustomerController.prototype, "create", null);
 __decorate([
-    common_1.Get(),
-    __param(0, common_1.Query()),
+    (0, common_1.Get)(),
+    __param(0, (0, common_1.Query)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], CustomerController.prototype, "findAll", null);
 __decorate([
-    common_1.Get(':id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)(':id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], CustomerController.prototype, "findOne", null);
 __decorate([
-    common_1.Put(':id'),
-    __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+    (0, common_1.Put)(':id'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, update_customer_dto_1.UpdateCustomerDto]),
     __metadata("design:returntype", void 0)
 ], CustomerController.prototype, "update", null);
 __decorate([
-    common_1.Delete(),
+    (0, common_1.Delete)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], CustomerController.prototype, "removeAll", null);
 __decorate([
-    common_1.Delete(':id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Delete)(':id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], CustomerController.prototype, "remove", null);
 __decorate([
-    common_1.Post('xls'),
-    common_1.UseInterceptors(platform_express_1.FileInterceptor('file')),
-    __param(0, common_1.Response()), __param(1, common_1.UploadedFile()),
+    (0, common_1.Post)('xls'),
+    (0, common_1.UseInterceptors)((0, platform_express_1.FileInterceptor)('file')),
+    __param(0, (0, common_1.Response)()),
+    __param(1, (0, common_1.UploadedFile)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], CustomerController.prototype, "uploadFile", null);
 CustomerController = __decorate([
-    common_1.Controller('customer'),
+    (0, common_1.Controller)('customer'),
     __metadata("design:paramtypes", [isp_service_1.IspService,
         customer_service_1.CustomerService,
         payment_slip_service_1.PaymentSlipService])

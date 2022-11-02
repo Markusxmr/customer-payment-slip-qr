@@ -33,7 +33,7 @@ let PaymentSlipService = class PaymentSlipService {
         let customer = await this.customerRepository.findOne(createPaymentSlipDto === null || createPaymentSlipDto === void 0 ? void 0 : createPaymentSlipDto.customer_id);
         let paymentSlips = (_a = customer === null || customer === void 0 ? void 0 : customer.paymentSlips) === null || _a === void 0 ? void 0 : _a.sort((a, b) => (b === null || b === void 0 ? void 0 : b.mjesec) - (a === null || a === void 0 ? void 0 : a.mjesec));
         let sortedPaymentSlip = paymentSlips.length > 0 ? paymentSlips[0] : { mjesec: 0 };
-        let updateItem = payment_slip_domain_1.paymentSlipDomain({ isp, customer }, (sortedPaymentSlip === null || sortedPaymentSlip === void 0 ? void 0 : sortedPaymentSlip.mjesec) + 1);
+        let updateItem = (0, payment_slip_domain_1.paymentSlipDomain)({ isp, customer }, (sortedPaymentSlip === null || sortedPaymentSlip === void 0 ? void 0 : sortedPaymentSlip.mjesec) + 1);
         createPaymentSlipDto = Object.assign(Object.assign({}, createPaymentSlipDto), updateItem);
         item = Object.assign(Object.assign({}, item), createPaymentSlipDto);
         return this.paymentSlipRepository.save(item);
@@ -43,7 +43,7 @@ let PaymentSlipService = class PaymentSlipService {
         for (const item of createPaymentSlipDtos) {
             items.push(item);
         }
-        return this.paymentSlipRepository.insert(items);
+        return this.paymentSlipRepository.save(items);
     }
     saveMany(updatePaymentSlipDtos) {
         let items = [];
@@ -53,16 +53,16 @@ let PaymentSlipService = class PaymentSlipService {
         return this.paymentSlipRepository.save(items);
     }
     async findAll() {
-        const items = await typeorm_1.getManager().query(`select * from payment_slips order by id desc`);
-        return dto_1.dto(items, ['inserted_at', 'updated_at', 'deleted_at']);
+        const items = await (0, typeorm_1.getManager)().query(`select * from payment_slips order by id desc`);
+        return (0, dto_1.dto)(items, ['inserted_at', 'updated_at', 'deleted_at']);
     }
     async updateAllPaymentSlips() {
-        const items = await typeorm_1.getManager().query(`select * from payment_slips order by id desc`);
+        const items = await (0, typeorm_1.getManager)().query(`select * from payment_slips order by id desc`);
         for (const item of items) {
             this.customerRepository.findOne(item === null || item === void 0 ? void 0 : item.customer_id).then(customer => {
                 var _a;
                 let šifra = (_a = `${customer === null || customer === void 0 ? void 0 : customer.šifra}-`) !== null && _a !== void 0 ? _a : '';
-                const poziv_na_broj_primatelja = `${šifra}${control_number_1.controlNumber(customer === null || customer === void 0 ? void 0 : customer.šifra)}`;
+                const poziv_na_broj_primatelja = `${šifra}${(0, control_number_1.controlNumber)(customer === null || customer === void 0 ? void 0 : customer.šifra)}`;
                 this.update(item.id, { poziv_na_broj_primatelja });
             });
         }
@@ -77,7 +77,7 @@ let PaymentSlipService = class PaymentSlipService {
                 id: 'DESC',
             },
         });
-        return dto_1.dto(items, ['inserted_at', 'updated_at', 'deleted_at']);
+        return (0, dto_1.dto)(items, ['inserted_at', 'updated_at', 'deleted_at']);
     }
     findOne(id) {
         return this.paymentSlipRepository.findOne(id);
@@ -91,7 +91,7 @@ let PaymentSlipService = class PaymentSlipService {
             if (key === 'isp_id' && (item === null || item === void 0 ? void 0 : item.isp_id) !== updatePaymentSlipDto[key]) {
                 let requestIspId = updatePaymentSlipDto[key];
                 let isp = await this.ispRepository.findOne(requestIspId);
-                updatedIsp = payment_slip_domain_1.setIspPaymentSlip(isp);
+                updatedIsp = (0, payment_slip_domain_1.setIspPaymentSlip)(isp);
                 updatePaymentSlipDto = Object.assign(Object.assign({}, updatePaymentSlipDto), updatedIsp);
             }
         }
@@ -107,10 +107,10 @@ let PaymentSlipService = class PaymentSlipService {
     }
 };
 PaymentSlipService = __decorate([
-    common_1.Injectable(),
-    __param(0, common_1.Inject('PAYMENT_SLIP_REPOSITORY')),
-    __param(1, common_1.Inject('ISP_REPOSITORY')),
-    __param(2, common_1.Inject('CUSTOMER_REPOSITORY')),
+    (0, common_1.Injectable)(),
+    __param(0, (0, common_1.Inject)('PAYMENT_SLIP_REPOSITORY')),
+    __param(1, (0, common_1.Inject)('ISP_REPOSITORY')),
+    __param(2, (0, common_1.Inject)('CUSTOMER_REPOSITORY')),
     __metadata("design:paramtypes", [typeorm_1.Repository,
         typeorm_1.Repository,
         typeorm_1.Repository])

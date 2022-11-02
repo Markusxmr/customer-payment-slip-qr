@@ -40,22 +40,22 @@ let CustomerService = class CustomerService {
     async findAll(options) {
         const items = await this.customerRepository
             .createQueryBuilder('customers')
-            .where('naziv ilike :naziv', { naziv: `%${options === null || options === void 0 ? void 0 : options.naziv}%` })
-            .orWhere('adresa ilike :adresa', { adresa: `%${options === null || options === void 0 ? void 0 : options.adresa}%` })
-            .orWhere('mjesto ilike :mjesto', { mjesto: `%${options === null || options === void 0 ? void 0 : options.mjesto}%` })
+            .where('naziv like :naziv', { naziv: `%${options === null || options === void 0 ? void 0 : options.naziv}%` })
+            .orWhere('adresa like :adresa', { adresa: `%${options === null || options === void 0 ? void 0 : options.adresa}%` })
+            .orWhere('mjesto like :mjesto', { mjesto: `%${options === null || options === void 0 ? void 0 : options.mjesto}%` })
             .orderBy('customers.id', 'DESC')
             .getMany();
-        return dto_1.dto(items, this.excludes);
+        return (0, dto_1.dto)(items, this.excludes);
     }
     async findOne(id) {
         const customer = await this.customerRepository.findOne(id);
         if (!customer)
             throw new common_1.NotFoundException();
-        let paymentSlips = await typeorm_1.getManager().query(`
-    select * from payment_slips
-    where customer_id = $1
-    order by id asc`, [id]);
-        paymentSlips = dto_1.dto(paymentSlips, this.excludes);
+        let paymentSlips = await (0, typeorm_1.getManager)().query(`
+      select * from payment_slips
+      where customer_id = ?
+      order by id asc`, [id]);
+        paymentSlips = (0, dto_1.dto)(paymentSlips, this.excludes);
         return Object.assign(Object.assign({}, customer), { paymentSlips });
     }
     async update(id, updateCustomerDto) {
@@ -69,7 +69,7 @@ let CustomerService = class CustomerService {
             .where('payment_slips.customer_id = :customerId', { customerId: id })
             .getMany();
         for (const paymentSlip of paymentSlips) {
-            let updatedPaymentSlip = payment_slip_domain_1.paymentSlipDomain({ isp: paymentSlip.isp, customer }, paymentSlip === null || paymentSlip === void 0 ? void 0 : paymentSlip.mjesec);
+            let updatedPaymentSlip = (0, payment_slip_domain_1.paymentSlipDomain)({ isp: paymentSlip.isp, customer }, paymentSlip === null || paymentSlip === void 0 ? void 0 : paymentSlip.mjesec);
             await this.paymentSlipRepository.update(paymentSlip === null || paymentSlip === void 0 ? void 0 : paymentSlip.id, updatedPaymentSlip);
         }
         return customer;
@@ -88,10 +88,10 @@ let CustomerService = class CustomerService {
     }
 };
 CustomerService = __decorate([
-    common_1.Injectable(),
-    __param(0, common_1.Inject('PAYMENT_SLIP_REPOSITORY')),
-    __param(1, common_1.Inject('ISP_REPOSITORY')),
-    __param(2, common_1.Inject('CUSTOMER_REPOSITORY')),
+    (0, common_1.Injectable)(),
+    __param(0, (0, common_1.Inject)('PAYMENT_SLIP_REPOSITORY')),
+    __param(1, (0, common_1.Inject)('ISP_REPOSITORY')),
+    __param(2, (0, common_1.Inject)('CUSTOMER_REPOSITORY')),
     __metadata("design:paramtypes", [typeorm_1.Repository,
         typeorm_1.Repository,
         typeorm_1.Repository])

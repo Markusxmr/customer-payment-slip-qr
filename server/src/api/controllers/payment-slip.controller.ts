@@ -16,13 +16,12 @@ import { getFilesFromDir } from '../../common/load-files';
 
 @Controller('payment-slip')
 export class PaymentSlipController {
-  constructor(private readonly paymentSlipService: PaymentSlipService) {}
+  constructor(private readonly paymentSlipService: PaymentSlipService) { }
 
   @Get('/files')
   findFiles() {
     const dir = join(process.cwd(), 'files');
     let files = getFilesFromDir(dir, '.pdf');
-    console.log(files);
 
     return files;
     let data = {};

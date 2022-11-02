@@ -39,41 +39,41 @@ let PaymentSlipResolver = class PaymentSlipResolver {
     }
 };
 __decorate([
-    graphql_1.Mutation(() => payment_slip_entity_1.PaymentSlip),
-    __param(0, graphql_1.Args('createPaymentSlipInput')),
+    (0, graphql_1.Mutation)(() => payment_slip_entity_1.PaymentSlip),
+    __param(0, (0, graphql_1.Args)('createPaymentSlipInput')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_payment_slip_input_1.CreatePaymentSlipInput]),
     __metadata("design:returntype", void 0)
 ], PaymentSlipResolver.prototype, "createPaymentSlip", null);
 __decorate([
-    graphql_1.Query(() => [payment_slip_entity_1.PaymentSlip], { name: 'user' }),
+    (0, graphql_1.Query)(() => [payment_slip_entity_1.PaymentSlip], { name: 'user' }),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], PaymentSlipResolver.prototype, "findAll", null);
 __decorate([
-    graphql_1.Query(() => payment_slip_entity_1.PaymentSlip, { name: 'user' }),
-    __param(0, graphql_1.Args('id', { type: () => graphql_1.Int })),
+    (0, graphql_1.Query)(() => payment_slip_entity_1.PaymentSlip, { name: 'user' }),
+    __param(0, (0, graphql_1.Args)('id', { type: () => graphql_1.Int })),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", void 0)
 ], PaymentSlipResolver.prototype, "findOne", null);
 __decorate([
-    graphql_1.Mutation(() => payment_slip_entity_1.PaymentSlip),
-    __param(0, graphql_1.Args('updatePaymentSlipInput')),
+    (0, graphql_1.Mutation)(() => payment_slip_entity_1.PaymentSlip),
+    __param(0, (0, graphql_1.Args)('updatePaymentSlipInput')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [update_payment_slip_input_1.UpdatePaymentSlipInput]),
     __metadata("design:returntype", void 0)
 ], PaymentSlipResolver.prototype, "updatePaymentSlip", null);
 __decorate([
-    graphql_1.Mutation(() => payment_slip_entity_1.PaymentSlip),
-    __param(0, graphql_1.Args('id', { type: () => graphql_1.Int })),
+    (0, graphql_1.Mutation)(() => payment_slip_entity_1.PaymentSlip),
+    __param(0, (0, graphql_1.Args)('id', { type: () => graphql_1.Int })),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", void 0)
 ], PaymentSlipResolver.prototype, "removePaymentSlip", null);
 PaymentSlipResolver = __decorate([
-    graphql_1.Resolver(() => payment_slip_entity_1.PaymentSlip),
+    (0, graphql_1.Resolver)(() => payment_slip_entity_1.PaymentSlip),
     __metadata("design:paramtypes", [payment_slip_service_1.PaymentSlipService])
 ], PaymentSlipResolver);
 exports.PaymentSlipResolver = PaymentSlipResolver;

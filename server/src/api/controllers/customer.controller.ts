@@ -28,7 +28,7 @@ export class CustomerController {
     private readonly ispService: IspService,
     private readonly customerService: CustomerService,
     private readonly paymentSlipService: PaymentSlipService,
-  ) {}
+  ) { }
 
   @Post()
   async create(@Body() createCustomerDto: CreateCustomerDto) {
@@ -45,8 +45,8 @@ export class CustomerController {
       let newVal = paymentSlipDomain({ isp, customer }, i + 1);
       paymentSlips.push(newVal);
     }
-    await this.paymentSlipService.createMany(paymentSlips);
 
+    await this.paymentSlipService.createMany(paymentSlips);
     return this.customerService.findOne(customer?.id);
   }
 
@@ -114,9 +114,9 @@ export class CustomerController {
           return Object.keys(item).reduce((acc, key) => {
             return item[key]
               ? {
-                  ...acc,
-                  [key.toLowerCase().replace(' ', '_')]: item[key],
-                }
+                ...acc,
+                [key.toLowerCase().replace(' ', '_')]: item[key],
+              }
               : acc;
           }, {});
         });

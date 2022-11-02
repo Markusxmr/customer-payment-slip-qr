@@ -5,7 +5,7 @@ import { ObjectType, Field, Int } from '@nestjs/graphql';
 @Entity('users')
 export class User {
   @Field(() => Int)
-  @PrimaryGeneratedColumn({ type: 'bigint' })
+  @PrimaryGeneratedColumn({ type: 'integer' })
   id: number;
 
   @Field(() => String)

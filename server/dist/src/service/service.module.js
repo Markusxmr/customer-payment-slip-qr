@@ -18,7 +18,7 @@ const user_service_1 = require("./services/user.service");
 let ServiceCoreModule = class ServiceCoreModule {
 };
 ServiceCoreModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         imports: [database_module_1.DatabaseModule],
         providers: [user_service_1.UserService, payment_slip_service_1.PaymentSlipService, customer_service_1.CustomerService, isp_service_1.IspService, global_setting_service_1.GlobalSettingService, ...service_providers_1.serviceProviders],
         exports: [user_service_1.UserService, payment_slip_service_1.PaymentSlipService, customer_service_1.CustomerService, isp_service_1.IspService, global_setting_service_1.GlobalSettingService, ...service_providers_1.serviceProviders],
@@ -28,7 +28,7 @@ exports.ServiceCoreModule = ServiceCoreModule;
 let ServiceModule = class ServiceModule {
 };
 ServiceModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         imports: [ServiceCoreModule],
         providers: [ServiceCoreModule],
         exports: [ServiceCoreModule],

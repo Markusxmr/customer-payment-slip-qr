@@ -6,7 +6,7 @@ import { PaymentSlip } from './payment-slip.entity';
 @Entity('customers')
 export class Customer {
   @Field(() => Int)
-  @PrimaryGeneratedColumn({ type: 'bigint' })
+  @PrimaryGeneratedColumn({ type: 'integer' })
   id: number;
 
   @Field(() => Int)

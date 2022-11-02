@@ -24,12 +24,12 @@ let TransactionalConnection = class TransactionalConnection {
         return this.connection;
     }
     getRepository(target) {
-        return typeorm_2.getRepository(target);
+        return (0, typeorm_2.getRepository)(target);
     }
 };
 TransactionalConnection = __decorate([
-    common_1.Injectable(),
-    __param(0, typeorm_1.InjectConnection()),
+    (0, common_1.Injectable)(),
+    __param(0, (0, typeorm_1.InjectConnection)()),
     __metadata("design:paramtypes", [typeorm_2.Connection])
 ], TransactionalConnection);
 exports.TransactionalConnection = TransactionalConnection;

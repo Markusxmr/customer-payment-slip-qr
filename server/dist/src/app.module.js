@@ -14,7 +14,7 @@ const api_module_1 = require("./api/api.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         imports: [api_module_1.ApiModule],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

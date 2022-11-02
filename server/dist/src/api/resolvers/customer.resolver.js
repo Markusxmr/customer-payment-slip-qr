@@ -39,41 +39,41 @@ let CustomerResolver = class CustomerResolver {
     }
 };
 __decorate([
-    graphql_1.Mutation(() => customer_entity_1.Customer),
-    __param(0, graphql_1.Args('createCustomerInput')),
+    (0, graphql_1.Mutation)(() => customer_entity_1.Customer),
+    __param(0, (0, graphql_1.Args)('createCustomerInput')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_customer_input_1.CreateCustomerInput]),
     __metadata("design:returntype", void 0)
 ], CustomerResolver.prototype, "createCustomer", null);
 __decorate([
-    graphql_1.Query(() => [customer_entity_1.Customer], { name: 'customer' }),
+    (0, graphql_1.Query)(() => [customer_entity_1.Customer], { name: 'customer' }),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], CustomerResolver.prototype, "findAll", null);
 __decorate([
-    graphql_1.Query(() => customer_entity_1.Customer, { name: 'customer' }),
-    __param(0, graphql_1.Args('id', { type: () => graphql_1.Int })),
+    (0, graphql_1.Query)(() => customer_entity_1.Customer, { name: 'customer' }),
+    __param(0, (0, graphql_1.Args)('id', { type: () => graphql_1.Int })),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", void 0)
 ], CustomerResolver.prototype, "findOne", null);
 __decorate([
-    graphql_1.Mutation(() => customer_entity_1.Customer),
-    __param(0, graphql_1.Args('updateCustomerInput')),
+    (0, graphql_1.Mutation)(() => customer_entity_1.Customer),
+    __param(0, (0, graphql_1.Args)('updateCustomerInput')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [update_customer_input_1.UpdateCustomerInput]),
     __metadata("design:returntype", void 0)
 ], CustomerResolver.prototype, "updateCustomer", null);
 __decorate([
-    graphql_1.Mutation(() => customer_entity_1.Customer),
-    __param(0, graphql_1.Args('id', { type: () => graphql_1.Int })),
+    (0, graphql_1.Mutation)(() => customer_entity_1.Customer),
+    __param(0, (0, graphql_1.Args)('id', { type: () => graphql_1.Int })),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", void 0)
 ], CustomerResolver.prototype, "removeCustomer", null);
 CustomerResolver = __decorate([
-    graphql_1.Resolver(() => customer_entity_1.Customer),
+    (0, graphql_1.Resolver)(() => customer_entity_1.Customer),
     __metadata("design:paramtypes", [customer_service_1.CustomerService])
 ], CustomerResolver);
 exports.CustomerResolver = CustomerResolver;

@@ -17,7 +17,7 @@ import { Isp } from './isp.entity';
 @Entity('payment_slips')
 export class PaymentSlip {
   @Field(() => Int)
-  @PrimaryGeneratedColumn({ type: 'bigint' })
+  @PrimaryGeneratedColumn({ type: 'integer' })
   id: number;
 
   @Field(() => Int)
@@ -33,7 +33,7 @@ export class PaymentSlip {
   mjesec: number;
 
   @Field(() => Int)
-  @Column({ type: 'int4', nullable: true, default: new Date().getFullYear() })
+  @Column({ type: 'int', nullable: true, default: new Date().getFullYear() })
   godina: number;
 
   @Field(() => Customer)

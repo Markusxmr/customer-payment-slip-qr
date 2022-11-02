@@ -10,7 +10,7 @@ export class IspService {
   constructor(
     @Inject('ISP_REPOSITORY')
     private ispRepository: Repository<Isp>,
-  ) {}
+  ) { }
 
   create(createIspDto: CreateIspDto) {
     let item = new Isp();
@@ -38,8 +38,12 @@ export class IspService {
   }
 
   async findOneDefault() {
-    const item = await this.ispRepository.findOne({ where: { defaultIsp: true } });
-    if (!item) throw new NotFoundException('ISP not found');
+    let item = await this.ispRepository.findOne({ where: { defaultIsp: true } });
+    if (!item) {
+      const items = await this.findAll();
+      item = items[0];
+      if (!item) throw new NotFoundException('ISP not found')
+    };
     return item;
   }
 
