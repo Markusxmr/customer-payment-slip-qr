@@ -1,2 +1,6 @@
-/apps
-/supabase
+/server/.env
+/server/dist
+/server/database.sqlite
+/server/database.sqlite-shm
+/server/database.sqlite-wal
+/server/database.sqlitec

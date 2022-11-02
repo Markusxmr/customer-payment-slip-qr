@@ -1,7 +1,0 @@
-FROM node:12-alpine
-
-ENV NODE_ENV=development
-
-WORKDIR /usr/src/app/
-
-CMD ls -ltr && npm install && npm run serve
