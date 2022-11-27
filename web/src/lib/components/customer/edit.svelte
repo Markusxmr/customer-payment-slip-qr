@@ -3,7 +3,6 @@
   import Form from "./form.svelte";
 
   export let params: any;
-
   let user: any;
 
   fetch(`${config.url}/user/${params.id}`, {

@@ -6,7 +6,7 @@
     function submit(isp: any): any {
         return () => {
             createCustomer(isp).then(data => {
-                goto(`/customer`)
+                goto(`/customers`)
             });
         }
     }

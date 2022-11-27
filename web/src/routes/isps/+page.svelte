@@ -9,7 +9,7 @@
 </script>
 
 {#if ISPS}
-  <div>
+  <div style="overflow-x: none;">
       <ISPS />
   </div>
 {/if}

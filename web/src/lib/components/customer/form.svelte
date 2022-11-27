@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { clearEmpties } from "$lib/utils";
 
-
   export let user: any;
   export let submit: (params: any) => any;
 </script>
@@ -335,7 +334,7 @@
   <div>
     <br />
     <span><button class="btn btn-secondary" type="submit">Spremi</button></span>
-    <span><a class="btn btn-secondary" href="/customer">Natrag</a></span>
+    <span><a class="btn btn-secondary" href="/customers">Natrag</a></span>
   </div>
 </form>
 

@@ -16,5 +16,5 @@
     <p>IBAN: {isp?.iban}</p>
   </div>
 
-  <span><a class="btn btn-secondary" href="/isp">Natrag</a></span>
+  <span><a class="btn btn-secondary" href="/isps">Natrag</a></span>
 </div>

@@ -6,7 +6,7 @@
   let canvas: HTMLCanvasElement;
   export let canvasClass = "uplatnica__barcode";
   export let key = 0;
-  export let props;
+  export let props: any;
   export let hub3_code = `HRVHUB30
 HRK
 000000000012355

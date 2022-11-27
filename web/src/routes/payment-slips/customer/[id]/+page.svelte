@@ -17,7 +17,6 @@
   export let data;
   export let { params } = data;
   let PaymentSlipTable: any;
-  
   let customer: { paymentSlips: any; naziv: any; } | null;
   let isps: any[] = [];
   let paymentSlips: any[] = [];
@@ -28,10 +27,12 @@
   let leftMargin = 0;
   let bottomMarginItem = -70;
   let showDecimalOnPaymentSlips = true;
+  let selectedAccordion = 0;
 
   store.subscribe((state) => {
     customer = state?.customer;
     paymentSlips = [...(customer?.paymentSlips ?? [])];
+    selectedAccordion = paymentSlips?.[0]?.id ?? 0;
   });
 
   function printWithBackground() {
@@ -95,6 +96,14 @@
       showDecimalOnPaymentSlips,
     });
     await fetchGlobalSetting();
+  }
+
+  function openAccordian(item) {
+    if (selectedAccordion === item?.id) {
+      selectedAccordion = 0
+    } else {
+      selectedAccordion = item?.id;
+    }
   }
 
   onMount(async() => {
@@ -238,13 +247,13 @@
     </fieldset>
     <br />
   {/if}
-
   <div class="accordion noprint" id="accordionPaymentSlip">
     {#each paymentSlips as item, i}
+
       <div class="accordion-item">
-        <h2 class="accordion-header" id="heading{i}">
+        <h2 class="accordion-header" id="heading{i}" on:click={() => openAccordian(item)}>
           <button
-            class="accordion-button {i === 0 ? '' : 'collapsed'}"
+            class="accordion-button {selectedAccordion === item?.id ? '' : 'collapsed'}"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapse{i}"
@@ -256,7 +265,7 @@
         </h2>
         <div
           id="collapse{i}"
-          class="accordion-collapse collapse {i === 0 ? 'show' : ''}"
+          class="accordion-collapse collapse {selectedAccordion === item?.id ? 'show' : ''}"
           data-bs-parent="#accordionPaymentSlip"
           data-bs-toggle="collapse"
           data-bs-target="#collapse{i}"

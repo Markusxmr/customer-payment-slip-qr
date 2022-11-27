@@ -6,7 +6,7 @@
     function submit(isp: any) {
         return () => {
             createIsp(isp).then(data => {
-                goto(`/isp`)
+                goto(`/isps`)
             });
         }
     }

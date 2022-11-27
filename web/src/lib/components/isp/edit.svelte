@@ -2,7 +2,7 @@
   import config from "$lib/config";
   import Form from "./form.svelte";
 
-  export let params;
+  export let params: any;
   let isp: any;
 
   fetch(`${config.url}/isp/${params?.id}`, {

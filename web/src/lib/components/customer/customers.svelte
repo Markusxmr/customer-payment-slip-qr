@@ -54,7 +54,7 @@
     let stringifiedValue = Handsontable.helper.stringify(value);
     let viewBtn = document.createElement("a");
     viewBtn.className = "btn btn-success btn-sm";
-    viewBtn.href = `/payment-slips/customer/${stringifiedValue}`;
+    viewBtn.href = `${window.location.origin}/payment-slips/customer/${stringifiedValue}`;
     viewBtn.textContent = "Pregled";
     viewBtn.style = "color: #fff;"
 
@@ -80,6 +80,8 @@
       contextMenu: true,
       columnSorting: true,
       width: '100vw',
+      collapsibleColumns: true,
+      nestedRows: true,
       afterChange: function (changes, source) {
         if (!changes) return;
 
@@ -244,7 +246,7 @@
 
   <div>
     <XlsUpload callback={getCustomers}>
-      <a class="btn btn-secondary btn-sm" href="/customer/new">Novi korisnik</a>
+      <a class="btn btn-secondary btn-sm" href="/customers/new">Novi korisnik</a>
       <button
         class="btn btn-secondary btn-danger btn-sm"
         on:click={deleteCustomers}>Izbriši sve</button

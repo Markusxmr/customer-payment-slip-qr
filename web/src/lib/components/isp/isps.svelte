@@ -58,7 +58,7 @@
   function actionRenderer(instance: any, td: any, row: any, col: any, prop: any, value: any, cellProperties: any) {
     let stringifiedValue = Handsontable.helper.stringify(value);
     let viewBtn = document.createElement("a");
-    viewBtn.href = `/isp/${stringifiedValue}`;
+    viewBtn.href = `/isps/${stringifiedValue}`;
     viewBtn.className = "btn btn-success btn-sm";
     viewBtn.textContent = "Pregled";
     viewBtn.style = "color: #fff;"
@@ -160,7 +160,7 @@
   <h3 class="text-center">ISP</h3>
 
   <div class="text-center">
-    <a class="btn btn-secondary btn-sm" href="/isp/new">Novi Isp</a>
+    <a class="btn btn-secondary btn-sm" href="/isps/new">Novi Isp</a>
   </div>
 
   <form

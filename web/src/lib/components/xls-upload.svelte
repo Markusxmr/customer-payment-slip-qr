@@ -25,8 +25,8 @@
 </script>
 
 <div>
-  <label for="">Unos korisnika preko xls datoteke</label>
-  <input id="fileUpload" type="file" bind:files />
+  <label for="xls">Unos korisnika preko xls datoteke</label>
+  <input id="fileUpload" name="xls" type="file" bind:files />
   
   {#if files}
     <button class="btn btn-secondary btn-sm" on:click={upload}>Upload</button>

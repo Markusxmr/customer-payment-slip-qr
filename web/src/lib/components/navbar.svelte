@@ -27,14 +27,14 @@
           <a
             class="nav-link"
             aria-current="page"
-            href="/isp">ISP</a
+            href="/isps">ISP</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
             aria-current="page"
-            href="/customer">Korisnici</a
+            href="/customers">Korisnici</a
           >
         </li>
         <li class="nav-item">

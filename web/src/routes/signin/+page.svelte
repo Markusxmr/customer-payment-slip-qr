@@ -20,7 +20,7 @@
         error = null;
         localStorage.setItem("user", JSON.stringify(res));
         store.update((state) => ({ ...state, user: res }));
-        goto("/customer");
+        goto("/customers");
       }
     });
   }

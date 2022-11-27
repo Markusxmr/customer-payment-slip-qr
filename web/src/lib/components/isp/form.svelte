@@ -92,7 +92,7 @@
   <div>
     <br />
     <span><button class="btn btn-secondary" type="submit">Spremi</button></span>
-    <span><a class="btn btn-secondary" href="/isp">Natrag</a></span>
+    <span><a class="btn btn-secondary" href="/isps">Natrag</a></span>
   </div>
 </form>
 
