@@ -2101,7 +2101,7 @@
             model_platitelja: "",
             sifra_namjene: "",
             datum_izvrsenja: "",
-            valuta_placanja: "HRK",
+            valuta_placanja: "EUR",
             // Samo vrijednost X ili ništa
             hitno: "X",
             ime_i_prezime_platitelja: customer === null || customer === void 0 ? void 0 : customer.naziv,

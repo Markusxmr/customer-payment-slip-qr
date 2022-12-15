@@ -53,7 +53,7 @@ let CustomerService = class CustomerService {
             throw new common_1.NotFoundException();
         let paymentSlips = await (0, typeorm_1.getManager)().query(`
       select * from payment_slips
-      where customer_id = ?
+      where customer_id = $1
       order by id asc`, [id]);
         paymentSlips = (0, dto_1.dto)(paymentSlips, this.excludes);
         return Object.assign(Object.assign({}, customer), { paymentSlips });

@@ -4,8 +4,8 @@ const DB_HOST = process.env.DB_HOST ?? '127.0.0.1';
 const baseEntity = 'src/entities/**/*.entity.ts';
 
 const shared = {
-  type: 'sqlite',
-  // port: 5432,
+  type: 'postgres',
+  port: 5432,
   entities: [`**/*.entity.ts`],
   migrationsTableName: 'migrations',
   migrations: ['priv/repo/migrations/*.ts'],
@@ -16,17 +16,17 @@ const shared = {
 };
 
 const dev = {
-  // host: DB_HOST,
-  // username: process.env.DB_USERNAME,
-  // password: process.env.DB_PASSWORD ?? '',
+  host: DB_HOST,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD ?? '',
   database: process.env.DB_DATABASE,
   ...shared,
 };
 
 const prod = {
-  // host: DB_HOST,
-  // username: process.env.DB_USERNAME,
-  // password: process.env.DB_PASSWORD ?? '',
+  host: DB_HOST,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD ?? '',
   database: process.env.DB_DATABASE,
   ...shared,
 };

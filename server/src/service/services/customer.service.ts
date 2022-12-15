@@ -53,7 +53,7 @@ export class CustomerService {
     let paymentSlips = await getManager().query(
       `
       select * from payment_slips
-      where customer_id = ?
+      where customer_id = $1
       order by id asc`,
       [id],
     );
