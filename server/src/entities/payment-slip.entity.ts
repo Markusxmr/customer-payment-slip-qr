@@ -5,7 +5,6 @@ import {
   ManyToOne,
   CreateDateColumn,
   UpdateDateColumn,
-  RelationId,
   JoinColumn,
   DeleteDateColumn,
 } from 'typeorm';
@@ -51,7 +50,16 @@ export class PaymentSlip {
   isp: Isp;
 
   @Field(() => Float)
-  @Column({ type: 'numeric', precision: 10, scale: 4, nullable: true })
+  @Column({
+    type: 'numeric',
+    precision: 10,
+    scale: 4,
+    nullable: true,
+    transformer: {
+      to: (value: number): number => value,
+      from: (value: string): number => (value !== null ? Number(parseFloat(value).toFixed(2)) : null),
+    },
+  })
   iznos: number;
 
   @Field(() => String)

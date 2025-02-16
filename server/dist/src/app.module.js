@@ -8,17 +8,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const api_module_1 = require("./api/api.module");
+const api_module_1 = require("./modules/api/api.module");
+const auth_module_1 = require("./modules/auth/auth.module");
+const database_module_1 = require("./modules/database/database.module");
+const user_service_1 = require("./services/user.service");
+const auth_service_1 = require("./services/auth.service");
+const customer_service_1 = require("./services/customer.service");
+const isp_service_1 = require("./services/isp.service");
+const global_setting_service_1 = require("./services/global-setting.service");
+const payment_slip_service_1 = require("./services/payment-slip.service");
+const repository_providers_1 = require("./repository.providers");
 let AppModule = class AppModule {
 };
-AppModule = __decorate([
+exports.AppModule = AppModule;
+exports.AppModule = AppModule = __decorate([
+    (0, common_1.Global)(),
     (0, common_1.Module)({
-        imports: [api_module_1.ApiModule],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        imports: [api_module_1.ApiModule, auth_module_1.AuthModule, database_module_1.DatabaseModule],
+        providers: [
+            auth_service_1.AuthService,
+            user_service_1.UserService,
+            payment_slip_service_1.PaymentSlipService,
+            customer_service_1.CustomerService,
+            isp_service_1.IspService,
+            global_setting_service_1.GlobalSettingService,
+            ...repository_providers_1.repositoryProviders,
+        ],
+        exports: [
+            api_module_1.ApiModule,
+            auth_module_1.AuthModule,
+            database_module_1.DatabaseModule,
+            user_service_1.UserService,
+            payment_slip_service_1.PaymentSlipService,
+            customer_service_1.CustomerService,
+            isp_service_1.IspService,
+            global_setting_service_1.GlobalSettingService,
+            ...repository_providers_1.repositoryProviders,
+        ],
     })
 ], AppModule);
-exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

@@ -14,7 +14,43 @@ const typeorm_1 = require("typeorm");
 const graphql_1 = require("@nestjs/graphql");
 const payment_slip_entity_1 = require("./payment-slip.entity");
 let Customer = class Customer {
+    id;
+    šifra;
+    naziv;
+    obveza;
+    iznos_opreme;
+    adresa;
+    država;
+    pošta;
+    mjesto;
+    porezni_obveznik;
+    oib;
+    matični_broj;
+    šifra_djelatnosti;
+    identifikacijski_broj;
+    novčana_jedinica;
+    dani_za_dospijeće;
+    postotak_rabata;
+    internet_stranica;
+    transakcijski_račun;
+    ime_prezime_kontakta;
+    telefon;
+    elektronska_pošta;
+    naziv_za_slanje;
+    adresa_za_slanje;
+    država_za_slanje;
+    pošta_za_slanje;
+    mjesto_pošte_za_slanje;
+    naziv_primatelja;
+    adresa_primatelja;
+    država_primatelja;
+    pošta_primatelja;
+    mjesto_primatelja;
+    paymentSlips;
+    inserted_at;
+    updated_at;
 };
+exports.Customer = Customer;
 __decorate([
     (0, graphql_1.Field)(() => graphql_1.Int),
     (0, typeorm_1.PrimaryGeneratedColumn)({ type: 'integer' }),
@@ -32,12 +68,30 @@ __decorate([
 ], Customer.prototype, "naziv", void 0);
 __decorate([
     (0, graphql_1.Field)(() => Number),
-    (0, typeorm_1.Column)({ type: 'numeric', precision: 10, scale: 4, nullable: true }),
+    (0, typeorm_1.Column)({
+        type: 'numeric',
+        precision: 10,
+        scale: 4,
+        nullable: true,
+        transformer: {
+            to: (value) => value,
+            from: (value) => (value !== null ? Number(parseFloat(value).toFixed(2)) : null),
+        },
+    }),
     __metadata("design:type", Object)
 ], Customer.prototype, "obveza", void 0);
 __decorate([
     (0, graphql_1.Field)(() => Number),
-    (0, typeorm_1.Column)({ type: 'numeric', precision: 10, scale: 4, nullable: true }),
+    (0, typeorm_1.Column)({
+        type: 'numeric',
+        precision: 10,
+        scale: 4,
+        nullable: true,
+        transformer: {
+            to: (value) => value,
+            from: (value) => (value !== null ? Number(parseFloat(value).toFixed(2)) : null),
+        },
+    }),
     __metadata("design:type", Object)
 ], Customer.prototype, "iznos_opreme", void 0);
 __decorate([
@@ -191,9 +245,8 @@ __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
 ], Customer.prototype, "updated_at", void 0);
-Customer = __decorate([
+exports.Customer = Customer = __decorate([
     (0, graphql_1.ObjectType)(),
     (0, typeorm_1.Entity)('customers')
 ], Customer);
-exports.Customer = Customer;
 //# sourceMappingURL=customer.entity.js.map

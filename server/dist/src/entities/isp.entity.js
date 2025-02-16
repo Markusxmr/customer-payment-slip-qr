@@ -14,7 +14,19 @@ const typeorm_1 = require("typeorm");
 const graphql_1 = require("@nestjs/graphql");
 const payment_slip_entity_1 = require("./payment-slip.entity");
 let Isp = class Isp {
+    id;
+    name;
+    street;
+    postalCode;
+    city;
+    oib;
+    iban;
+    defaultIsp;
+    paymentSlips;
+    inserted_at;
+    updated_at;
 };
+exports.Isp = Isp;
 __decorate([
     (0, graphql_1.Field)(() => graphql_1.Int),
     (0, typeorm_1.PrimaryGeneratedColumn)({ type: 'integer' }),
@@ -72,9 +84,8 @@ __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
 ], Isp.prototype, "updated_at", void 0);
-Isp = __decorate([
+exports.Isp = Isp = __decorate([
     (0, graphql_1.ObjectType)(),
     (0, typeorm_1.Entity)('isps')
 ], Isp);
-exports.Isp = Isp;
 //# sourceMappingURL=isp.entity.js.map

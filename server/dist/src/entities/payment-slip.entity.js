@@ -15,7 +15,37 @@ const graphql_1 = require("@nestjs/graphql");
 const customer_entity_1 = require("./customer.entity");
 const isp_entity_1 = require("./isp.entity");
 let PaymentSlip = class PaymentSlip {
+    id;
+    customer_id;
+    isp_id;
+    mjesec;
+    godina;
+    customer;
+    isp;
+    iznos;
+    poziv_na_broj_platitelja;
+    poziv_na_broj_primatelja;
+    iban_primatelja;
+    iban_platitelja;
+    model_primatelja;
+    model_platitelja;
+    sifra_namjene;
+    datum_izvrsenja;
+    valuta_placanja;
+    hitno;
+    ime_i_prezime_platitelja;
+    ulica_i_broj_platitelja;
+    ulica_i_broj_primatelja;
+    postanski_i_grad_platitelja;
+    postanski_i_grad_primatelja;
+    naziv_primatelja;
+    opis_placanja;
+    nalog;
+    inserted_at;
+    updated_at;
+    deleted_at;
 };
+exports.PaymentSlip = PaymentSlip;
 __decorate([
     (0, graphql_1.Field)(() => graphql_1.Int),
     (0, typeorm_1.PrimaryGeneratedColumn)({ type: 'integer' }),
@@ -59,7 +89,16 @@ __decorate([
 ], PaymentSlip.prototype, "isp", void 0);
 __decorate([
     (0, graphql_1.Field)(() => graphql_1.Float),
-    (0, typeorm_1.Column)({ type: 'numeric', precision: 10, scale: 4, nullable: true }),
+    (0, typeorm_1.Column)({
+        type: 'numeric',
+        precision: 10,
+        scale: 4,
+        nullable: true,
+        transformer: {
+            to: (value) => value,
+            from: (value) => (value !== null ? Number(parseFloat(value).toFixed(2)) : null),
+        },
+    }),
     __metadata("design:type", Number)
 ], PaymentSlip.prototype, "iznos", void 0);
 __decorate([
@@ -167,9 +206,8 @@ __decorate([
     (0, typeorm_1.DeleteDateColumn)(),
     __metadata("design:type", Date)
 ], PaymentSlip.prototype, "deleted_at", void 0);
-PaymentSlip = __decorate([
+exports.PaymentSlip = PaymentSlip = __decorate([
     (0, graphql_1.ObjectType)(),
     (0, typeorm_1.Entity)('payment_slips')
 ], PaymentSlip);
-exports.PaymentSlip = PaymentSlip;
 //# sourceMappingURL=payment-slip.entity.js.map

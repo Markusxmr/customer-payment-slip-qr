@@ -41,7 +41,7 @@ export function monthFormater(customer, i: number) {
   let iznos = obveza && iznos_opreme ? obveza + iznos_opreme : 0.0;
   let opis_placanja;
   let formatedMonth = i > 9 ? i : `0${i}`;
-  let šifra = `${customer?.šifra} - ` ?? '';
+  let šifra = customer?.šifra ? `${customer?.šifra} - ` : '';
 
   if (i < 4 && i > 0) {
     iznos = obveza && iznos_opreme ? obveza + iznos_opreme : 0.0;
@@ -63,7 +63,7 @@ export function buildPaymentSlipDomain() {
     let date = new Date();
     let year = date.getFullYear();
     let newVal = setPaymentSlip({ isp, customer });
-    let šifra = `${customer?.šifra}-` ?? '';
+    let šifra = customer?.šifra ? `${customer?.šifra}-` : '';
     let { formatedMonth, opis_placanja, iznos } = monthFormater(customer, i);
 
     return {

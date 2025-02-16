@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+require("reflect-metadata");
 const dotenv_1 = require("dotenv");
 (0, dotenv_1.config)();
 const core_1 = require("@nestjs/core");
@@ -11,7 +12,7 @@ async function bootstrap() {
     app.enableCors({
         credentials: true,
         allowedHeaders: ['authorization', 'content-type'],
-        origin: "*",
+        origin: '*',
     });
     app.useStaticAssets((0, path_1.join)(__dirname, '../..', 'public'));
     await app.listen(PORT);

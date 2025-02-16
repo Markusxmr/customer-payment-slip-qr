@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { config } from 'dotenv';
 config();
 
@@ -13,7 +14,7 @@ async function bootstrap() {
   app.enableCors({
     credentials: true,
     allowedHeaders: ['authorization', 'content-type'],
-    origin: "*",
+    origin: '*',
   });
   // @ts-ignore
   app.useStaticAssets(join(__dirname, '../..', 'public'));

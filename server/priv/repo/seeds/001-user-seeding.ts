@@ -1,10 +1,10 @@
 import { Factory, Seeder } from 'typeorm-seeding';
-import { Connection } from 'typeorm';
+import { DataSource } from 'typeorm';
 import { User } from '../../../src/entities/user.entity';
 
 export default class CreateUsers implements Seeder {
-  public async run(factory: Factory, connection: Connection): Promise<any> {
-    await connection
+  public async run(factory: Factory, dataSource: DataSource): Promise<any> {
+    await dataSource
       .createQueryBuilder()
       .insert()
       .into(User)
