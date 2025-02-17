@@ -1,133 +1,149 @@
 <script lang="ts">
-	import { browser } from "$app/environment";
-  import { onMount } from "svelte";
-  import Handsontable from "handsontable";
-  import {
-    deletePaymentSlip,
-    getCustomer,
-    getPaymentSlips,
-    updatePaymentSlip,
-  } from "$lib/services";
-  import { store } from "$lib/store";
-	import NoData from "$lib/components/no-data.svelte";
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	import {
+		getCustomer,
+		getPaymentSlips,
+		updatePaymentSlip,
+		deletePaymentSlip
+	} from '$lib/services';
+	import { store } from '$lib/store';
+	import { arraysEqual } from '$lib/utils/arrays-equal';
+	import NoData from '$lib/components/no-data.svelte';
 
-  export let paymentSlips: any[] = [];
-  let key = Math.random();
-  let prevSlips = [];
-  let handsontable: Handsontable;
-  let colHeaders: string[] = [];
-  let data: any[] = [];
-  let loading = false;
-  let container: Element;
-  let tableMounted = false;
+	export let paymentSlips: any[] = [];
+	export let tableClass = 'table-container'
 
-  function setTableData() {
-    if (!paymentSlips || paymentSlips?.length === 0) return;
+	let container: HTMLElement | null = null;
+	let handsontable: any = null;
 
-    colHeaders = Object.keys(paymentSlips[0]);
-    data = paymentSlips?.map((model, i) => {
-      return {
-        data: model,
-        renderer: "html",
-      };
-    });
-    if (handsontable) {
-      handsontable.loadData(data);
-    }
+	let colHeaders: string[] = [];
+	let data: any[] = [];
+	let loading = false;
+	let tableMounted = false;
+	let oldSlips: any[] = [];
 
-    loading = false;
-  }
+	// Keep track of the Handsontable import since it’s browser-only.
+	let Handsontable: any;
 
-  if (paymentSlips?.length > 0) {
-    prevSlips = paymentSlips;
-    setTableData();
-  }
+	/**
+	 * Called whenever `paymentSlips` changes from the store subscription
+	 */
+	function setTableData() {
+		if (!paymentSlips || paymentSlips.length === 0) return;
 
-  $: if (browser && container && paymentSlips?.length > 0 && tableMounted === false) {
-    createTable();
-    tableMounted = true;
-  }
+		colHeaders = Object.keys(paymentSlips[0]);
+		data = paymentSlips.map((model) => ({
+			data: model,
+			renderer: 'html'
+		}));
 
-  function createTable() {
-    handsontable = new Handsontable(container, {
-      data: data,
-      rowHeaders: true,
-      colHeaders,
-      filters: true,
-      dropdownMenu: true,
-      manualColumnResize: true,
-      manualRowResize: true,
-      contextMenu: true,
-      columnSorting: true,
-      width: '100vw',
-      afterChange: function (changes, source) {
-        if (!changes) return;
+		if (handsontable) {
+			handsontable.loadData(data);
+		}
 
-        for (const change of changes) {
-          let [index, column, prevVal, newVal] = change;
-          if (source === "loadData") {
-            return; //don't save this change
-          }
-          let item = {
-            ...(data[index]?.data ?? data[index]),
-            [column]: newVal,
-          };
+		loading = false;
+	}
 
-          if (item?.id) {
-            updatePaymentSlip(item).then(() => {
-              getCustomer({ id: item?.customer_id });
-            });
-          }
-        }
-      },
-      beforeRemoveRow: function (
-        index: number,
-        amount: number,
-        physicalRows: number[],
-        source: Handsontable.ChangeSource
-      ) {
-        const promptVal = confirm(
-          `Izbrisati ${amount} ${amount === 1 ? "stupac" : "stupca"}?`
-        );
-        if (!promptVal) return;
-        for (const row of physicalRows) {
-          let item = data[row];
-          if (item?.id) {
-            deletePaymentSlip(item?.id).then(() => {
-              if (row + 1 === amount) {
-                getPaymentSlips().then(data => {
-                  loading = false;
-                });
-              }
-            });
-          }
-        }
-      },
-      licenseKey: "non-commercial-and-evaluation",
-    });
-  }
+	/**
+	 * Initializes the Handsontable instance in the container
+	 */
+	function createTable() {
+		handsontable = new Handsontable(container, {
+			data,
+			rowHeaders: true,
+			colHeaders,
+			filters: true,
+			dropdownMenu: true,
+			manualColumnResize: true,
+			manualRowResize: true,
+			contextMenu: true,
+			columnSorting: true,
+			collapsibleColumns: true,
+			nestedRows: true,
+			// Only run this if the data actually changed, not on load
+			afterChange(changes: any[][], source: string) {
+				if (!changes || source === 'loadData') return;
 
-  store.subscribe((state) => {
-    paymentSlips = state?.paymentSlips;
-    
-    if (browser) {
-      setTableData();
-    }
-  });
+				for (const change of changes) {
+					const [index, column, prevVal, newVal] = change;
+					if (newVal === prevVal) continue;
 
-  onMount(async () => {
-    let element = document.getElementById(`datatable-${key}`);
+					let item = {
+						...(data[index]?.data ?? data[index]),
+						[String(column)]: newVal
+					};
 
-    if (element) {
-      container = element;
-    }
-  });
+					if (item?.id) {
+						updatePaymentSlip(item).then(() => {
+							getCustomer({ id: item?.customer_id });
+						});
+					}
+				}
+			},
+			beforeRemoveRow(index: number, amount: number, physicalRows: number[]) {
+				const confirmMsg = `Izbrisati ${amount} ${amount === 1 ? 'stupac' : 'stupca'}?`;
+				const promptVal = confirm(confirmMsg);
+				if (!promptVal) return;
+
+				for (const row of physicalRows) {
+					let item = data[row];
+					if (item?.id) {
+						deletePaymentSlip(item.id).then(() => {
+							if (row + 1 === amount) {
+								getPaymentSlips().then(() => {
+									loading = false;
+								});
+							}
+						});
+					}
+				}
+			},
+			licenseKey: 'non-commercial-and-evaluation'
+		});
+	}
+
+	/**
+	 * Subscribe to store changes so that if `paymentSlips` updates,
+	 * we update our Handsontable data
+	 */
+	store.subscribe((state) => {
+		const newSlips = state?.paymentSlips ?? [];
+		if (!arraysEqual(oldSlips, newSlips)) {
+			paymentSlips = newSlips;
+			oldSlips = newSlips;
+			if (browser) {
+				setTableData();
+			}
+		}
+	});
+
+	/**
+	 * `onMount` is only called on client. Perfect place to dynamically import.
+	 */
+	onMount(async () => {
+		if (!browser) return;
+
+		// Dynamically import Handsontable only in the browser
+		const module = await import('handsontable');
+		Handsontable = module.default;
+
+		// If we already have data, create the table.
+		if (paymentSlips && paymentSlips.length > 0) {
+			setTableData();
+			createTable();
+			tableMounted = true;
+		}
+	});
 </script>
 
 <div>
-  <div id="datatable-{key}" />
+	<div class="{tableClass}">
+		<!-- This element is used for mounting Handsontable -->
+		<div bind:this={container}/>
+	</div>
 
-  {#if !paymentSlips}
-    <NoData />
-  {/if}
+	{#if !paymentSlips || paymentSlips.length === 0}
+		<NoData />
+	{/if}
 </div>

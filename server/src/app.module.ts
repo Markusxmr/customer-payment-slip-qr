@@ -14,7 +14,6 @@ import { repositoryProviders } from './repository.providers';
 @Module({
   imports: [ApiModule, AuthModule, DatabaseModule],
   providers: [
-    AuthService,
     UserService,
     PaymentSlipService,
     CustomerService,

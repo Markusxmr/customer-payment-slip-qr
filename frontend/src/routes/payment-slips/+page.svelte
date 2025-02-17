@@ -4,15 +4,31 @@
   import { getPaymentSlips } from "$lib/services";
   import Spinner from "$lib/components/spinner.svelte";
 	import NoData from "$lib/components/no-data.svelte";
+	import _ from 'lodash';
+	const { debounce } = _;
 
   let paymentSlips: any[] = [];
   let data = [];
   let loading = true;
   let PaymentSlipList: any;
+	let search = '';
 
   store.subscribe((state) => {
     paymentSlips = state?.paymentSlips;
   });
+
+
+	// Debounce object for search input
+	const _debounce = {
+		data() {
+			return { name: '' };
+		},
+		methods: {
+			handleInput: debounce(async function () {
+				await getPaymentSlips();
+			}, 300)
+		}
+	};
 
   getPaymentSlips().then(() => {
     loading = false;
@@ -25,6 +41,20 @@
 
 <div>
   <h3>Uplatnice</h3>
+
+  <br>
+
+  <form class="d-flex search-form" on:submit|preventDefault={() => getPaymentSlips()}>
+			<input
+				class="form-control me-2"
+				type="search"
+				placeholder="Pretraži"
+				aria-label="Search"
+				on:input={_debounce.methods.handleInput}
+				bind:value={search}
+			/>
+		</form>
+
 
   {#if loading}
     <Spinner {loading} />

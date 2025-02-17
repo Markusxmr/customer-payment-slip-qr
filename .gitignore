@@ -1,6 +1,9 @@
 /server/.env
 /server/dist
+/server/public
+/server/app
 /server/database.sqlite
 /server/database.sqlite-shm
 /server/database.sqlite-wal
 /server/database.sqlitec
+

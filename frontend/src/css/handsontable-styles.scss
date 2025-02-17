@@ -1,0 +1,381 @@
+.company-table-container {
+	width: 100%;
+	min-height: 70vh;
+	overflow-x: auto; /* Enable horizontal scrolling if needed */
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+.table-container {
+	width: 100%;
+	height: 70vh;
+	overflow-x: auto; /* Enable horizontal scrolling if needed */
+	margin: 0 auto; /* Center if parent allows */
+}
+
+.table-container-customer {
+	height: 450px;
+	overflow-x: auto; /* Enable horizontal scrolling if needed */
+	margin: 0 auto; /* Center if parent allows */
+}
+
+.ht_master {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-size: 13px;
+	line-height: 1.4;
+	color: #333;
+	border-radius: 6px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	background-color: #fff;
+	transition: box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.ht_master:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.15);
+	border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* --- Table Cells --- */
+
+.handsontable td,
+.handsontable th {
+	padding: 6px 8px;
+	border-right: 1px solid rgba(0, 0, 0, 0.08);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	vertical-align: middle;
+	box-sizing: border-box;
+	background-color: #fff;
+	transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.handsontable td:last-child,
+.handsontable th:last-child {
+	border-right: none;
+}
+
+.handsontable tr:last-child td,
+.handsontable tr:last-child th {
+	border-bottom: none;
+}
+
+.handsontable td:hover,
+.handsontable th:hover {
+	background-color: rgba(0, 0, 0, 0.03);
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Header Cells (th) --- */
+
+.handsontable thead th {
+	background-color: transparent;
+	font-weight: 500;
+	text-align: left;
+	text-transform: none;
+	letter-spacing: normal;
+	font-size: 12px;
+	border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* --- Transform underscore to spaces and capitalize --- */
+/*Corrected CSS*/
+.handsontable thead th > div > span.colHeader:not(.cornerHeader) {
+	position: relative; /* Needed for absolute positioning */
+	display: block; /* Ensure it's a block-level element */
+	overflow: hidden; /* Hide any overflowing content */
+	white-space: nowrap; /* Keep text on one line */
+}
+
+.handsontable thead th > div > span.colHeader:not(.cornerHeader)::after {
+	content: attr(data-transformed-text); /* Use a dedicated attribute */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	text-transform: capitalize; /* Use CSS text-transform for capitalization */
+}
+/* --- Header Cell with Sorting Indicator --- */
+
+.handsontable .columnSorting {
+	/* Removed background color change.  Sorting indicated by arrow. */
+}
+
+.handsontable .columnSorting::after {
+	display: inline-block;
+	margin-left: 4px;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 12px;
+	font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.handsontable .columnSorting.ascending::after {
+	content: '\F883';
+}
+
+.handsontable .columnSorting.descending::after {
+	content: '\F882';
+}
+
+/* --- Row Headers --- */
+.handsontable .ht_clone_left .handsontable th,
+.handsontable .ht_clone_top_left_corner .handsontable th {
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.04);
+	font-weight: 400;
+	min-width: 40px;
+	color: rgba(0, 0, 0, 0.7);
+	border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* --- Selected Cell --- */
+
+.handsontable .ht_master .htCore .current {
+	border: 2px solid #007aff !important;
+	background-color: rgba(0, 122, 255, 0.1) !important;
+	z-index: 2;
+}
+
+/* --- Highlighted Cells --- */
+
+.handsontable .ht_master .htCore .highlight {
+	background-color: rgba(255, 204, 0, 0.15) !important;
+	border: 2px solid #ffcc00 !important;
+}
+
+/* --- Read-Only Cells --- */
+.handsontable td.htDimmed {
+	color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* --- Error/Invalid Cells --- */
+.handsontable .htInvalid {
+	background-color: rgba(255, 59, 48, 0.1) !important;
+	color: #ff3b30;
+}
+
+/* --- Autofill Handle --- */
+.handsontable .wtBorder.corner {
+	background-color: #007aff;
+	width: 8px;
+	height: 8px;
+	border: none;
+	border-radius: 50%;
+	z-index: 3;
+}
+
+/* --- Context Menu --- */
+
+.handsontable .htContextMenu {
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.15);
+	z-index: 1000;
+	padding: 4px 0;
+	overflow: hidden;
+}
+
+.handsontable .htContextMenu .ht_master table {
+	border: none;
+}
+
+.handsontable .htContextMenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.handsontable .htContextMenu li {
+	padding: 7px 14px;
+	cursor: pointer;
+	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+	white-space: nowrap;
+	font-size: 13px;
+}
+
+.handsontable .htContextMenu li:hover {
+	background-color: rgba(0, 122, 255, 0.1);
+	color: #007aff;
+}
+
+.handsontable .htContextMenu li.htSeparator {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	margin: 4px 0;
+	padding: 0;
+	height: 0;
+}
+
+/* --- Dropdown Menu (Filters) --- */
+
+.handsontable .htDropdownMenu {
+	background-color: white;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.15);
+	z-index: 999;
+	padding: 4px 0;
+	overflow: hidden;
+}
+
+.handsontable .htDropdownMenu .ht_master table {
+	border: none;
+}
+
+.handsontable .htDropdownMenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.handsontable .htDropdownMenu li {
+	padding: 7px 14px;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+	font-size: 13px;
+}
+
+.handsontable .htDropdownMenu li:hover {
+	background-color: rgba(0, 122, 255, 0.1);
+	color: #007aff;
+}
+
+.handsontable .htDropdownMenu .ht_master td {
+	border: none;
+	padding: 5px 8px;
+}
+
+/* --- Textarea (Editor) --- */
+
+.handsontable textarea.handsontableInput {
+	font-family: inherit;
+	font-size: inherit;
+	box-sizing: border-box;
+	border: 2px solid #007aff;
+	padding: 4px;
+	outline: none;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+	resize: none;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	overflow: hidden;
+}
+.handsontable textarea.handsontableInput:focus {
+	border-color: #0056b3;
+	box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.25), inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Checkbox --- */
+.handsontable .htCheckboxRendererInput {
+	margin: 0;
+	vertical-align: middle;
+	width: 15px;
+	height: 15px;
+	appearance: none;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	background-color: #fff;
+	cursor: pointer;
+	transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+		box-shadow 0.15s ease-in-out;
+}
+
+.handsontable .htCheckboxRendererInput:checked {
+	background-color: #007aff;
+	border-color: #007aff;
+}
+
+.handsontable .htCheckboxRendererInput:checked::before {
+	content: '\2713';
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	line-height: 14px;
+}
+.handsontable .htCheckboxRendererInput:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.25);
+}
+
+.handsontable .htCheckboxRendererInput:disabled {
+	background-color: #eee;
+	border-color: #ccc;
+	cursor: not-allowed;
+}
+
+/* --- Mobile Responsiveness --- */
+
+@media screen and (max-width: 768px) {
+	.company-table-container {
+		width: 100%;
+	}
+
+	.ht_master {
+		font-size: 12px;
+		border-radius: 0;
+		box-shadow: none;
+		padding: 0;
+	}
+
+	.handsontable td,
+	.handsontable th {
+		padding: 5px 6px;
+	}
+	.handsontable th {
+		font-size: 11px;
+	}
+
+	.handsontable .ht_clone_left,
+	.handsontable .ht_clone_top_left_corner {
+		display: none;
+	}
+
+	.handsontable .wtHolder {
+		overflow-x: auto;
+	}
+
+	.handsontable .htContextMenu,
+	.handsontable .htDropdownMenu {
+		position: fixed;
+		left: 5px !important;
+		right: 5px !important;
+		max-width: calc(100% - 10px);
+		border-radius: 4px;
+	}
+	.handsontable .htContextMenu ul,
+	.handsontable .htDropdownMenu ul {
+		max-height: 200px;
+		overflow-y: auto;
+	}
+
+	.handsontable .htContextMenu li,
+	.handsontable .htDropdownMenu li {
+		padding: 6px 10px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.handsontable td,
+	.handsontable th {
+		padding: 4px 5px;
+	}
+	.handsontable th {
+		font-size: 10px;
+	}
+	.handsontable .columnSorting::after {
+		margin-left: 2px;
+		font-size: 9px;
+	}
+
+	.handsontable .htContextMenu li,
+	.handsontable .htDropdownMenu li {
+		padding: 5px 8px;
+	}
+}

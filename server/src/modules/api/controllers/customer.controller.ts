@@ -78,7 +78,7 @@ export class CustomerController {
   @Post('xls')
   @UseInterceptors(FileInterceptor('file'))
   async uploadFile(@Response() res, @UploadedFile() file) {
-    const filePath = join(process.cwd(), 'files', file.originalname);
+    const filePath = join(process.cwd(), 'priv/files', file.originalname);
     const jsonPath = filePath.replace('xlsx', 'json').replace('xls', 'json');
     fs.writeFileSync(filePath, file.buffer, {});
 

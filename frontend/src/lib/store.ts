@@ -5,7 +5,7 @@ export const store = writable({
 	user: browser ? localStorage.getItem('user') : null,
 	signin: false,
 	customer: null,
-	customers: [] as any[],
+	customers: [] as { paymentSlips: any[] }[],
 	isps: [],
 	paymentSlips: []
 });

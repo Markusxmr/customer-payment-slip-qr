@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { FormatIntegerToDecimal } from "$lib/Format";
-  import { onMount } from "svelte";
-  import PDF417 from "$lib/pdf417";
+	import { FormatIntegerToDecimal } from '$lib/Format';
+	import { onMount } from 'svelte';
+	import PDF417 from '$lib/pdf417';
 
-  let canvas: HTMLCanvasElement;
-  export let canvasClass = "uplatnica__barcode";
-  export let key = 0;
-  export let props: any;
-  export let hub3_code = `HRVHUB30
+	let canvas: HTMLCanvasElement;
+	export let canvasClass = 'uplatnica__barcode';
+	export let key = 0;
+	export let props: any;
+	export let hub3_code = `HRVHUB30
 EUR
 000000000012355
 ZELJKO SENEKOVIC
@@ -22,8 +22,8 @@ HR01
 COST
 Troskovi za 1. mjesec`;
 
-  $: if (props) {
-    hub3_code = `HRVHUB30
+	$: if (props) {
+		hub3_code = `HRVHUB30
 ${props?.valuta_placanja}
 ${FormatIntegerToDecimal(props?.iznos, { dot: true })}
 ${props?.ime_i_prezime_platitelja}
@@ -37,72 +37,72 @@ ${props?.model_primatelja}
 ${props?.poziv_na_broj_primatelja}
 ${props?.sifra_namjene}
 ${props?.opis_placanja}`;
-  }
+	}
 
-  $: if (hub3_code && canvas) {
-    generate();
-  }
+	$: if (hub3_code && canvas) {
+		generate();
+	}
 
-  onMount(() => {
-    PDF417.init(hub3_code);
+	onMount(() => {
+		PDF417.init(hub3_code);
 
-    let barcode = PDF417.getBarcodeArray();
+		let barcode = PDF417.getBarcodeArray();
 
-    // block sizes (width and height) in pixels
-    let bw = 2;
-    let bh = 2;
+		// block sizes (width and height) in pixels
+		let bw = 2;
+		let bh = 2;
 
-    canvas.width = bw * barcode["num_cols"];
-    canvas.height = bh * barcode["num_rows"];
-    document.getElementById(`barcode-${key}`).appendChild(canvas);
+		canvas.width = bw * barcode['num_cols'];
+		canvas.height = bh * barcode['num_rows'];
+		document.getElementById(`barcode-${key}`).appendChild(canvas);
 
-    let ctx = canvas.getContext("2d");
+		let ctx = canvas.getContext('2d');
 
-    // graph barcode elements
-    let y = 0;
-    // for each row
-    for (let r = 0; r < barcode["num_rows"]; ++r) {
-      let x = 0;
-      // for each column
-      for (let c = 0; c < barcode["num_cols"]; ++c) {
-        if (barcode["bcode"][r][c] == 1) {
-          ctx.fillRect(x, y, bw, bh);
-        }
-        x += bw;
-      }
-      y += bh;
-    }
-  });
+		// graph barcode elements
+		let y = 0;
+		// for each row
+		for (let r = 0; r < barcode['num_rows']; ++r) {
+			let x = 0;
+			// for each column
+			for (let c = 0; c < barcode['num_cols']; ++c) {
+				if (barcode['bcode'][r][c] == 1) {
+					ctx.fillRect(x, y, bw, bh);
+				}
+				x += bw;
+			}
+			y += bh;
+		}
+	});
 
-  function generate() {
-    PDF417.init(hub3_code);
+	function generate() {
+		PDF417.init(hub3_code);
 
-    let barcode = PDF417.getBarcodeArray();
+		let barcode = PDF417.getBarcodeArray();
 
-    // block sizes (width and height) in pixels
-    let bw = 2;
-    let bh = 2;
+		// block sizes (width and height) in pixels
+		let bw = 2;
+		let bh = 2;
 
-    canvas.width = bw * barcode["num_cols"];
-    canvas.height = bh * barcode["num_rows"];
+		canvas.width = bw * barcode['num_cols'];
+		canvas.height = bh * barcode['num_rows'];
 
-    let ctx = canvas.getContext("2d");
+		let ctx = canvas.getContext('2d');
 
-    // graph barcode elements
-    let y = 0;
-    // for each row
-    for (let r = 0; r < barcode["num_rows"]; ++r) {
-      let x = 0;
-      // for each column
-      for (let c = 0; c < barcode["num_cols"]; ++c) {
-        if (barcode["bcode"][r][c] == 1) {
-          ctx.fillRect(x, y, bw, bh);
-        }
-        x += bw;
-      }
-      y += bh;
-    }
-  }
+		// graph barcode elements
+		let y = 0;
+		// for each row
+		for (let r = 0; r < barcode['num_rows']; ++r) {
+			let x = 0;
+			// for each column
+			for (let c = 0; c < barcode['num_cols']; ++c) {
+				if (barcode['bcode'][r][c] == 1) {
+					ctx.fillRect(x, y, bw, bh);
+				}
+				x += bw;
+			}
+			y += bh;
+		}
+	}
 </script>
 
 <div id="barcode-{key}" />

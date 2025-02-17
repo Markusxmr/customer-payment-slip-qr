@@ -12,7 +12,7 @@ export class PaymentSlipController {
 
   @Get('/files')
   findFiles() {
-    const dir = join(process.cwd(), 'files');
+    const dir = join(process.cwd(), 'priv/files');
     let files = getFilesFromDir(dir, '.pdf');
 
     return files;

@@ -14,7 +14,7 @@ export function setIspPaymentSlip(isp) {
 export function setPaymentSlip({ isp, customer }) {
   return {
     // poziv_na_broj_platitelja: '',
-    // iznos: '',
+    // iznos: 0.00,
     iban_platitelja: customer?.transakcijski_račun ? `HR${customer?.transakcijski_račun}` : '',
     // model_platitelja: '',
     sifra_namjene: 'GDSV',

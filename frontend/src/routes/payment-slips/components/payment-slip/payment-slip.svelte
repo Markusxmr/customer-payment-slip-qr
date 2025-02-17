@@ -7,6 +7,7 @@
 	import { deletePaymentSlip, getCustomer, updatePaymentSlip } from '$lib/services';
 	import { store } from '$lib/store';
 	import { FormatIntegerToDecimal } from '$lib/Format';
+
 	export let key = Math.random();
 	export let model: any;
 	export let printing = false;
@@ -148,13 +149,13 @@
 					<div>
 						<input
 							id="{key}-iznos"
-							class="form-field form-field--iznos "
+							class="form-field form-field--iznos"
 							class:form-field-invalid={!model.iznos}
 							type="text"
 							placeholder="iznos uplate"
 							value={showDecimalOnPaymentSlips
 								? FormatIntegerToDecimal(model.iznos)
-								: (model.iznos ?? '0').slice(0, -2)}
+								: (model.iznos ?? 0.0).slice(0, -2)}
 						/>
 					</div>
 				</div>

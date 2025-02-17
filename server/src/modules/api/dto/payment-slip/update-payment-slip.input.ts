@@ -9,6 +9,6 @@ export class UpdatePaymentSlipInput extends PartialType(CreatePaymentSlipInput) 
   @Field(() => String)
   poziv_na_broj_primatelja: string;
 
-  @Field(() => String)
-  iznos: string;
+  @Field(() => Number)
+  iznos: number;
 }

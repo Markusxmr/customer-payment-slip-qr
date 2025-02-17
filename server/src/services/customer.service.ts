@@ -6,7 +6,6 @@ import { Customer } from '../entities/customer.entity';
 import { dto } from '../common/utils/dto.util';
 import { paymentSlipDomain } from '../domain/payment-slip.domain';
 import { PaymentSlip } from '../entities/payment-slip.entity';
-import { AppDataSource } from '../modules/database/database.providers';
 
 @Injectable()
 export class CustomerService {
@@ -48,13 +47,11 @@ export class CustomerService {
   async findOne(id: number) {
     const customer = await this.customerRepository.findOne({ where: { id } });
     if (!customer) throw new NotFoundException();
-    let paymentSlips = await AppDataSource.query(
-      `
-      select * from payment_slips
-      where customer_id = $1
-      order by id asc`,
-      [id],
-    );
+    let paymentSlips = await this.paymentSlipRepository.find({
+      where: {
+        customer_id: id,
+      },
+    });
 
     paymentSlips = dto(paymentSlips, this.excludes);
     return { ...customer, paymentSlips };

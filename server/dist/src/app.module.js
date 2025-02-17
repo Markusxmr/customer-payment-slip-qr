@@ -12,7 +12,6 @@ const api_module_1 = require("./modules/api/api.module");
 const auth_module_1 = require("./modules/auth/auth.module");
 const database_module_1 = require("./modules/database/database.module");
 const user_service_1 = require("./services/user.service");
-const auth_service_1 = require("./services/auth.service");
 const customer_service_1 = require("./services/customer.service");
 const isp_service_1 = require("./services/isp.service");
 const global_setting_service_1 = require("./services/global-setting.service");
@@ -26,7 +25,6 @@ exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [api_module_1.ApiModule, auth_module_1.AuthModule, database_module_1.DatabaseModule],
         providers: [
-            auth_service_1.AuthService,
             user_service_1.UserService,
             payment_slip_service_1.PaymentSlipService,
             customer_service_1.CustomerService,

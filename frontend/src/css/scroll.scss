@@ -1,0 +1,80 @@
+/* --- macOS-Inspired Scrollbar Styles --- */
+
+/* WebKit-based browsers (Chrome, Safari, Edge, Opera) */
+::-webkit-scrollbar {
+	width: 12px; /* Overall width, can be adjusted */
+	height: 12px; /* Overall height for horizontal scrollbars */
+	background-color: transparent; /* Default: transparent background */
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.08); /* Light grey track, slightly transparent */
+	border-radius: 6px; /* Rounded corners for the track */
+	/* Optional: Add a subtle inner shadow for depth */
+	/* box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); */
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.3); /* Darker grey thumb, semi-transparent */
+	border-radius: 6px; /* Rounded corners for the thumb */
+	border: 3px solid transparent; /* Crucial for the "hover" effect */
+	background-clip: padding-box; /*  Important: Keeps the border transparent */
+}
+
+/* Hover state (more prominent thumb) */
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0, 0, 0, 0.5); /* Darker on hover, more opaque */
+}
+
+/* Active state (while dragging) */
+::-webkit-scrollbar-thumb:active {
+	background-color: rgba(0, 0, 0, 0.65); /* Even darker when actively dragging */
+	border: 2px solid transparent; /* Slightly thinner border on active */
+}
+
+/* Corner where horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+	background-color: rgba(0, 0, 0, 0.08); /* Match the track color */
+}
+
+/* Optional:  "Auto-Hiding" Scrollbar (like macOS) */
+/* This gets tricky and requires some JavaScript to be *perfect*, but here's a CSS-only approximation */
+
+body,
+html {
+	/*  Apply to the whole page, or the specific scrollable element */
+	overflow: overlay; /*  Key for "overlay" scrollbars. */
+	/* overflow-y: overlay;   Use for only vertical scrollbars  */
+}
+
+/* Hide the scrollbar when not hovered (approximation) */
+::-webkit-scrollbar {
+	width: 6px; /*  Smaller initial width */
+	transition: width 0.2s ease; /*  Smooth transition for width change */
+}
+
+/*  Widen scrollbar area on hover (but the *thumb* stays hidden until *it* is hovered)  */
+body:hover ::-webkit-scrollbar,
+html:hover ::-webkit-scrollbar,
+.scrollable-element:hover ::-webkit-scrollbar {
+	/* Or target your specific element */
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	/*  Initially hide the thumb by making it transparent and very small. */
+	background-color: transparent;
+	border: 6px solid transparent; /*  Keeps the "hit area" large for hover. */
+}
+
+/* --- Firefox Styles (scrollbar-color and scrollbar-width) --- */
+/*   Firefox doesn't have as much control, but we can approximate. */
+
+html,
+body,
+.scrollable-element {
+	/* Target the elements you want to style */
+	scrollbar-width: thin; /* thin | auto | none */
+	scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.08); /* thumb-color track-color */
+	/* Note: Firefox doesn't support rounded corners natively. */
+}

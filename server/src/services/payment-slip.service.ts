@@ -8,7 +8,6 @@ import { paymentSlipDomain, setIspPaymentSlip } from '../domain/payment-slip.dom
 import { controlNumber } from '../domain/control-number';
 import { Isp } from '../entities/isp.entity';
 import { Customer } from '../entities/customer.entity';
-import { AppDataSource } from '../modules/database/database.providers';
 
 @Injectable()
 export class PaymentSlipService {
@@ -53,19 +52,26 @@ export class PaymentSlipService {
   }
 
   async findAll() {
-    const items = await AppDataSource.query(`select * from payment_slips order by id desc`);
+    // Use the repository's find method with ordering instead of a raw SQL query.
+    const items = await this.paymentSlipRepository.find({ order: { id: 'DESC' } });
     return dto(items, ['inserted_at', 'updated_at', 'deleted_at']);
   }
 
   async updateAllPaymentSlips() {
-    const items = await AppDataSource.query(`select * from payment_slips order by id desc`);
+    // Retrieve all payment slips ordered by id descending.
+    const items = await this.paymentSlipRepository.find({ order: { id: 'DESC' } });
 
     for (const item of items) {
-      this.customerRepository.findOne(item?.customer_id).then(customer => {
-        let šifra = customer?.šifra ? `${customer?.šifra}-` : '';
-        const poziv_na_broj_primatelja = `${šifra}${controlNumber(customer?.šifra)}`;
-        this.update(item.id, { poziv_na_broj_primatelja });
-      });
+      // Fetch the related customer from the Customer repository.
+      const customer = await this.paymentSlipRepository.manager
+        .getRepository(Customer)
+        .findOne({ where: { id: item.customer_id } });
+      // Build the prefix (šifra) if available.
+      const šifra = customer?.šifra ? `${customer.šifra}-` : '';
+      // Generate the 'poziv_na_broj_primatelja' using the customer's šifra and controlNumber logic.
+      const poziv_na_broj_primatelja = `${šifra}${controlNumber(customer?.šifra)}`;
+      // Update the payment slip with the new field.
+      await this.update(item.id, { poziv_na_broj_primatelja });
     }
   }
 
